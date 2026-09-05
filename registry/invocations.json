@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "skills": {
+    "brainstorming": "brainstorming",
+    "writing-plans": "writing-plans",
+    "test-driven-development": "test-driven-development",
+    "systematic-debugging": "systematic-debugging",
+    "requesting-code-review": "requesting-code-review",
+    "verification-before-completion": "verification-before-completion",
+    "flutter-architecture": "flutter-apply-architecture-best-practices",
+    "dart-static-analysis": "dart-run-static-analysis",
+    "react-best-practices": "vercel-react-best-practices",
+    "react-composition-patterns": "vercel-composition-patterns",
+    "web-design-guidelines": "web-design-guidelines",
+    "react-native": "vercel-react-native-skills",
+    "expo-overview": "expo-overview",
+    "expo-ui": "expo-native-ui",
+    "winui-workflow": "winui-dev-workflow",
+    "impeccable": "impeccable",
+    "emil-design-eng": "emil-design-eng",
+    "antislop": "antislop",
+    "ui-ux-pro-max": "ui-ux-pro-max",
+    "taste-frontend": "design-taste-frontend",
+    "taste-mobile-imagegen": "imagegen-frontend-mobile",
+    "anthropic-frontend": "frontend-design",
+    "mobile-ios-design": "mobile-ios-design",
+    "mobile-android-design": "mobile-android-design",
+    "postgres-best-practices": "supabase-postgres-best-practices",
+    "firebase-basics": "firebase-basics"
+  }
+}

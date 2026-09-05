@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0 - 2026-09-05
+
+- Enforce router consultation and bundle disclosure through preserved global Codex and Antigravity rules.
+- Install all executable upstream capabilities and Expo's transitive skill family from pinned reviewed commits, with author and license attribution.
+- Normalize Expo's unsupported `version` frontmatter while retaining that version in installed source metadata.
+- Report actual upstream invocation names instead of internal aliases.
+- Add safe upgrade manifests, installation diagnostics, and isolated global installation tests.
+- Require explicit Flutter targets, route Expo UI guidance, include mobile UX review, and return the API reference for API work.
+
 ## 0.1.0 - 2026-09-05
 
 - Add the agent-neutral router and command-line interface.

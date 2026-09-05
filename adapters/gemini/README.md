@@ -1,3 +1,3 @@
 # Gemini adapter
 
-Run `node scripts/install-global.mjs --target antigravity` to install the self-contained router globally at `~/.gemini/config/skills/development-skill-router`. Resolve selected upstream skills through the client's supported skill mechanism.
+Run `node scripts/install-global.mjs --target antigravity` to install the router and pinned upstream inventory globally under `~/.gemini/config/skills`. The installer adds a managed rule to `~/.gemini/GEMINI.md`. Run `node scripts/doctor.mjs --target antigravity`, then start a new Antigravity session.

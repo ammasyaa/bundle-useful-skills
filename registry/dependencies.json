@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "groups": {
+    "expo-overview": [
+      "eas-app-stores",
+      "eas-hosting",
+      "eas-observe",
+      "eas-simulator",
+      "eas-update-insights",
+      "eas-update",
+      "eas-workflows",
+      "expo-animation",
+      "expo-app-clip",
+      "expo-brownfield",
+      "expo-data-fetching",
+      "expo-design-system",
+      "expo-dev-client",
+      "expo-dom",
+      "expo-examples",
+      "expo-module",
+      "expo-project-structure",
+      "expo-router",
+      "expo-skill-feedback",
+      "expo-ui",
+      "expo-upgrade",
+      "expo-web-to-native"
+    ]
+  }
+}

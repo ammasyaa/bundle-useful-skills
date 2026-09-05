@@ -9,4 +9,6 @@ The system has four layers:
 
 The authority order is user requirements, security/privacy/legal constraints, existing architecture, project documents, platform conventions, framework guidance, domain guidance, design guidance, and filters. A lower layer cannot silently override a higher one.
 
-The router does not download or execute upstream content. Pinned commits make reviews reproducible while official current documentation remains the authority for APIs that changed after review.
+The runtime router does not download upstream content. The explicit global installer can fetch executable skills from pinned reviewed commits into each host's user skill directory. Pinned commits make installs reproducible while official current documentation remains the authority for APIs that changed after review.
+
+Guaranteed discovery and task-specific loading are separate layers. A managed global host rule makes the router part of every task's instruction chain. The router then emits a small phase-specific bundle using the upstream skill's actual frontmatter invocation name. The full inventory stays dormant until selected.

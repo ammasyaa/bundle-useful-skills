@@ -3,6 +3,7 @@ const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'ut
 export const registry = read('../registry/skills.json');
 export const profiles = read('../profiles/index.json');
 export const rules = read('../registry/compatibility.json');
+export const invocations = read('../registry/invocations.json').skills;
 const tasks = ['brainstorm','plan','implementation','architecture','design','polish','motion','research','visual-reference','filter','bug','database','api','security','performance','refactor','testing','review','verify','release'];
 const uiTasks = ['design','polish','motion','research','visual-reference','filter'];
 const riskPattern = /\b(auth(?:entication|orization)?|payments?|pii|location|identity|secrets?|tokens?|uploads?|webhooks?|database permissions|admin|account recovery|password|login)\b/i;
@@ -39,6 +40,7 @@ export function route(options={},extensions=[]) {
   if(!['client','database','api','backend','renderer','native'].includes(ctx.scope)) throw new Error('Unknown scope');
   for(const key of ['enable','disable','risks']) if(!Array.isArray(ctx[key]) || !ctx[key].every(v=>typeof v==='string')) throw new Error(`${key} must be an array of strings`);
   if(ctx.renderer && !(ctx.platform==='desktop' && ['tauri','electron'].includes(ctx.framework) && ctx.renderer==='react')) throw new Error('Renderer applies only to React in Tauri/Electron');
+  if(ctx.framework==='flutter' && !ctx.target) throw new Error('Flutter requires an explicit target');
   if(ctx.target && !profile.targets.includes(ctx.target)) throw new Error('Target incompatible with profile');
   if(ctx.database && !['postgres','firebase'].includes(ctx.database)) throw new Error('Unsupported database; add a reviewed custom specialist');
   if(extensions.some(s=>registry.some(r=>r.id===s.id))) throw new Error('Custom IDs must not replace built-in security or compatibility rules');
@@ -60,6 +62,7 @@ export function route(options={},extensions=[]) {
   if(sensitive) add('security-gate','Sensitive feature requires security verification');
   if(ctx.task==='design') {
     add(ctx.platform==='website'?(ctx.director==='anthropic'?'anthropic-frontend':'taste-frontend'):'impeccable','Primary design responsibility for this surface');
+    if(ctx.framework==='expo') add('expo-ui','Expo-native UI guidance');
     if(ctx.mode!=='minimal' && ctx.platform==='mobile' && ctx.target) add(ctx.target==='ios'?'mobile-ios-design':'mobile-android-design','Platform UX principles only');
   }
   if(ctx.task==='polish') add('impeccable','Review existing product design');
@@ -67,6 +70,7 @@ export function route(options={},extensions=[]) {
   if(ctx.task==='research') add('ui-ux-pro-max','Reference research only');
   if(ctx.task==='visual-reference' && ctx.platform==='mobile') add('taste-mobile-imagegen','Mobile reference image generation only');
   if(ctx.task==='review' && ctx.platform==='website') add('web-design-guidelines','Website UX and accessibility review');
+  if(ctx.task==='review' && ctx.platform==='mobile' && ctx.target) add(ctx.target==='ios'?'mobile-ios-design':'mobile-android-design','Target platform UX review');
   if(ctx.task==='filter') add('antislop','Final filter below project design system');
   if(ctx.task==='release') add('release-gate','Platform release evidence');
   for(const id of ctx.enable) add(id,'Explicitly enabled');
@@ -84,12 +88,26 @@ export function route(options={},extensions=[]) {
   if(backendOnly && !ctx.database && ctx.task!=='api') warnings.push('No data specialist selected: identify the actual backend before implementation.');
   const references=[`references/${ctx.platform}.md`];
   if(sensitive) references.push('references/security.md');
+  if(ctx.task==='api' || ctx.scope==='api') references.push('references/api.md');
   if(ctx.task==='release') references.push('references/release.md');
-  return {schemaVersion:1,platform:ctx.platform,framework:ctx.framework,task:ctx.task,frameworkAuthority:profile.authority,active,
-    selections:selected.map(s=>({id:s.id,reason:chosen.get(s.id),authority:s.renderer && ctx.platform==='desktop'?'renderer':s.authority,source:s.source,installMode:s.installMode})),
+  const selections=selected.map(s=>({id:s.id,invocation:invocations[s.id]??s.id,reason:chosen.get(s.id),authority:s.renderer && ctx.platform==='desktop'?'renderer':s.authority,source:s.source,installMode:s.installMode}));
+  const reportLine=`Skill bundle: development-skill-router -> ${selections.map(s=>s.invocation).join(', ') || '(router only)'}`;
+  return {schemaVersion:2,platform:ctx.platform,framework:ctx.framework,task:ctx.task,frameworkAuthority:profile.authority,active,
+    selections,
     references,authorityOrder:rules.authorityOrder,warnings,justification:ctx.justification??null,
     available:ctx.mode==='full'?catalog.filter(s=>compatible(s,ctx)).map(s=>s.id):active,
+    report:{line:reportLine,router:'development-skill-router',invocations:selections.map(s=>s.invocation)},
     completion:['Run checks appropriate to the change','Report actual evidence and untested behavior']};
+}
+
+export function formatRouteReport(result) {
+  return [
+    result.report.line,
+    `Route: ${result.platform}/${result.framework}/${result.task}`,
+    `References: ${result.references.join(', ')}`,
+    ...result.selections.map(s=>`- ${s.invocation}: ${s.reason}`),
+    ...result.warnings.map(w=>`Warning: ${w}`)
+  ].join('\n');
 }
 // Detection suggests a lane; it never writes configuration or resolves ambiguous targets.
 export function detect(files) {

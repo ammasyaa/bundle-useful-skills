@@ -2,13 +2,19 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { route, validateSelection, detect } from '../src/router.mjs';
 
-const request = (extra = {}) => ({platform:'mobile', framework:'flutter', task:'implementation', ...extra});
+const request = (extra = {}) => {
+  const value={platform:'mobile',framework:'flutter',target:'ios',task:'implementation',...extra};
+  if(value.framework!=='flutter'&&!Object.hasOwn(extra,'target')) delete value.target;
+  return value;
+};
 test('Flutter mobile excludes React and has a bounded active set', () => {
   const result = route(request());
   assert.ok(result.active.includes('flutter-architecture'));
   assert.ok(result.active.includes('dart-static-analysis'));
   assert.ok(!result.active.some(id => /react|expo|taste/.test(id)));
   assert.ok(result.active.length <= 5);
+  assert.match(result.report.line,/flutter-apply-architecture-best-practices/);
+  assert.equal(result.selections.find(s=>s.id==='flutter-architecture').invocation,'flutter-apply-architecture-best-practices');
 });
 test('React website excludes Flutter', () => {
   const r = route(request({platform:'website', framework:'react'}));
@@ -16,7 +22,7 @@ test('React website excludes Flutter', () => {
   assert.ok(!r.active.some(id => id.includes('flutter')));
 });
 test('Flutter desktop stays desktop', () => {
-  const r = route(request({platform:'desktop'}));
+  const r = route(request({platform:'desktop',target:'windows'}));
   assert.equal(r.platform,'desktop');
   assert.ok(r.references.includes('references/desktop.md'));
 });
@@ -84,8 +90,19 @@ test('Security cannot be disabled for sensitive work', () => {
 });
 test('Invalid platform/framework fails closed', () => {
   assert.throws(() => route(request({platform:'website'})),/framework/i);
+  assert.throws(() => route({platform:'mobile',framework:'flutter',task:'implementation'}),/target/i);
   assert.throws(() => route(request({task:'unknown'})),/task/i);
   assert.throws(() => route(request({enable:['missing-skill']})),/unknown/i);
+});
+test('API routes include the bundled API reference', () => {
+  assert.ok(route(request({task:'api',scope:'api'})).references.includes('references/api.md'));
+});
+test('Expo design uses its UI skill and target platform review', () => {
+  const design=route(request({framework:'expo',target:'android',task:'design'}));
+  assert.ok(design.active.includes('expo-ui'));
+  assert.ok(design.active.includes('mobile-android-design'));
+  const review=route(request({framework:'expo',target:'ios',task:'review'}));
+  assert.ok(review.active.includes('mobile-ios-design'));
 });
 test('Above seven active skills needs a justification', () => {
   const opts=request({platform:'website',framework:'react',task:'design',enable:['brainstorming','writing-plans','test-driven-development','systematic-debugging','verification-before-completion','requesting-code-review','impeccable','emil-design-eng']});

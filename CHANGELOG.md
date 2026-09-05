@@ -8,6 +8,7 @@
 - Reject duplicate managed-rule blocks before installation.
 - Add a deterministic `triage` command for non-development tasks.
 - Add quick and full plug-and-play E2E commands plus one `npm run ready` release gate, and run that complete isolated install, routing, integrity, recovery, and readiness journey in CI.
+- Expand the README with 5W1H, routing and installation details, pros and cons, complete capability coverage, and direct acknowledgments for every external creator and original source.
 
 ## 0.2.0 - 2026-09-05
 

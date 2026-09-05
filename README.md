@@ -53,7 +53,7 @@ Installed capabilities remain dormant until the selected phase requires them. Of
 
 ## Trust and attribution
 
-See [`CREDITS.md`](CREDITS.md) for the people and organizations behind the referenced work and [`THIRD_PARTY_SKILLS.md`](THIRD_PARTY_SKILLS.md) for pinned technical records. Registry trust labels mean `official`, `verified`, `community`, `experimental`, or `internal`; popularity is not a trust level.
+See [`CREDITS.md`](CREDITS.md) for the people and organizations behind the referenced work, the individual [`catalog/`](catalog/) attribution cards, and [`THIRD_PARTY_SKILLS.md`](THIRD_PARTY_SKILLS.md) for pinned technical records. Registry trust labels mean `official`, `verified`, `community`, `experimental`, or `internal`; popularity is not a trust level.
 
 This independent project is not affiliated with or endorsed by any listed author or organization.
 

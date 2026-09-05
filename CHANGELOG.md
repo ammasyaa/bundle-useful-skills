@@ -7,3 +7,4 @@
 - Add reviewed attribution metadata for 34 internal and upstream capabilities.
 - Enforce framework, creative-authority, security, scope, and activation-budget rules.
 - Add routing, validation, attribution, licensing, and privacy checks.
+- Add one generated README attribution card for every referenced external capability.

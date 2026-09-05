@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "authorityOrder": [
+    "user-requirements",
+    "security-privacy-legal",
+    "existing-architecture",
+    "project-documents",
+    "platform-conventions",
+    "framework",
+    "domain",
+    "design",
+    "filter"
+  ],
+  "activationBudget": {"targetMin": 2, "targetMax": 5, "warnAbove": 5, "justifyAbove": 7},
+  "rules": [
+    "Select exactly one framework authority for implementation.",
+    "Treat React inside Tauri or Electron as renderer guidance only.",
+    "Require security for sensitive features.",
+    "Treat design filters as lower authority than project design documents.",
+    "A full installation is an available inventory, not an active context."
+  ]
+}

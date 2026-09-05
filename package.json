@@ -1,0 +1,18 @@
+{
+  "name": "bundle-useful-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small, agent-neutral development skill router",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "route": "node scripts/cli.mjs route",
+    "validate": "node scripts/validate-registry.mjs",
+    "credits": "node scripts/generate-credits.mjs",
+    "license-check": "node scripts/license-check.mjs",
+    "secret-check": "node scripts/secret-check.mjs",
+    "check": "npm test && npm run validate && npm run license-check && node scripts/generate-credits.mjs --check && npm run secret-check"
+  }
+}

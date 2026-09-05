@@ -1,0 +1,3 @@
+# Mobile routing
+
+Choose one lane: Flutter, React Native, Expo, native iOS, or native Android. Platform design reviewers influence UX conventions; the selected framework controls implementation. Image-generation guidance can create visual references but cannot implement app code. Handle applicable initial, loading, refresh, empty, success, validation, server error, offline, timeout, permission denied, expired auth, disabled, cancellation, and background/resume states. Test touch targets, safe areas, text scaling, rotation/adaptation, screen readers, reduced motion, permissions, deep links, and release builds on targeted platforms.

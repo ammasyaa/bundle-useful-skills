@@ -1,0 +1,15 @@
+[
+  {"platform":"website","framework":"react","authority":"react-best-practices","targets":[]},
+  {"platform":"website","framework":"next","authority":"react-best-practices","targets":[]},
+  {"platform":"website","framework":"web","authority":"web-platform-docs","targets":[]},
+  {"platform":"desktop","framework":"flutter","authority":"flutter-architecture","targets":["windows","macos"]},
+  {"platform":"desktop","framework":"tauri","authority":"tauri-docs","targets":["windows","macos"]},
+  {"platform":"desktop","framework":"electron","authority":"electron-docs","targets":["windows","macos"]},
+  {"platform":"desktop","framework":"winui","authority":"winui-workflow","targets":["windows"]},
+  {"platform":"desktop","framework":"macos","authority":"apple-docs","targets":["macos"]},
+  {"platform":"mobile","framework":"flutter","authority":"flutter-architecture","targets":["ios","android"]},
+  {"platform":"mobile","framework":"react-native","authority":"react-native","targets":["ios","android"]},
+  {"platform":"mobile","framework":"expo","authority":"expo-overview","targets":["ios","android"]},
+  {"platform":"mobile","framework":"native-ios","authority":"apple-docs","targets":["ios"]},
+  {"platform":"mobile","framework":"native-android","authority":"android-docs","targets":["android"]}
+]

@@ -1,0 +1,3 @@
+# Venture routing
+
+Use this lane for business-model work: ideation, validation, go-to-market, growth, and strategic options. The stages are gates, not chapters. Run one at a time and apply its exit test honestly; stopping is a normal outcome and the gates exist to make it cheap. Each stage writes a document the next stage reads, and every artefact separates evidence from assumption line by line. Demand evidence must have cost someone something. Numbers carry source, date, and geography, and projections are labelled as projections with their assumptions listed. Regulated categories run the compliance gate at validation, not at launch, because the regulatory position can invalidate the model itself.

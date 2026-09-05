@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.0 - 2026-09-05
+
+- Add five non-engineering domains — marketing, brand, content, automation, and venture — with 20 lanes, their own task vocabularies, and their own scopes.
+- Move all non-engineering routing rules into `registry/domains.json`, so a new lane is a registry change plus a test rather than a code change. Engineering routing is unchanged.
+- Add a compliance gate for regulated claims, personal data, endorsements, and audiences including minors; it activates from declared risks or task text and cannot be disabled once triggered.
+- Add a brand consistency gate as the verification pass for audience-facing work, including an explicit report of what was not checked.
+- Grow the registry from 34 to 116 capabilities: 50 marketing skills, 16 Anthropic skills, and 4 further process skills as pinned reference entries, plus 12 bundled internal capabilities.
+- Record per-skill licensing for mixed-license upstreams, distinguishing Apache-2.0 skills from source-available ones.
+- Add `tests/domains.test.mjs`, which walks every declared lane and task and proves each resolves to a compatible, budgeted bundle.
+- Copy bundled internal skills during global installation.
+
 ## 0.2.0 - 2026-09-05
 
 - Enforce router consultation and bundle disclosure through preserved global Codex and Antigravity rules.

@@ -1,0 +1,3 @@
+# Brand routing
+
+Use this lane for positioning, verbal and visual identity, and brand governance. Evidence precedes positioning, and positioning precedes any visual or verbal execution; a route that starts at colour has skipped the work that makes colour mean anything. Choose exactly one creative authority per pass. Emit brand decisions as tokens and recorded rules so later production routes bind to values rather than re-inventing them. An approved client brand or design document outranks any general design filter or taste skill. Multi-market identity states explicitly what is fixed across markets and what is local. Never reproduce another organization's identity, character, or wordmark as reference to be matched.

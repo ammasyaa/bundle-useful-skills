@@ -12,7 +12,7 @@ Bundle Useful Skills is an independent routing project. Thank you to the origina
 
 - Project: [https://github.com/anthropics/skills](https://github.com/anthropics/skills)
 - License/reference status: Apache-2.0
-- Used for: Anthropic Frontend Design
+- Used for: Algorithmic Art, Anthropic Frontend Design, Brand Guidelines, Canvas Design, Claude Api, Doc Coauthoring, Docx, Internal Comms, Mcp Builder, Pdf, Pptx, Skill Creator, Slack Gif Creator, Theme Factory, Web Artifacts Builder, Webapp Testing, Xlsx
 
 ## Miqdad Badjuber
 
@@ -30,7 +30,7 @@ Bundle Useful Skills is an independent routing project. Thank you to the origina
 
 - Project: [https://github.com/obra/superpowers](https://github.com/obra/superpowers)
 - License/reference status: MIT
-- Used for: Brainstorming, Requesting Code Review, Systematic Debugging, Test Driven Development, Verification Before Completion, Writing Plans
+- Used for: Brainstorming, Dispatching Parallel Agents, Executing Plans, Requesting Code Review, Subagent Driven Development, Systematic Debugging, Test Driven Development, Verification Before Completion, Writing Plans, Writing Skills
 
 ## The Dart Authors
 
@@ -86,6 +86,12 @@ Bundle Useful Skills is an independent routing project. Thank you to the origina
 - Project: [https://developer.mozilla.org/](https://developer.mozilla.org/)
 - License/reference status: Reference only
 - Used for: MDN Web Docs
+
+## Corey Haines
+
+- Project: [https://github.com/coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
+- License/reference status: MIT
+- Used for: Ab Testing, Ad Creative, Ads, Ai Seo, Analytics, Aso, Attribution, Churn Prevention, Co Marketing, Cold Email, Community Marketing, Competitor Profiling, Competitors, Content Strategy, Copy Editing, Copywriting, Cro, Customer Research, Directory Submissions, Emails, Events, Free Tools, Image, Influencer Marketing, Launch, Lead Magnets, Marketing Council, Marketing Ideas, Marketing Loops, Marketing Plan, Marketing Psychology, Offers, Onboarding, Paywalls, Popups, Pricing, Product Marketing, Programmatic Seo, Prospecting, Public Relations, Referrals, Revops, Sales Enablement, Schema, Seo Audit, Signup, Site Architecture, Sms, Social, Video
 
 ## Supabase
 

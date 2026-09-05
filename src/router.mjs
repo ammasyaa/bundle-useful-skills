@@ -4,9 +4,12 @@ export const registry = read('../registry/skills.json');
 export const profiles = read('../profiles/index.json');
 export const rules = read('../registry/compatibility.json');
 export const invocations = read('../registry/invocations.json').skills;
-const tasks = ['brainstorm','plan','implementation','architecture','design','polish','motion','research','visual-reference','filter','bug','database','api','security','performance','refactor','testing','review','verify','release'];
+export const domains = read('../registry/domains.json').domains;
+const tasks = domains.engineering.tasks;
 const uiTasks = ['design','polish','motion','research','visual-reference','filter'];
 const riskPattern = /\b(auth(?:entication|orization)?|payments?|pii|location|identity|secrets?|tokens?|uploads?|webhooks?|database permissions|admin|account recovery|password|login)\b/i;
+// Regulated-claim and personal-data triggers for audience-facing work.
+const compliancePattern = /\b(gdpr|pdpa|ccpa|personal data|consent|opt[- ]?in|health claims?|medical|financial (?:advice|promotion|product)|investment|insurance|testimonials?|endorsements?|influencer disclosure|minors?|children|gambling|alcohol|tobacco|crypto(?:currency)?|before[- ]and[- ]after|guaranteed? results?|earnings claims?|pharmaceutical)\b/i;
 
 function compatible(s,c) {
   if (!s.platforms.includes(c.platform)) return false;
@@ -31,20 +34,51 @@ export function validateSelection(ids,ctx,catalog=registry) {
   for (const s of found) for (const conflict of s.conflicts) if(ids.includes(conflict)) throw new Error(`Conflict: ${s.id} / ${conflict}`);
   return found;
 }
+
+// Shared assembly: apply explicit overrides, validate, and build the disclosure report.
+function finish(profile,ctx,catalog,chosen,references,gate,extra={}) {
+  for(const id of ctx.enable) chosen.set(id,'Explicitly enabled');
+  for(const id of ctx.disable) {
+    if(!catalog.some(s=>s.id===id)) throw new Error(`Unknown disabled skill: ${id}`);
+    if(extra.sensitive && id===gate) throw new Error(`Cannot disable mandatory ${gate}`);
+    if(extra.lockedDisable?.includes(id)) throw new Error(`Cannot disable ${id} for a ${ctx.task} route`);
+    chosen.delete(id);
+  }
+  const active=[...chosen.keys()];
+  const selected=validateSelection(active,ctx,catalog);
+  const warnings=[...(extra.warnings??[])];
+  if(active.length>rules.activationBudget.warnAbove) warnings.push('Above five active capabilities; consider sequential passes.');
+  if(active.length>rules.activationBudget.justifyAbove && !(typeof ctx.justification==='string' && ctx.justification.trim())) throw new Error('Above seven active capabilities requires a justification');
+  const selections=selected.map(s=>({id:s.id,invocation:invocations[s.id]??s.id,reason:chosen.get(s.id),authority:s.renderer && ctx.platform==='desktop'?'renderer':s.authority,source:s.source,installMode:s.installMode}));
+  const reportLine=`Skill bundle: development-skill-router -> ${selections.map(s=>s.invocation).join(', ') || '(router only)'}`;
+  return {schemaVersion:2,domain:profile.domain,platform:ctx.platform,framework:ctx.framework,task:ctx.task,frameworkAuthority:profile.authority,active,
+    selections,
+    references,authorityOrder:rules.authorityOrder,warnings,justification:ctx.justification??null,
+    available:ctx.mode==='full'?catalog.filter(s=>compatible(s,ctx)).map(s=>s.id):active,
+    report:{line:reportLine,router:'development-skill-router',invocations:selections.map(s=>s.invocation)},
+    completion:extra.completion??['Run checks appropriate to the change','Report actual evidence and untested behavior']};
+}
+
 export function route(options={},extensions=[]) {
   const ctx={task:'implementation',scope:'client',mode:'recommended',enable:[],disable:[],risks:[],...options};
   const profile=profiles.find(p=>p.platform===ctx.platform && p.framework===ctx.framework);
   if(!profile) throw new Error('Unsupported platform/framework. Choose an explicit supported profile.');
-  if(!tasks.includes(ctx.task)) throw new Error(`Unknown task: ${ctx.task}`);
   if(!['minimal','recommended','full'].includes(ctx.mode)) throw new Error('Unknown mode');
-  if(!['client','database','api','backend','renderer','native'].includes(ctx.scope)) throw new Error('Unknown scope');
   for(const key of ['enable','disable','risks']) if(!Array.isArray(ctx[key]) || !ctx[key].every(v=>typeof v==='string')) throw new Error(`${key} must be an array of strings`);
+  if(extensions.some(s=>registry.some(r=>r.id===s.id))) throw new Error('Custom IDs must not replace built-in security or compatibility rules');
+  const catalog=[...registry,...extensions];
+  return (profile.domain??'engineering')==='engineering'
+    ? routeEngineering(profile,ctx,catalog)
+    : routeDomain(profile,ctx,catalog);
+}
+
+function routeEngineering(profile,ctx,catalog) {
+  if(!tasks.includes(ctx.task)) throw new Error(`Unknown task: ${ctx.task}`);
+  if(!domains.engineering.scopes.includes(ctx.scope)) throw new Error('Unknown scope');
   if(ctx.renderer && !(ctx.platform==='desktop' && ['tauri','electron'].includes(ctx.framework) && ctx.renderer==='react')) throw new Error('Renderer applies only to React in Tauri/Electron');
   if(ctx.framework==='flutter' && !ctx.target) throw new Error('Flutter requires an explicit target');
   if(ctx.target && !profile.targets.includes(ctx.target)) throw new Error('Target incompatible with profile');
   if(ctx.database && !['postgres','firebase'].includes(ctx.database)) throw new Error('Unsupported database; add a reviewed custom specialist');
-  if(extensions.some(s=>registry.some(r=>r.id===s.id))) throw new Error('Custom IDs must not replace built-in security or compatibility rules');
-  const catalog=[...registry,...extensions];
   const chosen=new Map();
   const add=(id,why)=>chosen.set(id,why);
   const backendOnly=['database','api','backend'].includes(ctx.scope) || ['database','api'].includes(ctx.task);
@@ -73,31 +107,51 @@ export function route(options={},extensions=[]) {
   if(ctx.task==='review' && ctx.platform==='mobile' && ctx.target) add(ctx.target==='ios'?'mobile-ios-design':'mobile-android-design','Target platform UX review');
   if(ctx.task==='filter') add('antislop','Final filter below project design system');
   if(ctx.task==='release') add('release-gate','Platform release evidence');
-  for(const id of ctx.enable) add(id,'Explicitly enabled');
-  for(const id of ctx.disable) {
-    if(!catalog.some(s=>s.id===id)) throw new Error(`Unknown disabled skill: ${id}`);
-    if(sensitive && id==='security-gate') throw new Error('Cannot disable mandatory security gate');
-    if(ctx.task==='release' && ['release-gate','verification-before-completion'].includes(id)) throw new Error('Cannot disable release verification');
-    chosen.delete(id);
-  }
-  const active=[...chosen.keys()];
-  const selected=validateSelection(active,ctx,catalog);
-  const warnings=[];
-  if(active.length>5) warnings.push('Above five active capabilities; consider sequential passes.');
-  if(active.length>7 && !(typeof ctx.justification==='string' && ctx.justification.trim())) throw new Error('Above seven active capabilities requires a justification');
-  if(backendOnly && !ctx.database && ctx.task!=='api') warnings.push('No data specialist selected: identify the actual backend before implementation.');
   const references=[`references/${ctx.platform}.md`];
   if(sensitive) references.push('references/security.md');
   if(ctx.task==='api' || ctx.scope==='api') references.push('references/api.md');
   if(ctx.task==='release') references.push('references/release.md');
-  const selections=selected.map(s=>({id:s.id,invocation:invocations[s.id]??s.id,reason:chosen.get(s.id),authority:s.renderer && ctx.platform==='desktop'?'renderer':s.authority,source:s.source,installMode:s.installMode}));
-  const reportLine=`Skill bundle: development-skill-router -> ${selections.map(s=>s.invocation).join(', ') || '(router only)'}`;
-  return {schemaVersion:2,platform:ctx.platform,framework:ctx.framework,task:ctx.task,frameworkAuthority:profile.authority,active,
-    selections,
-    references,authorityOrder:rules.authorityOrder,warnings,justification:ctx.justification??null,
-    available:ctx.mode==='full'?catalog.filter(s=>compatible(s,ctx)).map(s=>s.id):active,
-    report:{line:reportLine,router:'development-skill-router',invocations:selections.map(s=>s.invocation)},
-    completion:['Run checks appropriate to the change','Report actual evidence and untested behavior']};
+  const warnings=[];
+  if(backendOnly && !ctx.database && ctx.task!=='api') warnings.push('No data specialist selected: identify the actual backend before implementation.');
+  return finish(profile,ctx,catalog,chosen,references,'security-gate',{
+    sensitive,warnings,
+    lockedDisable:ctx.task==='release'?['release-gate','verification-before-completion']:[]
+  });
+}
+
+// Non-engineering lanes are data-driven: rules live in registry/domains.json, not in code.
+function routeDomain(profile,ctx,catalog) {
+  const def=domains[profile.domain];
+  if(!def) throw new Error(`Unknown domain: ${profile.domain}`);
+  if(!def.tasks.includes(ctx.task)) throw new Error(`Unknown task: ${ctx.task} for domain ${profile.domain}`);
+  if(!def.scopes.includes(ctx.scope)) throw new Error(`Unknown scope: ${ctx.scope} for domain ${profile.domain}`);
+  if(ctx.renderer||ctx.target||ctx.database) throw new Error(`renderer, target and database apply to engineering routes only`);
+  const gate=def.gate;
+  const sensitive=ctx.risks.length>0 || compliancePattern.test(ctx.description??'') || riskPattern.test(ctx.description??'') || ctx.task==='compliance';
+  const chosen=new Map();
+  const add=(id,why)=>{ if(id) chosen.set(id,why); };
+  if(ctx.mode!=='minimal' && def.context) add(def.context,'Shared positioning and audience context');
+  const process=def.process?.[ctx.task];
+  if(process) add(process,`Process for ${ctx.task}`);
+  if(ctx.task!=='compliance') add(profile.authority,'Selected lane authority');
+  if(ctx.mode!=='minimal') {
+    for(const id of def.specialists?.[ctx.task]??[]) add(id,`Domain specialist for ${ctx.task}`);
+    for(const id of def.laneSpecialists?.[ctx.framework]?.[ctx.task]??[]) add(id,`${ctx.framework} specialist for ${ctx.task}`);
+  }
+  if(sensitive) add(gate,gate==='compliance-gate'
+    ? 'Regulated claim or personal-data handling requires a compliance pass'
+    : 'Sensitive feature requires security verification');
+  if(ctx.task==='verify' && def.verification) add(def.verification,'Evidence pass before the work is called done');
+  const references=[def.reference];
+  if(sensitive) references.push(gate==='compliance-gate'?'references/compliance.md':'references/security.md');
+  const warnings=[];
+  if(ctx.task!=='compliance' && !sensitive && ['marketing','brand','content'].includes(profile.domain))
+    warnings.push('No regulated-claim risk declared: confirm claims, consent, and disclosure before publishing.');
+  return finish(profile,ctx,catalog,chosen,references,gate,{
+    sensitive,warnings,
+    lockedDisable:ctx.task==='verify' && def.verification?[def.verification]:[],
+    completion:['Show the evidence behind every claim and number','Name what was not measured or verified']
+  });
 }
 
 export function formatRouteReport(result) {

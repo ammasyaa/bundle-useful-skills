@@ -7,6 +7,7 @@
 - Make the doctor return one JSON document, require exact global-rule content, and fail readiness for unverified capabilities.
 - Reject duplicate managed-rule blocks before installation.
 - Add a deterministic `triage` command for non-development tasks.
+- Add quick and full plug-and-play E2E commands plus one `npm run ready` release gate, and run that complete isolated install, routing, integrity, recovery, and readiness journey in CI.
 
 ## 0.2.0 - 2026-09-05
 

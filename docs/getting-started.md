@@ -29,3 +29,9 @@ npm run doctor
 ```
 
 The doctor emits one valid JSON array for one or both hosts. `ready: true` requires the current unmodified router, one exact managed global-rule block, and all 48 upstream capabilities at their reviewed commits with an exact matching file inventory and hashes. Restart each host after installation.
+
+## One-command E2E checks
+
+Use `npm run test:e2e:quick` for a fast offline check of dual-host installation, global rules, installed-router execution, and idempotency. Use `npm run ready` for the release path; it runs every repository check and then the full E2E journey. The full path downloads only reviewed commits into an isolated temporary home, checks the complete 49-directory inventory on each host, verifies author attribution, tampers with a test copy, confirms doctor rejection, repairs it through the backup flow, and requires final readiness.
+
+Neither command writes to the real user profile. A successful run cleans up its temporary home. A failed run prints and retains that directory for inspection.

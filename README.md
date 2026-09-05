@@ -69,6 +69,22 @@ node scripts/install-global.mjs --target all --replace-existing --adopt-legacy
 
 Start a new Codex or Antigravity session after installation so the host reloads global instructions. Skills remain available globally, while the rule requires the router to disclose and load only the small bundle relevant to the current phase.
 
+## End-to-end readiness
+
+Run the fast, offline smoke test during development:
+
+```bash
+npm run test:e2e:quick
+```
+
+Before release, run the complete plug-and-play readiness gate:
+
+```bash
+npm run ready
+```
+
+`npm run ready` runs every behavior, registry, license, attribution, and secret check before starting the full E2E journey. The E2E command uses an isolated temporary home and never changes the real Codex or Antigravity profile. It installs both hosts from reviewed commits, executes eight installed-router scenarios, checks all 49 skill directories per host and author attribution, proves repeat-install idempotency, detects a modified capability, repairs it with a timestamped backup, and requires both final doctor reports to be ready. Successful runs clean up automatically. Failed runs retain the temporary home for diagnosis; pass `--cleanup-on-failure` to remove it or `--keep-temp` to retain a successful run.
+
 ## Use as an Agent Skill
 
 Point an Agent Skills-compatible client at [`router/SKILL.md`](router/SKILL.md). The entrypoint is intentionally small and loads one platform reference at a time. The host-wide rule template is [`rules/global-rule.md`](rules/global-rule.md), and agent-specific notes live in [`adapters/`](adapters/).
@@ -95,7 +111,7 @@ This independent project is not affiliated with or endorsed by any listed author
 npm run check
 ```
 
-The check covers behavior, registry integrity, license metadata, generated attribution, and a local privacy/secret scan. See [`SECURITY.md`](SECURITY.md) for disclosure guidance and [`CONTRIBUTING.md`](CONTRIBUTING.md) for registry requirements.
+The check covers behavior, registry integrity, license metadata, generated attribution, and a local privacy/secret scan. CI runs the same `npm run ready` gate documented above. See [`SECURITY.md`](SECURITY.md) for disclosure guidance and [`CONTRIBUTING.md`](CONTRIBUTING.md) for registry requirements.
 
 The current urgent, major, and minor findings, fixes, limits, and per-task bundle examples are in [`docs/audit-2026-09-05.md`](docs/audit-2026-09-05.md).
 

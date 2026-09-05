@@ -8,6 +8,9 @@
   "license": "MIT",
   "scripts": {
     "test": "node --test",
+    "test:e2e": "node scripts/e2e.mjs",
+    "test:e2e:quick": "node scripts/e2e.mjs --router-only",
+    "ready": "npm run check && npm run test:e2e",
     "route": "node scripts/cli.mjs route",
     "validate": "node scripts/validate-registry.mjs",
     "credits": "node scripts/generate-credits.mjs",

@@ -34,11 +34,12 @@ function main(){
   let workRoot;
   try {
     const options=parse(process.argv.slice(2));
+    const runId=new Date().toISOString().replace(/[:.]/g,'-');
     const userHome=resolve(options.home||homedir());
     const codexRoot=options.home?join(userHome,'.codex'):resolve(process.env.CODEX_HOME||join(userHome,'.codex'));
     const targets={
-      codex:{skillRoot:join(codexRoot,'skills'),rulePath:codexRulePath(codexRoot)},
-      antigravity:{skillRoot:join(userHome,'.gemini','config','skills'),rulePath:join(userHome,'.gemini','GEMINI.md')}
+      codex:{skillRoot:join(codexRoot,'skills'),rulePath:codexRulePath(codexRoot),backupRoot:join(codexRoot,'bundle-useful-skills-backups',runId)},
+      antigravity:{skillRoot:join(userHome,'.gemini','config','skills'),rulePath:join(userHome,'.gemini','GEMINI.md'),backupRoot:join(userHome,'.gemini','bundle-useful-skills-backups',runId)}
     };
     const selected=options.target==='all'?Object.entries(targets):[[options.target,targets[options.target]]];
     for(const [name,target] of selected) {
@@ -47,19 +48,19 @@ function main(){
       validateRuleFile(target.rulePath);
     }
     const upstream=options.routerOnly?[]:installableSkills();
-    for(const [,target] of selected) for(const skill of upstream) validateCapabilityDestination(join(target.skillRoot,invocationName(skill)),skill);
-    const missing=upstream.filter(skill=>selected.some(([,target])=>!existsSync(join(target.skillRoot,invocationName(skill)))));
+    for(const [,target] of selected) target.capabilityPlans=upstream.map(skill=>({skill,action:capabilityAction(target.skillRoot,skill,options)}));
+    const staged=upstream.filter(skill=>selected.some(([,target])=>['install','replace'].includes(target.capabilityPlans.find(plan=>plan.skill.id===skill.id).action)));
     if(options.dryRun) {
       for(const [name,target] of selected) {
         console.log(`${name}: ${target.routerAction} router at ${target.routerDestination}`);
         console.log(`${name}: would enforce global rule at ${target.rulePath}`);
-        if(!options.routerOnly) console.log(`${name}: would ensure ${upstream.length} pinned upstream skills (${upstream.filter(s=>!existsSync(join(target.skillRoot,invocationName(s)))).length} missing)`);
+        if(!options.routerOnly) console.log(`${name}: capability plan (${summarizePlan(target.capabilityPlans)})`);
       }
       return;
     }
-    if(missing.length) {
+    if(staged.length) {
       workRoot=mkdtempSync(join(tmpdir(),'bundle-useful-skills-'));
-      prepareCapabilities(missing,workRoot);
+      prepareCapabilities(staged,workRoot);
     }
     for(const [name,target] of selected) {
       if(target.routerAction==='keep') console.log(`${name}: router already current at ${target.routerDestination}`);
@@ -69,7 +70,7 @@ function main(){
       }
       upsertManagedRule(target.rulePath);
       console.log(`${name}: enforced global routing rule at ${target.rulePath}`);
-      if(!options.routerOnly) installCapabilities(name,target.skillRoot,upstream,workRoot);
+      if(!options.routerOnly) installCapabilities(name,target,workRoot);
     }
   } catch(error) {
     console.error(`skill-router installer: ${error.message}`);
@@ -80,11 +81,13 @@ function main(){
 }
 
 function parse(values){
-  const out={target:'all',home:null,dryRun:false,routerOnly:false,adoptLegacy:false};
+  const out={target:'all',home:null,dryRun:false,routerOnly:false,adoptLegacy:false,replaceExisting:false,allowExisting:false};
   for(let i=0;i<values.length;i++){
     if(values[i]==='--dry-run'){out.dryRun=true;continue}
     if(values[i]==='--router-only'){out.routerOnly=true;continue}
     if(values[i]==='--adopt-legacy'){out.adoptLegacy=true;continue}
+    if(values[i]==='--replace-existing'){out.replaceExisting=true;continue}
+    if(values[i]==='--allow-existing'){out.allowExisting=true;continue}
     if(values[i]==='--target'||values[i]==='--home'){
       const key=values[i].slice(2).replace('-','');
       const value=values[++i];
@@ -105,6 +108,7 @@ function codexRulePath(codexRoot){
 function routerAction(name,destination,adoptLegacy){
   if(!existsSync(destination)) return 'install';
   if(isCurrent(destination)) return 'keep';
+  if(matchesPayload(destination)) return 'upgrade';
   if(isManagedClean(destination)) return 'upgrade';
   if(adoptLegacy&&looksLikeLegacyRouter(destination)) return 'upgrade';
   throw new Error(`refusing to overwrite a different or modified existing ${name} skill at ${destination}${looksLikeLegacyRouter(destination)?'; rerun with --adopt-legacy after reviewing it':''}`);
@@ -112,6 +116,16 @@ function routerAction(name,destination,adoptLegacy){
 
 function isCurrent(destination){
   if(!existsSync(destination)) return false;
+  if(!matchesPayload(destination)) return false;
+  const manifestPath=join(destination,manifestName);
+  if(!existsSync(manifestPath)||!isManagedClean(destination)) return false;
+  try {
+    const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+    return manifest.version===packageInfo.version;
+  } catch { return false; }
+}
+
+function matchesPayload(destination){
   return payload.every(([source,relativeDestination])=>same(join(projectRoot,source),join(destination,relativeDestination)));
 }
 
@@ -126,9 +140,7 @@ function isManagedClean(destination){
   try {
     const manifest=JSON.parse(readFileSync(path,'utf8'));
     if(manifest.package!=='bundle-useful-skills'||!Array.isArray(manifest.files)) return false;
-    const actual=listFiles(destination).filter(p=>p!==manifestName);
-    if(actual.length!==manifest.files.length) return false;
-    return manifest.files.every(file=>actual.includes(file.path)&&hashFile(join(destination,file.path))===file.sha256);
+    return verifyFiles(destination,manifest.files,manifestName);
   } catch { return false; }
 }
 
@@ -197,42 +209,109 @@ function stageCapability(skill,checkout,workRoot){
   const sourceUrl=`${skill.source.repository}/tree/${skill.source.commit}/${sourceDirectory(skill.source.path)}`;
   const attribution=[`# ${skill.name}`,'',`Installed by Bundle Useful Skills. Thank you to **${skill.author}** for the original work.`,'',`- Original source: ${sourceUrl}`,`- Reviewed commit: \`${skill.source.commit}\``,`- License: ${skill.license}`,'','The upstream files remain under their original license. This attribution file was added by the bundle installer.',''].join('\n');
   writeFileSync(join(destination,'BUNDLE_README.md'),attribution);
-  writeFileSync(join(destination,sourceManifestName),JSON.stringify({id:skill.id,invocation:invocationName(skill),author:skill.author,repository:skill.source.repository,commit:skill.source.commit,path:skill.source.path,license:skill.license,upstreamVersion},null,2)+'\n');
   for(const [evidence,label] of [[skill.licenseEvidence,'BUNDLE_UPSTREAM_LICENSE'],[skill.notice,'BUNDLE_UPSTREAM_NOTICE']]) {
     if(!isRepositoryPath(evidence)) continue;
     const source=join(checkout,...evidence.split('/'));
     if(existsSync(source)&&statSync(source).isFile()) copyFileSync(source,join(destination,`${label}${extensionFor(evidence)}`));
   }
+  const files=listFiles(destination).map(path=>({path,sha256:hashFile(join(destination,path))}));
+  writeFileSync(join(destination,sourceManifestName),JSON.stringify({id:skill.id,invocation:invocationName(skill),author:skill.author,repository:skill.source.repository,commit:skill.source.commit,path:skill.source.path,license:skill.license,upstreamVersion,files},null,2)+'\n');
 }
 
-function installCapabilities(name,skillRoot,skills,workRoot){
-  let installed=0,kept=0;
-  for(const skill of skills){
-    const destination=join(skillRoot,invocationName(skill));
-    if(existsSync(destination)) {
-      kept++; continue;
+function installCapabilities(name,target,workRoot){
+  const counts={install:0,replace:0,adopt:0,keep:0};
+  for(const {skill,action} of target.capabilityPlans){
+    const destination=join(target.skillRoot,invocationName(skill));
+    if(action==='keep'){counts.keep++;continue}
+    if(action==='adopt'){
+      adoptCapabilityManifest(destination);
+      counts.adopt++;
+      continue;
     }
     const staged=join(workRoot,'capabilities',invocationName(skill));
     if(!existsSync(staged)) throw new Error(`staged capability missing for ${skill.id}`);
-    mkdirSync(skillRoot,{recursive:true});
-    const temp=join(skillRoot,`.bundle-capability-${invocationName(skill)}-${Date.now()}`);
-    try { cpSync(staged,temp,{recursive:true}); renameSync(temp,destination); }
-    catch(error) { if(existsSync(temp)) safeRemove(temp,skillRoot); throw error; }
-    installed++;
+    mkdirSync(target.skillRoot,{recursive:true});
+    if(action==='replace') replaceCapability(staged,destination,target.backupRoot);
+    else installCapability(staged,destination,target.skillRoot);
+    counts[action]++;
   }
-  console.log(`${name}: capability inventory ready (${installed} installed, ${kept} already present, ${skills.length} total)`);
+  console.log(`${name}: capability inventory ready (${counts.install} installed, ${counts.replace} replaced, ${counts.adopt} adopted, ${counts.keep} current)`);
 }
 
-function validateCapabilityDestination(destination,skill){
-  if(!existsSync(destination)) return;
+function capabilityAction(skillRoot,skill,options){
+  const destination=join(skillRoot,invocationName(skill));
+  if(!existsSync(destination)) return 'install';
   const skillFile=join(destination,'SKILL.md');
   if(!existsSync(skillFile)||frontmatterName(readFileSync(skillFile,'utf8'))!==invocationName(skill)) throw new Error(`existing skill collision at ${destination}`);
+  const manifestPath=join(destination,sourceManifestName);
+  if(!existsSync(manifestPath)) return existingAction(destination,options);
+  try {
+    const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+    if(manifest.commit===skill.source.commit&&Array.isArray(manifest.files)&&verifyFiles(destination,manifest.files)) return 'keep';
+    if(manifest.commit===skill.source.commit&&!Array.isArray(manifest.files)&&options.adoptLegacy) return 'adopt';
+    if(options.replaceExisting) return 'replace';
+    throw new Error(`managed capability is stale, modified, or unverified at ${destination}; use --replace-existing, or --adopt-legacy for a reviewed legacy manifest`);
+  } catch(error) {
+    if(options.replaceExisting) return 'replace';
+    if(error instanceof SyntaxError) throw new Error(`invalid capability manifest at ${destination}; use --replace-existing after review`);
+    throw error;
+  }
+}
+
+function existingAction(destination,options){
+  if(options.replaceExisting) return 'replace';
+  if(options.allowExisting) return 'keep';
+  throw new Error(`unverified existing skill at ${destination}; use --replace-existing to back it up and install the reviewed copy, or --allow-existing to preserve it`);
+}
+
+function summarizePlan(plans){
+  const counts=Object.fromEntries(['install','replace','adopt','keep'].map(action=>[action,plans.filter(plan=>plan.action===action).length]));
+  return `${counts.install} install, ${counts.replace} replace, ${counts.adopt} adopt, ${counts.keep} keep`;
+}
+
+function installCapability(staged,destination,skillRoot){
+  const temp=join(skillRoot,`.bundle-capability-${basename(destination)}-${Date.now()}`);
+  try { cpSync(staged,temp,{recursive:true}); renameSync(temp,destination); }
+  catch(error) { if(existsSync(temp)) safeRemove(temp,skillRoot); throw error; }
+}
+
+function replaceCapability(staged,destination,backupRoot){
+  mkdirSync(backupRoot,{recursive:true});
+  const backup=join(backupRoot,basename(destination));
+  if(existsSync(backup)) throw new Error(`backup collision at ${backup}`);
+  renameSync(destination,backup);
+  try { installCapability(staged,destination,dirname(destination)); }
+  catch(error) { if(existsSync(destination)) safeRemove(destination,dirname(destination)); renameSync(backup,destination); throw error; }
+  console.log(`backed up replaced skill to ${backup}`);
+}
+
+function adoptCapabilityManifest(destination){
+  const manifestPath=join(destination,sourceManifestName);
+  const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+  manifest.files=listFiles(destination).filter(path=>path!==sourceManifestName).map(path=>({path,sha256:hashFile(join(destination,path))}));
+  const temp=`${manifestPath}.tmp`;
+  writeFileSync(temp,JSON.stringify(manifest,null,2)+'\n');
+  renameSync(temp,manifestPath);
+}
+
+function verifyFiles(root,files,excludedName=sourceManifestName){
+  if(!files.length) return false;
+  const actual=listFiles(root).filter(path=>path!==excludedName);
+  const expected=files.map(file=>file?.path).sort();
+  if(actual.length!==expected.length||actual.some((path,index)=>path!==expected[index])) return false;
+  return files.every(file=>{
+    if(!file||typeof file.path!=='string'||typeof file.sha256!=='string') return false;
+    const path=resolve(root,file.path),rel=relative(resolve(root),path);
+    return rel&&!rel.startsWith('..')&&!rel.includes(':')&&existsSync(path)&&hashFile(path)===file.sha256;
+  });
 }
 
 function validateRuleFile(path){
   if(!existsSync(path)) return;
   const body=readFileSync(path,'utf8');
-  if(body.includes(markerStart)!==body.includes(markerEnd)) throw new Error(`incomplete managed rule markers in ${path}`);
+  const starts=occurrences(body,markerStart),ends=occurrences(body,markerEnd);
+  if(starts!==ends) throw new Error(`incomplete managed rule markers in ${path}`);
+  if(starts>1) throw new Error(`duplicate managed rule markers in ${path}`);
 }
 
 function upsertManagedRule(path){
@@ -262,6 +341,7 @@ function runGit(args){
 }
 
 function sourceDirectory(path){return path.replace(/\/SKILL\.md$/,'')}
+function occurrences(body,needle){return body.split(needle).length-1}
 function frontmatterName(body){return body.match(/^name:\s*["']?([^\r\n"']+)/m)?.[1]?.trim()}
 function invocationName(skill){return skill.invocation??invocations[skill.id]}
 function normalizeFrontmatter(body){

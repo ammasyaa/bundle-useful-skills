@@ -109,6 +109,9 @@ export function formatRouteReport(result) {
     ...result.warnings.map(w=>`Warning: ${w}`)
   ].join('\n');
 }
+export function formatTriageReport() {
+  return 'Skill bundle: development-skill-router (triage only; no development capability applies)';
+}
 // Detection suggests a lane; it never writes configuration or resolves ambiguous targets.
 export function detect(files) {
   const names=Object.keys(files);

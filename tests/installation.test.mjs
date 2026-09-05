@@ -57,3 +57,50 @@ test('global installer preserves existing host rules and updates its managed blo
     assert.equal(body.match(/bundle-useful-skills:end/g)?.length,1);
   }
 });
+
+test('global installer can plan replacement of a valid pre-existing capability', () => {
+  const home=mkdtempSync(join(tmpdir(),'skill-router-replace-'));
+  const existing=join(home,'.codex','skills','test-driven-development');
+  mkdirSync(existing,{recursive:true});
+  writeFileSync(join(existing,'SKILL.md'),'---\nname: test-driven-development\ndescription: Existing fixture\n---\n');
+  const result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--dry-run','--replace-existing'],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+  assert.match(result.stdout,/47 install, 1 replace, 0 adopt, 0 keep/);
+});
+
+test('global installer rejects duplicate managed rule markers', () => {
+  const home=mkdtempSync(join(tmpdir(),'skill-router-duplicate-rule-'));
+  mkdirSync(join(home,'.codex'),{recursive:true});
+  writeFileSync(join(home,'.codex','AGENTS.md'),'<!-- bundle-useful-skills:begin -->\none\n<!-- bundle-useful-skills:end -->\n<!-- bundle-useful-skills:begin -->\ntwo\n<!-- bundle-useful-skills:end -->\n');
+  const result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
+  assert.notEqual(result.status,0);
+  assert.match(result.stderr,/duplicate managed rule markers/i);
+});
+
+test('global installer refreshes a stale router manifest version', () => {
+  const home=mkdtempSync(join(tmpdir(),'skill-router-stale-version-'));
+  let result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+  const manifestPath=join(home,'.codex','skills','development-skill-router','.bundle-useful-skills-install.json');
+  const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+  manifest.version='0.0.0';
+  writeFileSync(manifestPath,JSON.stringify(manifest,null,2));
+  result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+  assert.match(result.stdout,/upgraded router/);
+  const expected=JSON.parse(readFileSync(join(process.cwd(),'package.json'),'utf8')).version;
+  assert.equal(JSON.parse(readFileSync(manifestPath,'utf8')).version,expected);
+});
+
+test('global installer refreshes an incomplete router manifest inventory', () => {
+  const home=mkdtempSync(join(tmpdir(),'skill-router-bad-inventory-'));
+  let result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+  const manifestPath=join(home,'.codex','skills','development-skill-router','.bundle-useful-skills-install.json');
+  const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+  manifest.files=manifest.files.map(()=>manifest.files[0]);
+  writeFileSync(manifestPath,JSON.stringify(manifest,null,2));
+  result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
+  assert.equal(result.status,0,result.stderr);
+  assert.match(result.stdout,/upgraded router/);
+});

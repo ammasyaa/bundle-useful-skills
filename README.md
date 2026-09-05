@@ -29,6 +29,12 @@ The first line is the bundle disclosure agents must show before work, followed b
 node scripts/cli.mjs report --platform mobile --framework flutter --target ios --task bug --scope database --database postgres
 ```
 
+For work outside website, desktop, or mobile development, emit the exact deterministic triage disclosure with:
+
+```bash
+node scripts/cli.mjs triage
+```
+
 For a Tauri app with a React renderer:
 
 ```bash
@@ -52,7 +58,14 @@ node scripts/install-global.mjs --target codex
 node scripts/install-global.mjs --target antigravity
 ```
 
-Use `--router-only` when you want the router and global rule without downloading upstream skills. Run `npm run doctor` to verify both hosts. The installer is idempotent, records a content manifest for safe upgrades, and refuses to overwrite a different or locally modified router. An installation created before manifests were added requires `--adopt-legacy` once after you review it.
+Use `--router-only` when you want the router and global rule without downloading upstream skills. Run `npm run doctor` to verify both hosts. The doctor returns one JSON array, checks the router version and hashes, checks the exact managed rule, and verifies every managed capability file name and SHA-256 hash.
+
+The installer is strict and idempotent. It refuses an unverified same-name capability by default. After reviewing the plan with `--dry-run`, use `--replace-existing` to move each old copy into a timestamped backup directory and install the reviewed pinned copy. Use `--allow-existing` only when you intentionally accept a non-ready doctor result. An installation created by an older bundle release requires `--adopt-legacy` once after review so the installer can record its file hashes.
+
+```bash
+node scripts/install-global.mjs --target all --dry-run --replace-existing --adopt-legacy
+node scripts/install-global.mjs --target all --replace-existing --adopt-legacy
+```
 
 Start a new Codex or Antigravity session after installation so the host reloads global instructions. Skills remain available globally, while the rule requires the router to disclose and load only the small bundle relevant to the current phase.
 

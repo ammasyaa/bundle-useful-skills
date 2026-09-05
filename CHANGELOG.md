@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 - 2026-09-05
+
+- Add safe conversion of same-name existing capabilities to reviewed pinned copies, with timestamped backups and an explicit preserve option.
+- Add SHA-256 file inventories to capability manifests and verify exact file sets in the installer and doctor.
+- Make the doctor return one JSON document, require exact global-rule content, and fail readiness for unverified capabilities.
+- Reject duplicate managed-rule blocks before installation.
+- Add a deterministic `triage` command for non-development tasks.
+
 ## 0.2.0 - 2026-09-05
 
 - Enforce router consultation and bundle disclosure through preserved global Codex and Antigravity rules.

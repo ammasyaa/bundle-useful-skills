@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { route, validateSelection, detect } from '../src/router.mjs';
+import { route, validateSelection, detect, formatTriageReport } from '../src/router.mjs';
 
 const request = (extra = {}) => {
   const value={platform:'mobile',framework:'flutter',target:'ios',task:'implementation',...extra};
@@ -113,4 +113,7 @@ test('Detection distinguishes desktop shells from websites and refuses ambiguous
   assert.equal(detect({'package.json':JSON.stringify({dependencies:{react:'1','@tauri-apps/api':'2'}}),'src-tauri/Cargo.toml':''}).platform,'desktop');
   assert.equal(detect({'pubspec.yaml':'dependencies:\n  flutter:\n    sdk: flutter','windows/CMakeLists.txt':''}).platform,'desktop');
   assert.equal(detect({'pubspec.yaml':'dependencies:\n  flutter:\n    sdk: flutter','windows/CMakeLists.txt':'','android/build.gradle':''}).needsInput,true);
+});
+test('Non-application work has a deterministic triage disclosure', () => {
+  assert.equal(formatTriageReport(),'Skill bundle: development-skill-router (triage only; no development capability applies)');
 });

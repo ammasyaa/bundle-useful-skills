@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { registry, profiles, rules, invocations } from '../src/router.mjs';
+import { validateActivationBudget } from '../src/compatibility.mjs';
 const required=['id','name','author','source','license','licenseEvidence','platforms','phases','authority','conflicts','trust','installMode'];
 const ids=new Set();
 for(const s of registry) {
@@ -16,6 +17,7 @@ for(const id of Object.keys(invocations)) if(!registry.some(s=>s.id===id && s.in
 for(const p of profiles) if(!ids.has(p.authority)) throw new Error(`Profile ${p.platform}/${p.framework} has unknown authority`);
 if(new Set(profiles.map(p=>`${p.platform}/${p.framework}`)).size!==profiles.length) throw new Error('Duplicate profile');
 if(rules.authorityOrder.at(-1)!=='filter') throw new Error('Filter must remain the lowest registered authority');
+validateActivationBudget(rules.activationBudget);
 JSON.parse(readFileSync('registry/skills.json','utf8'));
 const dependencies=JSON.parse(readFileSync('registry/dependencies.json','utf8'));
 for(const [parent,names] of Object.entries(dependencies.groups)) {

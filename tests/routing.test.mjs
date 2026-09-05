@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { route, validateSelection, detect, formatTriageReport } from '../src/router.mjs';
+import { route, validateSelection, detect, formatTriageReport, profiles, rules } from '../src/router.mjs';
 
 const request = (extra = {}) => {
   const value={platform:'mobile',framework:'flutter',target:'ios',task:'implementation',...extra};
@@ -55,6 +55,25 @@ for (const risk of ['auth','authorization','payment','location','pii','identity'
 test('Risk in task text activates security', () => {
   assert.ok(route(request({description:'Fix payment confirmation'})).active.includes('security-gate'));
 });
+for (const description of ['OAuth provider','OpenID Connect','SSO','MFA','passkeys','API keys','RBAC permissions','session cookies','user credentials','biometric sign-in']) {
+  test(`${description} requires security`,()=>{
+    const result=route(request({platform:'website',framework:'next',description}));
+    assert.ok(result.active.includes('security-gate'));
+  });
+}
+for (const description of ['token budget','location of a source file','admin dashboard color']) {
+  test(`${description} alone is not a sensitive operation`,()=>{
+    const result=route(request({platform:'website',framework:'next',description}));
+    assert.ok(!result.active.includes('security-gate'));
+  });
+}
+test('security classifications are reported as normalized categories',()=>{
+  const result=route(request({risks:['OAuth','api-keys','RBAC']}));
+  assert.deepEqual(result.securityCategories,['authentication','authorization','secrets']);
+});
+test('unknown explicit risk categories fail closed',()=>{
+  assert.throws(()=>route(request({risks:['something-sensitive']})),/unknown risk category/i);
+});
 test('Native product UI rejects website creative direction', () => {
   assert.throws(() => route(request({enable:['taste-frontend']})),/incompatible|website/i);
 });
@@ -63,6 +82,18 @@ test('Only one creative director', () => {
 });
 test('Only one framework authority', () => {
   assert.throws(() => validateSelection(['flutter-architecture','react-native'],request()),/framework|incompatible/i);
+});
+for(const profile of profiles) {
+  test(`${profile.platform}/${profile.framework} cannot disable its required implementation authority`,()=>{
+    const input={platform:profile.platform,framework:profile.framework,task:'implementation'};
+    if(profile.targets?.length) input.target=profile.targets[0];
+    assert.throws(()=>route({...input,disable:[profile.authority]}),/required framework authority/i);
+  });
+}
+test('target-scoped skills require an explicit matching target',()=>{
+  assert.throws(()=>route({platform:'mobile',framework:'expo',task:'implementation',enable:['mobile-ios-design']}),/incompatible/i);
+  assert.throws(()=>route({platform:'mobile',framework:'expo',target:'android',task:'implementation',enable:['mobile-ios-design']}),/incompatible/i);
+  assert.ok(route({platform:'mobile',framework:'expo',target:'ios',task:'implementation',enable:['mobile-ios-design']}).active.includes('mobile-ios-design'));
 });
 test('Filter is below project design authority', () => {
   const r = route(request({task:'filter'}));
@@ -108,6 +139,12 @@ test('Above seven active skills needs a justification', () => {
   const opts=request({platform:'website',framework:'react',task:'design',enable:['brainstorming','writing-plans','test-driven-development','systematic-debugging','verification-before-completion','requesting-code-review','impeccable','emil-design-eng']});
   assert.throws(() => route(opts),/justification/i);
   assert.ok(route({...opts,justification:'Separate expertise needed for explicit review request'}).warnings.length);
+});
+test('activation warning and justification thresholds come from compatibility rules',()=>{
+  assert.equal(rules.activationBudget.warnAbove,5);
+  assert.equal(rules.activationBudget.justifyAbove,7);
+  const six=request({platform:'website',framework:'react',task:'design',enable:['brainstorming','writing-plans','test-driven-development','systematic-debugging','verification-before-completion']});
+  assert.match(route(six).warnings.join('\n'),new RegExp(`Above ${rules.activationBudget.warnAbove}`));
 });
 test('Detection distinguishes desktop shells from websites and refuses ambiguous Flutter target', () => {
   assert.equal(detect({'package.json':JSON.stringify({dependencies:{react:'1','@tauri-apps/api':'2'}}),'src-tauri/Cargo.toml':''}).platform,'desktop');

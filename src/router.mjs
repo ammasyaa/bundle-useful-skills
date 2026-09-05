@@ -1,12 +1,14 @@
 import { readFileSync } from 'node:fs';
+import { classifySecuritySignals } from './security-signals.mjs';
+import { validateActivationBudget } from './compatibility.mjs';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 export const registry = read('../registry/skills.json');
 export const profiles = read('../profiles/index.json');
 export const rules = read('../registry/compatibility.json');
 export const invocations = read('../registry/invocations.json').skills;
+const activationBudget=validateActivationBudget(rules.activationBudget);
 const tasks = ['brainstorm','plan','implementation','architecture','design','polish','motion','research','visual-reference','filter','bug','database','api','security','performance','refactor','testing','review','verify','release'];
 const uiTasks = ['design','polish','motion','research','visual-reference','filter'];
-const riskPattern = /\b(auth(?:entication|orization)?|payments?|pii|location|identity|secrets?|tokens?|uploads?|webhooks?|database permissions|admin|account recovery|password|login)\b/i;
 
 function compatible(s,c) {
   if (!s.platforms.includes(c.platform)) return false;
@@ -14,7 +16,7 @@ function compatible(s,c) {
     if (!(s.renderer === 'react' && c.platform === 'desktop' && ['tauri','electron'].includes(c.framework) && c.renderer === 'react')) return false;
   }
   if (s.database && s.database !== c.database) return false;
-  if (s.targets?.length && c.target && !s.targets.includes(c.target)) return false;
+  if (s.targets?.length && (!c.target || !s.targets.includes(c.target))) return false;
   return true;
 }
 export function validateSelection(ids,ctx,catalog=registry) {
@@ -48,10 +50,12 @@ export function route(options={},extensions=[]) {
   const chosen=new Map();
   const add=(id,why)=>chosen.set(id,why);
   const backendOnly=['database','api','backend'].includes(ctx.scope) || ['database','api'].includes(ctx.task);
-  const sensitive=ctx.risks.length>0 || riskPattern.test(ctx.description??'') || ctx.task==='security';
+  const authorityRequired=!backendOnly && !uiTasks.includes(ctx.task) && !['brainstorm','plan','security'].includes(ctx.task);
+  const security=classifySecuritySignals(ctx);
+  const sensitive=security.sensitive;
   const process={brainstorm:'brainstorming',plan:'writing-plans',bug:'systematic-debugging',implementation:'test-driven-development',refactor:'test-driven-development',testing:'test-driven-development',review:'requesting-code-review',verify:'verification-before-completion',release:'verification-before-completion'}[ctx.task];
   if(process) add(process,`Process for ${ctx.task}`);
-  if(!backendOnly && !uiTasks.includes(ctx.task) && !['brainstorm','plan','security'].includes(ctx.task)) {
+  if(authorityRequired) {
     add(profile.authority,'Selected framework authority');
     if(profile.authority==='flutter-architecture') add('dart-static-analysis','Dart language analysis for Flutter code');
   }
@@ -76,6 +80,7 @@ export function route(options={},extensions=[]) {
   for(const id of ctx.enable) add(id,'Explicitly enabled');
   for(const id of ctx.disable) {
     if(!catalog.some(s=>s.id===id)) throw new Error(`Unknown disabled skill: ${id}`);
+    if(authorityRequired && id===profile.authority) throw new Error(`Cannot disable required framework authority: ${id}`);
     if(sensitive && id==='security-gate') throw new Error('Cannot disable mandatory security gate');
     if(ctx.task==='release' && ['release-gate','verification-before-completion'].includes(id)) throw new Error('Cannot disable release verification');
     chosen.delete(id);
@@ -83,8 +88,9 @@ export function route(options={},extensions=[]) {
   const active=[...chosen.keys()];
   const selected=validateSelection(active,ctx,catalog);
   const warnings=[];
-  if(active.length>5) warnings.push('Above five active capabilities; consider sequential passes.');
-  if(active.length>7 && !(typeof ctx.justification==='string' && ctx.justification.trim())) throw new Error('Above seven active capabilities requires a justification');
+  if(active.length<activationBudget.targetMin) warnings.push(`Below target minimum of ${activationBudget.targetMin} active capabilities; confirm the route has sufficient coverage.`);
+  if(active.length>activationBudget.warnAbove) warnings.push(`Above ${activationBudget.warnAbove} active capabilities; consider sequential passes.`);
+  if(active.length>activationBudget.justifyAbove && !(typeof ctx.justification==='string' && ctx.justification.trim())) throw new Error(`Above ${activationBudget.justifyAbove} active capabilities requires a justification`);
   if(backendOnly && !ctx.database && ctx.task!=='api') warnings.push('No data specialist selected: identify the actual backend before implementation.');
   const references=[`references/${ctx.platform}.md`];
   if(sensitive) references.push('references/security.md');
@@ -92,7 +98,7 @@ export function route(options={},extensions=[]) {
   if(ctx.task==='release') references.push('references/release.md');
   const selections=selected.map(s=>({id:s.id,invocation:invocations[s.id]??s.id,reason:chosen.get(s.id),authority:s.renderer && ctx.platform==='desktop'?'renderer':s.authority,source:s.source,installMode:s.installMode}));
   const reportLine=`Skill bundle: development-skill-router -> ${selections.map(s=>s.invocation).join(', ') || '(router only)'}`;
-  return {schemaVersion:2,platform:ctx.platform,framework:ctx.framework,task:ctx.task,frameworkAuthority:profile.authority,active,
+  return {schemaVersion:2,platform:ctx.platform,framework:ctx.framework,task:ctx.task,profileAuthority:profile.authority,frameworkAuthority:active.includes(profile.authority)?profile.authority:null,securityCategories:security.categories,active,
     selections,
     references,authorityOrder:rules.authorityOrder,warnings,justification:ctx.justification??null,
     available:ctx.mode==='full'?catalog.filter(s=>compatible(s,ctx)).map(s=>s.id):active,

@@ -1,0 +1,3 @@
+# Content routing
+
+Use this lane for producing the artefact itself: articles and long-form writing, formatted documents and decks, video, and social assets. Strategy decides what to make and belongs in the marketing lane; this lane makes it well. Bind to the brand tokens and voice rather than restating them. Choose the document skill by output format, and prefer a structured source that renders to the format over hand-built markup. Localized deliverables ship as slot-keyed data per locale, not as parallel prose documents. Claims inherited from a brief still carry their sources; content production is not where substantiation gets dropped. Route regulated or audience-facing output through the compliance gate before delivery.

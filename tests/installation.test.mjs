@@ -16,7 +16,7 @@ test('global installer creates self-contained Codex and Antigravity skills', () 
     join(home,'.gemini','config','skills','development-skill-router')
   ];
   for(const dest of destinations) {
-    for(const file of ['SKILL.md','references/mobile.md','scripts/cli.mjs','src/router.mjs','registry/skills.json','profiles/index.json','LICENSE']) {
+    for(const file of ['SKILL.md','references/mobile.md','references/marketing.md','references/compliance.md','scripts/cli.mjs','src/router.mjs','registry/skills.json','registry/domains.json','profiles/index.json','skills/brand-bible/SKILL.md','LICENSE']) {
       assert.ok(existsSync(join(dest,file)),`${file} missing from ${dest}`);
     }
     assert.ok(existsSync(join(dest,'.bundle-useful-skills-install.json')));

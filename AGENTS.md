@@ -11,3 +11,7 @@ Keep the router agent-neutral, small, and dependency-free unless a dependency ha
 - Regenerate credits after registry changes.
 - Run `npm run check` before reporting completion.
 - Do not commit research scratchpads, conversation history, local paths, credentials, caches, or generated secrets.
+- Keep non-engineering routing as data in `registry/domains.json`; do not add per-domain branches to `src/router.mjs`.
+- Every lane named in a domain rule must resolve to a compatible, registered skill; `tests/domains.test.mjs` enforces this.
+- Security and compliance gates are non-optional once triggered. Do not add a path that disables either.
+- Generalize before publishing: no client names, account identifiers, site identifiers, pixel identifiers, or tokens in bundled skills.

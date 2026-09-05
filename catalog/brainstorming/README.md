@@ -1,6 +1,6 @@
 # Brainstorming
 
-Thank you to **Jesse Vincent / obra** for creating and maintaining this work. Bundle Useful Skills references it for brainstorm tasks on website, desktop, mobile projects.
+Thank you to **Jesse Vincent / obra** for creating and maintaining this work. Bundle Useful Skills references it for brainstorm tasks on website, desktop, mobile, automation, venture projects.
 
 - [Original source](https://github.com/obra/superpowers/blob/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/brainstorming/SKILL.md)
 - License/reference status: MIT

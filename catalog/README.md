@@ -2,34 +2,104 @@
 
 Each directory contains a short attribution card for one external capability. These files are generated from `registry/skills.json`; third-party instructions remain at their original sources.
 
+- [Ab Testing](ab-testing/README.md) — Corey Haines
+- [Ad Creative](ad-creative/README.md) — Corey Haines
+- [Ads](paid-ads/README.md) — Corey Haines
+- [Ai Seo](ai-seo/README.md) — Corey Haines
+- [Algorithmic Art](algorithmic-art/README.md) — Anthropic
+- [Analytics](marketing-analytics/README.md) — Corey Haines
 - [Android Developer Documentation](android-docs/README.md) — Google
 - [Android Mobile Design](mobile-android-design/README.md) — wshobson
 - [Anthropic Frontend Design](anthropic-frontend/README.md) — Anthropic
 - [Anti-Slop](antislop/README.md) — Miqdad Badjuber
 - [Apple Developer Documentation and HIG](apple-docs/README.md) — Apple Inc.
+- [Aso](app-store-optimization/README.md) — Corey Haines
+- [Attribution](marketing-attribution/README.md) — Corey Haines
 - [Brainstorming](brainstorming/README.md) — Jesse Vincent / obra
+- [Brand Guidelines](brand-guidelines/README.md) — Anthropic
+- [Canvas Design](canvas-design/README.md) — Anthropic
+- [Churn Prevention](churn-prevention/README.md) — Corey Haines
+- [Claude Api](claude-api/README.md) — Anthropic
+- [Co Marketing](co-marketing/README.md) — Corey Haines
+- [Cold Email](cold-email/README.md) — Corey Haines
+- [Community Marketing](community-marketing/README.md) — Corey Haines
+- [Competitor Profiling](competitor-profiling/README.md) — Corey Haines
+- [Competitors](competitor-pages/README.md) — Corey Haines
+- [Content Strategy](content-strategy/README.md) — Corey Haines
+- [Copy Editing](copy-editing/README.md) — Corey Haines
+- [Copywriting](copywriting/README.md) — Corey Haines
+- [Cro](conversion-optimization/README.md) — Corey Haines
+- [Customer Research](customer-research/README.md) — Corey Haines
 - [Dart Static Analysis](dart-static-analysis/README.md) — The Dart Authors
+- [Directory Submissions](directory-submissions/README.md) — Corey Haines
+- [Dispatching Parallel Agents](dispatching-parallel-agents/README.md) — Jesse Vincent / obra
+- [Doc Coauthoring](doc-coauthoring/README.md) — Anthropic
+- [Docx](docx-documents/README.md) — Anthropic
 - [Electron Documentation](electron-docs/README.md) — OpenJS Foundation and Electron contributors
+- [Emails](email-marketing/README.md) — Corey Haines
 - [Emil Design Engineering](emil-design-eng/README.md) — Emil Kowalski
+- [Events](event-marketing/README.md) — Corey Haines
+- [Executing Plans](executing-plans/README.md) — Jesse Vincent / obra
 - [Expo Native UI](expo-ui/README.md) — Expo
 - [Expo Overview](expo-overview/README.md) — Expo
 - [Firebase Basics](firebase-basics/README.md) — Google Firebase
 - [Flutter Architecture Best Practices](flutter-architecture/README.md) — The Flutter Authors
+- [Free Tools](free-tools/README.md) — Corey Haines
+- [Image](marketing-image/README.md) — Corey Haines
 - [Impeccable](impeccable/README.md) — Paul Bakaus
+- [Influencer Marketing](influencer-marketing/README.md) — Corey Haines
+- [Internal Comms](internal-comms/README.md) — Anthropic
 - [iOS Mobile Design](mobile-ios-design/README.md) — wshobson
+- [Launch](product-launch/README.md) — Corey Haines
+- [Lead Magnets](lead-magnets/README.md) — Corey Haines
+- [Marketing Council](marketing-council/README.md) — Corey Haines
+- [Marketing Ideas](marketing-ideas/README.md) — Corey Haines
+- [Marketing Loops](marketing-loops/README.md) — Corey Haines
+- [Marketing Plan](marketing-plan/README.md) — Corey Haines
+- [Marketing Psychology](marketing-psychology/README.md) — Corey Haines
+- [Mcp Builder](mcp-builder/README.md) — Anthropic
 - [MDN Web Docs](web-platform-docs/README.md) — Mozilla and contributors
+- [Offers](offer-design/README.md) — Corey Haines
+- [Onboarding](onboarding-activation/README.md) — Corey Haines
+- [Paywalls](paywall-conversion/README.md) — Corey Haines
+- [Pdf](pdf-documents/README.md) — Anthropic
+- [Popups](popup-conversion/README.md) — Corey Haines
+- [Pptx](pptx-presentations/README.md) — Anthropic
+- [Pricing](pricing-strategy/README.md) — Corey Haines
+- [Product Marketing](product-marketing/README.md) — Corey Haines
+- [Programmatic Seo](programmatic-seo/README.md) — Corey Haines
+- [Prospecting](prospecting/README.md) — Corey Haines
+- [Public Relations](public-relations/README.md) — Corey Haines
+- [Referrals](referral-program/README.md) — Corey Haines
 - [Requesting Code Review](requesting-code-review/README.md) — Jesse Vincent / obra
+- [Revops](revops/README.md) — Corey Haines
+- [Sales Enablement](sales-enablement/README.md) — Corey Haines
+- [Schema](schema-markup/README.md) — Corey Haines
+- [Seo Audit](seo-audit/README.md) — Corey Haines
+- [Signup](signup-conversion/README.md) — Corey Haines
+- [Site Architecture](site-architecture/README.md) — Corey Haines
+- [Skill Creator](skill-creator/README.md) — Anthropic
+- [Slack Gif Creator](slack-gif-creator/README.md) — Anthropic
+- [Sms](sms-marketing/README.md) — Corey Haines
+- [Social](social-marketing/README.md) — Corey Haines
+- [Subagent Driven Development](subagent-driven-development/README.md) — Jesse Vincent / obra
 - [Supabase Postgres Best Practices](postgres-best-practices/README.md) — Supabase
 - [Systematic Debugging](systematic-debugging/README.md) — Jesse Vincent / obra
 - [Taste Frontend](taste-frontend/README.md) — Leon Zhang
 - [Taste Mobile Image Generation](taste-mobile-imagegen/README.md) — Leon Zhang
 - [Tauri Documentation](tauri-docs/README.md) — Tauri Programme within The Commons Conservancy
 - [Test Driven Development](test-driven-development/README.md) — Jesse Vincent / obra
+- [Theme Factory](theme-factory/README.md) — Anthropic
 - [UI UX Pro Max](ui-ux-pro-max/README.md) — nextlevelbuilder
 - [Vercel Composition Patterns](react-composition-patterns/README.md) — Vercel
 - [Vercel React Best Practices](react-best-practices/README.md) — Vercel
 - [Vercel React Native Skills](react-native/README.md) — Vercel
 - [Vercel Web Design Guidelines](web-design-guidelines/README.md) — Vercel
 - [Verification Before Completion](verification-before-completion/README.md) — Jesse Vincent / obra
+- [Video](video-marketing/README.md) — Corey Haines
+- [Web Artifacts Builder](web-artifacts-builder/README.md) — Anthropic
+- [Webapp Testing](webapp-testing/README.md) — Anthropic
 - [WinUI Development Workflow](winui-workflow/README.md) — Microsoft
 - [Writing Plans](writing-plans/README.md) — Jesse Vincent / obra
+- [Writing Skills](writing-skills/README.md) — Jesse Vincent / obra
+- [Xlsx](xlsx-spreadsheets/README.md) — Anthropic

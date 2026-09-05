@@ -1,0 +1,3 @@
+# Marketing routing
+
+Use this lane for growth, demand, and lifecycle work: search, paid media, email and messaging, conversion, social, pricing, retention, and sales enablement. Lock one lane authority per route; a page rewrite is not simultaneously an SEO route and a CRO route, so run them as separate passes. Load shared positioning context before producing anything, and treat it as the source of audience, claim, and proof — do not re-derive positioning inside a production task. Numbers carry their source, date, and attribution window. Regulated claims, personal data, testimonials, and audiences including minors activate the compliance gate, which cannot be disabled. Finish audience-facing work with the brand consistency pass and report what was actually checked.

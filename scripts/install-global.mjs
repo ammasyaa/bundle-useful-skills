@@ -25,6 +25,7 @@ const payload=[
   ['src','src'],
   ['registry','registry'],
   ['profiles','profiles'],
+  ['skills','skills'],
   ['LICENSE','LICENSE']
 ];
 

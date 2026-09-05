@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "domains": {
+    "engineering": {
+      "label": "Software development",
+      "builtin": true,
+      "platforms": [
+        "website",
+        "desktop",
+        "mobile"
+      ],
+      "reference": "references/{platform}.md",
+      "tasks": [
+        "brainstorm",
+        "plan",
+        "implementation",
+        "architecture",
+        "design",
+        "polish",
+        "motion",
+        "research",
+        "visual-reference",
+        "filter",
+        "bug",
+        "database",
+        "api",
+        "security",
+        "performance",
+        "refactor",
+        "testing",
+        "review",
+        "verify",
+        "release"
+      ],
+      "scopes": [
+        "client",
+        "database",
+        "api",
+        "backend",
+        "renderer",
+        "native"
+      ],
+      "gate": "security-gate"
+    },
+    "marketing": {
+      "label": "Marketing and growth",
+      "builtin": false,
+      "reference": "references/marketing.md",
+      "tasks": [
+        "research",
+        "strategy",
+        "production",
+        "optimization",
+        "measurement",
+        "launch",
+        "review",
+        "compliance",
+        "verify"
+      ],
+      "scopes": [
+        "client",
+        "organic",
+        "paid",
+        "owned",
+        "earned"
+      ],
+      "gate": "compliance-gate",
+      "verification": "brand-consistency-gate",
+      "process": {
+        "research": "customer-research",
+        "strategy": "marketing-plan",
+        "review": "marketing-council",
+        "verify": "brand-consistency-gate"
+      },
+      "context": "product-marketing",
+      "specialists": {
+        "research": [
+          "market-research-sea",
+          "competitor-profiling"
+        ],
+        "strategy": [
+          "marketing-ideas",
+          "marketing-psychology"
+        ],
+        "production": [
+          "copywriting"
+        ],
+        "review": [
+          "copy-editing"
+        ],
+        "launch": [
+          "product-launch"
+        ],
+        "measurement": [
+          "marketing-analytics"
+        ]
+      },
+      "laneSpecialists": {
+        "seo": {
+          "strategy": [
+            "ai-seo"
+          ],
+          "production": [
+            "programmatic-seo"
+          ],
+          "optimization": [
+            "seo-audit"
+          ],
+          "review": [
+            "site-architecture"
+          ]
+        },
+        "paid": {
+          "production": [
+            "ad-creative"
+          ],
+          "optimization": [
+            "paid-media-operations"
+          ],
+          "measurement": [
+            "marketing-attribution"
+          ]
+        },
+        "lifecycle": {
+          "production": [
+            "cold-email"
+          ]
+        },
+        "cro": {
+          "measurement": [
+            "ab-testing"
+          ]
+        },
+        "social": {
+          "production": [
+            "social-marketing"
+          ]
+        },
+        "pricing": {
+          "strategy": [
+            "offer-design"
+          ]
+        },
+        "retention": {
+          "strategy": [
+            "referral-program"
+          ]
+        },
+        "sales": {
+          "research": [
+            "competitor-profiling"
+          ],
+          "production": [
+            "competitor-pages"
+          ]
+        }
+      }
+    },
+    "brand": {
+      "label": "Brand strategy and identity",
+      "builtin": false,
+      "reference": "references/brand.md",
+      "tasks": [
+        "research",
+        "strategy",
+        "production",
+        "review",
+        "compliance",
+        "verify"
+      ],
+      "scopes": [
+        "client",
+        "internal"
+      ],
+      "gate": "compliance-gate",
+      "verification": "brand-consistency-gate",
+      "process": {
+        "research": "customer-research",
+        "verify": "brand-consistency-gate"
+      },
+      "specialists": {
+        "research": [
+          "market-research-sea"
+        ],
+        "strategy": [
+          "marketing-psychology"
+        ],
+        "review": [
+          "copy-editing"
+        ]
+      },
+      "laneSpecialists": {
+        "visual": {
+          "production": [
+            "canvas-design"
+          ],
+          "review": [
+            "theme-factory"
+          ]
+        },
+        "messaging": {
+          "production": [
+            "copywriting",
+            "multilingual-market-copy"
+          ]
+        },
+        "identity": {
+          "production": [
+            "multilingual-market-copy"
+          ]
+        }
+      }
+    },
+    "content": {
+      "label": "Content and deliverable production",
+      "builtin": false,
+      "reference": "references/content.md",
+      "tasks": [
+        "research",
+        "strategy",
+        "production",
+        "review",
+        "compliance",
+        "verify"
+      ],
+      "scopes": [
+        "client",
+        "internal"
+      ],
+      "gate": "compliance-gate",
+      "verification": "brand-consistency-gate",
+      "process": {
+        "strategy": "content-strategy",
+        "review": "copy-editing",
+        "verify": "brand-consistency-gate"
+      },
+      "specialists": {
+        "production": [
+          "multilingual-market-copy"
+        ]
+      },
+      "laneSpecialists": {
+        "document": {
+          "production": [
+            "doc-coauthoring"
+          ]
+        },
+        "writing": {
+          "production": [
+            "copywriting"
+          ]
+        },
+        "video": {
+          "production": [
+            "ad-creative"
+          ]
+        },
+        "social": {
+          "production": [
+            "marketing-image"
+          ]
+        }
+      }
+    },
+    "automation": {
+      "label": "Agent, workflow and integration engineering",
+      "builtin": false,
+      "reference": "references/automation.md",
+      "tasks": [
+        "plan",
+        "implementation",
+        "integration",
+        "review",
+        "verify"
+      ],
+      "scopes": [
+        "client",
+        "internal",
+        "api"
+      ],
+      "gate": "security-gate",
+      "process": {
+        "plan": "writing-plans",
+        "implementation": "executing-plans",
+        "review": "requesting-code-review",
+        "verify": "verification-before-completion"
+      },
+      "specialists": {
+        "plan": [
+          "agent-config-architecture"
+        ],
+        "verify": [
+          "webapp-testing"
+        ]
+      },
+      "laneSpecialists": {
+        "mcp": {
+          "implementation": [
+            "claude-api"
+          ]
+        },
+        "workflow": {
+          "plan": [
+            "cms-publishing-pipeline"
+          ]
+        },
+        "integration": {
+          "implementation": [
+            "cms-publishing-pipeline"
+          ]
+        },
+        "skill": {
+          "plan": [
+            "skill-library-ops"
+          ],
+          "implementation": [
+            "writing-skills"
+          ],
+          "review": [
+            "skill-library-ops"
+          ]
+        }
+      }
+    },
+    "venture": {
+      "label": "Venture and business-model development",
+      "builtin": false,
+      "reference": "references/venture.md",
+      "tasks": [
+        "ideation",
+        "validation",
+        "gtm",
+        "growth",
+        "options",
+        "compliance",
+        "verify"
+      ],
+      "scopes": [
+        "client",
+        "internal"
+      ],
+      "gate": "compliance-gate",
+      "process": {
+        "ideation": "venture-blueprint",
+        "validation": "venture-blueprint",
+        "gtm": "venture-blueprint",
+        "growth": "venture-blueprint",
+        "options": "venture-blueprint"
+      },
+      "specialists": {
+        "ideation": [
+          "market-research-sea"
+        ],
+        "validation": [
+          "customer-research",
+          "competitor-profiling"
+        ],
+        "gtm": [
+          "product-launch",
+          "pricing-strategy"
+        ],
+        "growth": [
+          "marketing-loops"
+        ],
+        "options": [
+          "offer-design"
+        ]
+      },
+      "laneSpecialists": {}
+    }
+  }
+}

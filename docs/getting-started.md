@@ -11,3 +11,9 @@ node scripts/cli.mjs route --platform mobile --framework expo --task release --t
 Read the returned platform reference and activate the returned capabilities in order. If an upstream skill is not installed in your agent, follow its pinned source link in `registry/skills.json` and use the installation mechanism supported by that agent. Do not copy every referenced skill into the prompt.
 
 Project detection accepts a JSON map of relative file names to contents. It only suggests a route and deliberately asks for input when a repository contains multiple targets.
+
+## Global installation
+
+Run `npm run install:global` to install the router for Codex and Antigravity. Codex uses `$CODEX_HOME/skills/development-skill-router`, defaulting to `~/.codex/skills/development-skill-router`. Antigravity uses `~/.gemini/config/skills/development-skill-router` for user-global discovery. The installed package includes the router entrypoint, references, CLI, registry, profiles, implementation, and license.
+
+The installer first checks every selected destination. A matching installation is left unchanged; a different installation is rejected so local work cannot be overwritten accidentally.

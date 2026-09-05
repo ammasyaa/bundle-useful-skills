@@ -37,6 +37,23 @@ node scripts/cli.mjs route --platform desktop --framework tauri --renderer react
 
 Use `--mode minimal`, `recommended`, or `full`. Full expands the available inventory; it does not activate every compatible skill. Add comma-separated overrides with `--enable`, `--disable`, and `--risks`. Sensitive gates cannot be disabled.
 
+## Global installation
+
+Install the self-contained router for both Codex and Google Antigravity:
+
+```bash
+npm run install:global
+```
+
+This installs `development-skill-router` into `$CODEX_HOME/skills` (or `~/.codex/skills`) and `~/.gemini/config/skills`. Install one target with:
+
+```bash
+node scripts/install-global.mjs --target codex
+node scripts/install-global.mjs --target antigravity
+```
+
+The installer is idempotent when files match and refuses to overwrite a different or locally modified skill.
+
 ## Use as an Agent Skill
 
 Point an Agent Skills-compatible client at [`router/SKILL.md`](router/SKILL.md). The entrypoint is intentionally small and loads one platform reference at a time. Agent-specific notes live in [`adapters/`](adapters/).

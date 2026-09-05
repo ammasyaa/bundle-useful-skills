@@ -18,7 +18,7 @@ test('React website excludes Flutter', () => {
 test('Flutter desktop stays desktop', () => {
   const r = route(request({platform:'desktop'}));
   assert.equal(r.platform,'desktop');
-  assert.ok(r.references.includes('router/references/desktop.md'));
+  assert.ok(r.references.includes('references/desktop.md'));
 });
 test('Tauri React renderer is scoped separately', () => {
   const r = route(request({platform:'desktop',framework:'tauri',renderer:'react'}));

@@ -8,3 +8,4 @@
 - Enforce framework, creative-authority, security, scope, and activation-budget rules.
 - Add routing, validation, attribution, licensing, and privacy checks.
 - Add one generated README attribution card for every referenced external capability.
+- Add a collision-safe global installer for Codex and Google Antigravity.

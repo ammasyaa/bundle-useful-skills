@@ -82,9 +82,9 @@ export function route(options={},extensions=[]) {
   if(active.length>5) warnings.push('Above five active capabilities; consider sequential passes.');
   if(active.length>7 && !(typeof ctx.justification==='string' && ctx.justification.trim())) throw new Error('Above seven active capabilities requires a justification');
   if(backendOnly && !ctx.database && ctx.task!=='api') warnings.push('No data specialist selected: identify the actual backend before implementation.');
-  const references=[`router/references/${ctx.platform}.md`];
-  if(sensitive) references.push('router/references/security.md');
-  if(ctx.task==='release') references.push('router/references/release.md');
+  const references=[`references/${ctx.platform}.md`];
+  if(sensitive) references.push('references/security.md');
+  if(ctx.task==='release') references.push('references/release.md');
   return {schemaVersion:1,platform:ctx.platform,framework:ctx.framework,task:ctx.task,frameworkAuthority:profile.authority,active,
     selections:selected.map(s=>({id:s.id,reason:chosen.get(s.id),authority:s.renderer && ctx.platform==='desktop'?'renderer':s.authority,source:s.source,installMode:s.installMode})),
     references,authorityOrder:rules.authorityOrder,warnings,justification:ctx.justification??null,

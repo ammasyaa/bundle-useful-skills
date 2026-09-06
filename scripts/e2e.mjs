@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { basename, dirname, join, relative, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -28,7 +28,7 @@ try {
   for(const [label,skillRoot] of hostRoots()) {
     routeChecks+=verifyInstalledRoutes(label,join(skillRoot,'development-skill-router'));
   }
-  assert(routeChecks===8,`expected 8 installed route checks, received ${routeChecks}`);
+  assert(routeChecks===10,`expected 10 installed route checks, received ${routeChecks}`);
 
   console.log('E2E: prove reinstall idempotency');
   const repeat=runNode(installer,installArgs,0);
@@ -50,7 +50,7 @@ try {
     const suffix=options.routerOnly?'':`, pinned=${report.counts['managed-pinned']}`;
     console.log(`${label}: router=${report.routerStatus}, globalRule=${report.globalRule}${suffix}`);
   }
-  console.log('Installed routes: 8/8 passed');
+  console.log('Installed routes: 10/10 passed');
   console.log('Idempotent reinstall: passed');
   if(!options.routerOnly) console.log('Tamper detection and backup repair: passed');
   console.log(`E2E PASS (${options.routerOnly?'router-only':'full'})`);
@@ -140,7 +140,13 @@ function verifyInstalledRoutes(label,routerRoot){
     for(const expected of scenario.includes) assert(result.stdout.includes(expected),`${label} route omitted ${expected}`);
     for(const excluded of scenario.excludes??[]) assert(!result.stdout.includes(excluded),`${label} route unexpectedly included ${excluded}`);
   }
-  return cases.length;
+  const projectRoot=join(testHome,`search-${label.toLowerCase()}`);
+  mkdirSync(projectRoot,{recursive:true});
+  writeFileSync(join(projectRoot,'package.json'),JSON.stringify({dependencies:{next:'15',react:'19'}}));
+  const search=runNode(cli,['search','--root',projectRoot,'--task','implementation','--json'],0);
+  const result=JSON.parse(search.stdout);
+  assert(result.route?.framework==='next',`${label} installed search did not detect Next.js`);
+  return cases.length+1;
 }
 
 function inspectFullInventory(label,skillRoot){

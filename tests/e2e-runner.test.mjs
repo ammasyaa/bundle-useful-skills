@@ -12,7 +12,7 @@ test('plug-and-play E2E runner verifies both hosts without touching the user hom
   assert.match(result.stdout,/E2E: run installed-router scenarios/);
   assert.match(result.stdout,/Codex: router=managed-current, globalRule=true/);
   assert.match(result.stdout,/Antigravity: router=managed-current, globalRule=true/);
-  assert.match(result.stdout,/Installed routes: 8\/8 passed/);
+  assert.match(result.stdout,/Installed routes: 10\/10 passed/);
   assert.match(result.stdout,/Idempotent reinstall: passed/);
   assert.match(result.stdout,/E2E PASS \(router-only\)/);
 });

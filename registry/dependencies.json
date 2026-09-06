@@ -1,29 +1,51 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "groups": {
-    "expo-overview": [
-      "eas-app-stores",
-      "eas-hosting",
-      "eas-observe",
-      "eas-simulator",
-      "eas-update-insights",
-      "eas-update",
-      "eas-workflows",
-      "expo-animation",
-      "expo-app-clip",
-      "expo-brownfield",
-      "expo-data-fetching",
-      "expo-design-system",
-      "expo-dev-client",
-      "expo-dom",
-      "expo-examples",
-      "expo-module",
-      "expo-project-structure",
-      "expo-router",
-      "expo-skill-feedback",
-      "expo-ui",
-      "expo-upgrade",
-      "expo-web-to-native"
-    ]
+    "expo-overview": {
+      "requiredSkills": [
+        "eas-app-stores",
+        "eas-hosting",
+        "eas-observe",
+        "eas-simulator",
+        "eas-update-insights",
+        "eas-update",
+        "eas-workflows",
+        "expo-animation",
+        "expo-app-clip",
+        "expo-brownfield",
+        "expo-data-fetching",
+        "expo-design-system",
+        "expo-dev-client",
+        "expo-dom",
+        "expo-examples",
+        "expo-module",
+        "expo-project-structure",
+        "expo-router",
+        "expo-skill-feedback",
+        "expo-ui",
+        "expo-upgrade",
+        "expo-web-to-native"
+      ],
+      "optionalSkills": [],
+      "hostTools": [],
+      "sourcePathTemplate": "plugins/expo/skills/{name}/SKILL.md",
+      "reason": "Expo overview routes to version-matched Expo and EAS specialists."
+    },
+    "writing-plans": {
+      "requiredSkills": [],
+      "optionalSkills": [],
+      "hostTools": [
+        {"id":"plan-execution-workflow","required":"conditional","when":"executing a written implementation plan"}
+      ],
+      "reason": "Writing plans is self-contained; executing the resulting plan requires a supported execution workflow."
+    },
+    "requesting-code-review": {
+      "requiredSkills": [],
+      "optionalSkills": [],
+      "hostTools": [
+        {"id":"subagent-dispatch","required":"conditional","when":"dispatching the requested independent reviewer"}
+      ],
+      "reason": "The upstream review workflow requests an independent general-purpose reviewer when the host permits one."
+    }
   }
 }

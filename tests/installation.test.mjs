@@ -1,14 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const installer=join(process.cwd(),'scripts','install-global.mjs');
 
-test('global installer creates self-contained Codex and Antigravity skills', () => {
-  const home=mkdtempSync(join(tmpdir(),'skill-router-install-'));
+test('global installer creates self-contained Codex and Antigravity skills', t => {
+  const home=temporaryHome(t,'skill-router-install-');
   const result=spawnSync(process.execPath,[installer,'--target','all','--home',home,'--router-only'],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
   const destinations=[
@@ -28,8 +28,8 @@ test('global installer creates self-contained Codex and Antigravity skills', () 
   assert.match(readFileSync(join(home,'.gemini','GEMINI.md'),'utf8'),/Skill bundle used/);
 });
 
-test('global installer refuses to overwrite a different existing skill', () => {
-  const home=mkdtempSync(join(tmpdir(),'skill-router-collision-'));
+test('global installer refuses to overwrite a different existing skill', t => {
+  const home=temporaryHome(t,'skill-router-collision-');
   let result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
   const installed=join(home,'.codex','skills','development-skill-router','SKILL.md');
@@ -40,8 +40,8 @@ test('global installer refuses to overwrite a different existing skill', () => {
   assert.match(readFileSync(installed,'utf8'),/local change/);
 });
 
-test('global installer preserves existing host rules and updates its managed block idempotently', () => {
-  const home=mkdtempSync(join(tmpdir(),'skill-router-rules-'));
+test('global installer preserves existing host rules and updates its managed block idempotently', t => {
+  const home=temporaryHome(t,'skill-router-rules-');
   mkdirSync(join(home,'.codex'),{recursive:true});
   mkdirSync(join(home,'.gemini'),{recursive:true});
   writeFileSync(join(home,'.codex','AGENTS.md'),'# My Codex rule\n\nKeep this.\n');
@@ -58,8 +58,8 @@ test('global installer preserves existing host rules and updates its managed blo
   }
 });
 
-test('global installer can plan replacement of a valid pre-existing capability', () => {
-  const home=mkdtempSync(join(tmpdir(),'skill-router-replace-'));
+test('global installer can plan replacement of a valid pre-existing capability', t => {
+  const home=temporaryHome(t,'skill-router-replace-');
   const existing=join(home,'.codex','skills','test-driven-development');
   mkdirSync(existing,{recursive:true});
   writeFileSync(join(existing,'SKILL.md'),'---\nname: test-driven-development\ndescription: Existing fixture\n---\n');
@@ -68,8 +68,8 @@ test('global installer can plan replacement of a valid pre-existing capability',
   assert.match(result.stdout,/47 install, 1 replace, 0 adopt, 0 keep/);
 });
 
-test('global installer rejects duplicate managed rule markers', () => {
-  const home=mkdtempSync(join(tmpdir(),'skill-router-duplicate-rule-'));
+test('global installer rejects duplicate managed rule markers', t => {
+  const home=temporaryHome(t,'skill-router-duplicate-rule-');
   mkdirSync(join(home,'.codex'),{recursive:true});
   writeFileSync(join(home,'.codex','AGENTS.md'),'<!-- bundle-useful-skills:begin -->\none\n<!-- bundle-useful-skills:end -->\n<!-- bundle-useful-skills:begin -->\ntwo\n<!-- bundle-useful-skills:end -->\n');
   const result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
@@ -77,8 +77,8 @@ test('global installer rejects duplicate managed rule markers', () => {
   assert.match(result.stderr,/duplicate managed rule markers/i);
 });
 
-test('global installer refreshes a stale router manifest version', () => {
-  const home=mkdtempSync(join(tmpdir(),'skill-router-stale-version-'));
+test('global installer refreshes a stale router manifest version', t => {
+  const home=temporaryHome(t,'skill-router-stale-version-');
   let result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
   const manifestPath=join(home,'.codex','skills','development-skill-router','.bundle-useful-skills-install.json');
@@ -92,8 +92,8 @@ test('global installer refreshes a stale router manifest version', () => {
   assert.equal(JSON.parse(readFileSync(manifestPath,'utf8')).version,expected);
 });
 
-test('global installer refreshes an incomplete router manifest inventory', () => {
-  const home=mkdtempSync(join(tmpdir(),'skill-router-bad-inventory-'));
+test('global installer refreshes an incomplete router manifest inventory', t => {
+  const home=temporaryHome(t,'skill-router-bad-inventory-');
   let result=spawnSync(process.execPath,[installer,'--target','codex','--home',home,'--router-only'],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
   const manifestPath=join(home,'.codex','skills','development-skill-router','.bundle-useful-skills-install.json');
@@ -104,3 +104,9 @@ test('global installer refreshes an incomplete router manifest inventory', () =>
   assert.equal(result.status,0,result.stderr);
   assert.match(result.stdout,/upgraded router/);
 });
+
+function temporaryHome(t,prefix){
+  const home=mkdtempSync(join(tmpdir(),prefix));
+  t.after(()=>rmSync(home,{recursive:true,force:true}));
+  return home;
+}

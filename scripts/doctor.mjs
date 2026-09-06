@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { hasExplicitInvocationPolicy } from '../src/openai-policy.mjs';
+import { listSafeFiles } from '../src/safe-tree.mjs';
+import { evaluateWorkflowDependencies, requiredSkillNames } from '../src/dependencies.mjs';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const packageInfo=JSON.parse(readFileSync(join(root,'package.json'),'utf8'));
@@ -27,15 +30,19 @@ if(reports.some(report=>!report.ready)) process.exitCode=1;
 
 function inspectTarget(name,target){
   const rule=existsSync(target.rulePath)?readFileSync(target.rulePath,'utf8'):'';
-  const capabilities=installableSkills().map(skill=>inspectCapability(target.skillRoot,skill));
-  const statuses=['managed-pinned','present-existing','missing','managed-stale','managed-invalid','managed-unverified','managed-modified'];
+  const capabilities=installableSkills().map(skill=>inspectCapability(name,target.skillRoot,skill));
+  const statuses=['managed-pinned','present-existing','missing','managed-stale','managed-invalid','managed-unverified','managed-modified','managed-policy-invalid'];
   const counts=Object.fromEntries(statuses.map(status=>[status,capabilities.filter(capability=>capability.status===status).length]));
   const routerStatus=inspectRouter(target.skillRoot);
   const router=routerStatus!=='missing';
   const globalRule=managedRuleMatches(rule);
+  const dependencyStatus=evaluateWorkflowDependencies(dependencyGroups,new Map(capabilities.map(capability=>[capability.invocation,capability.status])));
+  const integrityReady=routerStatus==='managed-current'&&globalRule&&counts['managed-pinned']===capabilities.length;
   return {
     target:name,
-    ready:routerStatus==='managed-current'&&globalRule&&counts['managed-pinned']===capabilities.length,
+    ready:integrityReady&&dependencyStatus.workflowReady,
+    integrityReady,
+    ...dependencyStatus,
     router,
     routerStatus,
     globalRule,
@@ -59,7 +66,7 @@ function inspectRouter(skillRoot){
   } catch { return 'managed-invalid'; }
 }
 
-function inspectCapability(skillRoot,skill){
+function inspectCapability(host,skillRoot,skill){
   const invocation=invocationName(skill);
   const path=join(skillRoot,invocation);
   const base={id:skill.id,invocation};
@@ -71,6 +78,10 @@ function inspectCapability(skillRoot,skill){
     if(source.commit!==skill.source.commit) return {...base,status:'managed-stale'};
     if(!Array.isArray(source.files)||!source.files.length) return {...base,status:'managed-unverified'};
     if(!verifyFiles(path,source.files)) return {...base,status:'managed-modified'};
+    if(host==='codex') {
+      const metadata=join(path,'agents','openai.yaml');
+      if(!existsSync(metadata)||!hasExplicitInvocationPolicy(readFileSync(metadata,'utf8'))) return {...base,status:'managed-policy-invalid'};
+    }
     return {...base,status:'managed-pinned'};
   } catch { return {...base,status:'managed-invalid'}; }
 }
@@ -97,13 +108,7 @@ function verifyFiles(root,files,manifestName='BUNDLE_SOURCE.json'){
 
 function occurrences(body,needle){return body.split(needle).length-1}
 function listFiles(root,prefix=''){
-  const out=[];
-  for(const name of readdirSync(join(root,prefix)).sort()){
-    const rel=prefix?join(prefix,name):name;
-    if(statSync(join(root,rel)).isDirectory()) out.push(...listFiles(root,rel));
-    else out.push(rel.replaceAll('\\','/'));
-  }
-  return out;
+  return listSafeFiles(root,prefix);
 }
 
 function parse(values){
@@ -128,11 +133,12 @@ function codexRulePath(path){
 function installableSkills(){
   const primary=registry.filter(skill=>skill.installMode.startsWith('upstream'));
   const expanded=[...primary];
-  for(const [parentId,names] of Object.entries(dependencyGroups)){
+  for(const [parentId,record] of Object.entries(dependencyGroups)){
     const parent=registry.find(skill=>skill.id===parentId);
-    for(const name of names){
+    for(const name of requiredSkillNames(record)){
       if(Object.values(invocations).includes(name)) continue;
-      expanded.push({...parent,id:`${parentId}/${name}`,invocation:name,source:{...parent.source,path:`plugins/expo/skills/${name}/SKILL.md`}});
+      if(!record.sourcePathTemplate) throw new Error(`dependency ${parentId}/${name} requires a source path template`);
+      expanded.push({...parent,id:`${parentId}/${name}`,invocation:name,source:{...parent.source,path:record.sourcePathTemplate.replace('{name}',name)}});
     }
   }
   return expanded;

@@ -120,6 +120,9 @@ function assertHost(report,routerOnly){
     assert(report.counts.missing===48,`${report.target} router-only install did not report 48 missing capabilities`);
   } else {
     assert(report.ready===true,`${report.target} full install is not ready`);
+    assert(report.integrityReady===true,`${report.target} integrity readiness failed`);
+    assert(report.workflowReady===true,`${report.target} workflow readiness failed`);
+    assert(Array.isArray(report.conditionalGaps),`${report.target} conditional gaps are missing`);
     assert(report.counts['managed-pinned']===48,`${report.target} does not have 48 managed capabilities`);
   }
 }
@@ -153,6 +156,12 @@ function inspectFullInventory(label,skillRoot){
     assert(readFileSync(join(root,'BUNDLE_README.md'),'utf8').includes('Thank you to'),`${label}/${entry.name} does not thank its author`);
     const source=JSON.parse(readFileSync(join(root,'BUNDLE_SOURCE.json'),'utf8'));
     assert(Array.isArray(source.files)&&source.files.length>0,`${label}/${entry.name} has no file inventory`);
+    assert(Array.isArray(source.evidence)&&source.evidence.length>0,`${label}/${entry.name} has no license evidence record`);
+    if(label==='Codex') {
+      const policy=join(root,'agents','openai.yaml');
+      assert(existsSync(policy),`${label}/${entry.name} is missing explicit-invocation policy`);
+      assert(/allow_implicit_invocation:\s*false/.test(readFileSync(policy,'utf8')),`${label}/${entry.name} permits implicit invocation`);
+    }
   }
 }
 

@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
-import { copyFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { copyFileSync, cpSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { homedir, tmpdir } from 'node:os';
 import { basename, dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { applyExplicitInvocationPolicy } from '../src/openai-policy.mjs';
+import { assertRegularFileInside, listSafeFiles, resolveInside } from '../src/safe-tree.mjs';
+import { requiredSkillNames } from '../src/dependencies.mjs';
+import { classifyEvidence, validateEvidenceMetadata } from '../src/evidence.mjs';
 
 const projectRoot=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const packageInfo=JSON.parse(readFileSync(join(projectRoot,'package.json'),'utf8'));
@@ -145,8 +149,10 @@ function isManagedClean(destination){
 }
 
 function same(from,to){
-  if(!existsSync(to)||statSync(from).isDirectory()!==statSync(to).isDirectory()) return false;
-  if(statSync(from).isFile()) return readFileSync(from).equals(readFileSync(to));
+  if(!existsSync(to)) return false;
+  const fromStat=lstatSync(from),toStat=lstatSync(to);
+  if(fromStat.isSymbolicLink()||toStat.isSymbolicLink()||fromStat.isDirectory()!==toStat.isDirectory()) return false;
+  if(fromStat.isFile()) return toStat.isFile()&&readFileSync(from).equals(readFileSync(to));
   const left=readdirSync(from).sort(),right=readdirSync(to).filter(name=>name!==manifestName).sort();
   return left.length===right.length&&left.every((name,index)=>name===right[index]&&same(join(from,name),join(to,name)));
 }
@@ -159,7 +165,7 @@ function installRouter(destination){
     for(const [source,relativeDestination] of payload){
       const from=join(projectRoot,source),to=join(temp,relativeDestination);
       mkdirSync(dirname(to),{recursive:true});
-      statSync(from).isDirectory()?cpSync(from,to,{recursive:true}):copyFileSync(from,to);
+      lstatSync(from).isDirectory()?cpSync(from,to,{recursive:true}):copyFileSync(from,to);
     }
     const files=listFiles(temp).map(path=>({path,sha256:hashFile(join(temp,path))}));
     writeFileSync(join(temp,manifestName),JSON.stringify({package:'bundle-useful-skills',version:packageInfo.version,files},null,2)+'\n');
@@ -198,8 +204,11 @@ function prepareCapabilities(skills,workRoot){
 }
 
 function stageCapability(skill,checkout,workRoot){
-  const from=join(checkout,...sourceDirectory(skill.source.path).split('/'));
+  validateEvidenceMetadata(skill);
+  const sourcePath=sourceDirectory(skill.source.path);
+  const from=resolveInside(checkout,sourcePath);
   if(!existsSync(join(from,'SKILL.md'))) throw new Error(`pinned skill path missing for ${skill.id}`);
+  listSafeFiles(from);
   const destination=join(workRoot,'capabilities',invocationName(skill));
   cpSync(from,destination,{recursive:true});
   const skillFile=join(destination,'SKILL.md');
@@ -209,13 +218,23 @@ function stageCapability(skill,checkout,workRoot){
   const sourceUrl=`${skill.source.repository}/tree/${skill.source.commit}/${sourceDirectory(skill.source.path)}`;
   const attribution=[`# ${skill.name}`,'',`Installed by Bundle Useful Skills. Thank you to **${skill.author}** for the original work.`,'',`- Original source: ${sourceUrl}`,`- Reviewed commit: \`${skill.source.commit}\``,`- License: ${skill.license}`,'','The upstream files remain under their original license. This attribution file was added by the bundle installer.',''].join('\n');
   writeFileSync(join(destination,'BUNDLE_README.md'),attribution);
-  for(const [evidence,label] of [[skill.licenseEvidence,'BUNDLE_UPSTREAM_LICENSE'],[skill.notice,'BUNDLE_UPSTREAM_NOTICE']]) {
-    if(!isRepositoryPath(evidence)) continue;
-    const source=join(checkout,...evidence.split('/'));
-    if(existsSync(source)&&statSync(source).isFile()) copyFileSync(source,join(destination,`${label}${extensionFor(evidence)}`));
+  const evidenceRecords=[];
+  for(const [kind,evidence,label] of [['license',skill.licenseEvidence,'BUNDLE_UPSTREAM_LICENSE'],['notice',skill.notice,'BUNDLE_UPSTREAM_NOTICE']]) {
+    if(!evidence) continue;
+    const evidenceType=classifyEvidence(evidence);
+    if(evidenceType!=='repository') {
+      evidenceRecords.push({kind,type:evidenceType,declaration:evidence});
+      continue;
+    }
+    let source;
+    try { source=assertRegularFileInside(checkout,evidence); }
+    catch { throw new Error(`required upstream evidence missing or unsafe for ${skill.id}: ${evidence}`); }
+    const installedPath=`${label}${extensionFor(evidence)}`;
+    copyFileSync(source,join(destination,installedPath));
+    evidenceRecords.push({kind,type:'repository',sourcePath:evidence,installedPath,sha256:hashFile(join(destination,installedPath))});
   }
   const files=listFiles(destination).map(path=>({path,sha256:hashFile(join(destination,path))}));
-  writeFileSync(join(destination,sourceManifestName),JSON.stringify({id:skill.id,invocation:invocationName(skill),author:skill.author,repository:skill.source.repository,commit:skill.source.commit,path:skill.source.path,license:skill.license,upstreamVersion,files},null,2)+'\n');
+  writeFileSync(join(destination,sourceManifestName),JSON.stringify({id:skill.id,invocation:invocationName(skill),author:skill.author,repository:skill.source.repository,commit:skill.source.commit,path:skill.source.path,license:skill.license,evidence:evidenceRecords,upstreamVersion,files},null,2)+'\n');
 }
 
 function installCapabilities(name,target,workRoot){
@@ -231,8 +250,8 @@ function installCapabilities(name,target,workRoot){
     const staged=join(workRoot,'capabilities',invocationName(skill));
     if(!existsSync(staged)) throw new Error(`staged capability missing for ${skill.id}`);
     mkdirSync(target.skillRoot,{recursive:true});
-    if(action==='replace') replaceCapability(staged,destination,target.backupRoot);
-    else installCapability(staged,destination,target.skillRoot);
+    if(action==='replace') replaceCapability(staged,destination,target.backupRoot,name);
+    else installCapability(staged,destination,target.skillRoot,name);
     counts[action]++;
   }
   console.log(`${name}: capability inventory ready (${counts.install} installed, ${counts.replace} replaced, ${counts.adopt} adopted, ${counts.keep} current)`);
@@ -269,18 +288,22 @@ function summarizePlan(plans){
   return `${counts.install} install, ${counts.replace} replace, ${counts.adopt} adopt, ${counts.keep} keep`;
 }
 
-function installCapability(staged,destination,skillRoot){
+function installCapability(staged,destination,skillRoot,host){
   const temp=join(skillRoot,`.bundle-capability-${basename(destination)}-${Date.now()}`);
-  try { cpSync(staged,temp,{recursive:true}); renameSync(temp,destination); }
+  try {
+    cpSync(staged,temp,{recursive:true});
+    applyHostPolicy(host,temp);
+    renameSync(temp,destination);
+  }
   catch(error) { if(existsSync(temp)) safeRemove(temp,skillRoot); throw error; }
 }
 
-function replaceCapability(staged,destination,backupRoot){
+function replaceCapability(staged,destination,backupRoot,host){
   mkdirSync(backupRoot,{recursive:true});
   const backup=join(backupRoot,basename(destination));
   if(existsSync(backup)) throw new Error(`backup collision at ${backup}`);
   renameSync(destination,backup);
-  try { installCapability(staged,destination,dirname(destination)); }
+  try { installCapability(staged,destination,dirname(destination),host); }
   catch(error) { if(existsSync(destination)) safeRemove(destination,dirname(destination)); renameSync(backup,destination); throw error; }
   console.log(`backed up replaced skill to ${backup}`);
 }
@@ -292,6 +315,19 @@ function adoptCapabilityManifest(destination){
   const temp=`${manifestPath}.tmp`;
   writeFileSync(temp,JSON.stringify(manifest,null,2)+'\n');
   renameSync(temp,manifestPath);
+}
+
+function applyHostPolicy(host,destination){
+  if(host!=='codex') return;
+  const agents=join(destination,'agents');
+  const metadata=join(agents,'openai.yaml');
+  mkdirSync(agents,{recursive:true});
+  const source=existsSync(metadata)?readFileSync(metadata,'utf8'):'';
+  writeFileSync(metadata,applyExplicitInvocationPolicy(source));
+  const manifestPath=join(destination,sourceManifestName);
+  const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+  manifest.files=listSafeFiles(destination).filter(path=>path!==sourceManifestName).map(path=>({path,sha256:hashFile(resolveInside(destination,path))}));
+  writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
 }
 
 function verifyFiles(root,files,excludedName=sourceManifestName){
@@ -352,12 +388,13 @@ function normalizeFrontmatter(body){
 function installableSkills(){
   const primary=registry.filter(s=>s.installMode.startsWith('upstream'));
   const expanded=[...primary];
-  for(const [parentId,names] of Object.entries(dependencyGroups)){
+  for(const [parentId,record] of Object.entries(dependencyGroups)){
     const parent=registry.find(s=>s.id===parentId);
     if(!parent) throw new Error(`unknown dependency group parent ${parentId}`);
-    for(const name of names){
+    for(const name of requiredSkillNames(record)){
       if(Object.values(invocations).includes(name)) continue;
-      const skill={...parent,id:`${parentId}/${name}`,name:`Expo skill: ${name}`,invocation:name,source:{...parent.source,path:`plugins/expo/skills/${name}/SKILL.md`}};
+      if(!record.sourcePathTemplate) throw new Error(`dependency ${parentId}/${name} requires a source path template`);
+      const skill={...parent,id:`${parentId}/${name}`,name:`${parent.name} dependency: ${name}`,invocation:name,source:{...parent.source,path:record.sourcePathTemplate.replace('{name}',name)}};
       expanded.push(skill);
     }
   }
@@ -367,12 +404,7 @@ function isRepositoryPath(value){return typeof value==='string'&&/^[A-Za-z0-9._/
 function extensionFor(path){const name=basename(path);const dot=name.lastIndexOf('.');return dot>=0?name.slice(dot):'.txt'}
 function hashFile(path){return createHash('sha256').update(readFileSync(path)).digest('hex')}
 function listFiles(root,prefix=''){
-  const out=[];
-  for(const name of readdirSync(join(root,prefix)).sort()){
-    const rel=prefix?join(prefix,name):name;
-    if(statSync(join(root,rel)).isDirectory()) out.push(...listFiles(root,rel)); else out.push(rel.replaceAll('\\','/'));
-  }
-  return out;
+  return listSafeFiles(root,prefix);
 }
 function safeRemove(path,parent){
   const rel=relative(resolve(parent),resolve(path));

@@ -1,9 +1,14 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { registry, profiles, rules, invocations } from '../src/router.mjs';
 import { validateActivationBudget } from '../src/compatibility.mjs';
+import { validateDependencyDocument } from '../src/dependencies.mjs';
+import { validateRegistryData } from '../src/registry-validation.mjs';
+import { validateEvidenceMetadata } from '../src/evidence.mjs';
 const required=['id','name','author','source','license','licenseEvidence','platforms','phases','authority','conflicts','trust','installMode'];
 const ids=new Set();
+validateRegistryData(registry,profiles);
 for(const s of registry) {
+  validateEvidenceMetadata(s);
   for(const k of required) if(s[k]===undefined || s[k]===null && !['notice'].includes(k)) throw new Error(`${s.id??'entry'} missing ${k}`);
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s.id)) throw new Error(`Invalid id ${s.id}`);
   if(ids.has(s.id)) throw new Error(`Duplicate id ${s.id}`); ids.add(s.id);
@@ -20,8 +25,5 @@ if(rules.authorityOrder.at(-1)!=='filter') throw new Error('Filter must remain t
 validateActivationBudget(rules.activationBudget);
 JSON.parse(readFileSync('registry/skills.json','utf8'));
 const dependencies=JSON.parse(readFileSync('registry/dependencies.json','utf8'));
-for(const [parent,names] of Object.entries(dependencies.groups)) {
-  if(!ids.has(parent)) throw new Error(`Unknown dependency parent ${parent}`);
-  if(!Array.isArray(names)||new Set(names).size!==names.length||names.some(name=>!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(name))) throw new Error(`Invalid dependencies for ${parent}`);
-}
+validateDependencyDocument(dependencies,registry);
 console.log(`Registry valid: ${registry.length} skills, ${profiles.length} profiles.`);

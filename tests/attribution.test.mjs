@@ -38,7 +38,7 @@ test('README thanks every external creator and links every original source', () 
 test('README names every installed and referenced capability', () => {
   const readme=readFileSync('README.md','utf8');
   const primary=skills.map(skill=>skill.installMode.startsWith('upstream')?(invocations[skill.id]??skill.id):skill.id);
-  const transitive=Object.values(dependencies).flat();
+  const transitive=Object.values(dependencies).flatMap(record=>record.requiredSkills);
   for(const name of [...primary,...transitive]) {
     assert.ok(readme.includes(`\`${name}\``),`README does not name ${name}`);
   }

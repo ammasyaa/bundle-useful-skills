@@ -1,6 +1,38 @@
 # Getting started
 
-Start with an explicit route. Choose the product surface and framework, then name the current task rather than the entire project roadmap.
+## 1. Validate the checkout
+
+Requirements are Node.js 22 or later, Git, and internet access for a full upstream installation.
+
+```bash
+git clone https://github.com/ammasyaa/bundle-useful-skills.git
+cd bundle-useful-skills
+npm ci
+npm run test:e2e:quick
+```
+
+The quick E2E uses temporary Codex and Antigravity homes and does not alter the real user profile.
+
+## 2. Install and restart
+
+```bash
+npm run install:global
+npm run doctor
+```
+
+The installer places the router and 48 capabilities in both supported hosts unless a target is specified. It retrieves executable upstream skills only from reviewed commits, validates repository license evidence and safe file boundaries, adds creator/source/license metadata and exact hashes, and preserves host rules outside its managed markers.
+
+Codex uses `$CODEX_HOME/skills` or `~/.codex/skills` and the active global `AGENTS` file. Antigravity uses `~/.gemini/config/skills` and `~/.gemini/GEMINI.md`. Restart both hosts after installation so their global instructions are reloaded.
+
+A healthy full installation returns `ready: true`, `integrityReady: true`, and `workflowReady: true`. Conditional host-tool gaps describe branches that need an extra runtime capability only if used; they do not make an otherwise complete installation unready.
+
+## 3. Search the project
+
+```bash
+node scripts/cli.mjs search --root . --task implementation --description "describe the requested change"
+```
+
+Use the first report line in the task's first progress update. The search reads bounded project metadata, classifies platform/framework/renderer/targets, and searches only the reviewed local registry. If it returns `needsInput`, inspect the named conflict and supply the intended platform, framework, or target through an explicit report:
 
 ```bash
 node scripts/cli.mjs report --platform website --framework next --task design
@@ -8,30 +40,48 @@ node scripts/cli.mjs report --platform desktop --framework winui --task bug --ta
 node scripts/cli.mjs report --platform mobile --framework expo --task release --target android --risks auth,payment
 ```
 
-Use the first report line in the task's first progress update. Read the returned platform reference and each selected capability in order. Re-run the report when the phase changes, and route `verify` before completing code or configuration changes. Never report a capability as used unless its instructions were available and followed.
+Read the returned platform reference and each selected capability in order. Re-run routing when the phase changes, and route `verify` before completing code or configuration changes. Never report a capability as used unless its instructions were available and followed.
 
-For a task outside the three development surfaces, run `node scripts/cli.mjs triage` and use its exact disclosure. This makes non-development handling deterministic without activating development capabilities.
+For work outside website, desktop, and mobile development, run `node scripts/cli.mjs triage`. It reports deterministic triage without activating the development inventory.
 
-Project detection accepts a JSON map of relative file names to contents. It only suggests a route and deliberately asks for input when a repository contains multiple targets.
+## 4. Safe updates and replacement
 
-## Global installation
-
-Run `npm run install:global` to install the router and pinned upstream skill inventory for Codex and Antigravity. Codex uses `$CODEX_HOME/skills/development-skill-router`, defaulting to `~/.codex/skills/development-skill-router`. Antigravity uses `~/.gemini/config/skills/development-skill-router` for user-global discovery. The installer also maintains a bounded rule in Codex's active global `AGENTS.md` and Antigravity's `~/.gemini/GEMINI.md` so every task consults the router and reports its selected bundle.
-
-The installer downloads executable upstream skills from the reviewed commits in `registry/skills.json`, copies their full skill directories, and adds `BUNDLE_README.md`, source metadata, available license/notice files, and a SHA-256 inventory. A matching router is left unchanged; a modified or unrelated router is rejected so local work cannot be overwritten accidentally.
-
-An unverified same-name capability stops installation. Review the dry-run plan, then pass `--replace-existing` to back up that directory and install the pinned copy. Pass `--allow-existing` only to preserve it knowingly; the doctor will continue to report that host as not ready. Use `--adopt-legacy` once for reviewed copies installed by an older bundle version that have source manifests without file hashes.
+An unverified same-name capability stops installation. First inspect the exact plan:
 
 ```bash
 node scripts/install-global.mjs --target all --dry-run --replace-existing --adopt-legacy
+```
+
+Then apply only after reviewing the named destinations:
+
+```bash
 node scripts/install-global.mjs --target all --replace-existing --adopt-legacy
 npm run doctor
 ```
 
-The doctor emits one valid JSON array for one or both hosts. `ready: true` requires the current unmodified router, one exact managed global-rule block, and all 48 upstream capabilities at their reviewed commits with an exact matching file inventory and hashes. Restart each host after installation.
+`--replace-existing` moves old directories to a timestamped backup. `--adopt-legacy` adds hashes only to a reviewed older-bundle copy. `--allow-existing` knowingly preserves an unverified collision, and doctor keeps that host unready. `--router-only` installs no third-party inventory.
 
-## One-command E2E checks
+The installer is idempotent for current managed files and refuses modified routers, unsafe symlinks, source-path escapes, missing license evidence, and malformed registry/dependency metadata.
 
-Use `npm run test:e2e:quick` for a fast offline check of dual-host installation, global rules, installed-router execution, and idempotency. Use `npm run ready` for the release path; it runs every repository check and then the full E2E journey. The full path downloads only reviewed commits into an isolated temporary home, checks the complete 49-directory inventory on each host, verifies author attribution, tampers with a test copy, confirms doctor rejection, repairs it through the backup flow, and requires final readiness.
+## 5. Verification levels
 
-Neither command writes to the real user profile. A successful run cleans up its temporary home. A failed run prints and retains that directory for inspection.
+```bash
+npm run check
+npm run test:e2e:quick
+npm run ready
+```
+
+- `npm run check` runs behavior/integration tests, registry validation, license validation, generated-credit checks, and privacy/secret scanning.
+- `npm run test:e2e:quick` tests both hosts offline with router-only temporary homes.
+- `npm run ready` runs the repository checks and the full networked E2E installation, route/search scenarios, attribution inspection, idempotency, tamper rejection, repair, and final readiness.
+
+Successful E2E runs clean up automatically. Failed runs retain and print the temporary home for diagnosis. Use `--cleanup-on-failure` when that evidence is no longer needed, or `--keep-temp` to retain a successful fixture.
+
+## Common failures
+
+- `needsInput`: the scanner found ambiguous framework or target evidence. Provide explicit intent after examining entry points.
+- `managed-policy-invalid`: a managed Codex skill lost explicit-only invocation policy. Inspect and reinstall the reviewed copy.
+- `managed-modified`, `managed-stale`, or `managed-unverified`: do not overwrite blindly; review the manifest and use the dry-run backup flow.
+- `workflowReady: false`: one or more unconditional skill dependencies are missing or invalid.
+- Clone/license failure: preserve the current installation, restore network access or correct reviewed evidence, then retry.
+- Cross-platform CI-only failure: reproduce on the named OS and inspect path, case, permission, symlink, and cleanup behavior.

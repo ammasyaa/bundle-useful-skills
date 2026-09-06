@@ -7,14 +7,17 @@ import { basename, dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { applyExplicitInvocationPolicy } from '../src/openai-policy.mjs';
 import { assertRegularFileInside, listSafeFiles, resolveInside } from '../src/safe-tree.mjs';
-import { requiredSkillNames } from '../src/dependencies.mjs';
+import { requiredSkillNames, validateDependencyDocument } from '../src/dependencies.mjs';
 import { classifyEvidence, validateEvidenceMetadata } from '../src/evidence.mjs';
+import { validateRegistryData } from '../src/registry-validation.mjs';
 
 const projectRoot=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const packageInfo=JSON.parse(readFileSync(join(projectRoot,'package.json'),'utf8'));
 const registry=JSON.parse(readFileSync(join(projectRoot,'registry','skills.json'),'utf8'));
 const invocations=JSON.parse(readFileSync(join(projectRoot,'registry','invocations.json'),'utf8')).skills;
-const dependencyGroups=JSON.parse(readFileSync(join(projectRoot,'registry','dependencies.json'),'utf8')).groups;
+const profiles=JSON.parse(readFileSync(join(projectRoot,'profiles','index.json'),'utf8'));
+const dependencyDocument=JSON.parse(readFileSync(join(projectRoot,'registry','dependencies.json'),'utf8'));
+const dependencyGroups=dependencyDocument.groups;
 const ruleTemplate=readFileSync(join(projectRoot,'rules','global-rule.md'),'utf8').trim();
 const markerStart='<!-- bundle-useful-skills:begin -->';
 const markerEnd='<!-- bundle-useful-skills:end -->';
@@ -37,6 +40,8 @@ main();
 function main(){
   let workRoot;
   try {
+    validateRegistryData(registry,profiles);
+    validateDependencyDocument(dependencyDocument,registry);
     const options=parse(process.argv.slice(2));
     const runId=new Date().toISOString().replace(/[:.]/g,'-');
     const userHome=resolve(options.home||homedir());

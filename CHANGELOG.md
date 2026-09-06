@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0 - 2026-09-06
+
+- Add bounded, secret-safe project scanning, platform/framework/renderer/target classification, reviewed registry searching, and human or JSON `search` reports.
+- Replace broad sensitive-text matching with structured security categories and false-positive controls.
+- Make CLI parsing strict, protect mandatory framework authorities, require targets for target-scoped capabilities, and read activation budgets from compatibility configuration.
+- Apply explicit-only invocation policy to every managed Codex capability and report policy drift through doctor; clarify that Antigravity dormancy remains policy-guided.
+- Add versioned workflow dependency metadata and separate integrity, workflow, and conditional-tool readiness reporting.
+- Require classified license evidence, reject non-regular or escaping source trees, and validate registry/profile/dependency data before installation changes.
+- Clean temporary test homes deterministically and run checks plus quick E2E on Ubuntu, Windows, and macOS before the full isolated Ubuntu installation.
+- Expand user, agent, contributor, GitHub, troubleshooting, and release guidance with architecture and lifecycle diagrams.
+
 ## 0.3.0 - 2026-09-05
 
 - Add safe conversion of same-name existing capabilities to reviewed pinned copies, with timestamped backups and an explicit preserve option.

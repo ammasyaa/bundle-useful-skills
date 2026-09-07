@@ -1,0 +1,77 @@
+{
+  "id": "web-development",
+  "name": "Web Development Profile",
+  "description": "Full-stack web application engineering, modern React/Next.js, backend correctness, SEO/GEO, and performance",
+  "domain": "frontend",
+  "core_skills": [
+    "superpowers-brainstorming",
+    "vercel-react-best-practices",
+    "emil-design-eng",
+    "pbakaus-impeccable"
+  ],
+  "optional_specialists": [
+    {
+      "trigger": "Marketing site, landing page, portfolio, or editorial brand experience",
+      "skill_id": "taste-skill-frontend"
+    },
+    {
+      "trigger": "Bespoke, deliberate visual frontend direction",
+      "skill_id": "anthropic-frontend-design"
+    },
+    {
+      "trigger": "Complex SaaS layout, charts, typography tables, or UX reference research",
+      "skill_id": "ui-ux-pro-max"
+    },
+    {
+      "trigger": "Design system token architecture and component token drift",
+      "skill_id": "olzn-ui-craft"
+    },
+    {
+      "trigger": "Spring motion, physical animations, and micro-interactions",
+      "skill_id": "emil-animate"
+    },
+    {
+      "trigger": "Backend architecture, APIs, transactions, queues, and contracts",
+      "skill_id": "backend-engineering"
+    },
+    {
+      "trigger": "PostgreSQL indexing, query optimization, and Supabase RLS",
+      "skill_id": "supabase-postgres-best-practices"
+    },
+    {
+      "trigger": "Cloudflare Workers, Pages, and Edge KV/D1",
+      "skill_id": "cloudflare-skills"
+    },
+    {
+      "trigger": "Prisma ORM schema migrations and relation queries",
+      "skill_id": "prisma-skills"
+    },
+    {
+      "trigger": "Core Web Vitals (LCP, INP, CLS) and technical accessibility audits",
+      "skill_id": "addy-web-quality-audit"
+    },
+    {
+      "trigger": "Public route SEO, JSON-LD schema, and AI search visibility (GEO/AEO)",
+      "skill_id": "marketingskills-seo-audit"
+    }
+  ],
+  "routing_flow": [
+    "1. Shared Engineering Process: Superpowers (brainstorming/plans)",
+    "2. Creative Direction: Taste Skill OR Anthropic frontend-design (if brand/marketing)",
+    "3. UX Reference: UI UX Pro Max (if dense SaaS/dashboard)",
+    "4. Framework Authority: Vercel React Best Practices + Composition Patterns",
+    "5. Backend & DB Authority: backend-engineering + supabase-postgres-best-practices",
+    "6. Interaction Craft: Emil Kowalski design engineering & motion",
+    "7. UI Critique: Impeccable anti-slop and hierarchy review",
+    "8. Verification & Web Quality: Addy Osmani Web Quality + SEO/GEO audit"
+  ],
+  "release_gate": [
+    "Automated unit and integration test suite passes",
+    "No hard-coded API secrets or leaked credentials",
+    "Core Web Vitals meet thresholds (LCP < 2.5s, INP < 200ms, CLS < 0.1)",
+    "WCAG 2.1 AA accessibility checks pass without critical violations",
+    "Public indexable routes have semantic HTML, canonical tags, and structured schema",
+    "Private application routes are guarded against unauthenticated access and indexing",
+    "Database migrations are tested and backward-compatible"
+  ]
+}

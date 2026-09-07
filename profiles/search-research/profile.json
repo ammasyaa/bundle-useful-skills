@@ -1,0 +1,33 @@
+{
+  "id": "search-research",
+  "name": "Search & Research Profile",
+  "description": "Layered retrieval, analytical synthesis, deep technical research, and evidence extraction",
+  "domain": "search-research",
+  "core_skills": [
+    "firecrawl-cli",
+    "deer-flow-deep-research"
+  ],
+  "optional_specialists": [
+    {
+      "trigger": "Community opinion, emerging ecosystem trends, or freshness < 30 days",
+      "skill_id": "last30days-skill"
+    },
+    {
+      "trigger": "Interactive web app navigation, JavaScript execution, or authenticated QA",
+      "skill_id": "browser-use"
+    }
+  ],
+  "routing_flow": [
+    "1. Firecrawl: Scrape, crawl, and retrieve authoritative documentation and GitHub repos",
+    "2. DeerFlow: Analyze, reconcile discrepancies, and structure synthesized findings",
+    "3. Last30Days (conditional): Ingest recent developer discussions (Reddit, HN, X)",
+    "4. Browser Use (conditional): Execute live browser automation only if static retrieval fails",
+    "5. Source Reconciliation: Verify citations and evidence before reporting"
+  ],
+  "release_gate": [
+    "All claims have primary source URLs or commit references",
+    "Conflicting evidence or documentation discrepancies are reconciled",
+    "Anecdotal community opinions are clearly marked and corroborated",
+    "No halluncinated or unverified API signatures"
+  ]
+}

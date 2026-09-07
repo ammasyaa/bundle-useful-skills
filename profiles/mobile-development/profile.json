@@ -1,0 +1,59 @@
+{
+  "id": "mobile-development",
+  "name": "Mobile Development Profile",
+  "description": "Native Android, Native Apple iOS, Flutter Mobile, and Expo / React Native engineering",
+  "domain": "mobile",
+  "core_skills": [
+    "superpowers-brainstorming",
+    "emil-design-eng"
+  ],
+  "optional_specialists": [
+    {
+      "trigger": "Native Android application (Kotlin, Jetpack Compose, Material 3)",
+      "skill_id": "android-skills"
+    },
+    {
+      "trigger": "Native Apple iOS application (Swift, SwiftUI, Apple HIG)",
+      "skill_id": "openai-build-ios-apps"
+    },
+    {
+      "trigger": "Flutter mobile multiplatform application",
+      "skill_id": "flutter-agent-plugins"
+    },
+    {
+      "trigger": "Expo / React Native application",
+      "skill_id": "expo-skills"
+    },
+    {
+      "trigger": "Native gestures, bottom sheets, transitions, and haptics for Expo/RN",
+      "skill_id": "emil-animate-expo"
+    },
+    {
+      "trigger": "Mobile security review (keystore/keychain, deep links, permissions)",
+      "skill_id": "owasp-secure-agent-playbook"
+    },
+    {
+      "trigger": "Mobile UI/UX critique and accessibility audit",
+      "skill_id": "pbakaus-impeccable"
+    }
+  ],
+  "routing_flow": [
+    "1. Detect Framework: Exactly one of Android, iOS, Flutter, or Expo",
+    "2. Superpowers Engineering Process: Brainstorming and detailed implementation plan",
+    "3. Primary Platform Authority: Load official platform framework skill",
+    "4. Mobile Interaction Craft: Emil Kowalski native motion, gestures, and haptic feedback",
+    "5. Mobile Security: Review storage, permissions, deep links, and IPC via OWASP",
+    "6. Simulator / Device Validation: Functional QA in simulator or emulator",
+    "7. Mobile Release Verification: Accessibility (TalkBack/VoiceOver), battery, and performance"
+  ],
+  "release_gate": [
+    "Automated unit and widget tests pass",
+    "Accessible font scaling (Dynamic Type / fontScale) supported without text truncation",
+    "Touch target sizes meet minimum 48x48dp (Android) / 44x44pt (iOS)",
+    "Screen readers (VoiceOver and TalkBack) correctly announce views and actions",
+    "Edge-to-edge layout renders properly behind system bars and notches",
+    "Hardware back-button and swipe gestures handle navigation safely",
+    "Permissions requested just-in-time with explicit rationale strings",
+    "Memory leak tests confirm no retaining view cycles or lingering subscriptions"
+  ]
+}

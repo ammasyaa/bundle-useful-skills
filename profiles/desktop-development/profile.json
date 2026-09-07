@@ -1,0 +1,58 @@
+{
+  "id": "desktop-development",
+  "name": "Desktop Development Profile",
+  "description": "Native Windows (WinUI), Apple macOS (SwiftUI/AppKit), Flutter Desktop, Tauri, and secure Electron applications",
+  "domain": "desktop",
+  "core_skills": [
+    "superpowers-brainstorming",
+    "emil-design-eng"
+  ],
+  "optional_specialists": [
+    {
+      "trigger": "Windows native application (WinUI 3, Windows App SDK, Fluent Design)",
+      "skill_id": "microsoft-winui"
+    },
+    {
+      "trigger": "Apple macOS native application (SwiftUI, AppKit, Apple HIG)",
+      "skill_id": "openai-build-macos-apps"
+    },
+    {
+      "trigger": "Flutter Desktop application",
+      "skill_id": "flutter-agent-plugins"
+    },
+    {
+      "trigger": "Tauri desktop application with Rust backend commands",
+      "skill_id": "tauri-official-guidance"
+    },
+    {
+      "trigger": "Electron application requiring contextIsolation and IPC hardening",
+      "skill_id": "electron-official-guidance"
+    },
+    {
+      "trigger": "Desktop security review (IPC, WebViews, local filesystem access)",
+      "skill_id": "owasp-secure-agent-playbook"
+    },
+    {
+      "trigger": "Native UI/UX critique and accessibility audit",
+      "skill_id": "pbakaus-impeccable"
+    }
+  ],
+  "routing_flow": [
+    "1. Detect Framework: Exactly one of WinUI, macOS, Flutter Desktop, Tauri, or Electron",
+    "2. Superpowers Engineering Process: Brainstorming and detailed implementation plan",
+    "3. Primary Platform Authority: Load official platform framework skill",
+    "4. Interaction Craft: Apply Emil Kowalski interaction principles in native idioms",
+    "5. Security Isolation: Audit IPC, filesystem, and WebView boundaries via OWASP",
+    "6. Native UI Critique: Impeccable native keyboard, scaling, and contrast review",
+    "7. Release Verification: Packaging, signing, entitlements, and runtime smoke testing"
+  ],
+  "release_gate": [
+    "Native build passes cleanly without compilation warnings",
+    "Keyboard navigation and shortcuts function correctly across all views",
+    "High DPI scaling and dynamic window resizing operate smoothly",
+    "High Contrast / dark mode switches without visual glitches",
+    "IPC boundaries strictly validate inputs and reject unauthorized commands",
+    "App sandbox and entitlements are minimal and correctly configured",
+    "Packaging and code-signing workflows succeed deterministically"
+  ]
+}

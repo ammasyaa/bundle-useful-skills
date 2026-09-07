@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bundle-useful-skills.org/schemas/lock.schema.json",
+  "title": "DeterministicLockfile",
+  "description": "Cryptographic lockfile pinning exact upstream commits and sha256 checksums",
+  "type": "object",
+  "required": ["version", "generated_at", "skills"],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["source_repository", "commit", "sha256", "pinned"],
+        "properties": {
+          "source_repository": {
+            "type": "string",
+            "format": "uri"
+          },
+          "source_path": {
+            "type": "string"
+          },
+          "commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{7,40}$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "pinned": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

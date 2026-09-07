@@ -1,0 +1,79 @@
+{
+  "matrix": {
+    "microsoft-winui": {
+      "incompatible_with": [
+        "flutter-agent-plugins",
+        "openai-build-macos-apps",
+        "electron-official-guidance",
+        "tauri-official-guidance",
+        "android-skills",
+        "openai-build-ios-apps"
+      ]
+    },
+    "openai-build-macos-apps": {
+      "incompatible_with": [
+        "microsoft-winui",
+        "flutter-agent-plugins",
+        "android-skills",
+        "openai-build-ios-apps"
+      ]
+    },
+    "flutter-agent-plugins": {
+      "incompatible_with": [
+        "microsoft-winui",
+        "openai-build-macos-apps",
+        "openai-build-ios-apps",
+        "android-skills",
+        "expo-skills",
+        "vercel-react-best-practices"
+      ]
+    },
+    "expo-skills": {
+      "incompatible_with": [
+        "flutter-agent-plugins",
+        "microsoft-winui",
+        "openai-build-ios-apps",
+        "android-skills"
+      ]
+    },
+    "android-skills": {
+      "incompatible_with": [
+        "openai-build-ios-apps",
+        "microsoft-winui",
+        "openai-build-macos-apps",
+        "flutter-agent-plugins"
+      ]
+    },
+    "openai-build-ios-apps": {
+      "incompatible_with": [
+        "android-skills",
+        "microsoft-winui",
+        "openai-build-macos-apps",
+        "flutter-agent-plugins",
+        "expo-skills"
+      ]
+    },
+    "taste-skill-frontend": {
+      "incompatible_with": [
+        "anthropic-frontend-design"
+      ]
+    },
+    "anthropic-frontend-design": {
+      "incompatible_with": [
+        "taste-skill-frontend"
+      ]
+    },
+    "tauri-official-guidance": {
+      "incompatible_with": [
+        "electron-official-guidance",
+        "microsoft-winui"
+      ]
+    },
+    "electron-official-guidance": {
+      "incompatible_with": [
+        "tauri-official-guidance",
+        "microsoft-winui"
+      ]
+    }
+  }
+}

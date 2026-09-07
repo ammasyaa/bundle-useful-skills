@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bundle-useful-skills.org/schemas/profile.schema.json",
+  "title": "DomainProfileConfiguration",
+  "description": "Definition of a specialized domain profile in bundle-useful-skills",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "description",
+    "domain",
+    "core_skills",
+    "optional_specialists",
+    "routing_flow",
+    "release_gate"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-_]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "core_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "optional_specialists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["trigger", "skill_id"],
+        "properties": {
+          "trigger": {
+            "type": "string"
+          },
+          "skill_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "routing_flow": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "release_gate": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

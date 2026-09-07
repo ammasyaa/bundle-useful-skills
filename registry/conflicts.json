@@ -1,0 +1,54 @@
+{
+  "hard_conflicts": [
+    {
+      "id": "winui-vs-flutter-desktop",
+      "description": "WinUI and Flutter Desktop cannot act as simultaneous primary desktop authorities.",
+      "incompatible_skills": ["microsoft-winui", "flutter-agent-plugins"],
+      "resolution": "Select exactly one desktop framework authority based on target platform and project requirements."
+    },
+    {
+      "id": "flutter-vs-expo-mobile",
+      "description": "Flutter and Expo cannot act as simultaneous mobile authorities.",
+      "incompatible_skills": ["flutter-agent-plugins", "expo-skills"],
+      "resolution": "Isolate the repository to either Dart/Flutter or React Native/Expo."
+    },
+    {
+      "id": "android-vs-ios-implementation",
+      "description": "Native Android and Native iOS cannot act as simultaneous implementation authorities for a single codebase.",
+      "incompatible_skills": ["android-skills", "openai-build-ios-apps"],
+      "resolution": "Separate native implementation tasks by target platform surface or use cross-platform layer."
+    },
+    {
+      "id": "react-patterns-on-flutter",
+      "description": "React lifecycle and hooks patterns cannot be applied to Flutter widget trees.",
+      "incompatible_skills": ["vercel-react-best-practices", "flutter-agent-plugins"],
+      "resolution": "Enforce Flutter native State and InheritedWidget/Riverpod/Bloc architecture."
+    },
+    {
+      "id": "tauri-vs-electron-architecture",
+      "description": "Electron IPC and security architecture cannot be applied to Tauri Rust commands.",
+      "incompatible_skills": ["tauri-official-guidance", "electron-official-guidance"],
+      "resolution": "Use Tauri capabilities and IPC command macros for Tauri; use contextIsolation and preload scripts for Electron."
+    },
+    {
+      "id": "dual-creative-directors",
+      "description": "Taste Skill and Anthropic frontend-design cannot be activated simultaneously for creative direction.",
+      "incompatible_skills": ["taste-skill-frontend", "anthropic-frontend-design"],
+      "resolution": "Choose Taste Skill for marketing/brand or Anthropic frontend-design for bespoke UI direction."
+    }
+  ],
+  "conditional_warnings": [
+    {
+      "id": "ui-craft-and-impeccable-dual-load",
+      "description": "Activating both UI Craft (design system) and Impeccable (critic) incurs excessive token context.",
+      "skills": ["olzn-ui-craft", "pbakaus-impeccable"],
+      "guidance": "Use UI Craft only for token/system design, and switch to Impeccable only during post-implementation critique."
+    },
+    {
+      "id": "browser-use-with-static-scrapers",
+      "description": "Activating Browser Use alongside Firecrawl when static retrieval is sufficient causes latency and high resource usage.",
+      "skills": ["firecrawl-cli", "browser-use"],
+      "guidance": "Prefer Firecrawl for static documents and documentation. Only activate Browser Use when dynamic JavaScript or authentication is required."
+    }
+  ]
+}

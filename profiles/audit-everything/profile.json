@@ -1,0 +1,63 @@
+{
+  "id": "audit-everything",
+  "name": "Audit Everything Independent Review Profile",
+  "description": "Comprehensive independent multi-domain audit across 17 engineering perspectives",
+  "domain": "audit",
+  "core_skills": [
+    "addy-code-review-and-quality",
+    "pbakaus-impeccable",
+    "owasp-secure-agent-playbook",
+    "trailofbits-skills"
+  ],
+  "optional_specialists": [
+    {
+      "trigger": "Complex, high-risk, or release-level multi-perspective orchestration",
+      "skill_id": "compound-engineering-plugin"
+    },
+    {
+      "trigger": "Deep design-system token consistency and drift audit",
+      "skill_id": "olzn-ui-craft"
+    },
+    {
+      "trigger": "PostgreSQL indexing, query execution plans, and RLS audit",
+      "skill_id": "supabase-postgres-best-practices"
+    },
+    {
+      "trigger": "Web performance, Core Web Vitals, and WCAG accessibility audit",
+      "skill_id": "addy-web-quality-audit"
+    },
+    {
+      "trigger": "Public route SEO, JSON-LD schema, and AI search visibility audit",
+      "skill_id": "marketingskills-seo-audit"
+    },
+    {
+      "trigger": "Dependency supply-chain vulnerability audit",
+      "skill_id": "snyk-agent-scan"
+    }
+  ],
+  "routing_flow": [
+    "1. Requirements & Architecture Audit: Verify boundary integrity and adherence to ADRs",
+    "2. Code Quality & Correctness: Run Addy Osmani code review & quality auditor",
+    "3. UI/UX & Polish Audit: Run Impeccable critic for spacing, typography, and anti-slop",
+    "4. Security & Privacy Audit: Run Trail of Bits static & variant analysis + OWASP checks",
+    "5. Database & Backend Audit: Check query plans, transactions, idempotency, and retries",
+    "6. Accessibility & Performance Audit: Run WCAG checks, CWV profiling, and memory audits",
+    "7. Supply-Chain & Release Gate: Validate dependency pins, licenses, and release checklists"
+  ],
+  "release_gate": [
+    "Did we solve the requested problem?",
+    "Is the implementation functionally correct?",
+    "Does it respect the framework/platform conventions?",
+    "Is the UI intentionally designed with good hierarchy?",
+    "Is interaction/motion purposeful and physical?",
+    "Is accessibility adequate (WCAG / VoiceOver / TalkBack)?",
+    "Is the backend/data behavior correct (transactions, idempotency)?",
+    "Is security appropriate to the risk level?",
+    "Is performance measured where material?",
+    "Is SEO/GEO correct for public web content?",
+    "Are dependencies trustworthy and pinned?",
+    "Does it work at runtime without errors?",
+    "Did an independent review challenge the implementation?",
+    "Is there concrete evidence for the final verification claim?"
+  ]
+}

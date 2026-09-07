@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bundle-useful-skills.org/schemas/skill.schema.json",
+  "title": "AgentSkillMetadata",
+  "description": "Schema for Agent Skill metadata within the curated bundle-useful-skills registry",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "source_repository",
+    "source_path",
+    "license",
+    "version",
+    "commit",
+    "sha256",
+    "last_reviewed",
+    "authority_level",
+    "platform",
+    "framework",
+    "domain",
+    "task_types",
+    "activation_cost"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-_]+$",
+      "description": "Unique normalized identifier for the skill"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable display name"
+    },
+    "source_repository": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical upstream git repository URL"
+    },
+    "source_path": {
+      "type": "string",
+      "description": "Relative path to the SKILL.md or plugin root within the repository"
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier (e.g. MIT, Apache-2.0, BSD-3-Clause)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version or release identifier"
+    },
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{7,40}$",
+      "description": "Exact pinned git commit hash"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 integrity checksum of the source content"
+    },
+    "last_reviewed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of latest human/agent audit in YYYY-MM-DD format"
+    },
+    "authority_level": {
+      "type": "string",
+      "enum": [
+        "native-platform",
+        "official-framework",
+        "first-party",
+        "reviewed-specialist",
+        "design-specialist",
+        "community-audited"
+      ],
+      "description": "Position within the 10-level authority hierarchy"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "universal",
+        "web",
+        "windows",
+        "macos",
+        "linux",
+        "android",
+        "ios",
+        "mobile",
+        "desktop",
+        "cross-platform"
+      ]
+    },
+    "framework": {
+      "type": "string",
+      "description": "Primary framework target or 'generic'"
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "engineering-process",
+        "design-taste",
+        "search-research",
+        "frontend",
+        "backend",
+        "database",
+        "seo-geo",
+        "desktop",
+        "mobile",
+        "security",
+        "code-review",
+        "audit",
+        "release"
+      ]
+    },
+    "task_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Task categories where this skill applies"
+    },
+    "activation_cost": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Token and context footprint of loading this skill"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Required companion skill IDs"
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Mutually exclusive skill IDs, platforms, or frameworks"
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [],
+      "description": "Inferior or generic skills superseded by this authority"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Operational instructions, boundaries, and activation triggers"
+    }
+  },
+  "additionalProperties": false
+}

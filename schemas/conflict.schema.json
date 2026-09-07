@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bundle-useful-skills.org/schemas/conflict.schema.json",
+  "title": "ConflictRulesMatrix",
+  "description": "Rules defining incompatible skill combinations and mutual exclusions",
+  "type": "object",
+  "required": ["hard_conflicts", "conditional_warnings"],
+  "properties": {
+    "hard_conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "incompatible_skills", "resolution"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "incompatible_skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2
+          },
+          "resolution": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "conditional_warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "skills", "guidance"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "guidance": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

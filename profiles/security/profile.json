@@ -1,0 +1,41 @@
+{
+  "id": "security",
+  "name": "Security & Supply-Chain Governance Profile",
+  "description": "Dual-layer defense: OWASP secure-by-default development and Trail of Bits deep vulnerability audit",
+  "domain": "security",
+  "core_skills": [
+    "owasp-secure-agent-playbook",
+    "trailofbits-skills"
+  ],
+  "optional_specialists": [
+    {
+      "trigger": "Agent skills, MCP tools, plugins, or third-party package additions",
+      "skill_id": "snyk-agent-scan"
+    },
+    {
+      "trigger": "PostgreSQL database permission and Row Level Security (RLS) policies",
+      "skill_id": "supabase-postgres-best-practices"
+    },
+    {
+      "trigger": "Electron or Tauri desktop IPC security isolation",
+      "skill_id": "tauri-official-guidance"
+    }
+  ],
+  "routing_flow": [
+    "1. Architecture Understanding: Map system components, entry points, and trust boundaries",
+    "2. Threat Modeling: Identify high-risk triggers (auth, PII, payments, crypto, IPC)",
+    "3. Secure-by-Default Implementation: OWASP guidelines for input validation and defenses",
+    "4. Static Analysis: Automated and semantic code scanning for known vulnerability patterns",
+    "5. Variant Analysis: Search for systemic instances of discovered vulnerabilities",
+    "6. False-Positive Validation: Weed out non-exploitable findings with proof-of-concept tests",
+    "7. Supply-Chain Review: Verify licenses, scan third-party packages, and pin integrity hashes"
+  ],
+  "release_gate": [
+    "Zero unmitigated High or Critical static analysis findings",
+    "All external inputs are strictly sanitized and schema-validated",
+    "Authentication endpoints enforce rate limiting and constant-time comparison",
+    "No plain-text credentials, tokens, or private keys in source control",
+    "Database access enforces least-privilege roles and parameterized queries",
+    "Supply chain scan passes with all dependencies pinned to verifiable hashes"
+  ]
+}

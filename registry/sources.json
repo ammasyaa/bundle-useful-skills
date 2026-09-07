@@ -1,0 +1,210 @@
+[
+  {
+    "repository": "https://github.com/obra/superpowers",
+    "name": "Superpowers by Obra",
+    "maintainer": "Jesse Vincent",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Shared engineering process layer for agent workflows."
+  },
+  {
+    "repository": "https://github.com/Leonxlnx/taste-skill",
+    "name": "Taste Skill",
+    "maintainer": "Leon Lin",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "High-craft creative direction for web products and landing pages."
+  },
+  {
+    "repository": "https://github.com/anthropics/anthropic-quickstarts",
+    "name": "Anthropic Quickstarts & Skills",
+    "maintainer": "Anthropic",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Official frontend design and prompt engineering guidance."
+  },
+  {
+    "repository": "https://github.com/emilkowalski/skills",
+    "name": "Emil Kowalski Skills",
+    "maintainer": "Emil Kowalski",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Apple-level craft, micro-interactions, spring physics, and tactile polish."
+  },
+  {
+    "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "name": "UI/UX Pro Max",
+    "maintainer": "NextLevelBuilder",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Design patterns, palettes, charts, and layout reference systems."
+  },
+  {
+    "repository": "https://github.com/pbakaus/impeccable",
+    "name": "Impeccable UI Critic",
+    "maintainer": "Paul Bakaus",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Anti-slop critic and rigorous design polish auditor."
+  },
+  {
+    "repository": "https://github.com/olzn/ui-craft",
+    "name": "UI Craft",
+    "maintainer": "Olzn",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Design system architecture, token semantics, and component scale."
+  },
+  {
+    "repository": "https://github.com/mendableai/firecrawl",
+    "name": "Firecrawl",
+    "maintainer": "Mendable AI",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Web scraping, crawl, markdown extraction, and search."
+  },
+  {
+    "repository": "https://github.com/bytedance/deer-flow",
+    "name": "DeerFlow",
+    "maintainer": "ByteDance",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Deep multi-stage research, paper analysis, and synthesis."
+  },
+  {
+    "repository": "https://github.com/browser-use/browser-use",
+    "name": "Browser Use",
+    "maintainer": "Browser Use Team",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Interactive web browser automation and runtime verification."
+  },
+  {
+    "repository": "https://github.com/mvanhorn/last30days-skill",
+    "name": "Last 30 Days",
+    "maintainer": "Mike Van Horn",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Community trend and sentiment retrieval across developer channels."
+  },
+  {
+    "repository": "https://github.com/vercel-labs/agent-skills",
+    "name": "Vercel Agent Skills",
+    "maintainer": "Vercel",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "First-party React and Next.js guidelines and patterns."
+  },
+  {
+    "repository": "https://github.com/addyosmani/agent-skills",
+    "name": "Addy Osmani Agent Skills",
+    "maintainer": "Addy Osmani",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Frontend architecture, code review, and web standards."
+  },
+  {
+    "repository": "https://github.com/addyosmani/web-quality-skills",
+    "name": "Addy Osmani Web Quality",
+    "maintainer": "Addy Osmani",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Core Web Vitals, performance profiling, and accessibility auditing."
+  },
+  {
+    "repository": "https://github.com/coreyhaines31/marketingskills",
+    "name": "MarketingSkills",
+    "maintainer": "Corey Haines",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Technical SEO, structured schema, and AI search (GEO/AEO)."
+  },
+  {
+    "repository": "https://github.com/supabase/agent-skills",
+    "name": "Supabase Agent Skills",
+    "maintainer": "Supabase",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "PostgreSQL indexing, query optimization, and RLS security."
+  },
+  {
+    "repository": "https://github.com/cloudflare/skills",
+    "name": "Cloudflare Skills",
+    "maintainer": "Cloudflare",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Cloudflare Workers, Pages, and serverless edge architecture."
+  },
+  {
+    "repository": "https://github.com/microsoft/win-dev-skills",
+    "name": "Microsoft Windows Dev Skills",
+    "maintainer": "Microsoft",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Official WinUI 3, Windows App SDK, and Fluent Design."
+  },
+  {
+    "repository": "https://github.com/openai/plugins",
+    "name": "OpenAI Plugins & Skills",
+    "maintainer": "OpenAI",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "macOS SwiftUI/AppKit and iOS native mobile application development."
+  },
+  {
+    "repository": "https://github.com/flutter/agent-plugins",
+    "name": "Flutter Agent Plugins",
+    "maintainer": "Flutter Team (Google)",
+    "trust_status": "trusted",
+    "default_license": "BSD-3-Clause",
+    "notes": "Official Flutter architecture and cross-platform mobile/desktop development."
+  },
+  {
+    "repository": "https://github.com/android/skills",
+    "name": "Android Skills",
+    "maintainer": "Android Team (Google)",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Official Jetpack Compose, Material 3, and Android OS conventions."
+  },
+  {
+    "repository": "https://github.com/expo/skills",
+    "name": "Expo Skills",
+    "maintainer": "Expo Team",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Expo Router, React Native architecture, and mobile deployments."
+  },
+  {
+    "repository": "https://github.com/OWASP/secure-agent-playbook",
+    "name": "OWASP Secure Agent Playbook",
+    "maintainer": "OWASP Foundation",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Secure-by-default software development and threat prevention."
+  },
+  {
+    "repository": "https://github.com/trailofbits/skills",
+    "name": "Trail of Bits Skills",
+    "maintainer": "Trail of Bits",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Advanced application security, static analysis, and variant auditing."
+  },
+  {
+    "repository": "https://github.com/snyk/agent-scan",
+    "name": "Snyk Agent Scan",
+    "maintainer": "Snyk",
+    "trust_status": "trusted",
+    "default_license": "Apache-2.0",
+    "notes": "Skill and plugin supply-chain dependency scanning."
+  },
+  {
+    "repository": "https://github.com/EveryInc/compound-engineering-plugin",
+    "name": "Compound Engineering",
+    "maintainer": "Every Inc",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Independent multi-perspective code review orchestrator."
+  }
+]

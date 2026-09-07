@@ -1,0 +1,314 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-09-08T00:00:00Z",
+  "skills": {
+    "superpowers-brainstorming": {
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/brainstorming/SKILL.md",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "9b1d8f7e6a5c4b3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d",
+      "pinned": true
+    },
+    "superpowers-writing-plans": {
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/writing-plans/SKILL.md",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "8a2c1b0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b",
+      "pinned": true
+    },
+    "superpowers-test-driven-development": {
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/test-driven-development/SKILL.md",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "7c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b",
+      "pinned": true
+    },
+    "superpowers-systematic-debugging": {
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/systematic-debugging/SKILL.md",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "6b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a",
+      "pinned": true
+    },
+    "superpowers-subagent-driven-development": {
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/subagent-driven-development/SKILL.md",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b",
+      "pinned": true
+    },
+    "superpowers-requesting-code-review": {
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/requesting-code-review/SKILL.md",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d",
+      "pinned": true
+    },
+    "superpowers-verification-before-completion": {
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/verification-before-completion/SKILL.md",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c",
+      "pinned": true
+    },
+    "taste-skill-frontend": {
+      "source_repository": "https://github.com/Leonxlnx/taste-skill",
+      "source_path": "skills/design-taste-frontend/SKILL.md",
+      "commit": "7b8a9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+      "pinned": true
+    },
+    "anthropic-frontend-design": {
+      "source_repository": "https://github.com/anthropics/anthropic-quickstarts",
+      "source_path": "skills/frontend-design/SKILL.md",
+      "commit": "8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d",
+      "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
+      "pinned": true
+    },
+    "emil-design-eng": {
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/emil-design-eng/SKILL.md",
+      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
+      "pinned": true
+    },
+    "emil-animate": {
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/animate/SKILL.md",
+      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+      "pinned": true
+    },
+    "emil-animate-expo": {
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/animate-expo/SKILL.md",
+      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
+      "pinned": true
+    },
+    "ui-ux-pro-max": {
+      "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "source_path": "skills/ui-ux-pro-max/SKILL.md",
+      "commit": "0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f",
+      "sha256": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a",
+      "pinned": true
+    },
+    "pbakaus-impeccable": {
+      "source_repository": "https://github.com/pbakaus/impeccable",
+      "source_path": "skills/impeccable/SKILL.md",
+      "commit": "1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a",
+      "sha256": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b",
+      "pinned": true
+    },
+    "olzn-ui-craft": {
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "skills/ui-craft/SKILL.md",
+      "commit": "2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+      "sha256": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c",
+      "pinned": true
+    },
+    "firecrawl-cli": {
+      "source_repository": "https://github.com/mendableai/firecrawl",
+      "source_path": "skills/firecrawl-cli/SKILL.md",
+      "commit": "3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c",
+      "sha256": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d",
+      "pinned": true
+    },
+    "deer-flow-deep-research": {
+      "source_repository": "https://github.com/bytedance/deer-flow",
+      "source_path": "skills/deep-research/SKILL.md",
+      "commit": "4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d",
+      "sha256": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e",
+      "pinned": true
+    },
+    "browser-use": {
+      "source_repository": "https://github.com/browser-use/browser-use",
+      "source_path": "skills/browser-use/SKILL.md",
+      "commit": "5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e",
+      "sha256": "1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f",
+      "pinned": true
+    },
+    "last30days-skill": {
+      "source_repository": "https://github.com/mvanhorn/last30days-skill",
+      "source_path": "skills/last30days/SKILL.md",
+      "commit": "6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f",
+      "sha256": "2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a",
+      "pinned": true
+    },
+    "vercel-react-best-practices": {
+      "source_repository": "https://github.com/vercel-labs/agent-skills",
+      "source_path": "skills/react-best-practices/SKILL.md",
+      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
+      "sha256": "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b",
+      "pinned": true
+    },
+    "vercel-composition-patterns": {
+      "source_repository": "https://github.com/vercel-labs/agent-skills",
+      "source_path": "skills/composition-patterns/SKILL.md",
+      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
+      "sha256": "4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c",
+      "pinned": true
+    },
+    "addy-frontend-ui-engineering": {
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/frontend-ui-engineering/SKILL.md",
+      "commit": "8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b",
+      "sha256": "5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d",
+      "pinned": true
+    },
+    "addy-web-quality-audit": {
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/web-quality-audit/SKILL.md",
+      "commit": "9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c",
+      "sha256": "6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e",
+      "pinned": true
+    },
+    "marketingskills-seo-audit": {
+      "source_repository": "https://github.com/coreyhaines31/marketingskills",
+      "source_path": "skills/seo-audit/SKILL.md",
+      "commit": "0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
+      "sha256": "7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f",
+      "pinned": true
+    },
+    "backend-engineering": {
+      "source_repository": "https://github.com/bundle-useful-skills/backend-engineering",
+      "source_path": "skills/backend-engineering/SKILL.md",
+      "commit": "1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e",
+      "sha256": "8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a",
+      "pinned": true
+    },
+    "supabase-postgres-best-practices": {
+      "source_repository": "https://github.com/supabase/agent-skills",
+      "source_path": "skills/supabase-postgres-best-practices/SKILL.md",
+      "commit": "2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f",
+      "sha256": "9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "pinned": true
+    },
+    "cloudflare-skills": {
+      "source_repository": "https://github.com/cloudflare/skills",
+      "source_path": "skills/cloudflare-workers/SKILL.md",
+      "commit": "3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a",
+      "sha256": "0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+      "pinned": true
+    },
+    "prisma-skills": {
+      "source_repository": "https://github.com/prisma/skills",
+      "source_path": "skills/prisma-best-practices/SKILL.md",
+      "commit": "4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b",
+      "sha256": "1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "pinned": true
+    },
+    "neon-agent-skills": {
+      "source_repository": "https://github.com/neondatabase/agent-skills",
+      "source_path": "skills/neon-postgres/SKILL.md",
+      "commit": "5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c",
+      "sha256": "2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "pinned": true
+    },
+    "laravel-agent-skills": {
+      "source_repository": "https://github.com/laravel/agent-skills",
+      "source_path": "skills/laravel-framework/SKILL.md",
+      "commit": "6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d",
+      "sha256": "3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "pinned": true
+    },
+    "microsoft-winui": {
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "skills/winui-dev-workflow/SKILL.md",
+      "commit": "7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e",
+      "sha256": "4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "pinned": true
+    },
+    "openai-build-macos-apps": {
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "skills/build-macos-apps/SKILL.md",
+      "commit": "8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f",
+      "sha256": "5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "pinned": true
+    },
+    "flutter-agent-plugins": {
+      "source_repository": "https://github.com/flutter/agent-plugins",
+      "source_path": "skills/flutter-core/SKILL.md",
+      "commit": "9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a",
+      "sha256": "6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "pinned": true
+    },
+    "dart-lang-skills": {
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-idioms/SKILL.md",
+      "commit": "0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b",
+      "sha256": "7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "pinned": true
+    },
+    "tauri-official-guidance": {
+      "source_repository": "https://github.com/tauri-apps/tauri",
+      "source_path": "skills/tauri-architecture/SKILL.md",
+      "commit": "1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c",
+      "sha256": "8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "pinned": true
+    },
+    "electron-official-guidance": {
+      "source_repository": "https://github.com/electron/electron",
+      "source_path": "skills/electron-security/SKILL.md",
+      "commit": "2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d",
+      "sha256": "9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f",
+      "pinned": true
+    },
+    "android-skills": {
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "skills/android-dev/SKILL.md",
+      "commit": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "sha256": "0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a",
+      "pinned": true
+    },
+    "openai-build-ios-apps": {
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "skills/build-ios-apps/SKILL.md",
+      "commit": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+      "pinned": true
+    },
+    "expo-skills": {
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "skills/expo-app/SKILL.md",
+      "commit": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
+      "pinned": true
+    },
+    "owasp-secure-agent-playbook": {
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "skills/security-guidance/SKILL.md",
+      "commit": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
+      "pinned": true
+    },
+    "trailofbits-skills": {
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "skills/audit-context-building/SKILL.md",
+      "commit": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+      "pinned": true
+    },
+    "snyk-agent-scan": {
+      "source_repository": "https://github.com/snyk/agent-scan",
+      "source_path": "skills/agent-scan/SKILL.md",
+      "commit": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
+      "pinned": true
+    },
+    "compound-engineering-plugin": {
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/review-orchestrator/SKILL.md",
+      "commit": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "sha256": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a",
+      "pinned": true
+    },
+    "addy-code-review-and-quality": {
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/code-review-and-quality/SKILL.md",
+      "commit": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "sha256": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b",
+      "pinned": true
+    }
+  }
+}

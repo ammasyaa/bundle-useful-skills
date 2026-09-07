@@ -1,0 +1,86 @@
+{
+  "platforms": {
+    "universal": {
+      "name": "Universal / Platform-Agnostic",
+      "supported_runtimes": ["nodejs", "python", "jvm", "native", "browser"],
+      "allowed_frameworks": ["all"]
+    },
+    "web": {
+      "name": "Web Browser & Edge",
+      "supported_runtimes": ["nodejs", "browser", "deno", "bun", "edge-workers"],
+      "allowed_frameworks": ["react", "nextjs", "vue", "svelte", "generic"]
+    },
+    "windows": {
+      "name": "Microsoft Windows",
+      "supported_runtimes": [".net", "c++", "win32"],
+      "allowed_frameworks": ["winui", "wpf"]
+    },
+    "macos": {
+      "name": "Apple macOS",
+      "supported_runtimes": ["swift", "objective-c"],
+      "allowed_frameworks": ["swiftui", "appkit"]
+    },
+    "linux": {
+      "name": "Linux Desktop",
+      "supported_runtimes": ["gtk", "qt", "rust", "c++"],
+      "allowed_frameworks": ["gtk", "qt", "generic"]
+    },
+    "android": {
+      "name": "Google Android",
+      "supported_runtimes": ["jvm", "kotlin", "art"],
+      "allowed_frameworks": ["compose", "views"]
+    },
+    "ios": {
+      "name": "Apple iOS",
+      "supported_runtimes": ["swift", "objective-c"],
+      "allowed_frameworks": ["swiftui", "uikit"]
+    },
+    "cross-platform": {
+      "name": "Cross-Platform Frameworks",
+      "supported_runtimes": ["dart", "nodejs", "rust"],
+      "allowed_frameworks": ["flutter", "expo", "react-native", "tauri", "electron"]
+    }
+  },
+  "frameworks": {
+    "react": {
+      "primary_authority": "vercel-react-best-practices",
+      "companion_skills": ["vercel-composition-patterns", "addy-frontend-ui-engineering"],
+      "incompatible_authorities": ["flutter-agent-plugins", "android-skills"]
+    },
+    "winui": {
+      "primary_authority": "microsoft-winui",
+      "companion_skills": ["emil-design-eng"],
+      "incompatible_authorities": ["flutter-agent-plugins", "openai-build-macos-apps", "electron-official-guidance", "tauri-official-guidance"]
+    },
+    "swiftui-mac": {
+      "primary_authority": "openai-build-macos-apps",
+      "companion_skills": ["emil-design-eng"],
+      "incompatible_authorities": ["microsoft-winui", "flutter-agent-plugins", "android-skills"]
+    },
+    "swiftui-ios": {
+      "primary_authority": "openai-build-ios-apps",
+      "companion_skills": ["emil-design-eng"],
+      "incompatible_authorities": ["android-skills", "flutter-agent-plugins", "expo-skills"]
+    },
+    "flutter": {
+      "primary_authority": "flutter-agent-plugins",
+      "companion_skills": ["dart-lang-skills", "emil-design-eng"],
+      "incompatible_authorities": ["microsoft-winui", "openai-build-ios-apps", "android-skills", "expo-skills", "vercel-react-best-practices"]
+    },
+    "expo": {
+      "primary_authority": "expo-skills",
+      "companion_skills": ["emil-animate-expo"],
+      "incompatible_authorities": ["flutter-agent-plugins", "microsoft-winui", "openai-build-ios-apps", "android-skills"]
+    },
+    "tauri": {
+      "primary_authority": "tauri-official-guidance",
+      "companion_skills": ["owasp-secure-agent-playbook"],
+      "incompatible_authorities": ["electron-official-guidance", "microsoft-winui"]
+    },
+    "electron": {
+      "primary_authority": "electron-official-guidance",
+      "companion_skills": ["owasp-secure-agent-playbook", "trailofbits-skills"],
+      "incompatible_authorities": ["tauri-official-guidance", "microsoft-winui"]
+    }
+  }
+}

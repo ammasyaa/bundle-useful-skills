@@ -84,6 +84,37 @@ class SkillsRouter:
                 self._load_bundle(bfile)
 
     def _load_bundle(self, bfile: Path) -> None:
+        try:
+            import yaml
+            with open(bfile, "r", encoding="utf-8") as f:
+                data = yaml.safe_load(f)
+            if isinstance(data, dict):
+                b_id = data.get("id", "")
+                job = data.get("job", "")
+                skills = [
+                    BundleSkillRef(
+                        id=s.get("id", ""),
+                        url=s.get("url", ""),
+                        mode=s.get("mode", "CORE"),
+                        use=s.get("use", ""),
+                        when=s.get("when"),
+                    )
+                    for s in data.get("skills", [])
+                ]
+                recommended = data.get("recommended_with", [])
+                runtime_rules = data.get("runtime_rules", [])
+                if b_id:
+                    self.bundles[b_id] = BundleManifest(
+                        id=b_id,
+                        job=job,
+                        skills=skills,
+                        recommended_with=recommended,
+                        runtime_rules=runtime_rules,
+                    )
+                return
+        except ImportError:
+            pass
+
         lines = bfile.read_text(encoding="utf-8").splitlines()
         b_id = ""
         job = ""
@@ -98,40 +129,40 @@ class SkillsRouter:
             if not stripped or stripped.startswith("#"):
                 continue
 
-            if line.startswith("id:"):
-                b_id = line.split(":", 1)[1].strip()
-            elif line.startswith("job:"):
-                job = line.split(":", 1)[1].strip().strip('"')
-            elif line.startswith("skills:"):
+            if stripped.startswith("id:"):
+                b_id = stripped.split(":", 1)[1].strip()
+            elif stripped.startswith("job:"):
+                job = stripped.split(":", 1)[1].strip().strip('"')
+            elif stripped.startswith("skills:"):
                 current_section = "skills"
-            elif line.startswith("recommended_with:"):
+            elif stripped.startswith("recommended_with:"):
                 current_section = "recommended_with"
-            elif line.startswith("runtime_rules:"):
+            elif stripped.startswith("runtime_rules:"):
                 current_section = "runtime_rules"
             elif current_section == "skills":
-                if line.startswith("  - id:"):
+                if stripped.startswith("- id:"):
                     if current_skill:
                         skills.append(current_skill)
                     current_skill = BundleSkillRef(
-                        id=line.split(":", 1)[1].strip(),
+                        id=stripped.split(":", 1)[1].strip(),
                         url="",
                         mode="CORE",
                         use="",
                     )
-                elif current_skill and line.startswith("    url:"):
-                    current_skill.url = line.split(":", 1)[1].strip()
-                elif current_skill and line.startswith("    mode:"):
-                    current_skill.mode = line.split(":", 1)[1].strip()
-                elif current_skill and line.startswith("    when:"):
-                    current_skill.when = line.split(":", 1)[1].strip()
-                elif current_skill and line.startswith("    use:"):
-                    current_skill.use = line.split(":", 1)[1].strip().strip('"')
+                elif current_skill and stripped.startswith("url:"):
+                    current_skill.url = stripped.split(":", 1)[1].strip()
+                elif current_skill and stripped.startswith("mode:"):
+                    current_skill.mode = stripped.split(":", 1)[1].strip()
+                elif current_skill and stripped.startswith("when:"):
+                    current_skill.when = stripped.split(":", 1)[1].strip()
+                elif current_skill and stripped.startswith("use:"):
+                    current_skill.use = stripped.split(":", 1)[1].strip().strip('"')
             elif current_section == "recommended_with":
-                if line.startswith("  - "):
-                    recommended.append(line.replace("  - ", "").strip())
+                if stripped.startswith("- "):
+                    recommended.append(stripped[2:].strip().strip('"'))
             elif current_section == "runtime_rules":
-                if line.startswith("  - "):
-                    runtime_rules.append(line.replace("  - ", "").strip().strip('"'))
+                if stripped.startswith("- "):
+                    runtime_rules.append(stripped[2:].strip().strip('"'))
 
         if current_skill:
             skills.append(current_skill)
@@ -457,6 +488,51 @@ class SkillsRouter:
         # Step 10: Release Gate
         release_gate = self._build_release_gate(project_type, risk_level)
 
+        # Step 11: Recommended Focused Bundles
+        recommended_bundles: List[str] = []
+        if project_type == "web":
+            recommended_bundles.append("bus-web-app-builder")
+            if any(s.domain == "design-taste" for s in deduped):
+                recommended_bundles.append("bus-product-ui-taste")
+            if any("seo" in s.id or "marketingskills" in s.id for s in deduped):
+                recommended_bundles.append("bus-seo-geo-web-quality")
+            if any(s.domain in ["backend", "database"] for s in deduped):
+                recommended_bundles.append("bus-backend-api-data")
+        elif project_type == "desktop":
+            if platform == "windows":
+                recommended_bundles.append("bus-windows-app-builder")
+            elif platform == "macos":
+                recommended_bundles.append("bus-macos-app-builder")
+            elif framework == "flutter":
+                recommended_bundles.append("bus-flutter-desktop-builder")
+        elif project_type == "mobile":
+            if framework in ["react-native", "expo"]:
+                recommended_bundles.append("bus-expo-app-builder")
+            elif framework == "flutter":
+                recommended_bundles.append("bus-flutter-app-builder")
+            elif platform == "ios":
+                recommended_bundles.append("bus-ios-app-builder")
+            elif platform == "android":
+                recommended_bundles.append("bus-android-app-builder")
+        elif task_type in ["research", "search"]:
+            recommended_bundles.append("bus-research-intelligence")
+
+        if risk_level in ["HIGH", "RELEASE"] or task_type == "security":
+            recommended_bundles.append("bus-secure-app-builder")
+            recommended_bundles.append("bus-security-auditor")
+
+        if task_type in ["release", "audit"]:
+            recommended_bundles.append("bus-audit-release")
+
+        if not recommended_bundles:
+            recommended_bundles.append("bus-engineering-core")
+
+        # Deduplicate recommended bundles preserving order
+        deduped_bundles: List[str] = []
+        for b in recommended_bundles:
+            if b not in deduped_bundles and b in self.bundles:
+                deduped_bundles.append(b)
+
         return RouteResult(
             request=request,
             project_type=project_type,
@@ -471,6 +547,7 @@ class SkillsRouter:
             conflicts_detected=conflicts_detected,
             warnings=warnings,
             release_gate=release_gate,
+            recommended_bundles=deduped_bundles,
         )
 
     def _build_execution_stages(

@@ -35,7 +35,7 @@ class RegistryValidator:
             return None
 
     def validate_skills(self) -> Dict[str, Dict[str, Any]]:
-        print("[1/5] Validating registry/skills.json...")
+        print("[1/8] Validating registry/skills.json...")
         skills_data = self.load_json(self.registry_dir / "skills.json")
         if not isinstance(skills_data, list):
             self.log_error("skills.json must contain a list of skill objects.")
@@ -133,7 +133,7 @@ class RegistryValidator:
         return known_skills
 
     def validate_lockfile(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[2/5] Validating registry/lock.json and hash parity...")
+        print("[2/8] Validating registry/lock.json and hash parity...")
         lock_data = self.load_json(self.registry_dir / "lock.json")
         if not lock_data:
             return
@@ -159,7 +159,7 @@ class RegistryValidator:
         print(f"      Verified parity across {len(lock_skills)} locked skills.")
 
     def validate_conflicts(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[3/5] Validating registry/conflicts.json...")
+        print("[3/8] Validating registry/conflicts.json...")
         conflicts_data = self.load_json(self.registry_dir / "conflicts.json")
         if not conflicts_data:
             return
@@ -177,7 +177,7 @@ class RegistryValidator:
         print("      Conflict rules verified.")
 
     def validate_compatibility(self) -> None:
-        print("[4/5] Validating registry/compatibility.json...")
+        print("[4/8] Validating registry/compatibility.json...")
         compat_data = self.load_json(self.registry_dir / "compatibility.json")
         if not compat_data:
             return
@@ -185,8 +185,28 @@ class RegistryValidator:
             self.log_error("compatibility.json missing required 'platforms' or 'frameworks' keys.")
         print("      Compatibility matrix verified.")
 
+    def validate_sources(self) -> None:
+        print("[5/8] Validating registry/sources.json...")
+        sources_path = self.registry_dir / "sources.json"
+        sources_data = self.load_json(sources_path)
+        if not isinstance(sources_data, list):
+            self.log_error("sources.json must contain a list of source objects.")
+            return
+
+        commit_re = re.compile(r"^[0-9a-f]{7,40}$")
+        for idx, src in enumerate(sources_data):
+            for req in ["id", "name", "url", "default_branch", "license", "commit", "trust_tier"]:
+                if req not in src or not src[req]:
+                    self.log_error(f"Source #{idx} ({src.get('id')}) missing required field '{req}'.")
+            if not commit_re.match(str(src.get("commit", ""))):
+                self.log_error(f"Source '{src.get('id')}' has invalid commit hash: {src.get('commit')}")
+            if not str(src.get("url", "")).startswith("https://github.com/"):
+                self.log_error(f"Source '{src.get('id')}' URL must point to GitHub: {src.get('url')}")
+
+        print(f"      Verified {len(sources_data)} upstream sources in registry/sources.json.")
+
     def validate_profiles(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[5/7] Validating domain profiles in profiles/*...")
+        print("[6/8] Validating domain profiles in profiles/*...")
         profile_dirs = [p for p in self.profiles_dir.iterdir() if p.is_dir()]
         for pdir in profile_dirs:
             pjson = pdir / "profile.json"
@@ -210,7 +230,7 @@ class RegistryValidator:
         print(f"      Verified {len(profile_dirs)} domain profiles.")
 
     def validate_plugins(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[6/7] Validating registry/plugins.json and plugins/ directories...")
+        print("[7/8] Validating registry/plugins.json and plugins/ directories...")
         plugins_path = self.registry_dir / "plugins.json"
         plugins_data = self.load_json(plugins_path)
         if not isinstance(plugins_data, list):
@@ -235,7 +255,7 @@ class RegistryValidator:
         print(f"      Verified {len(plugins_data)} plugins in registry/plugins.json.")
 
     def validate_bundles(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[7/7] Validating focused bundles in bundles/*.yaml...")
+        print("[8/8] Validating focused bundles in bundles/*.yaml...")
         bundles_dir = self.root / "bundles"
         if not bundles_dir.exists():
             self.log_error("bundles/ directory does not exist!")
@@ -245,28 +265,67 @@ class RegistryValidator:
         if len(bfiles) < 16:
             self.log_error(f"Expected at least 16 bundle manifests, found {len(bfiles)}")
 
-        for bfile in bfiles:
-            lines = bfile.read_text(encoding="utf-8").splitlines()
-            b_id = ""
-            has_job = False
-            skills_found = 0
-            for line in lines:
-                if line.startswith("id:"):
-                    b_id = line.split(":", 1)[1].strip()
-                elif line.startswith("job:"):
-                    has_job = True
-                elif line.startswith("  - id:"):
-                    sid = line.split(":", 1)[1].strip()
-                    skills_found += 1
-                    if sid not in known_skills:
-                        self.log_error(f"Bundle '{bfile.name}' references unknown skill '{sid}'")
+        try:
+            import yaml
+            has_yaml = True
+        except ImportError:
+            has_yaml = False
 
-            if not b_id.startswith("bus-"):
-                self.log_error(f"Bundle file '{bfile.name}' has invalid id '{b_id}' (must start with bus-)")
-            if not has_job:
-                self.log_error(f"Bundle file '{bfile.name}' missing 'job' description")
-            if skills_found == 0:
-                self.log_error(f"Bundle file '{bfile.name}' has 0 skills defined")
+        for bfile in bfiles:
+            if has_yaml:
+                try:
+                    with open(bfile, "r", encoding="utf-8") as yf:
+                        bdata = yaml.safe_load(yf)
+                except Exception as e:
+                    self.log_error(f"Failed to parse YAML '{bfile.name}': {e}")
+                    continue
+
+                b_id = bdata.get("id", "")
+                if not b_id.startswith("bus-"):
+                    self.log_error(f"Bundle file '{bfile.name}' has invalid id '{b_id}' (must start with bus-)")
+                if not bdata.get("job"):
+                    self.log_error(f"Bundle file '{bfile.name}' missing 'job' description")
+
+                skills = bdata.get("skills", [])
+                if not skills or not isinstance(skills, list):
+                    self.log_error(f"Bundle file '{bfile.name}' has 0 skills defined")
+                else:
+                    for s in skills:
+                        sid = s.get("id", "")
+                        if not sid:
+                            self.log_error(f"Bundle '{bfile.name}' has skill with missing ID")
+                        elif sid not in known_skills:
+                            self.log_error(f"Bundle '{bfile.name}' references unknown skill '{sid}'")
+                        if not s.get("url"):
+                            self.log_error(f"Bundle '{bfile.name}' skill '{sid}' missing 'url'")
+
+                if "recommended_with" not in bdata or not isinstance(bdata["recommended_with"], list):
+                    self.log_error(f"Bundle '{bfile.name}' missing recommended_with list")
+                if "runtime_rules" not in bdata or not isinstance(bdata["runtime_rules"], list):
+                    self.log_error(f"Bundle '{bfile.name}' missing runtime_rules list")
+            else:
+                lines = bfile.read_text(encoding="utf-8").splitlines()
+                b_id = ""
+                has_job = False
+                skills_found = 0
+                for line in lines:
+                    stripped = line.strip()
+                    if stripped.startswith("id:"):
+                        b_id = stripped.split(":", 1)[1].strip()
+                    elif stripped.startswith("job:"):
+                        has_job = True
+                    elif stripped.startswith("- id:"):
+                        sid = stripped.split(":", 1)[1].strip()
+                        skills_found += 1
+                        if sid not in known_skills:
+                            self.log_error(f"Bundle '{bfile.name}' references unknown skill '{sid}'")
+
+                if not b_id.startswith("bus-"):
+                    self.log_error(f"Bundle file '{bfile.name}' has invalid id '{b_id}'")
+                if not has_job:
+                    self.log_error(f"Bundle file '{bfile.name}' missing 'job' description")
+                if skills_found == 0:
+                    self.log_error(f"Bundle file '{bfile.name}' has 0 skills defined")
 
         print(f"      Verified {len(bfiles)} bundle manifests.")
 
@@ -279,6 +338,7 @@ class RegistryValidator:
             self.validate_lockfile(skills)
             self.validate_conflicts(skills)
             self.validate_compatibility()
+            self.validate_sources()
             self.validate_profiles(skills)
             self.validate_plugins(skills)
             self.validate_bundles(skills)

@@ -1,32 +1,5 @@
 [
   {
-    "id": "everyinc-compound-engineering-plugin",
-    "name": "EveryInc/compound-engineering-plugin",
-    "url": "https://github.com/EveryInc/compound-engineering-plugin",
-    "default_branch": "main",
-    "license": "MIT",
-    "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
-    "trust_tier": "community-reviewed"
-  },
-  {
-    "id": "leonxlnx-taste-skill",
-    "name": "Leonxlnx/taste-skill",
-    "url": "https://github.com/Leonxlnx/taste-skill",
-    "default_branch": "main",
-    "license": "MIT",
-    "commit": "ccbc15639c0d381ae77c25143a502f6ae45ea9be",
-    "trust_tier": "community-reviewed"
-  },
-  {
-    "id": "owasp-secure-agent-playbook",
-    "name": "OWASP/secure-agent-playbook",
-    "url": "https://github.com/OWASP/secure-agent-playbook",
-    "default_branch": "main",
-    "license": "Apache-2.0",
-    "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
-    "trust_tier": "first-party"
-  },
-  {
     "id": "addyosmani-agent-skills",
     "name": "addyosmani/agent-skills",
     "url": "https://github.com/addyosmani/agent-skills",
@@ -81,6 +54,15 @@
     "trust_tier": "community-reviewed"
   },
   {
+    "id": "cloudflare-skills",
+    "name": "cloudflare/skills",
+    "url": "https://github.com/cloudflare/skills",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "d924cd8f59e75e08fd3dd52843bb2776de35c77e",
+    "trust_tier": "first-party"
+  },
+  {
     "id": "coreyhaines31-marketingskills",
     "name": "coreyhaines31/marketingskills",
     "url": "https://github.com/coreyhaines31/marketingskills",
@@ -105,6 +87,15 @@
     "default_branch": "main",
     "license": "MIT",
     "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+    "trust_tier": "community-reviewed"
+  },
+  {
+    "id": "everyinc-compound-engineering-plugin",
+    "name": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
     "trust_tier": "community-reviewed"
   },
   {
@@ -135,6 +126,24 @@
     "trust_tier": "first-party"
   },
   {
+    "id": "laravel-agent-skills",
+    "name": "laravel/agent-skills",
+    "url": "https://github.com/laravel/agent-skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "553bedde0f7f0a234ef408b77bf0435da5e3767c",
+    "trust_tier": "first-party"
+  },
+  {
+    "id": "leonxlnx-taste-skill",
+    "name": "Leonxlnx/taste-skill",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "ccbc15639c0d381ae77c25143a502f6ae45ea9be",
+    "trust_tier": "community-reviewed"
+  },
+  {
     "id": "microsoft-win-dev-skills",
     "name": "microsoft/win-dev-skills",
     "url": "https://github.com/microsoft/win-dev-skills",
@@ -151,6 +160,15 @@
     "license": "MIT",
     "commit": "56ba5ace27d0441db1eec70d37e4063bb7901594",
     "trust_tier": "community-reviewed"
+  },
+  {
+    "id": "neondatabase-agent-skills",
+    "name": "neondatabase/agent-skills",
+    "url": "https://github.com/neondatabase/agent-skills",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "2e0da3a1653bcdd227565ac14bb3e9e453a8b854",
+    "trust_tier": "first-party"
   },
   {
     "id": "nextlevelbuilder-ui-ux-pro-max-skill",
@@ -189,6 +207,15 @@
     "trust_tier": "first-party"
   },
   {
+    "id": "owasp-secure-agent-playbook",
+    "name": "OWASP/secure-agent-playbook",
+    "url": "https://github.com/OWASP/secure-agent-playbook",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+    "trust_tier": "first-party"
+  },
+  {
     "id": "pbakaus-impeccable",
     "name": "pbakaus/impeccable",
     "url": "https://github.com/pbakaus/impeccable",
@@ -196,6 +223,33 @@
     "license": "MIT",
     "commit": "8b39f41949544ae5d06bbfeea0a6931548e6fb12",
     "trust_tier": "community-reviewed"
+  },
+  {
+    "id": "prisma-skills",
+    "name": "prisma/skills",
+    "url": "https://github.com/prisma/skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "808913c1dac11dc425631c2454f7fcb2d5ade5ca",
+    "trust_tier": "first-party"
+  },
+  {
+    "id": "sickn33-agentic-awesome-skills",
+    "name": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "3d343b9d71969848bbfebea47428fdb3cd18d496",
+    "trust_tier": "reference-model"
+  },
+  {
+    "id": "snyk-agent-scan",
+    "name": "snyk/agent-scan",
+    "url": "https://github.com/snyk/agent-scan",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "dada638721a67c3940f6756865968e935651f31d",
+    "trust_tier": "first-party"
   },
   {
     "id": "supabase-agent-skills",

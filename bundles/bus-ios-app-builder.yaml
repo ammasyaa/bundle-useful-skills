@@ -1,45 +1,47 @@
 id: bus-ios-app-builder
-job: Native iOS development with SwiftUI, simulator inspection, debugger workflows, and Liquid Glass
+job: Native iOS development with SwiftUI, simulator inspection, debugger workflows,
+  and Liquid Glass
 skills:
-  - id: swiftui-ui-patterns
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-ui-patterns/SKILL.md
-    mode: CORE
-    use: "SwiftUI UI architecture"
-  - id: swiftui-view-refactor
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-view-refactor/SKILL.md
-    mode: COND
-    use: "Refactor large views"
-  - id: ios-debugger-agent
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-debugger-agent/SKILL.md
-    mode: CORE
-    use: "Simulator build/run/debug"
-  - id: ios-simulator-browser
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-simulator-browser/SKILL.md
-    mode: CORE
-    use: "Simulator visual/runtime inspection"
-  - id: swiftui-performance-audit
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-performance-audit/SKILL.md
-    mode: COND
-    use: "SwiftUI performance audit"
-  - id: ios-ettrace-performance
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-ettrace-performance/SKILL.md
-    mode: COND
-    use: "ETTrace profiling"
-  - id: ios-memgraph-leaks
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-memgraph-leaks/SKILL.md
-    mode: COND
-    use: "Memory/leak investigation"
-  - id: swiftui-liquid-glass
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-liquid-glass/SKILL.md
-    mode: COND
-    use: "Native current Liquid Glass APIs"
-  - id: ios-app-intents
-    url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-app-intents/SKILL.md
-    mode: COND
-    use: "App Intents/System integrations"
+- id: swiftui-ui-patterns
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-ui-patterns/SKILL.md
+  mode: CORE
+  use: SwiftUI UI architecture
+- id: swiftui-view-refactor
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-view-refactor/SKILL.md
+  mode: COND
+  use: Refactor large views
+- id: ios-debugger-agent
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-debugger-agent/SKILL.md
+  mode: CORE
+  use: Simulator build/run/debug
+- id: ios-simulator-browser
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-simulator-browser/SKILL.md
+  mode: CORE
+  use: Simulator visual/runtime inspection
+- id: swiftui-performance-audit
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-performance-audit/SKILL.md
+  mode: COND
+  use: SwiftUI performance audit
+- id: ios-ettrace-performance
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-ettrace-performance/SKILL.md
+  mode: COND
+  use: ETTrace profiling
+- id: ios-memgraph-leaks
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-memgraph-leaks/SKILL.md
+  mode: COND
+  use: Memory/leak investigation
+- id: swiftui-liquid-glass
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-liquid-glass/SKILL.md
+  mode: COND
+  use: Native current Liquid Glass APIs
+- id: ios-app-intents
+  url: https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-app-intents/SKILL.md
+  mode: COND
+  use: App Intents/System integrations
 recommended_with:
-  - bus-product-ui-taste
-  - bus-audit-release
+- bus-product-ui-taste
+- bus-audit-release
 runtime_rules:
-  - "swiftui-ui-patterns + ios-debugger-agent + ios-simulator-browser + verification-before-completion"
-  - "Apple HIG remains platform authority"
+- swiftui-ui-patterns + ios-debugger-agent + ios-simulator-browser + verification-before-completion
+- Apple HIG remains platform authority
+- Activate profiling (ettrace, memgraph) and view refactoring conditionally

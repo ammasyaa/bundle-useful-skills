@@ -1,46 +1,48 @@
 id: bus-research-intelligence
 job: Comprehensive search, deep literature research, and interactive web synthesis
 skills:
-  - id: firecrawl-search
-    url: https://github.com/firecrawl/cli/blob/main/skills/firecrawl-search/SKILL.md
-    mode: CORE
-    use: "Web/developer/news/paper discovery"
-  - id: deep-research
-    url: https://github.com/bytedance/deer-flow/blob/main/skills/public/deep-research/SKILL.md
-    mode: CORE
-    use: "Multi-source deep synthesis"
-  - id: github-deep-research
-    url: https://github.com/bytedance/deer-flow/blob/main/skills/public/github-deep-research/SKILL.md
-    mode: COND
-    use: "GitHub repo/ecosystem comparison"
-  - id: academic-paper-review
-    url: https://github.com/bytedance/deer-flow/tree/main/skills/public/academic-paper-review
-    mode: COND
-    when: academic-review
-    use: "Individual academic paper review"
-  - id: systematic-literature-review
-    url: https://github.com/bytedance/deer-flow/tree/main/skills/public/systematic-literature-review
-    mode: COND
-    when: academic-review
-    use: "Literature synthesis"
-  - id: browser-use
-    url: https://github.com/browser-use/browser-use/blob/main/skills/browser-use/SKILL.md
-    mode: COND
-    use: "Interactive/JS/authenticated sites"
-  - id: qa
-    url: https://github.com/browser-use/browser-use/blob/main/skills/qa/SKILL.md
-    mode: COND
-    use: "Real-browser website/web-app QA"
-  - id: last30days
-    url: https://github.com/mvanhorn/last30days-skill/blob/main/skills/last30days/SKILL.md
-    mode: COND
-    use: "Recent community/ecosystem sentiment"
+- id: firecrawl-search
+  url: https://github.com/firecrawl/cli/blob/main/skills/firecrawl-search/SKILL.md
+  mode: CORE
+  use: Web/developer/news/paper discovery
+- id: deep-research
+  url: https://github.com/bytedance/deer-flow/blob/main/skills/public/deep-research/SKILL.md
+  mode: CORE
+  use: Multi-source deep synthesis
+- id: github-deep-research
+  url: https://github.com/bytedance/deer-flow/blob/main/skills/public/github-deep-research/SKILL.md
+  mode: COND
+  use: GitHub repo/ecosystem comparison
+- id: academic-paper-review
+  url: https://github.com/bytedance/deer-flow/tree/main/skills/public/academic-paper-review
+  mode: COND
+  when: academic-review
+  use: Individual academic paper review
+- id: systematic-literature-review
+  url: https://github.com/bytedance/deer-flow/tree/main/skills/public/systematic-literature-review
+  mode: COND
+  when: academic-review
+  use: Literature synthesis
+- id: browser-use
+  url: https://github.com/browser-use/browser-use/blob/main/skills/browser-use/SKILL.md
+  mode: COND
+  use: Interactive/JS/authenticated sites
+- id: qa
+  url: https://github.com/browser-use/browser-use/blob/main/skills/qa/SKILL.md
+  mode: COND
+  use: Real-browser website/web-app QA
+- id: last30days
+  url: https://github.com/mvanhorn/last30days-skill/blob/main/skills/last30days/SKILL.md
+  mode: COND
+  use: Recent community/ecosystem sentiment
 recommended_with:
-  - bus-engineering-core
+- bus-engineering-core
 runtime_rules:
-  - "simple lookup -> firecrawl-search"
-  - "deep research -> firecrawl-search + deep-research"
-  - "GitHub comparison -> github-deep-research"
-  - "interactive website -> browser-use"
-  - "runtime website QA -> qa"
-  - "recent sentiment -> last30days"
+- simple lookup -> firecrawl-search
+- deep research -> firecrawl-search + deep-research
+- GitHub comparison -> github-deep-research
+- individual academic paper review -> academic-paper-review
+- literature synthesis -> systematic-literature-review
+- interactive website -> browser-use
+- runtime website QA -> qa
+- recent sentiment -> last30days

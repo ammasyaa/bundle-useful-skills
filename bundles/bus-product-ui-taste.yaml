@@ -1,76 +1,84 @@
 id: bus-product-ui-taste
 job: Product design, craft, motion, UI/UX intelligence, and anti-slop visual critique
 skills:
-  - id: design-taste-frontend
-    url: https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md
-    mode: ALT
-    use: "Expressive marketing/editorial/corporate web"
-  - id: frontend-design
-    url: https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md
-    mode: ALT
-    use: "Distinctive production frontend direction"
-  - id: emil-design-eng
-    url: https://github.com/emilkowalski/skills/blob/main/skills/emil-design-eng/SKILL.md
-    mode: CORE
-    use: "Interface craft and design engineering"
-  - id: apple-design
-    url: https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md
-    mode: COND
-    use: "Apple-like restraint, physical motion, feedback"
-  - id: animate
-    url: https://github.com/emilkowalski/skills/blob/main/skills/animate/SKILL.md
-    mode: COND
-    use: "Implement web/interface motion"
-  - id: animate-expo
-    url: https://github.com/emilkowalski/skills/blob/main/skills/animate-expo/SKILL.md
-    mode: COND
-    when: expo
-    use: "Expo/React Native motion"
-  - id: review-animations
-    url: https://github.com/emilkowalski/skills/blob/main/skills/review-animations/SKILL.md
-    mode: COND
-    use: "Motion review"
-  - id: improve-animations
-    url: https://github.com/emilkowalski/skills/blob/main/skills/improve-animations/SKILL.md
-    mode: COND
-    use: "Codebase-level motion improvement"
-  - id: ui-ux-pro-max
-    url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md
-    mode: CORE
-    use: "UX patterns, typography, palettes, product/UI research"
-  - id: impeccable
-    url: https://github.com/pbakaus/impeccable/blob/main/.vibe/skills/impeccable/SKILL.md
-    mode: CORE
-    use: "UI/UX audit, critique, polish, anti-slop"
-  - id: ui-craft
-    url: https://github.com/olzn/ui-craft/blob/main/ui-craft/SKILL.md
-    mode: COND
-    use: "Route deep design-system work"
-  - id: surface-motion
-    url: https://github.com/olzn/ui-craft/blob/main/surface/surface-motion/SKILL.md
-    mode: COND
-    use: "Motion system"
-  - id: surface-interaction
-    url: https://github.com/olzn/ui-craft/blob/main/surface/surface-interaction/SKILL.md
-    mode: COND
-    use: "Interaction system"
-  - id: surface-typography
-    url: https://github.com/olzn/ui-craft/blob/main/surface/surface-typography/SKILL.md
-    mode: COND
-    use: "Typography system"
-  - id: system-tokens
-    url: https://github.com/olzn/ui-craft/blob/main/system/system-tokens/SKILL.md
-    mode: COND
-    use: "Design tokens"
-  - id: system-components
-    url: https://github.com/olzn/ui-craft/blob/main/system/system-components/SKILL.md
-    mode: COND
-    use: "Component-system architecture"
-  - id: system-patterns
-    url: https://github.com/olzn/ui-craft/blob/main/system/system-patterns/SKILL.md
-    mode: COND
-    use: "Reusable UI patterns"
+- id: design-taste-frontend
+  url: https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md
+  mode: ALT
+  use: Expressive marketing/editorial/corporate web
+- id: frontend-design
+  url: https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md
+  mode: ALT
+  use: Distinctive production frontend direction
+- id: emil-design-eng
+  url: https://github.com/emilkowalski/skills/blob/main/skills/emil-design-eng/SKILL.md
+  mode: CORE
+  use: Interface craft and design engineering
+- id: apple-design
+  url: https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md
+  mode: COND
+  use: Apple-like restraint, physical motion, feedback
+- id: animate
+  url: https://github.com/emilkowalski/skills/blob/main/skills/animate/SKILL.md
+  mode: COND
+  use: Implement web/interface motion
+- id: animate-expo
+  url: https://github.com/emilkowalski/skills/blob/main/skills/animate-expo/SKILL.md
+  mode: COND
+  when: expo
+  use: Expo/React Native motion
+- id: review-animations
+  url: https://github.com/emilkowalski/skills/blob/main/skills/review-animations/SKILL.md
+  mode: COND
+  use: Motion review
+- id: improve-animations
+  url: https://github.com/emilkowalski/skills/blob/main/skills/improve-animations/SKILL.md
+  mode: COND
+  use: Codebase-level motion improvement
+- id: ui-ux-pro-max
+  url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md
+  mode: CORE
+  use: UX patterns, typography, palettes, product/UI research
+- id: impeccable
+  url: https://github.com/pbakaus/impeccable/blob/main/.vibe/skills/impeccable/SKILL.md
+  mode: CORE
+  use: UI/UX audit, critique, polish, anti-slop
+- id: ui-craft
+  url: https://github.com/olzn/ui-craft/blob/main/ui-craft/SKILL.md
+  mode: COND
+  use: Route deep design-system work
+- id: surface-motion
+  url: https://github.com/olzn/ui-craft/blob/main/surface/surface-motion/SKILL.md
+  mode: COND
+  use: Motion system
+- id: surface-interaction
+  url: https://github.com/olzn/ui-craft/blob/main/surface/surface-interaction/SKILL.md
+  mode: COND
+  use: Interaction system
+- id: surface-typography
+  url: https://github.com/olzn/ui-craft/blob/main/surface/surface-typography/SKILL.md
+  mode: COND
+  use: Typography system
+- id: system-tokens
+  url: https://github.com/olzn/ui-craft/blob/main/system/system-tokens/SKILL.md
+  mode: COND
+  use: Design tokens
+- id: system-components
+  url: https://github.com/olzn/ui-craft/blob/main/system/system-components/SKILL.md
+  mode: COND
+  use: Component-system architecture
+- id: system-patterns
+  url: https://github.com/olzn/ui-craft/blob/main/system/system-patterns/SKILL.md
+  mode: COND
+  use: Reusable UI patterns
 recommended_with:
-  - bus-web-app-builder
-  - bus-macos-app-builder
-  - bus-ios-app-builder
+- bus-web-app-builder
+- bus-macos-app-builder
+- bus-ios-app-builder
+runtime_rules:
+- Never activate both creative directors (design-taste-frontend and frontend-design)
+  together
+- 'Apple taste != copy Apple UI: Apply craft, restraint, hierarchy, feedback and motion
+  quality through the target platform''s native conventions'
+- Interface craft and design engineering baseline -> emil-design-eng + impeccable
+- Deep design-system architecture -> ui-craft + surface-* + system-*
+- Motion review and codebase improvement -> review-animations + improve-animations

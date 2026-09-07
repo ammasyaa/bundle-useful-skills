@@ -1,30 +1,37 @@
 id: bus-agent-security
-job: AI agent systems security, LLM threat modeling, MCP server reviews, and injection defense
+job: AI agent systems security, LLM threat modeling, MCP server reviews, and injection
+  defense
 skills:
-  - id: agent-security-audit
-    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/agent-security-audit/SKILL.md
-    mode: CORE
-    use: "Agent-system security"
-  - id: llm-risk-assess
-    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/llm-risk-assess/SKILL.md
-    mode: COND
-    use: "LLM application risk"
-  - id: agentic-ai-risk-assess
-    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/agentic-ai-risk-assess/SKILL.md
-    mode: COND
-    use: "Agentic-system risk"
-  - id: mcp-server-review
-    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/mcp-server-review/SKILL.md
-    mode: COND
-    use: "MCP server review"
-  - id: prompt-injection-test
-    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/prompt-injection-test/SKILL.md
-    mode: COND
-    use: "Authorized prompt-injection testing"
-  - id: multi-agentic-threat-model
-    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/multi-agentic-threat-model/SKILL.md
-    mode: COND
-    use: "Multi-agent threat modeling"
+- id: agent-security-audit
+  url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/agent-security-audit/SKILL.md
+  mode: CORE
+  use: Agent-system security
+- id: llm-risk-assess
+  url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/llm-risk-assess/SKILL.md
+  mode: COND
+  use: LLM application risk
+- id: agentic-ai-risk-assess
+  url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/agentic-ai-risk-assess/SKILL.md
+  mode: COND
+  use: Agentic-system risk
+- id: mcp-server-review
+  url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/mcp-server-review/SKILL.md
+  mode: COND
+  use: MCP server review
+- id: prompt-injection-test
+  url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/prompt-injection-test/SKILL.md
+  mode: COND
+  use: Authorized prompt-injection testing
+- id: multi-agentic-threat-model
+  url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/multi-agentic-threat-model/SKILL.md
+  mode: COND
+  use: Multi-agent threat modeling
 recommended_with:
-  - bus-secure-app-builder
-  - bus-security-auditor
+- bus-secure-app-builder
+- bus-security-auditor
+runtime_rules:
+- agent-security-audit for agent-system security review
+- mcp-server-review for MCP server review and validation
+- prompt-injection-test for authorized prompt-injection testing only
+- llm-risk-assess and agentic-ai-risk-assess for AI application risk and multi-agent
+  threat modeling

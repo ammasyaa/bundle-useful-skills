@@ -111,6 +111,47 @@ class TestBundleManifestsAndPlugins(unittest.TestCase):
             self.assertEqual(entry["skill_count"], len(entry["skills"]))
             self.assertGreaterEqual(entry["skill_count"], 5)
 
+    def test_bundles_runtime_rules_and_recommendations(self):
+        """Verify that all 17 bundles specify runtime_rules and recommended_with."""
+        for b_id in EXPECTED_BUNDLES:
+            bundle = self.router.get_bundle(b_id)
+            self.assertIsNotNone(bundle)
+            self.assertGreater(
+                len(bundle.runtime_rules),
+                0,
+                f"Bundle '{b_id}' has empty runtime_rules!"
+            )
+            self.assertGreater(
+                len(bundle.recommended_with),
+                0,
+                f"Bundle '{b_id}' has empty recommended_with!"
+            )
+
+    def test_route_generates_recommended_bundles(self):
+        """Verify that routing plans recommend appropriate focused bundles."""
+        from router.models import TaskRequest
+        req = TaskRequest(
+            query="Build a high performance Next.js web application",
+            project_type="web",
+            framework="react",
+        )
+        res = self.router.route(req)
+        self.assertIn("bus-web-app-builder", res.recommended_bundles)
+
+    def test_all_sources_cataloged(self):
+        """Verify that registry/sources.json has all 31 sources referenced in the prompt."""
+        sources_path = self.registry_dir / "sources.json"
+        with open(sources_path, "r", encoding="utf-8") as f:
+            sources = json.load(f)
+        self.assertEqual(len(sources), 31)
+        source_ids = {s["id"] for s in sources}
+        self.assertIn("cloudflare-skills", source_ids)
+        self.assertIn("neondatabase-agent-skills", source_ids)
+        self.assertIn("prisma-skills", source_ids)
+        self.assertIn("laravel-agent-skills", source_ids)
+        self.assertIn("sickn33-agentic-awesome-skills", source_ids)
+        self.assertIn("snyk-agent-scan", source_ids)
+
 
 if __name__ == "__main__":
     unittest.main()

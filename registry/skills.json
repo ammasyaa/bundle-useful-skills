@@ -21,7 +21,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Individual academic paper review"
+    "notes": "Individual academic paper review",
+    "repo": "https://github.com/bytedance/deer-flow",
+    "path": "skills/public/academic-paper-review/SKILL.md",
+    "url": "https://github.com/bytedance/deer-flow/blob/main/skills/public/academic-paper-review/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "accessibility",
@@ -44,7 +48,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "WCAG 2.2"
+    "notes": "WCAG 2.2",
+    "repo": "https://github.com/addyosmani/web-quality-skills",
+    "path": "skills/accessibility/SKILL.md",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/accessibility/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "addy-code-review-and-quality",
@@ -68,7 +76,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Standard code review for correctness, readability, maintainability, and clean architecture."
+    "notes": "Standard code review for correctness, readability, maintainability, and clean architecture.",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/code-review-and-quality/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "addy-frontend-ui-engineering",
@@ -92,7 +104,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Framework-agnostic frontend engineering, clean component boundaries, and web standards."
+    "notes": "Framework-agnostic frontend engineering, clean component boundaries, and web standards.",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/frontend-ui-engineering/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "addy-web-quality-audit",
@@ -118,7 +134,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Technical web audit: Core Web Vitals (LCP, INP, CLS), WCAG accessibility, and runtime profiling."
+    "notes": "Technical web audit: Core Web Vitals (LCP, INP, CLS), WCAG accessibility, and runtime profiling.",
+    "repo": "https://github.com/addyosmani/web-quality-skills",
+    "path": "skills/web-quality-audit/SKILL.md",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "agent-security-audit",
@@ -142,7 +162,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Agent-system security"
+    "notes": "Agent-system security",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/ai-security-skills/skills/agent-security-audit/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/agent-security-audit/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "agentic-ai-risk-assess",
@@ -165,7 +189,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Agentic-system risk"
+    "notes": "Agentic-system risk",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/ai-security-skills/skills/agentic-ai-risk-assess/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/agentic-ai-risk-assess/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "agp-9-upgrade",
@@ -188,7 +216,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "AGP upgrade"
+    "notes": "AGP upgrade",
+    "repo": "https://github.com/android/skills",
+    "path": "build-system/agp/agp-9-upgrade/SKILL.md",
+    "url": "https://github.com/android/skills/blob/main/build-system/agp/agp-9-upgrade/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "ai-seo",
@@ -212,7 +244,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "GEO/AEO/LLM citation readiness"
+    "notes": "GEO/AEO/LLM citation readiness",
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/ai-seo/SKILL.md",
+    "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "android-cli",
@@ -235,7 +271,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Official docs, SDK/device/project/skill discovery"
+    "notes": "Official docs, SDK/device/project/skill discovery",
+    "repo": "https://github.com/android/skills",
+    "path": "devtools/android-cli/SKILL.md",
+    "url": "https://github.com/android/skills/blob/main/devtools/android-cli/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "android-intent-security",
@@ -259,7 +299,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Intent/component security"
+    "notes": "Intent/component security",
+    "repo": "https://github.com/android/skills",
+    "path": "security/android-intent-security/SKILL.md",
+    "url": "https://github.com/android/skills/blob/main/security/android-intent-security/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "android-skills",
@@ -287,7 +331,11 @@
       "swiftui"
     ],
     "supersedes": [],
-    "notes": "Official Android/Jetpack Compose conventions, TalkBack, back navigation, edge-to-edge, and lifecycle safety."
+    "notes": "Official Android/Jetpack Compose conventions, TalkBack, back navigation, edge-to-edge, and lifecycle safety.",
+    "repo": "https://github.com/android/skills",
+    "path": "skills/android-dev/SKILL.md",
+    "url": "https://github.com/android/skills/blob/main/skills/android-dev/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "animate",
@@ -310,7 +358,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Implement web/interface motion"
+    "notes": "Implement web/interface motion",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/animate/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/animate/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "animate-expo",
@@ -333,7 +385,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Expo/React Native motion"
+    "notes": "Expo/React Native motion",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/animate-expo/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/animate-expo/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "anthropic-frontend-design",
@@ -359,7 +415,11 @@
       "taste-skill-frontend"
     ],
     "supersedes": [],
-    "notes": "Alternative creative director for distinctive frontend visual direction. Incompatible with taste-skill-frontend."
+    "notes": "Alternative creative director for distinctive frontend visual direction. Incompatible with taste-skill-frontend.",
+    "repo": "https://github.com/anthropics/anthropic-quickstarts",
+    "path": "skills/frontend-design/SKILL.md",
+    "url": "https://github.com/anthropics/anthropic-quickstarts/blob/main/skills/frontend-design/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "api-and-interface-design",
@@ -383,7 +443,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Public/module/API interfaces; Addy Osmani"
+    "notes": "Public/module/API interfaces; Addy Osmani",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/api-and-interface-design/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "api-security-review",
@@ -407,7 +471,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "REST/GraphQL/gRPC/API"
+    "notes": "REST/GraphQL/gRPC/API",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/api-security-review/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/api-security-review/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "appkit-interop",
@@ -430,7 +498,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "SwiftUI/AppKit boundary"
+    "notes": "SwiftUI/AppKit boundary",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/appkit-interop/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/appkit-interop/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "apple-design",
@@ -454,7 +526,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Apple-like restraint, physical motion, feedback"
+    "notes": "Apple-like restraint, physical motion, feedback",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/apple-design/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "audit-context-building",
@@ -478,7 +554,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Understand codebase before hunting bugs; Architecture/security context"
+    "notes": "Understand codebase before hunting bugs; Architecture/security context",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "backend-engineering",
@@ -504,7 +584,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Backend correctness, idempotency, retry safety, contract boundaries, caching, and queue handling."
+    "notes": "Backend correctness, idempotency, retry safety, contract boundaries, caching, and queue handling.",
+    "repo": "https://github.com/bundle-useful-skills/backend-engineering",
+    "path": "skills/backend-engineering/SKILL.md",
+    "url": "https://github.com/bundle-useful-skills/backend-engineering/blob/main/skills/backend-engineering/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "best-practices",
@@ -527,7 +611,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Browser/security/quality baseline"
+    "notes": "Browser/security/quality baseline",
+    "repo": "https://github.com/addyosmani/web-quality-skills",
+    "path": "skills/best-practices/SKILL.md",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/best-practices/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "brainstorming",
@@ -550,7 +638,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Ambiguous/new feature design"
+    "notes": "Ambiguous/new feature design",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/brainstorming/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "browser-testing-with-devtools",
@@ -574,7 +666,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Runtime browser verification"
+    "notes": "Runtime browser verification",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/browser-testing-with-devtools/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/browser-testing-with-devtools/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "browser-use",
@@ -597,7 +693,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Interactive/JS/authenticated sites"
+    "notes": "Interactive/JS/authenticated sites",
+    "repo": "https://github.com/browser-use/browser-use",
+    "path": "skills/browser-use/SKILL.md",
+    "url": "https://github.com/browser-use/browser-use/blob/main/skills/browser-use/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "build-run-debug",
@@ -621,7 +721,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native build/run/debug"
+    "notes": "Native build/run/debug",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/build-run-debug/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/build-run-debug/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "camerax",
@@ -644,7 +748,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "CameraX work"
+    "notes": "CameraX work",
+    "repo": "https://github.com/android/skills",
+    "path": "camera/camerax/SKILL.md",
+    "url": "https://github.com/android/skills/blob/main/camera/camerax/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "ce-code-review",
@@ -667,7 +775,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Deep independent multi-perspective code review"
+    "notes": "Deep independent multi-perspective code review",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-code-review/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-code-review/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ce-dogfood",
@@ -690,7 +802,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Product-use review"
+    "notes": "Product-use review",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-dogfood/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-dogfood/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ce-optimize",
@@ -713,7 +829,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Optimization"
+    "notes": "Optimization",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-optimize/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-optimize/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ce-polish",
@@ -736,7 +856,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Release polish"
+    "notes": "Release polish",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-polish/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-polish/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ce-simplify-code",
@@ -759,7 +883,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Simplification after correctness"
+    "notes": "Simplification after correctness",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-simplify-code/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-simplify-code/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ce-test-browser",
@@ -783,7 +911,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Browser testing"
+    "notes": "Browser testing",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-test-browser/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-test-browser/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ce-test-xcode",
@@ -807,7 +939,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Apple/Xcode testing"
+    "notes": "Apple/Xcode testing",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-test-xcode/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-test-xcode/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "cloudflare-skills",
@@ -831,7 +967,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Cloudflare Workers, Pages, Durable Objects, KV, and edge security."
+    "notes": "Cloudflare Workers, Pages, Durable Objects, KV, and edge security.",
+    "repo": "https://github.com/cloudflare/skills",
+    "path": "skills/cloudflare-workers/SKILL.md",
+    "url": "https://github.com/cloudflare/skills/blob/main/skills/cloudflare-workers/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "code-review-and-quality",
@@ -855,7 +995,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "General engineering review; Addy Osmani; Normal code review"
+    "notes": "General engineering review; Addy Osmani; Normal code review",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/code-review-and-quality/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "code-review-security",
@@ -879,7 +1023,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "General secure code review"
+    "notes": "General secure code review",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/code-review-security/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/code-review-security/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "compound-engineering-plugin",
@@ -903,7 +1051,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Multi-perspective independent review orchestrator for release-level changes."
+    "notes": "Multi-perspective independent review orchestrator for release-level changes.",
+    "repo": "https://github.com/EveryInc/compound-engineering-plugin",
+    "path": "skills/review-orchestrator/SKILL.md",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/review-orchestrator/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "core-web-vitals",
@@ -927,7 +1079,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "LCP/INP/CLS"
+    "notes": "LCP/INP/CLS",
+    "repo": "https://github.com/addyosmani/web-quality-skills",
+    "path": "skills/core-web-vitals/SKILL.md",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/core-web-vitals/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "dart-add-unit-test",
@@ -951,7 +1107,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Dart unit testing"
+    "notes": "Dart unit testing",
+    "repo": "https://github.com/dart-lang/skills",
+    "path": "skills/dart-add-unit-test/SKILL.md",
+    "url": "https://github.com/dart-lang/skills/blob/main/skills/dart-add-unit-test/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "dart-collect-coverage",
@@ -974,7 +1134,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Coverage"
+    "notes": "Coverage",
+    "repo": "https://github.com/dart-lang/skills",
+    "path": "skills/dart-collect-coverage/SKILL.md",
+    "url": "https://github.com/dart-lang/skills/blob/main/skills/dart-collect-coverage/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "dart-fix-runtime-errors",
@@ -998,7 +1162,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Runtime errors"
+    "notes": "Runtime errors",
+    "repo": "https://github.com/dart-lang/skills",
+    "path": "skills/dart-fix-runtime-errors/SKILL.md",
+    "url": "https://github.com/dart-lang/skills/blob/main/skills/dart-fix-runtime-errors/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "dart-generate-test-mocks",
@@ -1022,7 +1190,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Test mocks"
+    "notes": "Test mocks",
+    "repo": "https://github.com/dart-lang/skills",
+    "path": "skills/dart-generate-test-mocks/SKILL.md",
+    "url": "https://github.com/dart-lang/skills/blob/main/skills/dart-generate-test-mocks/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "dart-lang-skills",
@@ -1046,7 +1218,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Dart language idioms, sound null-safety, and widget test harnesses."
+    "notes": "Dart language idioms, sound null-safety, and widget test harnesses.",
+    "repo": "https://github.com/dart-lang/skills",
+    "path": "skills/dart-idioms/SKILL.md",
+    "url": "https://github.com/dart-lang/skills/blob/main/skills/dart-idioms/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "dart-resolve-package-conflicts",
@@ -1069,7 +1245,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Package/dependency conflicts"
+    "notes": "Package/dependency conflicts",
+    "repo": "https://github.com/dart-lang/skills",
+    "path": "skills/dart-resolve-package-conflicts/SKILL.md",
+    "url": "https://github.com/dart-lang/skills/blob/main/skills/dart-resolve-package-conflicts/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "dart-run-static-analysis",
@@ -1092,7 +1272,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Analyze/fix lint/static issues"
+    "notes": "Analyze/fix lint/static issues",
+    "repo": "https://github.com/dart-lang/skills",
+    "path": "skills/dart-run-static-analysis/SKILL.md",
+    "url": "https://github.com/dart-lang/skills/blob/main/skills/dart-run-static-analysis/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "deep-research",
@@ -1115,7 +1299,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Multi-source deep synthesis"
+    "notes": "Multi-source deep synthesis",
+    "repo": "https://github.com/bytedance/deer-flow",
+    "path": "skills/public/deep-research/SKILL.md",
+    "url": "https://github.com/bytedance/deer-flow/blob/main/skills/public/deep-research/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "deer-flow-deep-research",
@@ -1139,7 +1327,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Deep analytical synthesis, literature reconciliation, and structured research reporting."
+    "notes": "Deep analytical synthesis, literature reconciliation, and structured research reporting.",
+    "repo": "https://github.com/bytedance/deer-flow",
+    "path": "skills/deep-research/SKILL.md",
+    "url": "https://github.com/bytedance/deer-flow/blob/main/skills/deep-research/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "design-taste-frontend",
@@ -1165,7 +1357,11 @@
       "frontend-design"
     ],
     "supersedes": [],
-    "notes": "Expressive marketing/editorial/corporate web"
+    "notes": "Expressive marketing/editorial/corporate web",
+    "repo": "https://github.com/Leonxlnx/taste-skill",
+    "path": "skills/taste-skill/SKILL.md",
+    "url": "https://github.com/Leonxlnx/taste-skill/blob/main/skills/taste-skill/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "differential-review",
@@ -1189,7 +1385,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Security-focused diff review"
+    "notes": "Security-focused diff review",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/differential-review/skills/differential-review/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/differential-review/skills/differential-review/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "edge-to-edge",
@@ -1212,7 +1412,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Compose insets/system bars/IME"
+    "notes": "Compose insets/system bars/IME",
+    "repo": "https://github.com/android/skills",
+    "path": "system/edge-to-edge/SKILL.md",
+    "url": "https://github.com/android/skills/blob/main/system/edge-to-edge/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "electron-official-guidance",
@@ -1240,7 +1444,11 @@
       "winui"
     ],
     "supersedes": [],
-    "notes": "Context isolation, sandbox, preload script security, safe IPC validation, and protocol handlers."
+    "notes": "Context isolation, sandbox, preload script security, safe IPC validation, and protocol handlers.",
+    "repo": "https://github.com/electron/electron",
+    "path": "skills/electron-security/SKILL.md",
+    "url": "https://github.com/electron/electron/blob/main/skills/electron-security/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "emil-animate",
@@ -1264,7 +1472,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Physical-feeling animation, spring physics, and spatial continuity for web interfaces."
+    "notes": "Physical-feeling animation, spring physics, and spatial continuity for web interfaces.",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/animate/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/animate/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "emil-animate-expo",
@@ -1289,7 +1501,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native-feeling animations, gestures, bottom sheets, and haptics for Expo and React Native apps."
+    "notes": "Native-feeling animations, gestures, bottom sheets, and haptics for Expo and React Native apps.",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/animate-expo/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/animate-expo/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "emil-design-eng",
@@ -1313,7 +1529,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Interface craft and design engineering"
+    "notes": "Interface craft and design engineering",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/emil-design-eng/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/emil-design-eng/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "expo-data-fetching",
@@ -1336,7 +1556,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Networking/cache/offline"
+    "notes": "Networking/cache/offline",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-data-fetching/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-data-fetching/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-design-system",
@@ -1360,7 +1584,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Tokens/components/system consistency"
+    "notes": "Tokens/components/system consistency",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-design-system/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-design-system/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-dev-client",
@@ -1383,7 +1611,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Dev-client workflow"
+    "notes": "Dev-client workflow",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-dev-client/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-dev-client/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-module",
@@ -1406,7 +1638,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native module development"
+    "notes": "Native module development",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-module/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-module/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-native-ui",
@@ -1429,7 +1665,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native-feeling platform UI"
+    "notes": "Native-feeling platform UI",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-native-ui/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-native-ui/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-project-structure",
@@ -1452,7 +1692,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Project organization"
+    "notes": "Project organization",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-project-structure/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-project-structure/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-router",
@@ -1475,7 +1719,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Navigation/routing"
+    "notes": "Navigation/routing",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-router/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-router/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-skills",
@@ -1504,7 +1752,11 @@
       "winui"
     ],
     "supersedes": [],
-    "notes": "Expo Router, file-based routing, native UI primitives, and cross-platform native modules."
+    "notes": "Expo Router, file-based routing, native UI primitives, and cross-platform native modules.",
+    "repo": "https://github.com/expo/skills",
+    "path": "skills/expo-app/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/skills/expo-app/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-ui",
@@ -1527,7 +1779,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native UI components"
+    "notes": "Native UI components",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-ui/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-ui/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "expo-upgrade",
@@ -1550,7 +1806,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "SDK upgrade"
+    "notes": "SDK upgrade",
+    "repo": "https://github.com/expo/skills",
+    "path": "plugins/expo/skills/expo-upgrade/SKILL.md",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-upgrade/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "firecrawl-cli",
@@ -1574,7 +1834,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Web scraping, crawl, markdown extraction, documentation lookup, and developer search."
+    "notes": "Web scraping, crawl, markdown extraction, documentation lookup, and developer search.",
+    "repo": "https://github.com/mendableai/firecrawl",
+    "path": "skills/firecrawl-cli/SKILL.md",
+    "url": "https://github.com/mendableai/firecrawl/blob/main/skills/firecrawl-cli/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "firecrawl-search",
@@ -1597,7 +1861,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Web/developer/news/paper discovery"
+    "notes": "Web/developer/news/paper discovery",
+    "repo": "https://github.com/firecrawl/cli",
+    "path": "skills/firecrawl-search/SKILL.md",
+    "url": "https://github.com/firecrawl/cli/blob/main/skills/firecrawl-search/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "flutter-add-integration-test",
@@ -1621,7 +1889,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "End-to-end user-flow testing"
+    "notes": "End-to-end user-flow testing",
+    "repo": "https://github.com/flutter/agent-plugins",
+    "path": "skills/flutter-add-integration-test/SKILL.md",
+    "url": "https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-integration-test/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "flutter-add-widget-preview",
@@ -1645,7 +1917,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Preview UI"
+    "notes": "Preview UI",
+    "repo": "https://github.com/flutter/agent-plugins",
+    "path": "skills/flutter-add-widget-preview/SKILL.md",
+    "url": "https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-widget-preview/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "flutter-add-widget-test",
@@ -1669,7 +1945,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Widget interaction/render testing"
+    "notes": "Widget interaction/render testing",
+    "repo": "https://github.com/flutter/agent-plugins",
+    "path": "skills/flutter-add-widget-test/SKILL.md",
+    "url": "https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-widget-test/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "flutter-agent-plugins",
@@ -1700,7 +1980,11 @@
       "react"
     ],
     "supersedes": [],
-    "notes": "Official Flutter multiplatform architecture. Incompatible with WinUI, Expo, or React paradigms."
+    "notes": "Official Flutter multiplatform architecture. Incompatible with WinUI, Expo, or React paradigms.",
+    "repo": "https://github.com/flutter/agent-plugins",
+    "path": "skills/flutter-core/SKILL.md",
+    "url": "https://github.com/flutter/agent-plugins/blob/main/skills/flutter-core/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "fp-check",
@@ -1724,7 +2008,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Validate suspected findings"
+    "notes": "Validate suspected findings",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/fp-check/skills/fp-check/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/fp-check/skills/fp-check/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "frontend-design",
@@ -1750,7 +2038,11 @@
       "design-taste-frontend"
     ],
     "supersedes": [],
-    "notes": "Distinctive production frontend direction"
+    "notes": "Distinctive production frontend direction",
+    "repo": "https://github.com/anthropics/skills",
+    "path": "skills/frontend-design/SKILL.md",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "frontend-ui-engineering",
@@ -1773,7 +2065,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Production UI implementation"
+    "notes": "Production UI implementation",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/frontend-ui-engineering/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "github-deep-research",
@@ -1796,7 +2092,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "GitHub repo/ecosystem comparison"
+    "notes": "GitHub repo/ecosystem comparison",
+    "repo": "https://github.com/bytedance/deer-flow",
+    "path": "skills/public/github-deep-research/SKILL.md",
+    "url": "https://github.com/bytedance/deer-flow/blob/main/skills/public/github-deep-research/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "iac-security-review",
@@ -1820,7 +2120,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Terraform/K8s/CloudFormation"
+    "notes": "Terraform/K8s/CloudFormation",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/iac-security-review/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/iac-security-review/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "impeccable",
@@ -1843,7 +2147,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "UI/UX audit, critique, polish, anti-slop; UI/UX review"
+    "notes": "UI/UX audit, critique, polish, anti-slop; UI/UX review",
+    "repo": "https://github.com/pbakaus/impeccable",
+    "path": ".vibe/skills/impeccable/SKILL.md",
+    "url": "https://github.com/pbakaus/impeccable/blob/main/.vibe/skills/impeccable/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "improve-animations",
@@ -1866,7 +2174,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Codebase-level motion improvement"
+    "notes": "Codebase-level motion improvement",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/improve-animations/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/improve-animations/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "insecure-defaults",
@@ -1889,7 +2201,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Dangerous default analysis"
+    "notes": "Dangerous default analysis",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/insecure-defaults/README.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/insecure-defaults/README.md",
+    "status": "conditional"
   },
   {
     "id": "ios-app-intents",
@@ -1912,7 +2228,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "App Intents/System integrations"
+    "notes": "App Intents/System integrations",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/ios-app-intents/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-app-intents/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "ios-debugger-agent",
@@ -1936,7 +2256,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Simulator build/run/debug"
+    "notes": "Simulator build/run/debug",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/ios-debugger-agent/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-debugger-agent/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "ios-ettrace-performance",
@@ -1959,7 +2283,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "ETTrace profiling"
+    "notes": "ETTrace profiling",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/ios-ettrace-performance/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-ettrace-performance/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "ios-memgraph-leaks",
@@ -1982,7 +2310,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Memory/leak investigation"
+    "notes": "Memory/leak investigation",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/ios-memgraph-leaks/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-memgraph-leaks/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "ios-simulator-browser",
@@ -2005,7 +2337,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Simulator visual/runtime inspection"
+    "notes": "Simulator visual/runtime inspection",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/ios-simulator-browser/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/ios-simulator-browser/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "laravel-agent-skills",
@@ -2030,7 +2366,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Official Laravel architectural conventions, Eloquent ORM, queues, and testing."
+    "notes": "Official Laravel architectural conventions, Eloquent ORM, queues, and testing.",
+    "repo": "https://github.com/laravel/agent-skills",
+    "path": "skills/laravel-framework/SKILL.md",
+    "url": "https://github.com/laravel/agent-skills/blob/main/skills/laravel-framework/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "last30days",
@@ -2053,7 +2393,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Recent community/ecosystem sentiment"
+    "notes": "Recent community/ecosystem sentiment",
+    "repo": "https://github.com/mvanhorn/last30days-skill",
+    "path": "skills/last30days/SKILL.md",
+    "url": "https://github.com/mvanhorn/last30days-skill/blob/main/skills/last30days/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "last30days-skill",
@@ -2076,7 +2420,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Recent community sentiment and emerging ecosystem discussions across Reddit, X, and HN. Treat as anecdotal unless corroborated."
+    "notes": "Recent community sentiment and emerging ecosystem discussions across Reddit, X, and HN. Treat as anecdotal unless corroborated.",
+    "repo": "https://github.com/mvanhorn/last30days-skill",
+    "path": "skills/last30days/SKILL.md",
+    "url": "https://github.com/mvanhorn/last30days-skill/blob/main/skills/last30days/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "llm-risk-assess",
@@ -2099,7 +2447,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "LLM application risk"
+    "notes": "LLM application risk",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/ai-security-skills/skills/llm-risk-assess/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/llm-risk-assess/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "marketingskills-seo-audit",
@@ -2123,7 +2475,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Search engine and generative AI optimization (GEO/AEO), structured schema, and public route crawlability."
+    "notes": "Search engine and generative AI optimization (GEO/AEO), structured schema, and public route crawlability.",
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/seo-audit/SKILL.md",
+    "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "mcp-server-review",
@@ -2147,7 +2503,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "MCP server review"
+    "notes": "MCP server review",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/ai-security-skills/skills/mcp-server-review/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/mcp-server-review/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "microsoft-winui",
@@ -2176,7 +2536,11 @@
       "tauri"
     ],
     "supersedes": [],
-    "notes": "Official Windows App SDK and Fluent Design conventions for WinUI 3."
+    "notes": "Official Windows App SDK and Fluent Design conventions for WinUI 3.",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "skills/winui-dev-workflow/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/skills/winui-dev-workflow/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "mobile-code-review",
@@ -2200,7 +2564,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Android/iOS"
+    "notes": "Android/iOS",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/mobile-code-review/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/mobile-code-review/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "multi-agentic-threat-model",
@@ -2223,7 +2591,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Multi-agent threat modeling"
+    "notes": "Multi-agent threat modeling",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/ai-security-skills/skills/multi-agentic-threat-model/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/multi-agentic-threat-model/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "neon-agent-skills",
@@ -2247,7 +2619,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Serverless Postgres branching, autoscaling, and connection pooling."
+    "notes": "Serverless Postgres branching, autoscaling, and connection pooling.",
+    "repo": "https://github.com/neondatabase/agent-skills",
+    "path": "skills/neon-postgres/SKILL.md",
+    "url": "https://github.com/neondatabase/agent-skills/blob/main/skills/neon-postgres/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "observability-and-instrumentation",
@@ -2270,7 +2646,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Logs/metrics/tracing; Addy Osmani"
+    "notes": "Logs/metrics/tracing; Addy Osmani",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/observability-and-instrumentation/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/observability-and-instrumentation/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "olzn-ui-craft",
@@ -2294,7 +2674,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Deep design-system tokens, color systems, and token drift. Do not activate simultaneously with Impeccable by default."
+    "notes": "Deep design-system tokens, color systems, and token drift. Do not activate simultaneously with Impeccable by default.",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "skills/ui-craft/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/skills/ui-craft/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "openai-build-ios-apps",
@@ -2323,7 +2707,11 @@
       "expo"
     ],
     "supersedes": [],
-    "notes": "Official Apple HIG conventions, SwiftUI view patterns, memory leak audits, and simulator testing."
+    "notes": "Official Apple HIG conventions, SwiftUI view patterns, memory leak audits, and simulator testing.",
+    "repo": "https://github.com/openai/plugins",
+    "path": "skills/build-ios-apps/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/skills/build-ios-apps/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "openai-build-macos-apps",
@@ -2352,7 +2740,11 @@
       "winui"
     ],
     "supersedes": [],
-    "notes": "macOS SwiftUI/AppKit development, sandboxing, entitlements, and Apple HIG compliance."
+    "notes": "macOS SwiftUI/AppKit development, sandboxing, entitlements, and Apple HIG compliance.",
+    "repo": "https://github.com/openai/plugins",
+    "path": "skills/build-macos-apps/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/skills/build-macos-apps/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "owasp-secure-agent-playbook",
@@ -2377,7 +2769,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Secure-by-default guidance for auth, input validation, cryptographic practices, and secrets handling."
+    "notes": "Secure-by-default guidance for auth, input validation, cryptographic practices, and secrets handling.",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "skills/security-guidance/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/skills/security-guidance/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "packaging-notarization",
@@ -2400,7 +2796,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Distribution/notarization"
+    "notes": "Distribution/notarization",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/packaging-notarization/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/packaging-notarization/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "pbakaus-impeccable",
@@ -2425,7 +2825,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Post-implementation critic for visual hierarchy, typography, spacing, responsive states, platform feel, and anti-slop."
+    "notes": "Post-implementation critic for visual hierarchy, typography, spacing, responsive states, platform feel, and anti-slop.",
+    "repo": "https://github.com/pbakaus/impeccable",
+    "path": "skills/impeccable/SKILL.md",
+    "url": "https://github.com/pbakaus/impeccable/blob/main/skills/impeccable/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "performance",
@@ -2448,7 +2852,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Loading/runtime performance"
+    "notes": "Loading/runtime performance",
+    "repo": "https://github.com/addyosmani/web-quality-skills",
+    "path": "skills/performance/SKILL.md",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/performance/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "performance-optimization",
@@ -2471,7 +2879,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Performance-sensitive code"
+    "notes": "Performance-sensitive code",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/performance-optimization/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/performance-optimization/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "play-policy-insights",
@@ -2494,7 +2906,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Play policy/data safety/release compliance"
+    "notes": "Play policy/data safety/release compliance",
+    "repo": "https://github.com/android/skills",
+    "path": "play/play-policy-insights/SKILL.md",
+    "url": "https://github.com/android/skills/blob/main/play/play-policy-insights/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "prisma-skills",
@@ -2518,7 +2934,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Prisma schema design, migrations, relation queries, and connection tuning."
+    "notes": "Prisma schema design, migrations, relation queries, and connection tuning.",
+    "repo": "https://github.com/prisma/skills",
+    "path": "skills/prisma-best-practices/SKILL.md",
+    "url": "https://github.com/prisma/skills/blob/main/skills/prisma-best-practices/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "programmatic-seo",
@@ -2542,7 +2962,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Scaled public pages with real differentiated value"
+    "notes": "Scaled public pages with real differentiated value",
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/programmatic-seo/SKILL.md",
+    "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/programmatic-seo/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "prompt-injection-test",
@@ -2566,7 +2990,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Authorized prompt-injection testing"
+    "notes": "Authorized prompt-injection testing",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/ai-security-skills/skills/prompt-injection-test/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/ai-security-skills/skills/prompt-injection-test/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "property-based-testing",
@@ -2590,7 +3018,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Invariant/property-based tests"
+    "notes": "Invariant/property-based tests",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/property-based-testing/skills/property-based-testing/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/property-based-testing/skills/property-based-testing/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "qa",
@@ -2614,7 +3046,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Real-browser website/web-app QA"
+    "notes": "Real-browser website/web-app QA",
+    "repo": "https://github.com/browser-use/browser-use",
+    "path": "skills/qa/SKILL.md",
+    "url": "https://github.com/browser-use/browser-use/blob/main/skills/qa/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "react-best-practices",
@@ -2637,7 +3073,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "React/Next implementation"
+    "notes": "React/Next implementation",
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/react-best-practices/SKILL.md",
+    "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "requesting-code-review",
@@ -2661,7 +3101,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Pre-merge review"
+    "notes": "Pre-merge review",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/requesting-code-review/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "review-animations",
@@ -2685,7 +3129,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Motion review"
+    "notes": "Motion review",
+    "repo": "https://github.com/emilkowalski/skills",
+    "path": "skills/review-animations/SKILL.md",
+    "url": "https://github.com/emilkowalski/skills/blob/main/skills/review-animations/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "sca-audit",
@@ -2709,7 +3157,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Dependency CVEs/reachability"
+    "notes": "Dependency CVEs/reachability",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/sca-audit/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/sca-audit/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "schema",
@@ -2732,7 +3184,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Structured data"
+    "notes": "Structured data",
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/schema/SKILL.md",
+    "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/schema/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "secrets-scan",
@@ -2755,7 +3211,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Hard-coded secrets"
+    "notes": "Hard-coded secrets",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/secrets-scan/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/secrets-scan/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "securability-engineering",
@@ -2778,7 +3238,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Security-focused architecture/code generation"
+    "notes": "Security-focused architecture/code generation",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/securability-engineering/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/securability-engineering/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "security-guidance",
@@ -2801,7 +3265,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Secure-by-default implementation"
+    "notes": "Secure-by-default implementation",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/security-guidance/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/security-guidance/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "seo",
@@ -2825,7 +3293,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Technical/on-page SEO"
+    "notes": "Technical/on-page SEO",
+    "repo": "https://github.com/addyosmani/web-quality-skills",
+    "path": "skills/seo/SKILL.md",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/seo/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "seo-audit",
@@ -2850,7 +3322,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "SEO audit strategy"
+    "notes": "SEO audit strategy",
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/seo-audit/SKILL.md",
+    "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "sharp-edges",
@@ -2873,7 +3349,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Footgun/API misuse analysis"
+    "notes": "Footgun/API misuse analysis",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "shipping-and-launch",
@@ -2896,7 +3376,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Release"
+    "notes": "Release",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/shipping-and-launch/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/shipping-and-launch/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "signing-entitlements",
@@ -2919,7 +3403,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Signing/entitlements"
+    "notes": "Signing/entitlements",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/signing-entitlements/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/signing-entitlements/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "site-architecture",
@@ -2942,7 +3430,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "IA, URLs, navigation, internal links"
+    "notes": "IA, URLs, navigation, internal links",
+    "repo": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/site-architecture/SKILL.md",
+    "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/site-architecture/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "snyk-agent-scan",
@@ -2966,7 +3458,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Evaluates skill and plugin supply-chain vulnerabilities, malicious scripts, and permission leaks."
+    "notes": "Evaluates skill and plugin supply-chain vulnerabilities, malicious scripts, and permission leaks.",
+    "repo": "https://github.com/snyk/agent-scan",
+    "path": "skills/agent-scan/SKILL.md",
+    "url": "https://github.com/snyk/agent-scan/blob/main/skills/agent-scan/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "source-driven-development",
@@ -2989,7 +3485,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Verify framework/library decisions against current sources; Addy Osmani"
+    "notes": "Verify framework/library decisions against current sources; Addy Osmani",
+    "repo": "https://github.com/addyosmani/agent-skills",
+    "path": "skills/source-driven-development/SKILL.md",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/source-driven-development/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "static-analysis",
@@ -3012,7 +3512,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Static-analysis workflows"
+    "notes": "Static-analysis workflows",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/static-analysis/skills/semgrep/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/static-analysis/skills/semgrep/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "subagent-driven-development",
@@ -3035,7 +3539,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Large parallelizable implementation"
+    "notes": "Large parallelizable implementation",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/subagent-driven-development/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "supabase",
@@ -3058,7 +3566,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Actual Supabase projects"
+    "notes": "Actual Supabase projects",
+    "repo": "https://github.com/supabase/agent-skills",
+    "path": "skills/supabase/SKILL.md",
+    "url": "https://github.com/supabase/agent-skills/blob/main/skills/supabase/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "supabase-postgres-best-practices",
@@ -3081,7 +3593,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "PostgreSQL schema/query/index/RLS work"
+    "notes": "PostgreSQL schema/query/index/RLS work",
+    "repo": "https://github.com/supabase/agent-skills",
+    "path": "skills/supabase-postgres-best-practices/SKILL.md",
+    "url": "https://github.com/supabase/agent-skills/blob/main/skills/supabase-postgres-best-practices/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "superpowers-brainstorming",
@@ -3106,7 +3622,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Shared engineering process: explores user intent, requirements, and design before implementation."
+    "notes": "Shared engineering process: explores user intent, requirements, and design before implementation.",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/brainstorming/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "superpowers-requesting-code-review",
@@ -3130,7 +3650,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Verifies that implementation strictly fulfills requirements before merging."
+    "notes": "Verifies that implementation strictly fulfills requirements before merging.",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/requesting-code-review/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "superpowers-subagent-driven-development",
@@ -3155,7 +3679,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Executes implementation plans with independent tasks across clean subagent boundaries."
+    "notes": "Executes implementation plans with independent tasks across clean subagent boundaries.",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/subagent-driven-development/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "superpowers-systematic-debugging",
@@ -3178,7 +3706,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Hypothesis-driven root cause analysis before making code modifications."
+    "notes": "Hypothesis-driven root cause analysis before making code modifications.",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/systematic-debugging/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "superpowers-test-driven-development",
@@ -3203,7 +3735,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Rigorous red-green-refactor cycle: write tests before implementation."
+    "notes": "Rigorous red-green-refactor cycle: write tests before implementation.",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/test-driven-development/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "superpowers-verification-before-completion",
@@ -3228,7 +3764,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Requires evidence before assertions: running verification commands and confirming outputs."
+    "notes": "Requires evidence before assertions: running verification commands and confirming outputs.",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/verification-before-completion/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "superpowers-writing-plans",
@@ -3252,7 +3792,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Creates comprehensive bite-sized implementation plans before writing code."
+    "notes": "Creates comprehensive bite-sized implementation plans before writing code.",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/writing-plans/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "supply-chain-risk-auditor",
@@ -3276,7 +3820,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Dependency takeover/health risk; Dependencies"
+    "notes": "Dependency takeover/health risk; Dependencies",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "surface-interaction",
@@ -3299,7 +3847,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Interaction system"
+    "notes": "Interaction system",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "surface/surface-interaction/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/surface/surface-interaction/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "surface-motion",
@@ -3323,7 +3875,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Motion system"
+    "notes": "Motion system",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "surface/surface-motion/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/surface/surface-motion/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "surface-typography",
@@ -3346,7 +3902,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Typography system"
+    "notes": "Typography system",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "surface/surface-typography/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/surface/surface-typography/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "swiftui-liquid-glass",
@@ -3369,7 +3929,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native current Liquid Glass APIs"
+    "notes": "Native current Liquid Glass APIs",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/swiftui-liquid-glass/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-liquid-glass/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "swiftui-patterns",
@@ -3392,7 +3956,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "SwiftUI implementation"
+    "notes": "SwiftUI implementation",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/swiftui-patterns/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/swiftui-patterns/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "swiftui-performance-audit",
@@ -3416,7 +3984,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "SwiftUI performance audit"
+    "notes": "SwiftUI performance audit",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/swiftui-performance-audit/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-performance-audit/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "swiftui-ui-patterns",
@@ -3439,7 +4011,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "SwiftUI UI architecture"
+    "notes": "SwiftUI UI architecture",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/swiftui-ui-patterns/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-ui-patterns/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "swiftui-view-refactor",
@@ -3462,7 +4038,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Refactor large views"
+    "notes": "Refactor large views",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-ios-apps/skills/swiftui-view-refactor/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-ios-apps/skills/swiftui-view-refactor/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "system-components",
@@ -3485,7 +4065,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Component-system architecture"
+    "notes": "Component-system architecture",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "system/system-components/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/system/system-components/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "system-patterns",
@@ -3508,7 +4092,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Reusable UI patterns"
+    "notes": "Reusable UI patterns",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "system/system-patterns/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/system/system-patterns/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "system-tokens",
@@ -3531,7 +4119,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Design tokens"
+    "notes": "Design tokens",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "system/system-tokens/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/system/system-tokens/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "systematic-debugging",
@@ -3555,7 +4147,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Bugs, failures, unknown root causes"
+    "notes": "Bugs, failures, unknown root causes",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/systematic-debugging/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "systematic-literature-review",
@@ -3579,7 +4175,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Literature synthesis"
+    "notes": "Literature synthesis",
+    "repo": "https://github.com/bytedance/deer-flow",
+    "path": "skills/public/systematic-literature-review/SKILL.md",
+    "url": "https://github.com/bytedance/deer-flow/blob/main/skills/public/systematic-literature-review/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "taste-skill-frontend",
@@ -3605,7 +4205,11 @@
       "anthropic-frontend-design"
     ],
     "supersedes": [],
-    "notes": "Creative direction for marketing sites, landing pages, and portfolios. Incompatible with anthropic-frontend-design."
+    "notes": "Creative direction for marketing sites, landing pages, and portfolios. Incompatible with anthropic-frontend-design.",
+    "repo": "https://github.com/Leonxlnx/taste-skill",
+    "path": "skills/design-taste-frontend/SKILL.md",
+    "url": "https://github.com/Leonxlnx/taste-skill/blob/main/skills/design-taste-frontend/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "tauri-official-guidance",
@@ -3633,7 +4237,11 @@
       "winui"
     ],
     "supersedes": [],
-    "notes": "Rust backend commands, IPC boundaries, capability configurations, and secure WebViews."
+    "notes": "Rust backend commands, IPC boundaries, capability configurations, and secure WebViews.",
+    "repo": "https://github.com/tauri-apps/tauri",
+    "path": "skills/tauri-architecture/SKILL.md",
+    "url": "https://github.com/tauri-apps/tauri/blob/main/skills/tauri-architecture/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "telemetry",
@@ -3656,7 +4264,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native runtime telemetry"
+    "notes": "Native runtime telemetry",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/telemetry/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/telemetry/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "test-driven-development",
@@ -3680,7 +4292,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Feature/bug work suited to TDD"
+    "notes": "Feature/bug work suited to TDD",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/test-driven-development/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "test-triage",
@@ -3704,7 +4320,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Test/debug triage"
+    "notes": "Test/debug triage",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/test-triage/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/test-triage/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "trailofbits-skills",
@@ -3728,7 +4348,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Deep security audit: threat modeling, attack surface mapping, static analysis, and variant analysis."
+    "notes": "Deep security audit: threat modeling, attack surface mapping, static analysis, and variant analysis.",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "skills/audit-context-building/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/skills/audit-context-building/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ui-craft",
@@ -3751,7 +4375,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Route deep design-system work"
+    "notes": "Route deep design-system work",
+    "repo": "https://github.com/olzn/ui-craft",
+    "path": "ui-craft/SKILL.md",
+    "url": "https://github.com/olzn/ui-craft/blob/main/ui-craft/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "ui-ux-pro-max",
@@ -3774,7 +4402,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "UX patterns, typography, palettes, product/UI research"
+    "notes": "UX patterns, typography, palettes, product/UI research",
+    "repo": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/ui-ux-pro-max/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "variant-analysis",
@@ -3797,7 +4429,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Find variants of known root cause"
+    "notes": "Find variants of known root cause",
+    "repo": "https://github.com/trailofbits/skills",
+    "path": "plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "vercel-composition-patterns",
@@ -3820,7 +4456,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Component/API architecture"
+    "notes": "Component/API architecture",
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/composition-patterns/SKILL.md",
+    "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/composition-patterns/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "vercel-react-best-practices",
@@ -3848,7 +4488,11 @@
       "winui"
     ],
     "supersedes": [],
-    "notes": "Primary official authority for React and Next.js applications."
+    "notes": "Primary official authority for React and Next.js applications.",
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/react-best-practices/SKILL.md",
+    "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "verification-before-completion",
@@ -3871,7 +4515,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Evidence before completion claims; Final evidence gate"
+    "notes": "Evidence before completion claims; Final evidence gate",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/verification-before-completion/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "view-refactor",
@@ -3894,7 +4542,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "View structure/refactor"
+    "notes": "View structure/refactor",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/view-refactor/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/view-refactor/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "web-design-guidelines",
@@ -3917,7 +4569,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Web-interface review"
+    "notes": "Web-interface review",
+    "repo": "https://github.com/vercel-labs/agent-skills",
+    "path": "skills/web-design-guidelines/SKILL.md",
+    "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/web-design-guidelines/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "web-quality-audit",
@@ -3941,7 +4597,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Complete evidence-led web audit; Web quality"
+    "notes": "Complete evidence-led web audit; Web quality",
+    "repo": "https://github.com/addyosmani/web-quality-skills",
+    "path": "skills/web-quality-audit/SKILL.md",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "web-security-review",
@@ -3965,7 +4625,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Web app"
+    "notes": "Web app",
+    "repo": "https://github.com/OWASP/secure-agent-playbook",
+    "path": "plugins/code-security-skills/skills/web-security-review/SKILL.md",
+    "url": "https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/web-security-review/SKILL.md",
+    "status": "conditional"
   },
   {
     "id": "window-management",
@@ -3988,7 +4652,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "macOS windows/scenes"
+    "notes": "macOS windows/scenes",
+    "repo": "https://github.com/openai/plugins",
+    "path": "plugins/build-macos-apps/skills/window-management/SKILL.md",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/window-management/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "winui-code-review",
@@ -4012,7 +4680,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "WinUI-specific code review"
+    "notes": "WinUI-specific code review",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "plugins/winui/agent-plugin/skills/winui-code-review/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/agent-plugin/skills/winui-code-review/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "winui-design",
@@ -4036,7 +4708,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Fluent UI/XAML/accessibility"
+    "notes": "Fluent UI/XAML/accessibility",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "plugins/winui/agent-plugin/skills/winui-design/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/agent-plugin/skills/winui-design/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "winui-dev-workflow",
@@ -4059,7 +4735,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Build/run/fix WinUI"
+    "notes": "Build/run/fix WinUI",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "plugins/winui/agent-plugin/skills/winui-dev-workflow/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/agent-plugin/skills/winui-dev-workflow/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "winui-packaging",
@@ -4082,7 +4762,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Packaging/release"
+    "notes": "Packaging/release",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "plugins/winui/agent-plugin/skills/winui-packaging/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/agent-plugin/skills/winui-packaging/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "winui-setup",
@@ -4105,7 +4789,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Machine/toolchain setup"
+    "notes": "Machine/toolchain setup",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "plugins/winui/agent-plugin/skills/winui-setup/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/agent-plugin/skills/winui-setup/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "winui-ui-testing",
@@ -4129,7 +4817,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Native UI automation"
+    "notes": "Native UI automation",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "plugins/winui/agent-plugin/skills/winui-ui-testing/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/agent-plugin/skills/winui-ui-testing/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "winui-wpf-migration",
@@ -4152,7 +4844,11 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "WPF migration"
+    "notes": "WPF migration",
+    "repo": "https://github.com/microsoft/win-dev-skills",
+    "path": "plugins/winui/agent-plugin/skills/winui-wpf-migration/SKILL.md",
+    "url": "https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/agent-plugin/skills/winui-wpf-migration/SKILL.md",
+    "status": "trusted"
   },
   {
     "id": "writing-plans",
@@ -4175,6 +4871,10 @@
     "dependencies": [],
     "conflicts": [],
     "supersedes": [],
-    "notes": "Multi-step implementation plan"
+    "notes": "Multi-step implementation plan",
+    "repo": "https://github.com/obra/superpowers",
+    "path": "skills/writing-plans/SKILL.md",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md",
+    "status": "trusted"
   }
 ]

@@ -1,49 +1,56 @@
 id: bus-seo-geo-web-quality
-job: Evidence-backed web quality, Core Web Vitals, accessibility, and GEO/AEO search optimization
+job: Evidence-backed web quality, Core Web Vitals, accessibility, and GEO/AEO search
+  optimization
 skills:
-  - id: web-quality-audit
-    url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md
-    mode: CORE
-    use: "Complete evidence-led web audit"
-  - id: performance
-    url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/performance/SKILL.md
-    mode: COND
-    use: "Loading/runtime performance"
-  - id: core-web-vitals
-    url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/core-web-vitals/SKILL.md
-    mode: CORE
-    use: "LCP/INP/CLS"
-  - id: accessibility
-    url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/accessibility/SKILL.md
-    mode: CORE
-    use: "WCAG 2.2"
-  - id: seo
-    url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/seo/SKILL.md
-    mode: CORE
-    use: "Technical/on-page SEO"
-  - id: best-practices
-    url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/best-practices/SKILL.md
-    mode: COND
-    use: "Browser/security/quality baseline"
-  - id: seo-audit
-    url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/SKILL.md
-    mode: CORE
-    use: "SEO audit strategy"
-  - id: ai-seo
-    url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/SKILL.md
-    mode: CORE
-    use: "GEO/AEO/LLM citation readiness"
-  - id: schema
-    url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/schema/SKILL.md
-    mode: CORE
-    use: "Structured data"
-  - id: site-architecture
-    url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/site-architecture/SKILL.md
-    mode: CORE
-    use: "IA, URLs, navigation, internal links"
-  - id: programmatic-seo
-    url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/programmatic-seo/SKILL.md
-    mode: COND
-    use: "Scaled public pages with real differentiated value"
+- id: web-quality-audit
+  url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md
+  mode: CORE
+  use: Complete evidence-led web audit
+- id: performance
+  url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/performance/SKILL.md
+  mode: COND
+  use: Loading/runtime performance
+- id: core-web-vitals
+  url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/core-web-vitals/SKILL.md
+  mode: CORE
+  use: LCP/INP/CLS
+- id: accessibility
+  url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/accessibility/SKILL.md
+  mode: CORE
+  use: WCAG 2.2
+- id: seo
+  url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/seo/SKILL.md
+  mode: CORE
+  use: Technical/on-page SEO
+- id: best-practices
+  url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/best-practices/SKILL.md
+  mode: COND
+  use: Browser/security/quality baseline
+- id: seo-audit
+  url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/SKILL.md
+  mode: CORE
+  use: SEO audit strategy
+- id: ai-seo
+  url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/SKILL.md
+  mode: CORE
+  use: GEO/AEO/LLM citation readiness
+- id: schema
+  url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/schema/SKILL.md
+  mode: CORE
+  use: Structured data
+- id: site-architecture
+  url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/site-architecture/SKILL.md
+  mode: CORE
+  use: IA, URLs, navigation, internal links
+- id: programmatic-seo
+  url: https://github.com/coreyhaines31/marketingskills/blob/main/skills/programmatic-seo/SKILL.md
+  mode: COND
+  use: Scaled public pages with real differentiated value
 recommended_with:
-  - bus-web-app-builder
+- bus-web-app-builder
+runtime_rules:
+- 'Evidence preference: field/RUM -> DevTools/Lighthouse -> runtime inspection ->
+  static source'
+- public/indexable route -> SEO + GEO/AEO + CWV
+- private/auth route -> normally exclude from search optimization
+- ai-seo + schema + site-architecture for GEO, AEO, and LLM citation readiness

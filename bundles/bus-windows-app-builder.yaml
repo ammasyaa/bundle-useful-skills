@@ -1,37 +1,41 @@
 id: bus-windows-app-builder
-job: Native Windows desktop application engineering using WinUI 3, XAML, and Fluent Design
+job: Native Windows desktop application engineering using WinUI 3, XAML, and Fluent
+  Design
 skills:
-  - id: winui-dev-workflow
-    url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-dev-workflow/SKILL.md
-    mode: CORE
-    use: "Build/run/fix WinUI"
-  - id: winui-design
-    url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-design/SKILL.md
-    mode: CORE
-    use: "Fluent UI/XAML/accessibility"
-  - id: winui-code-review
-    url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-code-review/SKILL.md
-    mode: CORE
-    use: "WinUI-specific code review"
-  - id: winui-ui-testing
-    url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-ui-testing/SKILL.md
-    mode: CORE
-    use: "Native UI automation"
-  - id: winui-packaging
-    url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-packaging/SKILL.md
-    mode: COND
-    use: "Packaging/release"
-  - id: winui-setup
-    url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-setup/SKILL.md
-    mode: COND
-    use: "Machine/toolchain setup"
-  - id: winui-wpf-migration
-    url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-wpf-migration/SKILL.md
-    mode: COND
-    use: "WPF migration"
+- id: winui-dev-workflow
+  url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-dev-workflow/SKILL.md
+  mode: CORE
+  use: Build/run/fix WinUI
+- id: winui-design
+  url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-design/SKILL.md
+  mode: CORE
+  use: Fluent UI/XAML/accessibility
+- id: winui-code-review
+  url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-code-review/SKILL.md
+  mode: CORE
+  use: WinUI-specific code review
+- id: winui-ui-testing
+  url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-ui-testing/SKILL.md
+  mode: CORE
+  use: Native UI automation
+- id: winui-packaging
+  url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-packaging/SKILL.md
+  mode: COND
+  use: Packaging/release
+- id: winui-setup
+  url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-setup/SKILL.md
+  mode: COND
+  use: Machine/toolchain setup
+- id: winui-wpf-migration
+  url: https://github.com/microsoft/win-dev-skills/blob/main/plugins/winui/skills/winui-wpf-migration/SKILL.md
+  mode: COND
+  use: WPF migration
 recommended_with:
-  - bus-engineering-core
-  - bus-audit-release
+- bus-engineering-core
+- bus-audit-release
 runtime_rules:
-  - "winui-dev-workflow + winui-design + winui-ui-testing + verification-before-completion"
-  - "Windows/Fluent remains platform authority"
+- winui-dev-workflow + winui-design + winui-ui-testing + verification-before-completion
+- Windows/Fluent remains platform authority. Taste skills may improve craft but must
+  not make WinUI imitate macOS
+- Activate winui-packaging, winui-setup, or winui-wpf-migration only when specifically
+  required

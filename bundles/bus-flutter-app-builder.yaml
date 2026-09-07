@@ -1,45 +1,48 @@
 id: bus-flutter-app-builder
-job: Cross-platform mobile application development with Flutter, Dart unit tests, and widget tests
+job: Cross-platform mobile application development with Flutter, Dart unit tests,
+  and widget tests
 skills:
-  - id: flutter-add-widget-preview
-    url: https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-widget-preview/SKILL.md
-    mode: CORE
-    use: "Preview UI"
-  - id: flutter-add-widget-test
-    url: https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-widget-test/SKILL.md
-    mode: CORE
-    use: "Widget interaction/render testing"
-  - id: flutter-add-integration-test
-    url: https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-integration-test/SKILL.md
-    mode: CORE
-    use: "End-to-end user-flow testing"
-  - id: dart-run-static-analysis
-    url: https://github.com/dart-lang/skills/blob/main/skills/dart-run-static-analysis/SKILL.md
-    mode: CORE
-    use: "Analyze/fix lint/static issues"
-  - id: dart-add-unit-test
-    url: https://github.com/dart-lang/skills/blob/main/skills/dart-add-unit-test/SKILL.md
-    mode: CORE
-    use: "Dart unit testing"
-  - id: dart-collect-coverage
-    url: https://github.com/dart-lang/skills/blob/main/skills/dart-collect-coverage/SKILL.md
-    mode: COND
-    use: "Coverage"
-  - id: dart-fix-runtime-errors
-    url: https://github.com/dart-lang/skills/blob/main/skills/dart-fix-runtime-errors/SKILL.md
-    mode: COND
-    use: "Runtime errors"
-  - id: dart-generate-test-mocks
-    url: https://github.com/dart-lang/skills/blob/main/skills/dart-generate-test-mocks/SKILL.md
-    mode: COND
-    use: "Test mocks"
-  - id: dart-resolve-package-conflicts
-    url: https://github.com/dart-lang/skills/blob/main/skills/dart-resolve-package-conflicts/SKILL.md
-    mode: COND
-    use: "Package/dependency conflicts"
+- id: flutter-add-widget-preview
+  url: https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-widget-preview/SKILL.md
+  mode: CORE
+  use: Preview UI
+- id: flutter-add-widget-test
+  url: https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-widget-test/SKILL.md
+  mode: CORE
+  use: Widget interaction/render testing
+- id: flutter-add-integration-test
+  url: https://github.com/flutter/agent-plugins/blob/main/skills/flutter-add-integration-test/SKILL.md
+  mode: CORE
+  use: End-to-end user-flow testing
+- id: dart-run-static-analysis
+  url: https://github.com/dart-lang/skills/blob/main/skills/dart-run-static-analysis/SKILL.md
+  mode: CORE
+  use: Analyze/fix lint/static issues
+- id: dart-add-unit-test
+  url: https://github.com/dart-lang/skills/blob/main/skills/dart-add-unit-test/SKILL.md
+  mode: CORE
+  use: Dart unit testing
+- id: dart-collect-coverage
+  url: https://github.com/dart-lang/skills/blob/main/skills/dart-collect-coverage/SKILL.md
+  mode: COND
+  use: Coverage
+- id: dart-fix-runtime-errors
+  url: https://github.com/dart-lang/skills/blob/main/skills/dart-fix-runtime-errors/SKILL.md
+  mode: COND
+  use: Runtime errors
+- id: dart-generate-test-mocks
+  url: https://github.com/dart-lang/skills/blob/main/skills/dart-generate-test-mocks/SKILL.md
+  mode: COND
+  use: Test mocks
+- id: dart-resolve-package-conflicts
+  url: https://github.com/dart-lang/skills/blob/main/skills/dart-resolve-package-conflicts/SKILL.md
+  mode: COND
+  use: Package/dependency conflicts
 recommended_with:
-  - bus-engineering-core
-  - bus-secure-app-builder
+- bus-engineering-core
+- bus-secure-app-builder
 runtime_rules:
-  - "flutter-add-widget-test + dart-run-static-analysis + relevant implementation skill + verification-before-completion"
-  - "Validate Android and iOS targets separately"
+- flutter-add-widget-test + dart-run-static-analysis + relevant implementation skill
+  + verification-before-completion
+- For mobile targets, validate Android and iOS separately
+- Activate coverage, mocks, and package conflict resolution conditionally

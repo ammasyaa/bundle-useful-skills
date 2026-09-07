@@ -1,57 +1,64 @@
 id: bus-audit-release
-job: Universal release gate, multi-perspective code review, browser QA, and final verification
+job: Universal release gate, multi-perspective code review, browser QA, and final
+  verification
 skills:
-  - id: code-review-and-quality
-    url: https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md
-    mode: CORE
-    use: "Normal code review"
-  - id: verification-before-completion
-    url: https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md
-    mode: CORE
-    use: "Final evidence gate"
-  - id: impeccable
-    url: https://github.com/pbakaus/impeccable/blob/main/.vibe/skills/impeccable/SKILL.md
-    mode: COND
-    use: "UI/UX review"
-  - id: web-quality-audit
-    url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md
-    mode: COND
-    use: "Web quality"
-  - id: audit-context-building
-    url: https://github.com/trailofbits/skills/blob/main/plugins/audit-context-building/skills/audit-context-building/SKILL.md
-    mode: COND
-    use: "Architecture/security context"
-  - id: supply-chain-risk-auditor
-    url: https://github.com/trailofbits/skills/blob/main/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md
-    mode: COND
-    use: "Dependencies"
-  - id: ce-code-review
-    url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-code-review/SKILL.md
-    mode: COND
-    use: "Deep independent multi-perspective code review"
-  - id: ce-test-browser
-    url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-test-browser/SKILL.md
-    mode: COND
-    use: "Browser testing"
-  - id: ce-test-xcode
-    url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-test-xcode/SKILL.md
-    mode: COND
-    use: "Apple/Xcode testing"
-  - id: ce-polish
-    url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-polish/SKILL.md
-    mode: COND
-    use: "Release polish"
-  - id: ce-dogfood
-    url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-dogfood/SKILL.md
-    mode: COND
-    use: "Product-use review"
-  - id: ce-optimize
-    url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-optimize/SKILL.md
-    mode: COND
-    use: "Optimization"
-  - id: ce-simplify-code
-    url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-simplify-code/SKILL.md
-    mode: COND
-    use: "Simplification after correctness"
+- id: code-review-and-quality
+  url: https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md
+  mode: CORE
+  use: Normal code review
+- id: verification-before-completion
+  url: https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md
+  mode: CORE
+  use: Final evidence gate
+- id: impeccable
+  url: https://github.com/pbakaus/impeccable/blob/main/.vibe/skills/impeccable/SKILL.md
+  mode: COND
+  use: UI/UX review
+- id: web-quality-audit
+  url: https://github.com/addyosmani/web-quality-skills/blob/main/skills/web-quality-audit/SKILL.md
+  mode: COND
+  use: Web quality
+- id: audit-context-building
+  url: https://github.com/trailofbits/skills/blob/main/plugins/audit-context-building/skills/audit-context-building/SKILL.md
+  mode: COND
+  use: Architecture/security context
+- id: supply-chain-risk-auditor
+  url: https://github.com/trailofbits/skills/blob/main/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md
+  mode: COND
+  use: Dependencies
+- id: ce-code-review
+  url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-code-review/SKILL.md
+  mode: COND
+  use: Deep independent multi-perspective code review
+- id: ce-test-browser
+  url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-test-browser/SKILL.md
+  mode: COND
+  use: Browser testing
+- id: ce-test-xcode
+  url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-test-xcode/SKILL.md
+  mode: COND
+  use: Apple/Xcode testing
+- id: ce-polish
+  url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-polish/SKILL.md
+  mode: COND
+  use: Release polish
+- id: ce-dogfood
+  url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-dogfood/SKILL.md
+  mode: COND
+  use: Product-use review
+- id: ce-optimize
+  url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-optimize/SKILL.md
+  mode: COND
+  use: Optimization
+- id: ce-simplify-code
+  url: https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-simplify-code/SKILL.md
+  mode: COND
+  use: Simplification after correctness
 recommended_with:
-  - bus-engineering-core
+- bus-engineering-core
+runtime_rules:
+- code-review-and-quality + verification-before-completion
+- Do not make Compound Engineering compete with Superpowers as the normal implementation
+  process; use primarily as independent audit/release capabilities
+- Invoke independent specialist auditors (impeccable for UI, web-quality-audit, audit-context-building,
+  supply-chain-risk-auditor) for high-risk changes

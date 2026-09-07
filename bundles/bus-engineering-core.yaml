@@ -1,34 +1,44 @@
 id: bus-engineering-core
-job: Core software engineering workflows, test-driven development, and systematic debugging
+job: Core software engineering workflows, test-driven development, and systematic
+  debugging
 skills:
-  - id: brainstorming
-    url: https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md
-    mode: COND
-    use: "Ambiguous/new feature design"
-  - id: writing-plans
-    url: https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md
-    mode: COND
-    use: "Multi-step implementation plan"
-  - id: test-driven-development
-    url: https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md
-    mode: COND
-    use: "Feature/bug work suited to TDD"
-  - id: systematic-debugging
-    url: https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md
-    mode: CORE
-    use: "Bugs, failures, unknown root causes"
-  - id: requesting-code-review
-    url: https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/SKILL.md
-    mode: COND
-    use: "Pre-merge review"
-  - id: verification-before-completion
-    url: https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md
-    mode: CORE
-    use: "Evidence before completion claims"
-  - id: subagent-driven-development
-    url: https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md
-    mode: COND
-    use: "Large parallelizable implementation"
+- id: brainstorming
+  url: https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md
+  mode: COND
+  use: Ambiguous/new feature design
+- id: writing-plans
+  url: https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md
+  mode: COND
+  use: Multi-step implementation plan
+- id: test-driven-development
+  url: https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md
+  mode: COND
+  use: Feature/bug work suited to TDD
+- id: systematic-debugging
+  url: https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md
+  mode: CORE
+  use: Bugs, failures, unknown root causes
+- id: requesting-code-review
+  url: https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/SKILL.md
+  mode: COND
+  use: Pre-merge review
+- id: verification-before-completion
+  url: https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md
+  mode: CORE
+  use: Evidence before completion claims
+- id: subagent-driven-development
+  url: https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md
+  mode: COND
+  use: Large parallelizable implementation
 recommended_with:
-  - bus-secure-app-builder
-  - bus-audit-release
+- bus-audit-release
+- bus-secure-app-builder
+runtime_rules:
+- Do not activate the entire Superpowers set for every task
+- Ambiguous or new feature design -> brainstorming
+- Multi-step implementation plan -> writing-plans
+- Feature or bug work suited to TDD -> test-driven-development
+- Bugs, failures, unknown root causes -> systematic-debugging
+- Pre-merge review -> requesting-code-review
+- Evidence before completion claims -> verification-before-completion
+- Large parallelizable implementation -> subagent-driven-development

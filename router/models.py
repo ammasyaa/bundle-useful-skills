@@ -121,6 +121,7 @@ class RouteResult:
     conflicts_detected: List[str]
     warnings: List[str]
     release_gate: List[str]
+    recommended_bundles: List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -133,6 +134,7 @@ class RouteResult:
                 "risk_level": self.risk_level,
                 "primary_authority": self.primary_authority,
             },
+            "recommended_bundles": self.recommended_bundles,
             "selected_skills": [
                 {
                     "id": s.id,
@@ -207,5 +209,10 @@ class RouteResult:
         lines.append("## 5. Verification & Release Gate")
         for check in self.release_gate:
             lines.append(f"- [ ] {check}")
+
+        if self.recommended_bundles:
+            lines.extend(["", "## 6. Recommended Focused Bundles"])
+            for b in self.recommended_bundles:
+                lines.append(f"- **`{b}`**")
 
         return "\n".join(lines)

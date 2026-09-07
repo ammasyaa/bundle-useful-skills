@@ -53,8 +53,30 @@ def main() -> int:
         choices=["LOW", "MEDIUM", "HIGH", "RELEASE"],
         help="Explicit risk level override",
     )
+    parser.add_argument(
+        "--check-conflicts",
+        nargs="+",
+        metavar="SKILL_ID",
+        help="Check whether a specific list of skill IDs contains mutual exclusions",
+    )
 
     args = parser.parse_args()
+
+    router = SkillsRouter()
+
+    if args.check_conflicts:
+        conflicts, warnings = router.check_conflicts(args.check_conflicts)
+        if args.json:
+            print(json.dumps({"conflicts": conflicts, "warnings": warnings}, indent=2))
+        else:
+            if not conflicts and not warnings:
+                print("[PASS] No conflicts or warnings detected for skills:", ", ".join(args.check_conflicts))
+            else:
+                for c in conflicts:
+                    print(f"[CONFLICT] {c}")
+                for w in warnings:
+                    print(f"[WARNING] {w}")
+        return 1 if conflicts else 0
 
     if not args.query:
         if not sys.stdin.isatty():
@@ -64,8 +86,6 @@ def main() -> int:
             return 1
     else:
         query_str = args.query
-
-    router = SkillsRouter()
     req = TaskRequest(
         query=query_str,
         project_type=args.project_type,

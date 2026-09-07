@@ -51,6 +51,16 @@ class TestCLICommands(unittest.TestCase):
         self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
         self.assertIn("Audit Summary: ALL 14 CRITERIA VERIFIED", proc.stdout)
 
+    def test_check_conflicts_cli_pass(self):
+        proc = self.run_cmd(["scripts/route.py", "--check-conflicts", "vercel-react-best-practices", "emil-design-eng"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        self.assertIn("[PASS] No conflicts or warnings detected", proc.stdout)
+
+    def test_check_conflicts_cli_fail(self):
+        proc = self.run_cmd(["scripts/route.py", "--check-conflicts", "microsoft-winui", "flutter-agent-plugins"])
+        self.assertEqual(proc.returncode, 1, f"Expected conflict error, got exit code 0: {proc.stdout}")
+        self.assertIn("[CONFLICT]", proc.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

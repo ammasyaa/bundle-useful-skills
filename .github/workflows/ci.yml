@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-validate:
+    name: Test & Validate (${{ matrix.os }} - Python ${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Run automated test suite
+        run: python -m unittest discover tests -v
+
+      - name: Validate registry schemas & manifests
+        run: python scripts/validate_registry.py
+
+      - name: Verify cryptographic lockfile parity
+        run: python scripts/verify_lock.py
+
+      - name: Verify prompt & bundle parity
+        run: python scripts/verify_against_prompt.py
+
+      - name: Run Snyk supply-chain security scan
+        run: python scripts/scan_supply_chain.py --check-all
+
+      - name: Run 14-point multi-perspective audit
+        run: python scripts/audit_everything.py

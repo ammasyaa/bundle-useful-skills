@@ -14,51 +14,133 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
 
 <p align="center">
-  <a href="#quick-start-in-60-seconds">Quick Start</a> •
-  <a href="#why-bundle-useful-skills">Why This Exists</a> •
-  <a href="#the-11-step-routing-pipeline">Routing Architecture</a> •
-  <a href="#the-17-focused-bundles-bus-">The 17 Bundles</a> •
-  <a href="#domain-profiles">Domain Profiles</a> •
-  <a href="#authority-hierarchy--conflict-matrix">Authority & Conflicts</a> •
-  <a href="#cli-reference--examples">CLI Reference</a> •
-  <a href="#supply-chain-security--admission-pipeline">Security & Governance</a>
+  <a href="#-fast--frictionless-installation">Installation</a> •
+  <a href="#-why-bundle-useful-skills">Why This Exists</a> •
+  <a href="#-the-11-step-routing-pipeline">Routing Architecture</a> •
+  <a href="#-the-17-focused-bundles-bus-">The 17 Bundles</a> •
+  <a href="#-domain-profiles">Domain Profiles</a> •
+  <a href="#%EF%B8%8F-authority-hierarchy--conflict-matrix">Authority & Conflicts</a> •
+  <a href="#-cli-reference--examples">CLI Reference</a> •
+  <a href="#%EF%B8%8F-supply-chain-security--admission-pipeline">Security & Governance</a>
 </p>
 
 ---
 
 </div>
 
-## ⚡ Quick Start in 60 Seconds
+## ⚡ Fast & Frictionless Installation
 
-`bundle-useful-skills` requires **zero third-party dependencies**. It runs instantly with Python 3.10+ using only standard library modules.
+`bundle-useful-skills` requires **zero third-party dependencies** and runs out of the box with Python 3.10+. Choose your preferred installation method below:
 
-### 1. Clone the repository
+### Option 1: Universal One-Liner (Fastest)
+
+Install the global `bus` CLI and automatically register the router with all detected AI agents on your machine with one command:
+
+**macOS & Linux:**
 ```bash
+curl -fsSL https://raw.githubusercontent.com/ammasyaa/bundle-useful-skills/main/install.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/ammasyaa/bundle-useful-skills/main/install.ps1 | iex
+```
+
+*What this does automatically:*
+1. Validates Python 3.10+ availability.
+2. Clones/updates the repository into `~/.bundle-useful-skills`.
+3. Registers the router skill into **Google Antigravity**, **Claude Code**, **Codex**, and **Cursor**.
+4. Adds the global `bus` command to your PATH (`~/.local/bin/bus`).
+
+---
+
+### Option 2: Global CLI via Pip or Pipx
+
+Install `bundle-useful-skills` globally as a native Python command-line utility:
+
+```bash
+# Direct install with pip
+pip install git+https://github.com/ammasyaa/bundle-useful-skills.git
+
+# Or isolated application install with pipx
+pipx install git+https://github.com/ammasyaa/bundle-useful-skills.git
+```
+
+Once installed, the `bus` command is immediately available everywhere in your terminal:
+```bash
+bus "Build a real-time Next.js dashboard with Supabase"
+```
+
+---
+
+### Option 3: 1-Click AI Agent Integration
+
+Already cloned the repository or installed via pip? You can register the router directly with your preferred agent environments:
+
+```bash
+# Auto-detect all agents and install to all of them
+bus --install all
+# (or: python scripts/install.py --target all)
+
+# Install specifically to Google Antigravity
+bus --install antigravity
+
+# Install specifically to Anthropic Claude Code
+bus --install claude
+
+# Install specifically to OpenAI Codex
+bus --install codex
+
+# Install specifically to Cursor / Windsurf workspace
+bus --install cursor
+```
+
+Inspect which AI agent environments are installed on your machine:
+```bash
+bus --list-targets
+```
+*Output:*
+```text
+==================================================
+  Detected AI Agent Environments
+==================================================
+[ACTIVE]     antigravity    -> ~/.gemini/antigravity/skills
+[ACTIVE]     codex          -> ~/.codex/skills
+[ACTIVE]     claude         -> ~/.claude/plugins
+[ACTIVE]     cursor         -> .cursor/skills
+```
+
+---
+
+### Option 4: Install a Focused Bundle into Your Agent
+
+Want your agent to directly possess all individual skills from a specific domain bundle (e.g. `bus-web-app-builder`, `bus-product-ui-taste`)? Install it with one flag:
+
+```bash
+# Install the Web App Builder bundle into all active agents
+bus --install all --install-bundle bus-web-app-builder
+
+# Install the Product UI & Taste bundle into Claude Code
+bus --install claude --install-bundle bus-product-ui-taste
+
+# Install all 17 focused bundles (all 175 skills) into Antigravity
+bus --install antigravity --install-bundle all
+```
+
+---
+
+### Option 5: Local Clone & Development
+
+```bash
+# 1. Clone repository
 git clone https://github.com/ammasyaa/bundle-useful-skills.git
 cd bundle-useful-skills
-```
 
-### 2. Route an engineering task
-```bash
-# Route any software task to receive the optimal minimum skill stack
-python scripts/route.py "Build a real-time Next.js dashboard using Supabase and Tailwind"
-```
+# 2. Install editable CLI
+pip install -e .
 
-### 3. Inspect a focused bundle
-```bash
-# Inspect the Web App Builder bundle
-python scripts/route.py --bundle bus-web-app-builder
-
-# List all 17 focused bundles
-python scripts/route.py --list-bundles
-```
-
-### 4. Verify system integrity
-```bash
-# Run the complete test suite (38 tests)
+# 3. Run test suite & validation
 python -m unittest discover tests -v
-
-# Validate all schemas, manifests, and lockfile parity
 python scripts/validate_registry.py
 ```
 
@@ -188,8 +270,14 @@ The router programmatically rejects dangerous combinations:
 
 ## 💻 CLI Reference & Examples
 
+You can use the global `bus` command (after install) or run `python scripts/route.py` directly from the repository.
+
 ### Basic Task Routing
 ```bash
+# Using global CLI
+bus "Implement user authentication with Supabase and Next.js"
+
+# Or using repository script
 python scripts/route.py "Implement user authentication with Supabase and Next.js"
 ```
 *Output:*
@@ -214,19 +302,31 @@ Active Skill Stack (Context Budget: 4 / 5):
 
 ### JSON Output for Agent Runtimes
 ```bash
-python scripts/route.py "Audit iOS app for memory retention cycles" --json
+bus "Audit iOS app for memory retention cycles" --json
 ```
 
-### Explicit Overrides & Verification
+### Explicit Overrides & Conflict Verification
 ```bash
 # Override framework and risk level
-python scripts/route.py "Refactor database migrations" --framework postgres --risk high
+bus "Refactor database migrations" --framework postgres --risk high
 
-# Verify compatibility between two skills
-python scripts/route.py --check-conflicts vercel-react-best-practices emil-design-eng
+# Verify compatibility between skills
+bus --check-conflicts vercel-react-best-practices emil-design-eng
 
 # Catch an incompatible combination (returns exit code 1)
-python scripts/route.py --check-conflicts microsoft-winui flutter-agent-plugins
+bus --check-conflicts microsoft-winui flutter-agent-plugins
+```
+
+### AI Agent Environment Management
+```bash
+# Detect installed AI agents on your machine
+bus --list-targets
+
+# Register router with all detected agents
+bus --install all
+
+# Install specific focused bundle into an agent environment
+bus --install antigravity --install-bundle bus-web-app-builder
 ```
 
 ---
@@ -290,6 +390,9 @@ Before an agent or engineer asserts completion of a task, all 14 criteria must b
 bundle-useful-skills/
 ├── README.md                               # Project showcase and router manual
 ├── LICENSE                                 # Apache-2.0 open-source license
+├── pyproject.toml                          # PEP 517/621 packaging & global 'bus' console script
+├── install.sh                              # Fast one-liner installer for macOS & Linux
+├── install.ps1                             # Fast one-liner installer for Windows PowerShell
 ├── SECURITY.md                             # Supply-chain security & admission policy
 ├── CONTRIBUTING.md                         # Contribution workflow & guidelines
 ├── CODE_OF_CONDUCT.md                      # Contributor Covenant v2.1
@@ -328,6 +431,7 @@ bundle-useful-skills/
 │   ├── SKILL.md                            # Agent Skill definition for router
 │   ├── engine.py                           # 11-step routing orchestrator & bundle loader
 │   ├── cli.py                              # CLI interface implementation
+│   ├── installer.py                        # Cross-platform AI agent environment installer
 │   ├── models.py                           # Strongly-typed data models & schemas
 │   ├── profiles/                           # Profile router documentation
 │   ├── conflicts/                          # Conflict matrix & rules
@@ -345,6 +449,7 @@ bundle-useful-skills/
 ├── schemas/                                # Formal JSON schemas for registry validation
 ├── scripts/                                # Standalone CLI tools, validators & generators
 │   ├── route.py                            # CLI entrypoint
+│   ├── install.py                          # Universal agent installer CLI
 │   ├── validate_registry.py                # Schema & referential integrity validator
 │   ├── verify_lock.py                      # Cryptographic SHA-256 hash verifier
 │   ├── verify_against_prompt.py            # Deep prompt specification parity verifier
@@ -352,10 +457,11 @@ bundle-useful-skills/
 │   ├── audit_everything.py                 # Multi-perspective workspace auditor
 │   ├── admit_skill.py                      # Skill admission helper
 │   └── generate_plugins.py                 # Portable plugin generator
-└── tests/                                  # Comprehensive automated test suite (38 tests)
+└── tests/                                  # Comprehensive automated test suite (45 tests)
     ├── test_bundles.py                     # Bundle manifest & plugin parity tests
     ├── test_cli.py                         # CLI end-to-end tests
     ├── test_conflicts.py                   # Hard conflict & warning tests
+    ├── test_installer.py                   # Target resolution & installation tests
     ├── test_registry.py                    # Registry integrity & lockfile parity tests
     └── test_router.py                      # Canonical routing & context budget tests
 ```

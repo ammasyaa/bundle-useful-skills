@@ -43,5 +43,12 @@ jobs:
       - name: Run Snyk supply-chain security scan
         run: python scripts/scan_supply_chain.py --check-all
 
+      - name: Test editable package installation & CLI entrypoint
+        run: |
+          python -m pip install -e .
+          bus --list-targets
+          bus --list-bundles
+          bus "Build a Next.js app with Supabase"
+
       - name: Run 14-point multi-perspective audit
         run: python scripts/audit_everything.py

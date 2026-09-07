@@ -14,6 +14,10 @@ You are operating with `bundle-useful-skills`. Your directive is to activate the
 When a user task arrives, route it immediately using the built-in CLI:
 
 ```bash
+# Using installed global CLI:
+bus "<user task description>" --json
+
+# Or using repository script:
 python scripts/route.py "<user task description>" --json
 ```
 

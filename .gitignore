@@ -37,6 +37,7 @@ venv.bak/
 # IDE & OS files
 .idea/
 .vscode/
+.cursor/
 *.swp
 *.swo
 *~

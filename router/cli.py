@@ -69,8 +69,60 @@ def main() -> int:
         type=str,
         help="Inspect a specific focused bundle manifest by ID (e.g. bus-web-app-builder)",
     )
+    parser.add_argument(
+        "--install",
+        nargs="?",
+        const="all",
+        choices=["all", "antigravity", "codex", "claude", "cursor"],
+        metavar="TARGET",
+        help="Install router into AI agent environment (all, antigravity, codex, claude, cursor)",
+    )
+    parser.add_argument(
+        "--install-bundle",
+        type=str,
+        metavar="BUNDLE_ID",
+        help="Install specific focused bundle into AI agent environment (e.g. bus-web-app-builder)",
+    )
+    parser.add_argument(
+        "--list-targets",
+        action="store_true",
+        help="Detect and list available AI agent environments",
+    )
 
     args = parser.parse_args()
+
+    if args.list_targets:
+        from .installer import detect_installed_agents
+        status = detect_installed_agents()
+        if args.json:
+            print(json.dumps(status, indent=2))
+        else:
+            print("==================================================")
+            print("  Detected AI Agent Environments")
+            print("==================================================")
+            for agent, data in status.items():
+                mark = "[ACTIVE]" if data["detected"] else "[NOT FOUND]"
+                print(f"{mark:<12} {agent:<14} -> {data['active_path']}")
+        return 0
+
+    if args.install or args.install_bundle:
+        from .installer import run_installation
+        target = args.install or "all"
+        res = run_installation(target=target, bundle=args.install_bundle)
+        if args.json:
+            print(json.dumps(res, indent=2))
+        else:
+            print("==================================================")
+            print("  Bundle Useful Skills: Installation Summary")
+            print("==================================================")
+            for line in res["details"]:
+                print(f"- {line}")
+            print("--------------------------------------------------")
+            if res["success"]:
+                print("[SUCCESS] Installation completed cleanly!")
+            else:
+                print("[FAILED] Installation encountered errors.")
+        return 0 if res["success"] else 1
 
     router = SkillsRouter()
 

@@ -1,48 +1,97 @@
-# Bundle Useful Skills
+<div align="center">
+
+# 🎛️ Bundle Useful Skills
+
+**The intelligent, context-efficient skill router and orchestrator for AI coding agents.**  
+*Prevents context exhaustion • Eliminates framework collisions • Enforces deterministic security gates.*
 
 [![CI](https://github.com/ammasyaa/bundle-useful-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/ammasyaa/bundle-useful-skills/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node: >=22](https://img.shields.io/badge/Node.js-%3E%3D22-brightgreen.svg)](https://nodejs.org/)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-0%20runtime-success.svg)](package.json)
+[![Hosts: Codex & Antigravity](https://img.shields.io/badge/Hosts-Codex%20%7C%20Antigravity-orange.svg)](#global-installation)
+[![Platforms: Windows | macOS | Linux](https://img.shields.io/badge/Platforms-Win%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#start-here)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-An open-source, dependency-free project scanner and router that gives Codex and Google Antigravity a small, compatible set of Agent Skills for each website, desktop, or mobile development task.
+[Quickstart](#start-here) • [Why This Exists](#5w1h) • [How Routing Works](#how-routing-works) • [Supported Lanes](#supported-development-lanes) • [Everyday Commands](#everyday-commands) • [Global Installation](#global-installation) • [Doctor & Integrity](#doctor-and-integrity-model) • [Special Thanks](#special-thanks-and-original-repositories)
 
-It keeps 48 installable capabilities available on each host while normally activating only two to five. Every report names the skills actually selected, every installed upstream copy points back to its creator, and every managed file is checked against its reviewed source.
+</div>
+
+---
+
+> [!IMPORTANT]
+> **The 2–5 Skill Rule**: Context window space is precious. Large skill collections flood model attention, trigger contradictory instructions (e.g. Flutter vs React), and inflate token costs. `bundle-useful-skills` keeps **48 installable capabilities** in dormant host storage while dynamically activating only **two to five skills** needed for your specific task phase.
+
+### 🌟 Why Developers & Agents Rely on This Router
+
+- 🧠 **Dynamic Context Preservation** — Never dump dozens of skills into context. The router activates only the minimum sufficient set (2–5 skills) and mentally unloads them once the task phase completes.
+- 🛡️ **Framework & Creative Isolation** — Strictly blocks conflicting framework instructions (e.g., mixing React with Flutter or competing design authorities like `taste-skill` and `frontend-design`).
+- 🔒 **Deterministic Security & Release Gates** — Automatically routes OWASP-aligned security gates whenever touching authentication, payments, tokens, or PII.
+- ⚡ **Zero Runtime Dependencies** — Pure Node.js standard library. Fast execution, zero supply-chain bloat, instant offline availability.
+- 📜 **Cryptographic Integrity & Provenance** — Every single capability is pinned to an immutable 40-character Git commit hash, verified with SHA-256 manifests, and fully attributed to its upstream creator.
 
 ## Contents
 
-- [Start here](#start-here)
-- [5W1H](#5w1h)
-- [How routing works](#how-routing-works)
-- [Supported development lanes](#supported-development-lanes)
-- [Complete workflow](#complete-workflow)
-- [Everyday commands](#everyday-commands)
-- [Global installation](#global-installation)
-- [Doctor and integrity model](#doctor-and-integrity-model)
-- [End-to-end readiness](#end-to-end-readiness)
-- [Contributor and GitHub workflow](#contributor-and-github-workflow)
-- [Troubleshooting](#troubleshooting)
-- [Pros and cons](#pros-and-cons)
-- [Trust and update policy](#trust-and-update-policy)
-- [Special thanks and original repositories](#special-thanks-and-original-repositories)
-- [Repository map](#repository-map)
-- [Contributing and security](#contributing-and-security)
+- **Getting Started**
+  - [Start here (Quickstart & Installation)](#start-here)
+  - [5W1H (Overview & Purpose)](#5w1h)
+  - [Everyday commands (CLI Manual)](#everyday-commands)
+- **Architecture & Routing**
+  - [How routing works (Authority Hierarchy)](#how-routing-works)
+  - [Supported development lanes](#supported-development-lanes)
+  - [Complete workflow](#complete-workflow)
+- **Operations & Security**
+  - [Global installation (Codex & Antigravity)](#global-installation)
+  - [Doctor and integrity model](#doctor-and-integrity-model)
+  - [End-to-end readiness](#end-to-end-readiness)
+  - [Troubleshooting](#troubleshooting)
+- **Governance & Attribution**
+  - [Contributor and GitHub workflow](#contributor-and-github-workflow)
+  - [Pros and cons](#pros-and-cons)
+  - [Trust and update policy](#trust-and-update-policy)
+  - [Special thanks and original repositories](#special-thanks-and-original-repositories)
+  - [Repository map](#repository-map)
+  - [Contributing and security](#contributing-and-security)
+  - [License](#license)
 
 ## Start here
 
-Requirements:
+### ⚡ 30-Second Quickstart (Try Without Installing)
 
-- Node.js 22 or later.
-- Git and internet access for a full upstream installation.
-- Windows, macOS, or Linux for the repository tools. Codex and Antigravity use their own supported platforms.
+You can clone and test project scanning, framework classification, and skill routing immediately without modifying any global agent configurations:
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/ammasyaa/bundle-useful-skills.git
 cd bundle-useful-skills
+
+# 2. Test the router on your current repository or any task description
+node scripts/cli.mjs search --root . --task implementation --description "Build Next.js e-commerce app with Supabase"
+
+# 3. Test multi-platform routing scenarios
+node scripts/cli.mjs report --platform mobile --framework flutter --task implementation --target ios
+```
+
+### 📦 Full Host Installation (OpenAI Codex & Google Antigravity)
+
+**Prerequisites:**
+- **Node.js**: 22 or later.
+- **Git & Network Access**: Required for fetching pinned upstream capability commits.
+- **Supported Platforms**: Windows, macOS, or Linux for the repository tools. Codex and Antigravity use their own supported platforms.
+
+```bash
+# Verify offline readiness
 npm run test:e2e:quick
+
+# Install router & reviewed capabilities into both Codex and Antigravity
 npm run install:global
+
+# Inspect installation health and manifest integrity
 npm run doctor
 ```
 
-Restart Codex and Antigravity after installation so each host reloads its global instructions. A healthy full installation returns `ready: true` for both hosts.
+> [!TIP]
+> Restart Codex and Antigravity after installation so each host reloads its global instructions. A healthy full installation returns `ready: true` for both hosts.
 
 For a release-quality check of the repository and a complete isolated installation:
 
@@ -428,7 +477,7 @@ Thank you to the **Bundle Useful Skills contributors** who maintain `development
 
 ## Contributing and security
 
-Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing routing or registry metadata. Behavior changes require tests, upstream additions require provenance and license review, and registry changes require regenerated credits.
+Read [`CONTRIBUTING.md`](CONTRIBUTING.md) before changing routing or registry metadata. All community participants are expected to follow our [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md). Behavior changes require tests, upstream additions require provenance and license review, and registry changes require regenerated credits.
 
 Report security concerns according to [`SECURITY.md`](SECURITY.md). Do not include credentials, private project data, or exploit details in public issues.
 

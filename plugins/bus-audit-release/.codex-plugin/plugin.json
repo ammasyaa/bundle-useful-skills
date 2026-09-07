@@ -1,0 +1,19 @@
+{
+  "name": "bus-audit-release",
+  "version": "1.0.0",
+  "skills": [
+    "skills/code-review-and-quality",
+    "skills/verification-before-completion",
+    "skills/impeccable",
+    "skills/web-quality-audit",
+    "skills/audit-context-building",
+    "skills/supply-chain-risk-auditor",
+    "skills/ce-code-review",
+    "skills/ce-test-browser",
+    "skills/ce-test-xcode",
+    "skills/ce-polish",
+    "skills/ce-dogfood",
+    "skills/ce-optimize",
+    "skills/ce-simplify-code"
+  ]
+}

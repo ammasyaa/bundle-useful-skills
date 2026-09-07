@@ -1,0 +1,16 @@
+{
+  "name": "bus-expo-app-builder",
+  "description": "Universal React Native / Expo mobile development, native UI, router, and fluid motion",
+  "version": "1.0.0",
+  "skills": [
+    "skills/expo-project-structure",
+    "skills/expo-router",
+    "skills/expo-native-ui",
+    "skills/expo-ui",
+    "skills/expo-data-fetching",
+    "skills/expo-design-system",
+    "skills/expo-dev-client",
+    "skills/expo-module",
+    "skills/expo-upgrade"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "bus-engineering-core",
+  "version": "1.0.0",
+  "description": "Core software engineering workflows, test-driven development, and systematic debugging",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "engineering-core"
+  ],
+  "skills": [
+    "brainstorming",
+    "writing-plans",
+    "test-driven-development",
+    "systematic-debugging",
+    "requesting-code-review",
+    "verification-before-completion",
+    "subagent-driven-development"
+  ]
+}

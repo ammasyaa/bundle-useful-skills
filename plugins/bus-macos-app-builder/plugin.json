@@ -1,0 +1,23 @@
+{
+  "name": "bus-macos-app-builder",
+  "version": "1.0.0",
+  "description": "Native macOS desktop development with SwiftUI, AppKit, window management, and notarization",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "macos-app-builder"
+  ],
+  "skills": [
+    "build-run-debug",
+    "swiftui-patterns",
+    "window-management",
+    "appkit-interop",
+    "view-refactor",
+    "test-triage",
+    "signing-entitlements",
+    "packaging-notarization",
+    "telemetry"
+  ]
+}

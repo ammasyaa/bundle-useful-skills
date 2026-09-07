@@ -1,218 +1,227 @@
 [
   {
-    "repository": "https://github.com/obra/superpowers",
-    "name": "Superpowers by Obra",
-    "maintainer": "Jesse Vincent",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Shared engineering process layer for agent workflows."
+    "id": "everyinc-compound-engineering-plugin",
+    "name": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/Leonxlnx/taste-skill",
-    "name": "Taste Skill",
-    "maintainer": "Leon Lin",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "High-craft creative direction for web products and landing pages."
+    "id": "leonxlnx-taste-skill",
+    "name": "Leonxlnx/taste-skill",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "ccbc15639c0d381ae77c25143a502f6ae45ea9be",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/anthropics/anthropic-quickstarts",
-    "name": "Anthropic Quickstarts & Skills",
-    "maintainer": "Anthropic",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Official frontend design and prompt engineering guidance."
+    "id": "owasp-secure-agent-playbook",
+    "name": "OWASP/secure-agent-playbook",
+    "url": "https://github.com/OWASP/secure-agent-playbook",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/emilkowalski/skills",
-    "name": "Emil Kowalski Skills",
-    "maintainer": "Emil Kowalski",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Apple-level craft, micro-interactions, spring physics, and tactile polish."
+    "id": "addyosmani-agent-skills",
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
-    "name": "UI/UX Pro Max",
-    "maintainer": "NextLevelBuilder",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Design patterns, palettes, charts, and layout reference systems."
+    "id": "addyosmani-web-quality-skills",
+    "name": "addyosmani/web-quality-skills",
+    "url": "https://github.com/addyosmani/web-quality-skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/pbakaus/impeccable",
-    "name": "Impeccable UI Critic",
-    "maintainer": "Paul Bakaus",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Anti-slop critic and rigorous design polish auditor."
+    "id": "android-skills",
+    "name": "android/skills",
+    "url": "https://github.com/android/skills",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/olzn/ui-craft",
-    "name": "UI Craft",
-    "maintainer": "Olzn",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Design system architecture, token semantics, and component scale."
+    "id": "anthropics-skills",
+    "name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "41bbe19d1a3c774f35e982ae3ca3a628864757c3",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/mendableai/firecrawl",
-    "name": "Firecrawl",
-    "maintainer": "Mendable AI",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Web scraping, crawl, markdown extraction, and search."
+    "id": "browser-use-browser-use",
+    "name": "browser-use/browser-use",
+    "url": "https://github.com/browser-use/browser-use",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "8a9b5f86184517336ea8804b404d49a374971c26",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/bytedance/deer-flow",
-    "name": "DeerFlow",
-    "maintainer": "ByteDance",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Deep multi-stage research, paper analysis, and synthesis."
+    "id": "bytedance-deer-flow",
+    "name": "bytedance/deer-flow",
+    "url": "https://github.com/bytedance/deer-flow",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "cbd6621d5203cba53d4c3298cb3d79bc75836c97",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/browser-use/browser-use",
-    "name": "Browser Use",
-    "maintainer": "Browser Use Team",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Interactive web browser automation and runtime verification."
+    "id": "coreyhaines31-marketingskills",
+    "name": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "5b2c000776b25ea7a4087e0b57e4e1a1796be4b0",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/mvanhorn/last30days-skill",
-    "name": "Last 30 Days",
-    "maintainer": "Mike Van Horn",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Community trend and sentiment retrieval across developer channels."
+    "id": "dart-lang-skills",
+    "name": "dart-lang/skills",
+    "url": "https://github.com/dart-lang/skills",
+    "default_branch": "main",
+    "license": "BSD-3-Clause",
+    "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/vercel-labs/agent-skills",
-    "name": "Vercel Agent Skills",
-    "maintainer": "Vercel",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "First-party React and Next.js guidelines and patterns."
+    "id": "emilkowalski-skills",
+    "name": "emilkowalski/skills",
+    "url": "https://github.com/emilkowalski/skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/addyosmani/agent-skills",
-    "name": "Addy Osmani Agent Skills",
-    "maintainer": "Addy Osmani",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Frontend architecture, code review, and web standards."
+    "id": "expo-skills",
+    "name": "expo/skills",
+    "url": "https://github.com/expo/skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/addyosmani/web-quality-skills",
-    "name": "Addy Osmani Web Quality",
-    "maintainer": "Addy Osmani",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Core Web Vitals, performance profiling, and accessibility auditing."
+    "id": "firecrawl-cli",
+    "name": "firecrawl/cli",
+    "url": "https://github.com/firecrawl/cli",
+    "default_branch": "main",
+    "license": "AGPL-3.0",
+    "commit": "06e2fd59d33c5e88410d8a5717cb97cb4bf190be",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/coreyhaines31/marketingskills",
-    "name": "MarketingSkills",
-    "maintainer": "Corey Haines",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Technical SEO, structured schema, and AI search (GEO/AEO)."
+    "id": "flutter-agent-plugins",
+    "name": "flutter/agent-plugins",
+    "url": "https://github.com/flutter/agent-plugins",
+    "default_branch": "main",
+    "license": "BSD-3-Clause",
+    "commit": "9b8106dbf082e0cfa0b2b8c54ff9ca688b56f2e8",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/supabase/agent-skills",
-    "name": "Supabase Agent Skills",
-    "maintainer": "Supabase",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "PostgreSQL indexing, query optimization, and RLS security."
+    "id": "microsoft-win-dev-skills",
+    "name": "microsoft/win-dev-skills",
+    "url": "https://github.com/microsoft/win-dev-skills",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/cloudflare/skills",
-    "name": "Cloudflare Skills",
-    "maintainer": "Cloudflare",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Cloudflare Workers, Pages, and serverless edge architecture."
+    "id": "mvanhorn-last30days-skill",
+    "name": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "56ba5ace27d0441db1eec70d37e4063bb7901594",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/microsoft/win-dev-skills",
-    "name": "Microsoft Windows Dev Skills",
-    "maintainer": "Microsoft",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Official WinUI 3, Windows App SDK, and Fluent Design."
+    "id": "nextlevelbuilder-ui-ux-pro-max-skill",
+    "name": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "4aad0584d9426f30a2a4b3605e7e0e84ec16b5a3",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/openai/plugins",
-    "name": "OpenAI Plugins & Skills",
-    "maintainer": "OpenAI",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "macOS SwiftUI/AppKit and iOS native mobile application development."
+    "id": "obra-superpowers",
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/flutter/agent-plugins",
-    "name": "Flutter Agent Plugins",
-    "maintainer": "Flutter Team (Google)",
-    "trust_status": "trusted",
-    "default_license": "BSD-3-Clause",
-    "notes": "Official Flutter architecture and cross-platform mobile/desktop development."
+    "id": "olzn-ui-craft",
+    "name": "olzn/ui-craft",
+    "url": "https://github.com/olzn/ui-craft",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/android/skills",
-    "name": "Android Skills",
-    "maintainer": "Android Team (Google)",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Official Jetpack Compose, Material 3, and Android OS conventions."
+    "id": "openai-plugins",
+    "name": "openai/plugins",
+    "url": "https://github.com/openai/plugins",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/expo/skills",
-    "name": "Expo Skills",
-    "maintainer": "Expo Team",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Expo Router, React Native architecture, and mobile deployments."
+    "id": "pbakaus-impeccable",
+    "name": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "default_branch": "main",
+    "license": "MIT",
+    "commit": "8b39f41949544ae5d06bbfeea0a6931548e6fb12",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/OWASP/secure-agent-playbook",
-    "name": "OWASP Secure Agent Playbook",
-    "maintainer": "OWASP Foundation",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Secure-by-default software development and threat prevention."
+    "id": "supabase-agent-skills",
+    "name": "supabase/agent-skills",
+    "url": "https://github.com/supabase/agent-skills",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "8331f91084b12269a8e9e4f509e8b78f44ff5213",
+    "trust_tier": "community-reviewed"
   },
   {
-    "repository": "https://github.com/trailofbits/skills",
-    "name": "Trail of Bits Skills",
-    "maintainer": "Trail of Bits",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Advanced application security, static analysis, and variant auditing."
+    "id": "trailofbits-skills",
+    "name": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+    "trust_tier": "first-party"
   },
   {
-    "repository": "https://github.com/snyk/agent-scan",
-    "name": "Snyk Agent Scan",
-    "maintainer": "Snyk",
-    "trust_status": "trusted",
-    "default_license": "Apache-2.0",
-    "notes": "Skill and plugin supply-chain dependency scanning."
-  },
-  {
-    "repository": "https://github.com/EveryInc/compound-engineering-plugin",
-    "name": "Compound Engineering",
-    "maintainer": "Every Inc",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Independent multi-perspective code review orchestrator."
-  },
-  {
-    "repository": "https://github.com/sickn33/agentic-awesome-skills",
-    "name": "Agentic Awesome Skills",
-    "maintainer": "sickn33 and contributors",
-    "trust_status": "trusted",
-    "default_license": "MIT",
-    "notes": "Curated catalog of specialized Agent Skills and portable plugin bundles."
+    "id": "vercel-labs-agent-skills",
+    "name": "vercel-labs/agent-skills",
+    "url": "https://github.com/vercel-labs/agent-skills",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "commit": "063bee94c34a2ec9eb7a3d3c734020a6723ba868",
+    "trust_tier": "first-party"
   }
 ]

@@ -1,0 +1,13 @@
+{
+  "name": "bus-agent-security",
+  "description": "AI agent systems security, LLM threat modeling, MCP server reviews, and injection defense",
+  "version": "1.0.0",
+  "skills": [
+    "skills/agent-security-audit",
+    "skills/llm-risk-assess",
+    "skills/agentic-ai-risk-assess",
+    "skills/mcp-server-review",
+    "skills/prompt-injection-test",
+    "skills/multi-agentic-threat-model"
+  ]
+}

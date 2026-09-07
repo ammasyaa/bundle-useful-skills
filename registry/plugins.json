@@ -1,434 +1,441 @@
 [
   {
-    "id": "aas-web-app-builder",
-    "name": "AAS Web App Builder",
-    "plugin_name": "agentic-bundle-aas-web-app-builder",
-    "priority": "tier-1",
-    "audience": "Frontend and full-stack developers shipping modern web apps.",
-    "why": "Implement a React/Next.js user journey with responsive UI, accessibility checks and browser verification.",
-    "skill_count": 10,
+    "id": "bus-agent-security",
+    "name": "Bus Agent Security",
+    "plugin_name": "bus-agent-security",
+    "description": "AI agent systems security, LLM threat modeling, MCP server reviews, and injection defense",
+    "job": "AI agent systems security, LLM threat modeling, MCP server reviews, and injection defense",
+    "skill_count": 6,
     "skills": [
-      "frontend-developer",
-      "frontend-design",
-      "react-best-practices",
-      "nextjs-app-router-patterns",
-      "browser-automation",
-      "tailwind-patterns",
-      "shadcn",
-      "form-cro",
-      "seo-audit",
-      "ui-a11y"
-    ]
+      "agent-security-audit",
+      "llm-risk-assess",
+      "agentic-ai-risk-assess",
+      "mcp-server-review",
+      "prompt-injection-test",
+      "multi-agentic-threat-model"
+    ],
+    "recommended_with": [
+      "bus-secure-app-builder",
+      "bus-security-auditor"
+    ],
+    "runtime_rules": []
   },
   {
-    "id": "aas-product-design-studio",
-    "name": "AAS Product Design Studio",
-    "plugin_name": "agentic-bundle-aas-product-design-studio",
-    "priority": "tier-1",
-    "audience": "Builders who want richer UI, brand, portfolio, and visual product work.",
-    "why": "Turn a product brief into a coherent visual direction, responsive interface and actionable design review.",
-    "skill_count": 10,
+    "id": "bus-android-app-builder",
+    "name": "Bus Android App Builder",
+    "plugin_name": "bus-android-app-builder",
+    "description": "Native Android app engineering with Jetpack Compose, edge-to-edge, and Play policy compliance",
+    "job": "Native Android app engineering with Jetpack Compose, edge-to-edge, and Play policy compliance",
+    "skill_count": 6,
     "skills": [
-      "ui-ux-pro-max",
-      "high-end-visual-design",
-      "frontend-design",
-      "mobile-design",
-      "3d-web-experience",
-      "canvas-design",
-      "scroll-experience",
-      "interactive-portfolio",
-      "ui-a11y",
-      "ui-review"
-    ]
+      "android-cli",
+      "edge-to-edge",
+      "play-policy-insights",
+      "android-intent-security",
+      "camerax",
+      "agp-9-upgrade"
+    ],
+    "recommended_with": [
+      "bus-engineering-core",
+      "bus-secure-app-builder"
+    ],
+    "runtime_rules": []
   },
   {
-    "id": "aas-security-engineer",
-    "name": "AAS Security Engineer",
-    "plugin_name": "agentic-bundle-aas-security-engineer",
-    "priority": "tier-1",
-    "audience": "Authorized security testing, audit, and hardening teams.",
-    "why": "Assess explicitly authorized targets and produce reproducible findings, remediation priorities and retest steps.",
-    "skill_count": 10,
+    "id": "bus-audit-release",
+    "name": "Bus Audit Release",
+    "plugin_name": "bus-audit-release",
+    "description": "Universal release gate, multi-perspective code review, browser QA, and final verification",
+    "job": "Universal release gate, multi-perspective code review, browser QA, and final verification",
+    "skill_count": 13,
     "skills": [
-      "ethical-hacking-methodology",
-      "burp-suite-testing",
-      "top-web-vulnerabilities",
-      "api-security-testing",
-      "linux-privilege-escalation",
-      "cloud-penetration-testing",
-      "security-auditor",
-      "vulnerability-scanner",
-      "sast-configuration",
-      "web-security-testing"
-    ]
+      "code-review-and-quality",
+      "verification-before-completion",
+      "impeccable",
+      "web-quality-audit",
+      "audit-context-building",
+      "supply-chain-risk-auditor",
+      "ce-code-review",
+      "ce-test-browser",
+      "ce-test-xcode",
+      "ce-polish",
+      "ce-dogfood",
+      "ce-optimize",
+      "ce-simplify-code"
+    ],
+    "recommended_with": [
+      "bus-engineering-core"
+    ],
+    "runtime_rules": []
   },
   {
-    "id": "aas-secure-app-builder",
-    "name": "AAS Secure App Builder",
-    "plugin_name": "agentic-bundle-aas-secure-app-builder",
-    "priority": "tier-1",
-    "audience": "Application developers who want security embedded while building features.",
-    "why": "Implement authentication, access control and data protection with negative tests and a focused security review.",
-    "skill_count": 9,
+    "id": "bus-backend-api-data",
+    "name": "Bus Backend Api Data",
+    "plugin_name": "bus-backend-api-data",
+    "description": "Backend engineering, API design, observability, and PostgreSQL/Supabase data architecture",
+    "job": "Backend engineering, API design, observability, and PostgreSQL/Supabase data architecture",
+    "skill_count": 6,
     "skills": [
-      "api-security-best-practices",
-      "auth-implementation-patterns",
-      "backend-security-coder",
-      "frontend-security-coder",
-      "cc-skill-security-review",
-      "pci-compliance",
-      "sast-configuration",
-      "secrets-management",
-      "django-access-review"
-    ]
+      "source-driven-development",
+      "api-and-interface-design",
+      "code-review-and-quality",
+      "observability-and-instrumentation",
+      "supabase-postgres-best-practices",
+      "supabase"
+    ],
+    "recommended_with": [
+      "bus-engineering-core",
+      "bus-secure-app-builder"
+    ],
+    "runtime_rules": []
   },
   {
-    "id": "aas-documents-presentations",
-    "name": "AAS Documents & Presentations",
-    "plugin_name": "agentic-bundle-aas-documents-presentations",
-    "priority": "tier-1",
-    "audience": "Users creating, editing, converting, and automating office documents.",
-    "why": "Produce editable office files and PDFs, with content checks and rendered output review.",
-    "skill_count": 9,
+    "id": "bus-engineering-core",
+    "name": "Bus Engineering Core",
+    "plugin_name": "bus-engineering-core",
+    "description": "Core software engineering workflows, test-driven development, and systematic debugging",
+    "job": "Core software engineering workflows, test-driven development, and systematic debugging",
+    "skill_count": 7,
     "skills": [
-      "office-productivity",
-      "docx-official",
-      "xlsx-official",
-      "pptx-official",
-      "pdf-official",
-      "pdf-conversion-router",
-      "google-docs-automation",
-      "google-sheets-automation",
-      "google-slides-automation"
-    ]
-  },
-  {
-    "id": "aas-data-analytics",
-    "name": "AAS Data Analytics",
-    "plugin_name": "agentic-bundle-aas-data-analytics",
-    "priority": "tier-1",
-    "audience": "Analysts, operators, and product teams turning data into business decisions.",
-    "why": "Validate source data, write analytical queries and produce a dashboard or experiment readout with traceable definitions.",
-    "skill_count": 10,
-    "skills": [
-      "analytics-tracking",
-      "analytics-product",
-      "sql-pro",
-      "postgres-best-practices",
-      "data-quality-frameworks",
-      "dbt-transformation-patterns",
-      "claude-d3js-skill",
-      "kpi-dashboard-design",
-      "ab-test-setup",
-      "business-analyst"
-    ]
-  },
-  {
-    "id": "aas-agent-mcp-builder",
-    "name": "AAS Agent & MCP Builder",
-    "plugin_name": "agentic-bundle-aas-agent-mcp-builder",
-    "priority": "tier-1",
-    "audience": "Engineers building custom AI tools, server adapters, and agent runtimes.",
-    "why": "Build a bounded agent or MCP tool with explicit interfaces, failure handling and behavioral evaluation.",
-    "skill_count": 10,
-    "skills": [
-      "ai-agents-architect",
-      "agent-evaluation",
-      "mcp-builder",
-      "mcp-tool-developer",
-      "llm-app-patterns",
-      "rag-engineer",
-      "langgraph",
-      "langfuse",
-      "context-window-management",
-      "prompt-engineering"
-    ]
-  },
-  {
-    "id": "aas-qa-test-automation",
-    "name": "AAS QA & Test Automation",
-    "plugin_name": "agentic-bundle-aas-qa-test-automation",
-    "priority": "tier-1",
-    "audience": "Engineers reproducing regressions, writing test harnesses, and stabilizing suites.",
-    "why": "Reproduce failures, add meaningful regression coverage and stabilize browser or service tests.",
-    "skill_count": 10,
-    "skills": [
+      "brainstorming",
+      "writing-plans",
       "test-driven-development",
       "systematic-debugging",
-      "browser-automation",
-      "e2e-testing-patterns",
-      "playwright-skill",
-      "webapp-testing",
-      "k6-load-testing",
-      "test-fixing",
-      "code-review-checklist",
-      "screen-reader-testing"
-    ]
+      "requesting-code-review",
+      "verification-before-completion",
+      "subagent-driven-development"
+    ],
+    "recommended_with": [
+      "bus-secure-app-builder",
+      "bus-audit-release"
+    ],
+    "runtime_rules": []
   },
   {
-    "id": "aas-devops-cloud",
-    "name": "AAS DevOps & Cloud",
-    "plugin_name": "agentic-bundle-aas-devops-cloud",
-    "priority": "tier-1",
-    "audience": "Teams managing infrastructure, deployment pipelines, containers, and cloud resources.",
-    "why": "Prepare infrastructure and delivery changes with validation, rollback steps and explicit deployment boundaries.",
-    "skill_count": 10,
+    "id": "bus-expo-app-builder",
+    "name": "Bus Expo App Builder",
+    "plugin_name": "bus-expo-app-builder",
+    "description": "Universal React Native / Expo mobile development, native UI, router, and fluid motion",
+    "job": "Universal React Native / Expo mobile development, native UI, router, and fluid motion",
+    "skill_count": 9,
     "skills": [
-      "docker-expert",
-      "aws-serverless",
-      "kubernetes-architect",
-      "terraform-specialist",
-      "github-actions-templates",
-      "environment-setup-guide",
-      "deployment-procedures",
-      "bash-linux",
-      "incident-responder",
-      "devops-troubleshooter"
-    ]
-  },
-  {
-    "id": "aas-marketing-seo-growth",
-    "name": "AAS Marketing, SEO & Growth",
-    "plugin_name": "agentic-bundle-aas-marketing-seo-growth",
-    "priority": "tier-1",
-    "audience": "Growth marketers, founders, and content leads acquiring customers through organic search and outreach.",
-    "why": "Create an acquisition plan and channel assets grounded in the supplied audience, product and search evidence.",
-    "skill_count": 10,
-    "skills": [
-      "content-creator",
-      "seo-audit",
-      "seo-fundamentals",
-      "seo-content-planner",
-      "programmatic-seo",
-      "analytics-tracking",
-      "ab-test-setup",
-      "email-sequence",
-      "copywriting",
-      "schema-markup"
-    ]
-  },
-  {
-    "id": "aas-automation-builder",
-    "name": "AAS Automation Builder",
-    "plugin_name": "agentic-bundle-aas-automation-builder",
-    "priority": "tier-1",
-    "audience": "Operators and technical leads stitching systems together via workflows and webhooks.",
-    "why": "Design an automation with explicit triggers, mappings, retries and a reviewable test run.",
-    "skill_count": 10,
-    "skills": [
-      "workflow-automation",
-      "mcp-builder",
-      "make-automation",
-      "zapier-make-patterns",
-      "airtable-automation",
-      "notion-automation",
-      "slack-automation",
-      "googlesheets-automation",
-      "github-automation",
-      "n8n-workflow-patterns"
-    ]
-  },
-  {
-    "id": "aas-observability-ir",
-    "name": "AAS Observability IR",
-    "plugin_name": "agentic-bundle-aas-observability-ir",
-    "priority": "tier-1",
-    "audience": "On-call engineers, SREs, and platform teams operating live systems.",
-    "why": "Connect logs, metrics and traces to incident diagnosis, recovery checks and a documented follow-up.",
-    "skill_count": 10,
-    "skills": [
-      "observability-engineer",
-      "observability-and-instrumentation",
-      "distributed-tracing",
-      "slo-implementation",
-      "grafana-dashboards",
-      "performance-engineer",
-      "incident-responder",
-      "devops-troubleshooter",
-      "postmortem-writing",
-      "langfuse"
-    ]
-  },
-  {
-    "id": "aas-python-api-builder",
-    "name": "AAS Python API Builder",
-    "plugin_name": "agentic-bundle-aas-python-api-builder",
-    "priority": "tier-1",
-    "audience": "Python engineers delivering reliable backend services, FastAPI apps, and async APIs.",
-    "why": "Implement Python service endpoints with schema validation, async boundaries and automated tests.",
-    "skill_count": 10,
-    "skills": [
-      "python-pro",
-      "python-patterns",
-      "fastapi-pro",
-      "fastapi-templates",
-      "django-pro",
-      "python-testing-patterns",
-      "async-python-patterns",
-      "api-design-principles",
-      "pydantic-models-py",
-      "openapi-spec-generation"
-    ]
-  },
-  {
-    "id": "aas-mobile-app-builder",
-    "name": "AAS Mobile App Builder",
-    "plugin_name": "agentic-bundle-aas-mobile-app-builder",
-    "priority": "tier-1",
-    "audience": "Mobile engineers shipping iOS, Android, Expo, and Flutter apps.",
-    "why": "Implement a mobile feature in the chosen stack and prepare platform-specific build and release checks.",
-    "skill_count": 10,
-    "skills": [
-      "mobile-developer",
-      "react-native-architecture",
-      "expo-api-routes",
+      "expo-project-structure",
+      "expo-router",
+      "expo-native-ui",
+      "expo-ui",
+      "expo-data-fetching",
+      "expo-design-system",
       "expo-dev-client",
-      "expo-cicd-workflows",
-      "expo-deployment",
-      "flutter-expert",
-      "ios-developer",
-      "app-store-optimization",
-      "multi-platform-apps-multi-platform"
+      "expo-module",
+      "expo-upgrade"
+    ],
+    "recommended_with": [
+      "bus-product-ui-taste",
+      "bus-secure-app-builder"
+    ],
+    "runtime_rules": [
+      "expo-project-structure + expo-native-ui + expo-design-system + relevant router/data skill",
+      "Companion: animate-expo"
     ]
   },
   {
-    "id": "aas-accessibility-inclusive-ux",
-    "name": "AAS Accessibility & Inclusive UX",
-    "plugin_name": "agentic-bundle-aas-accessibility-inclusive-ux",
-    "priority": "tier-1",
-    "audience": "Designers and engineers building usable interfaces for all audiences.",
-    "why": "Find and fix accessibility barriers with keyboard, automated and screen-reader checks appropriate to the interface.",
+    "id": "bus-flutter-app-builder",
+    "name": "Bus Flutter App Builder",
+    "plugin_name": "bus-flutter-app-builder",
+    "description": "Cross-platform mobile application development with Flutter, Dart unit tests, and widget tests",
+    "job": "Cross-platform mobile application development with Flutter, Dart unit tests, and widget tests",
+    "skill_count": 9,
+    "skills": [
+      "flutter-add-widget-preview",
+      "flutter-add-widget-test",
+      "flutter-add-integration-test",
+      "dart-run-static-analysis",
+      "dart-add-unit-test",
+      "dart-collect-coverage",
+      "dart-fix-runtime-errors",
+      "dart-generate-test-mocks",
+      "dart-resolve-package-conflicts"
+    ],
+    "recommended_with": [
+      "bus-engineering-core",
+      "bus-secure-app-builder"
+    ],
+    "runtime_rules": [
+      "flutter-add-widget-test + dart-run-static-analysis + relevant implementation skill + verification-before-completion",
+      "Validate Android and iOS targets separately"
+    ]
+  },
+  {
+    "id": "bus-flutter-desktop-builder",
+    "name": "Bus Flutter Desktop Builder",
+    "plugin_name": "bus-flutter-desktop-builder",
+    "description": "Cross-platform desktop application development with Flutter and Dart analysis",
+    "job": "Cross-platform desktop application development with Flutter and Dart analysis",
+    "skill_count": 9,
+    "skills": [
+      "flutter-add-widget-preview",
+      "flutter-add-widget-test",
+      "flutter-add-integration-test",
+      "dart-run-static-analysis",
+      "dart-add-unit-test",
+      "dart-collect-coverage",
+      "dart-fix-runtime-errors",
+      "dart-generate-test-mocks",
+      "dart-resolve-package-conflicts"
+    ],
+    "recommended_with": [
+      "bus-engineering-core",
+      "bus-audit-release"
+    ],
+    "runtime_rules": [
+      "flutter-add-widget-test + dart-run-static-analysis + relevant implementation skill + verification-before-completion"
+    ]
+  },
+  {
+    "id": "bus-ios-app-builder",
+    "name": "Bus Ios App Builder",
+    "plugin_name": "bus-ios-app-builder",
+    "description": "Native iOS development with SwiftUI, simulator inspection, debugger workflows, and Liquid Glass",
+    "job": "Native iOS development with SwiftUI, simulator inspection, debugger workflows, and Liquid Glass",
+    "skill_count": 9,
+    "skills": [
+      "swiftui-ui-patterns",
+      "swiftui-view-refactor",
+      "ios-debugger-agent",
+      "ios-simulator-browser",
+      "swiftui-performance-audit",
+      "ios-ettrace-performance",
+      "ios-memgraph-leaks",
+      "swiftui-liquid-glass",
+      "ios-app-intents"
+    ],
+    "recommended_with": [
+      "bus-product-ui-taste",
+      "bus-audit-release"
+    ],
+    "runtime_rules": [
+      "swiftui-ui-patterns + ios-debugger-agent + ios-simulator-browser + verification-before-completion",
+      "Apple HIG remains platform authority"
+    ]
+  },
+  {
+    "id": "bus-macos-app-builder",
+    "name": "Bus Macos App Builder",
+    "plugin_name": "bus-macos-app-builder",
+    "description": "Native macOS desktop development with SwiftUI, AppKit, window management, and notarization",
+    "job": "Native macOS desktop development with SwiftUI, AppKit, window management, and notarization",
+    "skill_count": 9,
+    "skills": [
+      "build-run-debug",
+      "swiftui-patterns",
+      "window-management",
+      "appkit-interop",
+      "view-refactor",
+      "test-triage",
+      "signing-entitlements",
+      "packaging-notarization",
+      "telemetry"
+    ],
+    "recommended_with": [
+      "bus-product-ui-taste",
+      "bus-audit-release"
+    ],
+    "runtime_rules": [
+      "build-run-debug + swiftui-patterns + test-triage + verification-before-completion",
+      "Apple HIG remains platform authority"
+    ]
+  },
+  {
+    "id": "bus-product-ui-taste",
+    "name": "Bus Product Ui Taste",
+    "plugin_name": "bus-product-ui-taste",
+    "description": "Product design, craft, motion, UI/UX intelligence, and anti-slop visual critique",
+    "job": "Product design, craft, motion, UI/UX intelligence, and anti-slop visual critique",
+    "skill_count": 17,
+    "skills": [
+      "design-taste-frontend",
+      "frontend-design",
+      "emil-design-eng",
+      "apple-design",
+      "animate",
+      "animate-expo",
+      "review-animations",
+      "improve-animations",
+      "ui-ux-pro-max",
+      "impeccable",
+      "ui-craft",
+      "surface-motion",
+      "surface-interaction",
+      "surface-typography",
+      "system-tokens",
+      "system-components",
+      "system-patterns"
+    ],
+    "recommended_with": [
+      "bus-web-app-builder",
+      "bus-macos-app-builder",
+      "bus-ios-app-builder"
+    ],
+    "runtime_rules": []
+  },
+  {
+    "id": "bus-research-intelligence",
+    "name": "Bus Research Intelligence",
+    "plugin_name": "bus-research-intelligence",
+    "description": "Comprehensive search, deep literature research, and interactive web synthesis",
+    "job": "Comprehensive search, deep literature research, and interactive web synthesis",
     "skill_count": 8,
     "skills": [
-      "accesslint-audit",
-      "accesslint-scan",
-      "screen-reader-testing",
-      "accesslint-diff",
-      "fixing-accessibility",
-      "ui-a11y",
-      "webapp-testing",
-      "playwright-skill"
+      "firecrawl-search",
+      "deep-research",
+      "github-deep-research",
+      "academic-paper-review",
+      "systematic-literature-review",
+      "browser-use",
+      "qa",
+      "last30days"
+    ],
+    "recommended_with": [
+      "bus-engineering-core"
+    ],
+    "runtime_rules": [
+      "simple lookup -> firecrawl-search",
+      "deep research -> firecrawl-search + deep-research",
+      "GitHub comparison -> github-deep-research",
+      "interactive website -> browser-use",
+      "runtime website QA -> qa",
+      "recent sentiment -> last30days"
     ]
   },
   {
-    "id": "aas-api-platform-builder",
-    "name": "AAS API Platform Builder",
-    "plugin_name": "agentic-bundle-aas-api-platform-builder",
-    "priority": "tier-1",
-    "audience": "Platform architects and backend leads standardizing APIs across services.",
-    "why": "Define and implement API contracts, authorization, documentation and service verification across languages.",
-    "skill_count": 10,
+    "id": "bus-secure-app-builder",
+    "name": "Bus Secure App Builder",
+    "plugin_name": "bus-secure-app-builder",
+    "description": "Secure-by-default software engineering, secrets scanning, and OWASP code reviews",
+    "job": "Secure-by-default software engineering, secrets scanning, and OWASP code reviews",
+    "skill_count": 9,
     "skills": [
-      "api-design-principles",
-      "api-patterns",
-      "openapi-spec-generation",
-      "api-documentation",
-      "api-endpoint-builder",
-      "auth-implementation-patterns",
-      "api-security-best-practices",
-      "backend-architect",
-      "k6-load-testing",
-      "observability-engineer"
+      "security-guidance",
+      "code-review-security",
+      "web-security-review",
+      "api-security-review",
+      "mobile-code-review",
+      "sca-audit",
+      "secrets-scan",
+      "iac-security-review",
+      "securability-engineering"
+    ],
+    "recommended_with": [
+      "bus-security-auditor",
+      "bus-audit-release"
+    ],
+    "runtime_rules": []
+  },
+  {
+    "id": "bus-security-auditor",
+    "name": "Bus Security Auditor",
+    "plugin_name": "bus-security-auditor",
+    "description": "Deep security auditing, static analysis, variant analysis, and supply chain verification",
+    "job": "Deep security auditing, static analysis, variant analysis, and supply chain verification",
+    "skill_count": 9,
+    "skills": [
+      "audit-context-building",
+      "static-analysis",
+      "differential-review",
+      "variant-analysis",
+      "fp-check",
+      "insecure-defaults",
+      "sharp-edges",
+      "supply-chain-risk-auditor",
+      "property-based-testing"
+    ],
+    "recommended_with": [
+      "bus-audit-release"
+    ],
+    "runtime_rules": [
+      "audit-context-building -> static-analysis -> domain security review -> differential/variant analysis -> fp-check -> supply-chain-risk-auditor"
     ]
   },
   {
-    "id": "aas-saas-launch-revenue",
-    "name": "AAS SaaS Launch & Revenue",
-    "plugin_name": "agentic-bundle-aas-saas-launch-revenue",
-    "priority": "tier-1",
-    "audience": "Founders, indie hackers, and product engineers launching software and collecting payments.",
-    "why": "Connect MVP scope, pricing, payments and launch assets into a concrete launch-readiness review.",
-    "skill_count": 10,
+    "id": "bus-seo-geo-web-quality",
+    "name": "Bus Seo Geo Web Quality",
+    "plugin_name": "bus-seo-geo-web-quality",
+    "description": "Evidence-backed web quality, Core Web Vitals, accessibility, and GEO/AEO search optimization",
+    "job": "Evidence-backed web quality, Core Web Vitals, accessibility, and GEO/AEO search optimization",
+    "skill_count": 11,
     "skills": [
-      "saas-mvp-launcher",
-      "micro-saas-launcher",
-      "pricing-strategy",
-      "monetization",
-      "stripe-integration",
-      "analytics-product",
-      "launch-strategy",
-      "referral-program",
-      "email-sequence",
-      "seo-audit"
+      "web-quality-audit",
+      "performance",
+      "core-web-vitals",
+      "accessibility",
+      "seo",
+      "best-practices",
+      "seo-audit",
+      "ai-seo",
+      "schema",
+      "site-architecture",
+      "programmatic-seo"
+    ],
+    "recommended_with": [
+      "bus-web-app-builder"
+    ],
+    "runtime_rules": []
+  },
+  {
+    "id": "bus-web-app-builder",
+    "name": "Bus Web App Builder",
+    "plugin_name": "bus-web-app-builder",
+    "description": "Modern full-stack web application engineering, performance, and Next.js/React development",
+    "job": "Modern full-stack web application engineering, performance, and Next.js/React development",
+    "skill_count": 11,
+    "skills": [
+      "source-driven-development",
+      "frontend-ui-engineering",
+      "browser-testing-with-devtools",
+      "code-review-and-quality",
+      "api-and-interface-design",
+      "performance-optimization",
+      "observability-and-instrumentation",
+      "shipping-and-launch",
+      "react-best-practices",
+      "vercel-composition-patterns",
+      "web-design-guidelines"
+    ],
+    "recommended_with": [
+      "bus-product-ui-taste",
+      "bus-seo-geo-web-quality",
+      "bus-secure-app-builder"
+    ],
+    "runtime_rules": [
+      "frontend-ui-engineering + framework authority + emil-design-eng + impeccable",
+      "Add design-taste-frontend or frontend-design only for new visual direction",
+      "SEO/GEO skills only for public/indexable content",
+      "OWASP skills only when relevant security surface exists"
     ]
   },
   {
-    "id": "aas-ai-product-evaluation-ops",
-    "name": "AAS AI Product & Evaluation Ops",
-    "plugin_name": "agentic-bundle-aas-ai-product-evaluation-ops",
-    "priority": "tier-1",
-    "audience": "Product leads, AI engineers, and QA practitioners testing probabilistic AI behaviors.",
-    "why": "Define AI feature success criteria, representative evaluation cases and a decision-ready error analysis.",
-    "skill_count": 10,
+    "id": "bus-windows-app-builder",
+    "name": "Bus Windows App Builder",
+    "plugin_name": "bus-windows-app-builder",
+    "description": "Native Windows desktop application engineering using WinUI 3, XAML, and Fluent Design",
+    "job": "Native Windows desktop application engineering using WinUI 3, XAML, and Fluent Design",
+    "skill_count": 7,
     "skills": [
-      "ai-wrapper-product",
-      "agent-evaluation",
-      "langfuse",
-      "llm-app-patterns",
-      "context-window-management",
-      "kpi-dashboard-design",
-      "analytics-product",
-      "product-manager",
-      "ab-test-setup",
-      "hugging-face-evaluation"
-    ]
-  },
-  {
-    "id": "aas-data-engineering-platform",
-    "name": "AAS Data Engineering Platform",
-    "plugin_name": "agentic-bundle-aas-data-engineering-platform",
-    "priority": "tier-1",
-    "audience": "Data engineers building pipelines, data models, and warehouses.",
-    "why": "Build ingestion and transformation pipelines with data contracts, quality checks and recovery planning.",
-    "skill_count": 10,
-    "skills": [
-      "data-engineer",
-      "airflow-dag-patterns",
-      "dbt-transformation-patterns",
-      "postgres-best-practices",
-      "database-architect",
-      "vector-database-engineer",
-      "embedding-strategies",
-      "rag-engineer",
-      "sql-pro",
-      "data-quality-frameworks"
-    ]
-  },
-  {
-    "id": "aas-privacy-compliance-engineering",
-    "name": "AAS Privacy & Compliance Engineering",
-    "plugin_name": "agentic-bundle-aas-privacy-compliance-engineering",
-    "priority": "tier-1",
-    "audience": "Privacy engineers, compliance officers, and developers subject to GDPR, HIPAA, or SOC 2.",
-    "why": "Map data flows to engineering controls and evidence gaps for a scoped privacy or compliance review.",
-    "skill_count": 5,
-    "skills": [
-      "privacy-by-design",
-      "gdpr-data-handling",
-      "pci-compliance",
-      "fsi-compliance-checker",
-      "cc-skill-security-review"
-    ]
-  },
-  {
-    "id": "aas-localization-international-growth",
-    "name": "AAS Localization & International Growth",
-    "plugin_name": "agentic-bundle-aas-localization-international-growth",
-    "priority": "tier-1",
-    "audience": "Teams expanding applications to global markets, international locales, and multi-lingual SEO.",
-    "why": "Prepare locale-aware interfaces and content with language, routing and international SEO checks.",
-    "skill_count": 10,
-    "skills": [
-      "i18n-localization",
-      "seo-hreflang",
-      "seo-fundamentals",
-      "seo-content-planner",
-      "seo-content-writer",
-      "schema-markup",
-      "content-creator",
-      "copywriting",
-      "analytics-tracking",
-      "apify-market-research"
+      "winui-dev-workflow",
+      "winui-design",
+      "winui-code-review",
+      "winui-ui-testing",
+      "winui-packaging",
+      "winui-setup",
+      "winui-wpf-migration"
+    ],
+    "recommended_with": [
+      "bus-engineering-core",
+      "bus-audit-release"
+    ],
+    "runtime_rules": [
+      "winui-dev-workflow + winui-design + winui-ui-testing + verification-before-completion",
+      "Windows/Fluent remains platform authority"
     ]
   }
 ]

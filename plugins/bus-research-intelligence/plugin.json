@@ -1,0 +1,22 @@
+{
+  "name": "bus-research-intelligence",
+  "version": "1.0.0",
+  "description": "Comprehensive search, deep literature research, and interactive web synthesis",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "research-intelligence"
+  ],
+  "skills": [
+    "firecrawl-search",
+    "deep-research",
+    "github-deep-research",
+    "academic-paper-review",
+    "systematic-literature-review",
+    "browser-use",
+    "qa",
+    "last30days"
+  ]
+}

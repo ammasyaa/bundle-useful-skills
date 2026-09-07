@@ -186,7 +186,7 @@ class RegistryValidator:
         print("      Compatibility matrix verified.")
 
     def validate_profiles(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[5/6] Validating domain profiles in profiles/*...")
+        print("[5/7] Validating domain profiles in profiles/*...")
         profile_dirs = [p for p in self.profiles_dir.iterdir() if p.is_dir()]
         for pdir in profile_dirs:
             pjson = pdir / "profile.json"
@@ -209,44 +209,66 @@ class RegistryValidator:
 
         print(f"      Verified {len(profile_dirs)} domain profiles.")
 
-    def validate_specialized_plugins(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[6/6] Validating specialized plugin bundles in registry/plugins.json & plugins/*...")
-        plugins_file = self.registry_dir / "plugins.json"
-        if not plugins_file.exists():
-            self.log_error("registry/plugins.json missing!")
-            return
-
-        plugins_data = self.load_json(plugins_file)
+    def validate_plugins(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
+        print("[6/7] Validating registry/plugins.json and plugins/ directories...")
+        plugins_path = self.registry_dir / "plugins.json"
+        plugins_data = self.load_json(plugins_path)
         if not isinstance(plugins_data, list):
             self.log_error("plugins.json must contain a list of plugin objects.")
             return
 
-        plugins_dir = self.root / "plugins"
         for p in plugins_data:
             pid = p.get("id")
             pname = p.get("plugin_name")
-            if not pid or not pname:
-                self.log_error(f"Plugin entry missing id or plugin_name: {p}")
-                continue
+            p_dir = self.root / "plugins" / pname
+            if not p_dir.exists():
+                self.log_error(f"Plugin '{pid}' directory '{p_dir}' does not exist!")
 
-            p_path = plugins_dir / pname
-            if not p_path.exists():
-                self.log_error(f"Plugin directory missing for '{pname}' at {p_path}")
-                continue
+            plugin_manifest = p_dir / "plugin.json"
+            if not plugin_manifest.exists():
+                self.log_error(f"Plugin manifest missing at '{plugin_manifest}'")
 
-            if not (p_path / "plugin.json").exists():
-                self.log_error(f"plugin.json missing in '{pname}'")
-
-            skills = p.get("skills", [])
-            for sid in skills:
+            for sid in p.get("skills", []):
                 if sid not in known_skills:
-                    self.log_error(f"Plugin '{pid}' references unknown skill '{sid}' not in skills.json!")
+                    self.log_error(f"Plugin '{pid}' references unknown skill '{sid}'")
 
-                skill_file = p_path / "skills" / sid / "SKILL.md"
-                if not skill_file.exists():
-                    self.log_error(f"Skill file missing: {skill_file}")
+        print(f"      Verified {len(plugins_data)} plugins in registry/plugins.json.")
 
-        print(f"      Verified {len(plugins_data)} specialized plugin bundles.")
+    def validate_bundles(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
+        print("[7/7] Validating focused bundles in bundles/*.yaml...")
+        bundles_dir = self.root / "bundles"
+        if not bundles_dir.exists():
+            self.log_error("bundles/ directory does not exist!")
+            return
+
+        bfiles = list(bundles_dir.glob("bus-*.yaml"))
+        if len(bfiles) < 16:
+            self.log_error(f"Expected at least 16 bundle manifests, found {len(bfiles)}")
+
+        for bfile in bfiles:
+            lines = bfile.read_text(encoding="utf-8").splitlines()
+            b_id = ""
+            has_job = False
+            skills_found = 0
+            for line in lines:
+                if line.startswith("id:"):
+                    b_id = line.split(":", 1)[1].strip()
+                elif line.startswith("job:"):
+                    has_job = True
+                elif line.startswith("  - id:"):
+                    sid = line.split(":", 1)[1].strip()
+                    skills_found += 1
+                    if sid not in known_skills:
+                        self.log_error(f"Bundle '{bfile.name}' references unknown skill '{sid}'")
+
+            if not b_id.startswith("bus-"):
+                self.log_error(f"Bundle file '{bfile.name}' has invalid id '{b_id}' (must start with bus-)")
+            if not has_job:
+                self.log_error(f"Bundle file '{bfile.name}' missing 'job' description")
+            if skills_found == 0:
+                self.log_error(f"Bundle file '{bfile.name}' has 0 skills defined")
+
+        print(f"      Verified {len(bfiles)} bundle manifests.")
 
     def run(self) -> int:
         print("==================================================")
@@ -258,7 +280,8 @@ class RegistryValidator:
             self.validate_conflicts(skills)
             self.validate_compatibility()
             self.validate_profiles(skills)
-            self.validate_specialized_plugins(skills)
+            self.validate_plugins(skills)
+            self.validate_bundles(skills)
 
         print("--------------------------------------------------")
         if self.errors:

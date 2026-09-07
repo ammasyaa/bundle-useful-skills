@@ -1,0 +1,23 @@
+{
+  "name": "bus-secure-app-builder",
+  "version": "1.0.0",
+  "description": "Secure-by-default software engineering, secrets scanning, and OWASP code reviews",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "secure-app-builder"
+  ],
+  "skills": [
+    "security-guidance",
+    "code-review-security",
+    "web-security-review",
+    "api-security-review",
+    "mobile-code-review",
+    "sca-audit",
+    "secrets-scan",
+    "iac-security-review",
+    "securability-engineering"
+  ]
+}

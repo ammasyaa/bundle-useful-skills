@@ -1,0 +1,23 @@
+{
+  "name": "bus-expo-app-builder",
+  "version": "1.0.0",
+  "description": "Universal React Native / Expo mobile development, native UI, router, and fluid motion",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "expo-app-builder"
+  ],
+  "skills": [
+    "expo-project-structure",
+    "expo-router",
+    "expo-native-ui",
+    "expo-ui",
+    "expo-data-fetching",
+    "expo-design-system",
+    "expo-dev-client",
+    "expo-module",
+    "expo-upgrade"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "bus-research-intelligence",
+  "version": "1.0.0",
+  "skills": [
+    "skills/firecrawl-search",
+    "skills/deep-research",
+    "skills/github-deep-research",
+    "skills/academic-paper-review",
+    "skills/systematic-literature-review",
+    "skills/browser-use",
+    "skills/qa",
+    "skills/last30days"
+  ]
+}

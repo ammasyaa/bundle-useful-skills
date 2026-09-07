@@ -1,0 +1,44 @@
+id: bus-security-auditor
+job: Deep security auditing, static analysis, variant analysis, and supply chain verification
+skills:
+  - id: audit-context-building
+    url: https://github.com/trailofbits/skills/blob/main/plugins/audit-context-building/skills/audit-context-building/SKILL.md
+    mode: CORE
+    use: "Understand codebase before hunting bugs"
+  - id: static-analysis
+    url: https://github.com/trailofbits/skills/blob/main/plugins/static-analysis/skills/static-analysis/SKILL.md
+    mode: CORE
+    use: "Static-analysis workflows"
+  - id: differential-review
+    url: https://github.com/trailofbits/skills/blob/main/plugins/differential-review/skills/differential-review/SKILL.md
+    mode: COND
+    when: diff-review
+    use: "Security-focused diff review"
+  - id: variant-analysis
+    url: https://github.com/trailofbits/skills/blob/main/plugins/variant-analysis/skills/variant-analysis/SKILL.md
+    mode: COND
+    use: "Find variants of known root cause"
+  - id: fp-check
+    url: https://github.com/trailofbits/skills/blob/main/plugins/fp-check/skills/fp-check/SKILL.md
+    mode: CORE
+    use: "Validate suspected findings"
+  - id: insecure-defaults
+    url: https://github.com/trailofbits/skills/blob/main/plugins/insecure-defaults/skills/insecure-defaults/SKILL.md
+    mode: COND
+    use: "Dangerous default analysis"
+  - id: sharp-edges
+    url: https://github.com/trailofbits/skills/blob/main/plugins/sharp-edges/skills/sharp-edges/SKILL.md
+    mode: COND
+    use: "Footgun/API misuse analysis"
+  - id: supply-chain-risk-auditor
+    url: https://github.com/trailofbits/skills/blob/main/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md
+    mode: CORE
+    use: "Dependency takeover/health risk"
+  - id: property-based-testing
+    url: https://github.com/trailofbits/skills/blob/main/plugins/property-based-testing/skills/property-based-testing/SKILL.md
+    mode: COND
+    use: "Invariant/property-based tests"
+recommended_with:
+  - bus-audit-release
+runtime_rules:
+  - "audit-context-building -> static-analysis -> domain security review -> differential/variant analysis -> fp-check -> supply-chain-risk-auditor"

@@ -1,1207 +1,1407 @@
 {
-  "$schema": "https://bundle-useful-skills.org/schemas/lock.schema.json",
-  "lockfile_version": 1,
+  "version": "1.0.0",
   "generated_at": "2026-09-08T00:00:00Z",
+  "schema_version": "1.0.0",
   "skills": {
-    "3d-web-experience": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "9906b44c820b8279fdbf769db3dc3c4f4edbba5019f5c179976ea1425c0e39b0",
-      "pinned": true
+    "academic-paper-review": {
+      "commit": "cbd6621d5203cba53d4c3298cb3d79bc75836c97",
+      "sha256": "a0285baaeacc916bf45751c06db37745b195ddd4ec30e271ec1472f6cd48e8aa",
+      "pinned": true,
+      "source_repository": "https://github.com/bytedance/deer-flow",
+      "source_path": "skills/public/academic-paper-review/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "ab-test-setup": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "f5a16d277826a0b8c2cb153723b1caa8c214a0509265ade3eb516e1d2e0d1ef5",
-      "pinned": true
-    },
-    "accesslint-audit": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "b46270efb46f06f664d4c0159a95a285d7228ebc5fb0edbe7e2f5589ee5f6223",
-      "pinned": true
-    },
-    "accesslint-diff": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "6af4a0c13b1a5cce302d9ac37e6cb6cc1552aaaec4b8efc54df53378deafc593",
-      "pinned": true
-    },
-    "accesslint-scan": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "32f7f8e7621ac1ceaf4af7eeb50dd5bc7cccdba3e4fe0d42293c6cb4f6c214d9",
-      "pinned": true
+    "accessibility": {
+      "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
+      "sha256": "267fb2a0707d6142f2871f22688203a42ba21291a2aa200fb740936e41362b5d",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/accessibility/SKILL.md",
+      "license": "MIT"
     },
     "addy-code-review-and-quality": {
-      "version": "1.1.0",
-      "commit": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
       "sha256": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/code-review-and-quality/SKILL.md",
+      "license": "MIT"
     },
     "addy-frontend-ui-engineering": {
-      "version": "1.1.0",
-      "commit": "8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b",
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
       "sha256": "5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/frontend-ui-engineering/SKILL.md",
+      "license": "MIT"
     },
     "addy-web-quality-audit": {
-      "version": "1.0.0",
-      "commit": "9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c",
+      "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
       "sha256": "6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/web-quality-audit/SKILL.md",
+      "license": "MIT"
     },
-    "agent-evaluation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "44e1807b2db2c4c1c30a5bdf1c5a1c5090f2b887c9e3054b6ab7aab091f83b55",
-      "pinned": true
+    "agent-security-audit": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "014fb8da19f6e257164ebc10476a168d9dc5458ebdc24d4e75c51a8f94635b13",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/ai-security-skills/skills/agent-security-audit/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "ai-agents-architect": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "63edf98b00b251b00f19bb82c00752c880c1f2bf179fee7dd69eb042da5d21ed",
-      "pinned": true
+    "agentic-ai-risk-assess": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "35e9f083430ceb5215fb57f4df30a27ff199956d0ba205388185676f83a40d7b",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/ai-security-skills/skills/agentic-ai-risk-assess/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "ai-wrapper-product": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "a754a9ce044ed42974c63a4e510a1bc97a7c1482b71373c7351f83f2e76bb3c2",
-      "pinned": true
+    "agp-9-upgrade": {
+      "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
+      "sha256": "b24e772c606796bf6b60893d08122f1efff38d2cd51d90c6bfed2ce495bd7b22",
+      "pinned": true,
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "build-system/agp/agp-9-upgrade/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "airflow-dag-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "6d4b0f9919cc7c1ab1b82c54e2f63199eb36dd227d1bbcdfcab5f00c117314b4",
-      "pinned": true
+    "ai-seo": {
+      "commit": "5b2c000776b25ea7a4087e0b57e4e1a1796be4b0",
+      "sha256": "b1ecd93ebc65af886f81bc0a90645c8fd4ffdf68c5b3d4495a9e61481d954d00",
+      "pinned": true,
+      "source_repository": "https://github.com/coreyhaines31/marketingskills",
+      "source_path": "skills/ai-seo/SKILL.md",
+      "license": "MIT"
     },
-    "airtable-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c70baa50702e5b00b4d90c0f9b6d5363bc197e9621dc3cdbca5c4b490c8670c0",
-      "pinned": true
+    "android-cli": {
+      "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
+      "sha256": "b79254ca7999ceb3e4e3d623ff2859b270788867972c82f4d05c78f878e0e2e8",
+      "pinned": true,
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "devtools/android-cli/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "analytics-product": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "20bd7b4e93b3492e9081b8a55bdb6cedd02ed38ae86ad013f14af7f4dc274677",
-      "pinned": true
-    },
-    "analytics-tracking": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "1a0d49d7be7447dbf20d8648e65d0bc21cc43c1d82ae8edb8b9800524aa57e48",
-      "pinned": true
+    "android-intent-security": {
+      "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
+      "sha256": "02576b7430b4e22a965d7a2c87066630336e6f0534119d3403cf96ea24b5b73f",
+      "pinned": true,
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "security/android-intent-security/SKILL.md",
+      "license": "Apache-2.0"
     },
     "android-skills": {
-      "version": "1.0.0",
-      "commit": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
       "sha256": "0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "skills/android-dev/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "animate": {
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+      "sha256": "f6317335da2662e92270dc0a6128bea95d7216cd751f86628e3ac6b72804e805",
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/animate/SKILL.md",
+      "license": "MIT"
+    },
+    "animate-expo": {
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+      "sha256": "2121fc72ffa476492c1b91ccf96c7b26aade9d1a332dc5834ba3526e1102b00d",
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/animate-expo/SKILL.md",
+      "license": "MIT"
     },
     "anthropic-frontend-design": {
-      "version": "1.1.0",
       "commit": "8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d",
       "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/anthropics/anthropic-quickstarts",
+      "source_path": "skills/frontend-design/SKILL.md",
+      "license": "MIT"
     },
-    "api-design-principles": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "ec8595025578602a35c681ad57ff22d8e221896c18939e52b2264ca4f96129b3",
-      "pinned": true
+    "api-and-interface-design": {
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "5dafd0c44a3aabf11cae5bcb34f6fcc24dfa5c01ba6e0d3176bce997f4d68bc8",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/api-and-interface-design/SKILL.md",
+      "license": "MIT"
     },
-    "api-documentation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c6f88fc0e712150ba48fb8ca232ad441c1b4793777a8a8a3a7fb3acd39d753a4",
-      "pinned": true
+    "api-security-review": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "b1359b568cfaf72a322a8445c7b8ef6c3123df53bc3ee22dad5ae93658afc00b",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/api-security-review/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "api-endpoint-builder": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "acc052b6a435b3207f0fa0a4354616c08d9b4f3afbd9a046a26a9cd042b75317",
-      "pinned": true
+    "appkit-interop": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "7c91be82e30340ed9c929270f102965da3d67bcf509eecf8bf207c8a679fd3b6",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/appkit-interop/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "api-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "98a04b179359611f20e84fd888b4fe29b712c42f7c993f3a398f0db751e35085",
-      "pinned": true
+    "apple-design": {
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+      "sha256": "11840b24a11d7f94f39c6aaab074750ae4e4de4ef54ee4b1dd97e16ebd485e61",
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/apple-design/SKILL.md",
+      "license": "MIT"
     },
-    "api-security-best-practices": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "d706ba3383cb3b739c1c5c9ee231057e948fc9e13826d37833aee4f612d2f252",
-      "pinned": true
-    },
-    "api-security-testing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "ef33c414408c24854b3a0d9a5355f3cbdbec84a98e9d08af0136b8256a27aea7",
-      "pinned": true
-    },
-    "apify-market-research": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "7c94f8226cb920e52029b4b93f4335c28301ef1175b096a03a115154b113c20d",
-      "pinned": true
-    },
-    "app-store-optimization": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c238d9a15f359699b44fe6a0bda21e505ed0b4fd3baf70b9336041f48fd2ff8e",
-      "pinned": true
-    },
-    "async-python-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "ece020c17b7e4d59ebb203db8f18efd604ef6ebd5be7a047696644954c7d2aac",
-      "pinned": true
-    },
-    "auth-implementation-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "8967b61125ac4c68a765d1c54044e605c6ea7e0e187ee44ca8633acb9f3a4cca",
-      "pinned": true
-    },
-    "aws-serverless": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c5114c133fe9ddfe05a5754d3aeb99a397dc07e7d7173be9ad1137bef072daa9",
-      "pinned": true
-    },
-    "backend-architect": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c8a2423cfa0a9d86e209f7b2c5f41309692629877e22c90ceda7e2a07ee9f297",
-      "pinned": true
+    "audit-context-building": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "33fa693dc6e166cfa4919e4373cb6578c009d296234c2ae7cb3cd4e79b443765",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+      "license": "Apache-2.0"
     },
     "backend-engineering": {
-      "version": "1.0.0",
       "commit": "1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e",
       "sha256": "8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/bundle-useful-skills/backend-engineering",
+      "source_path": "skills/backend-engineering/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "backend-security-coder": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "e9b3c84c5c08bfcc083d0bc4513010e7836bfc4d87ee8419d9ed4b2843728faf",
-      "pinned": true
+    "best-practices": {
+      "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
+      "sha256": "9d1f10a08cd7a94176ce160ec860dbd3ecfadad75d46546001883f1f907c5c3e",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/best-practices/SKILL.md",
+      "license": "MIT"
     },
-    "bash-linux": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "cbdbdd546f2b1ff6a67e3c340914479b56daddbe940c38c616919adea6303fbc",
-      "pinned": true
+    "brainstorming": {
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "74edf03ea6d24ef53db48677b93558d14a979bdf052ca3f57ecdca0c66791608",
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/brainstorming/SKILL.md",
+      "license": "MIT"
     },
-    "browser-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c2967861de6c2b8cf46a9ee9503fd442d7ed22c21e785866865268bd8e476f3b",
-      "pinned": true
+    "browser-testing-with-devtools": {
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "4e3aacd6a380cd25bc6c2d67fdd1c926a9b22535b8a62109ecd33cefd909e3d9",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/browser-testing-with-devtools/SKILL.md",
+      "license": "MIT"
     },
     "browser-use": {
-      "version": "0.1.25",
-      "commit": "5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e",
-      "sha256": "1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f",
-      "pinned": true
+      "commit": "8a9b5f86184517336ea8804b404d49a374971c26",
+      "sha256": "58d07219a900116242ce948253bf1d6ebd84d9a5b0743e3e1e5609f0f8296a51",
+      "pinned": true,
+      "source_repository": "https://github.com/browser-use/browser-use",
+      "source_path": "skills/browser-use/SKILL.md",
+      "license": "MIT"
     },
-    "burp-suite-testing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "413f4ff079239c1df9f9bf03085b2176d5facea52d0aee39a62cfa2dfb399d79",
-      "pinned": true
+    "build-run-debug": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "bd32f3fa611fd731d01113450929aaeab8b40bfdda669b6cad76d877a096b722",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/build-run-debug/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "business-analyst": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "120dbe5a0d1ae8a2e04bc29ac9b11a7589c3772ead4a92e6dfe058522ac403b0",
-      "pinned": true
+    "camerax": {
+      "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
+      "sha256": "9ff427e29be47a5d87b906341213f6e25cf5be3cd8ff53b09c3577f948f8dde1",
+      "pinned": true,
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "camera/camerax/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "canvas-design": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "06fe09e7d3506d30b2278406c49b0f38bf5efeeebd1a0f866e8ef6a40bb4dd99",
-      "pinned": true
+    "ce-code-review": {
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+      "sha256": "4fe803c556d4f925869cf999988481e38676c1ed06b45c987fd28feb2313af49",
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/ce-code-review/SKILL.md",
+      "license": "MIT"
     },
-    "cc-skill-security-review": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "391988056290855034b521c3a24bfd4f82ab3a2dbdd3dd5c7e2e020d380b70e4",
-      "pinned": true
+    "ce-dogfood": {
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+      "sha256": "97f46ebf228f05de33208b81fabc406bb2994d8e8bcda2d02f60cb13ae05c814",
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/ce-dogfood/SKILL.md",
+      "license": "MIT"
     },
-    "claude-d3js-skill": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "bf0e65a9e5879188266ece2ba5315a4396ac619b91d22d76b76a7420d2a7c0ca",
-      "pinned": true
+    "ce-optimize": {
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+      "sha256": "fb0bb36a9a98d3003568c2b46364dba01bd43a518228e717aede2213a1f520a0",
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/ce-optimize/SKILL.md",
+      "license": "MIT"
     },
-    "cloud-penetration-testing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "126fb317f321024be8144ed0e49a8b98d610b3676f77dbecf313f3efede3172d",
-      "pinned": true
+    "ce-polish": {
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+      "sha256": "e3f5f3cc660a70c37456cd53c4fe9972996613ce225c109818595f101fd1a7d7",
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/ce-polish/SKILL.md",
+      "license": "MIT"
+    },
+    "ce-simplify-code": {
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+      "sha256": "f7295ebe360f0874f288a43b0f72fba837eb096bf1b3158dc4d2d20289c083c2",
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/ce-simplify-code/SKILL.md",
+      "license": "MIT"
+    },
+    "ce-test-browser": {
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+      "sha256": "074fd7d2813440fc4d975a448c8c5ca9864e3a458d02d73314397ddc1e3470b9",
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/ce-test-browser/SKILL.md",
+      "license": "MIT"
+    },
+    "ce-test-xcode": {
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
+      "sha256": "ebee5d613f8ecb0c9095d4bf8cb972c0e38511681e7acc9216cd8aa9a64965ca",
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/ce-test-xcode/SKILL.md",
+      "license": "MIT"
     },
     "cloudflare-skills": {
-      "version": "1.0.0",
       "commit": "3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a",
       "sha256": "0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/cloudflare/skills",
+      "source_path": "skills/cloudflare-workers/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "code-review-checklist": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "ab131f57809d92f2d92a607529762375926ecb7cc6c7b92e9ba2703721591502",
-      "pinned": true
+    "code-review-and-quality": {
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "8f3cabca581bbf7cb5f0add3f7454e7a4523f9d4353a6a4a217e6fa515309612",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/code-review-and-quality/SKILL.md",
+      "license": "MIT"
+    },
+    "code-review-security": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "a95dbecda4100e39b81fd7480fd76c228149b786ea5e66888044e9addf4abdd3",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/code-review-security/SKILL.md",
+      "license": "Apache-2.0"
     },
     "compound-engineering-plugin": {
-      "version": "1.0.0",
-      "commit": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "commit": "caa3b23145dae6ec8773e734c2642bf1bc64161b",
       "sha256": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
+      "source_path": "skills/review-orchestrator/SKILL.md",
+      "license": "MIT"
     },
-    "content-creator": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "1d0a9a8e6bbadc1a72cf8fd093da90c039cda9d94dbfb01cd386a750ede284fa",
-      "pinned": true
+    "core-web-vitals": {
+      "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
+      "sha256": "731aa78c0347e8b3e191b75962175bee058ce73817278e610ac0fe546e685914",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/core-web-vitals/SKILL.md",
+      "license": "MIT"
     },
-    "context-window-management": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "d06b58f23c23b4d10a2827e0c3dfbd5d97769410138f62120791ea3af6d32097",
-      "pinned": true
+    "dart-add-unit-test": {
+      "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
+      "sha256": "02428fa20c2cb90afcaf17a52c559641b85eb04f2765a54da2bc72ca858c1fce",
+      "pinned": true,
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-add-unit-test/SKILL.md",
+      "license": "BSD-3-Clause"
     },
-    "copywriting": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "8bc1424d11ae92b5959bbc45fe2632e61644ddf53e14990214442c56119a1419",
-      "pinned": true
+    "dart-collect-coverage": {
+      "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
+      "sha256": "229035193bfd785368c48e3dd8ee059df43fcbdfe227dfd8a9a0178b995ee6c6",
+      "pinned": true,
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-collect-coverage/SKILL.md",
+      "license": "BSD-3-Clause"
+    },
+    "dart-fix-runtime-errors": {
+      "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
+      "sha256": "0c18be0cbda925cb1322c2c47a52c288cce1dc34218705a20c4c071eed1b066d",
+      "pinned": true,
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-fix-runtime-errors/SKILL.md",
+      "license": "BSD-3-Clause"
+    },
+    "dart-generate-test-mocks": {
+      "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
+      "sha256": "ca58b0e0d045595aa99990715bbf48fc75b1c5dca4053bc1940ef289cbcf2f00",
+      "pinned": true,
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-generate-test-mocks/SKILL.md",
+      "license": "BSD-3-Clause"
     },
     "dart-lang-skills": {
-      "version": "3.5.0",
-      "commit": "0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b",
+      "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
       "sha256": "7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-idioms/SKILL.md",
+      "license": "BSD-3-Clause"
     },
-    "data-engineer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "544e3dc01f0541b8a8b40e59da69a0d5a160e53672a80717c1872ba211daf2fe",
-      "pinned": true
+    "dart-resolve-package-conflicts": {
+      "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
+      "sha256": "967093ae2bca2784ba6a104dba3821ad809b399ca22071e9afc512915f60fa0a",
+      "pinned": true,
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-resolve-package-conflicts/SKILL.md",
+      "license": "BSD-3-Clause"
     },
-    "data-quality-frameworks": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "e1e10ce53443a1dcc005607959138057aba4ac8b1e7c920f1fe5e4ebbd47ee5f",
-      "pinned": true
+    "dart-run-static-analysis": {
+      "commit": "c530d2c72836262425026df1f50b4ec747247fb2",
+      "sha256": "5e41a03011647bcaee182ddc5d4471122f45f93fec6570480c237077e7f9438c",
+      "pinned": true,
+      "source_repository": "https://github.com/dart-lang/skills",
+      "source_path": "skills/dart-run-static-analysis/SKILL.md",
+      "license": "BSD-3-Clause"
     },
-    "database-architect": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "aab924231e55660a51b87e1941a33b40f4bd6fd1ce3cbbdf2a2aa8c1cbb175d2",
-      "pinned": true
-    },
-    "dbt-transformation-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "f3884ea7616d2f031b7d95fd9cbe311b98a6e4ed8adef06492ee406e44bcb90e",
-      "pinned": true
+    "deep-research": {
+      "commit": "cbd6621d5203cba53d4c3298cb3d79bc75836c97",
+      "sha256": "04712f4daa7937cc1f8dabc1a086a9549e670eb3fa3f1a8d30abdc3ea8b31a79",
+      "pinned": true,
+      "source_repository": "https://github.com/bytedance/deer-flow",
+      "source_path": "skills/public/deep-research/SKILL.md",
+      "license": "Apache-2.0"
     },
     "deer-flow-deep-research": {
-      "version": "1.0.0",
-      "commit": "4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d",
+      "commit": "cbd6621d5203cba53d4c3298cb3d79bc75836c97",
       "sha256": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/bytedance/deer-flow",
+      "source_path": "skills/deep-research/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "deployment-procedures": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "fc4ec54ba6988df856617a741d44a10f30f5f6435d5eed89d538ae194661c538",
-      "pinned": true
+    "design-taste-frontend": {
+      "commit": "ccbc15639c0d381ae77c25143a502f6ae45ea9be",
+      "sha256": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89",
+      "pinned": true,
+      "source_repository": "https://github.com/Leonxlnx/taste-skill",
+      "source_path": "skills/taste-skill/SKILL.md",
+      "license": "MIT"
     },
-    "devops-troubleshooter": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "4a14ff76eb2dac14e7713652b1a6fda1dff213ea7d95c52e09a569646a94ca97",
-      "pinned": true
+    "differential-review": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "f9af6a8193fc1a9f8ca3c54bb8d19095a5f20c9472ca6d014488bbde50b67da0",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/differential-review/skills/differential-review/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "distributed-tracing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "e1c1751c6159ed351ee3f7209586e7706f5c7081a90465ac8d50da3c835d47ce",
-      "pinned": true
-    },
-    "django-access-review": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c11044ac6b5ca253d365e960b0003affa03978d74ab2bac54897281a952d1dea",
-      "pinned": true
-    },
-    "django-pro": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "36e55075f6c6ba9918bf1740dbb3c244088388a4977bc8fdc093031ef09a897a",
-      "pinned": true
-    },
-    "docker-expert": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "ee73b03d9b6973e4d2bb5c09750c7aa32196d1c725c12a51ce9bb355088b4eb9",
-      "pinned": true
-    },
-    "docx-official": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "aa28edf6c5dbf98315d531a4f71e4e72c75fa305a65ad17f2c129c68e32fc43e",
-      "pinned": true
-    },
-    "e2e-testing-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c90f76e1fd43015b07215e6e9c5d197832f224a3f9ce1237b4e8cc8aae8a111b",
-      "pinned": true
+    "edge-to-edge": {
+      "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
+      "sha256": "4ca04cb6a5330b96e51410bc815f878b4ca642fba46fe5e1ad724c94e04d6eb8",
+      "pinned": true,
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "system/edge-to-edge/SKILL.md",
+      "license": "Apache-2.0"
     },
     "electron-official-guidance": {
-      "version": "32.0.0",
       "commit": "2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d",
       "sha256": "9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f",
-      "pinned": true
-    },
-    "email-sequence": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "b86f2f59e423637b2993cca28cdd9c0eebb394d0c16762c59342ca2df1a864f5",
-      "pinned": true
-    },
-    "embedding-strategies": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "47d35a45ab0aa9c18f7473deef8388f776aaf26b2df0bed2e4a15355f0aaae17",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/electron/electron",
+      "source_path": "skills/electron-security/SKILL.md",
+      "license": "MIT"
     },
     "emil-animate": {
-      "version": "2.0.0",
-      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
       "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/animate/SKILL.md",
+      "license": "MIT"
     },
     "emil-animate-expo": {
-      "version": "2.0.0",
-      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
       "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/animate-expo/SKILL.md",
+      "license": "MIT"
     },
     "emil-design-eng": {
-      "version": "2.0.0",
-      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
-      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
-      "pinned": true
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+      "sha256": "e71de849347050c2c573c1cf24d742d5a13459557ecffa6e562f08006f46b5b7",
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/emil-design-eng/SKILL.md",
+      "license": "MIT"
     },
-    "environment-setup-guide": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "907f06d6f19e2a1d51e00278c637ec5556a1794f676ba39f24e7f14772220ae7",
-      "pinned": true
+    "expo-data-fetching": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "cb79a899ccfaed4fa544034440138f34982b18752248066af98feeb50e43f35d",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-data-fetching/SKILL.md",
+      "license": "MIT"
     },
-    "ethical-hacking-methodology": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "6fcb0517bd7a393573f0a0dd1778fea7d196e030eae2541595df3da5b0e64fe1",
-      "pinned": true
-    },
-    "expo-api-routes": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "3441e9ef9debc5983b78b417094e9c2ff221f8dbb308b92fa462bab9b40a17f0",
-      "pinned": true
-    },
-    "expo-cicd-workflows": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "31be3809b19e4cc5a711631e3e1b5b5c0fa2e18dd034ff7bd834f66a69cbd871",
-      "pinned": true
-    },
-    "expo-deployment": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "176910292f74aba87235fe04aabc36ee2f653c0b8eb0103691d4f243917af67e",
-      "pinned": true
+    "expo-design-system": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "17a1129510f62a24e5ee8e6bda89d1df919939eebcbd32be095541e16c5b30d8",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-design-system/SKILL.md",
+      "license": "MIT"
     },
     "expo-dev-client": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "0d92c7bc29e91debc07f7d9fbdc874e8cbc11248a0f0e1726580724292223077",
-      "pinned": true
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "f39d8f589e3b22e93fecd4a17b5102c3ff3eb392a7fe69081b181d7f0743826d",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-dev-client/SKILL.md",
+      "license": "MIT"
+    },
+    "expo-module": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "02847b29a4c8bb957cdea4e9efa060e78b6b1ac5976fb38d14275a9f21d5c776",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-module/SKILL.md",
+      "license": "MIT"
+    },
+    "expo-native-ui": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "3af5c164a7f91336100b4aeaa7ed3ecaa1b94ff2e9716f1bbb9656aec1c4cc1c",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-native-ui/SKILL.md",
+      "license": "MIT"
+    },
+    "expo-project-structure": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "96fd0659067e6e44bae2046bbfc779441705de0f31dadfe6d77029006f1bc5b9",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-project-structure/SKILL.md",
+      "license": "MIT"
+    },
+    "expo-router": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "eeffbf9cd5271e9c742af3919741dc2bfbbf312e8898017204a523d1e2db811b",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-router/SKILL.md",
+      "license": "MIT"
     },
     "expo-skills": {
-      "version": "51.0.0",
-      "commit": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
       "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "skills/expo-app/SKILL.md",
+      "license": "MIT"
     },
-    "fastapi-pro": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "d46cbc9b2ad870ca3e4561f0dbdfda4cd537e5b7bd81f98bfc575b6db340901b",
-      "pinned": true
+    "expo-ui": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "3d1bd7004e6556c2aadf1664308ca2a01d983ff3b819b6448ad7e5ffdbd469ca",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-ui/SKILL.md",
+      "license": "MIT"
     },
-    "fastapi-templates": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "6e79b344dd1eb191e1cf05efe626d8c8f7d2a6dcaff7879abd2c63bf31304603",
-      "pinned": true
+    "expo-upgrade": {
+      "commit": "d0075ffa09c13b35582fdbf08d0116886eec0810",
+      "sha256": "a48788aa5cfcfb7c6bce72420a52a650510e4c5738a0a528d4fa1d2c81643275",
+      "pinned": true,
+      "source_repository": "https://github.com/expo/skills",
+      "source_path": "plugins/expo/skills/expo-upgrade/SKILL.md",
+      "license": "MIT"
     },
     "firecrawl-cli": {
-      "version": "1.4.0",
       "commit": "3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c",
       "sha256": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/mendableai/firecrawl",
+      "source_path": "skills/firecrawl-cli/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "fixing-accessibility": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "200e6fbff2521cf1cd350385c969ae9ce37537f47ca939300d11b24ac39c6700",
-      "pinned": true
+    "firecrawl-search": {
+      "commit": "06e2fd59d33c5e88410d8a5717cb97cb4bf190be",
+      "sha256": "2d782f5da2f905178f7773c9d3b18b15331b0892d6d1cb678d166dc672ac41f5",
+      "pinned": true,
+      "source_repository": "https://github.com/firecrawl/cli",
+      "source_path": "skills/firecrawl-search/SKILL.md",
+      "license": "AGPL-3.0"
+    },
+    "flutter-add-integration-test": {
+      "commit": "9b8106dbf082e0cfa0b2b8c54ff9ca688b56f2e8",
+      "sha256": "8d81b053c5fdf5b61aa7d0165cbc35e7a9a1c5bdcd7a301b8293a108771e6bab",
+      "pinned": true,
+      "source_repository": "https://github.com/flutter/agent-plugins",
+      "source_path": "skills/flutter-add-integration-test/SKILL.md",
+      "license": "BSD-3-Clause"
+    },
+    "flutter-add-widget-preview": {
+      "commit": "9b8106dbf082e0cfa0b2b8c54ff9ca688b56f2e8",
+      "sha256": "88cfeb7084e798714f5ac59cff62e5441759bcbe096c0fdc37abd21111b20212",
+      "pinned": true,
+      "source_repository": "https://github.com/flutter/agent-plugins",
+      "source_path": "skills/flutter-add-widget-preview/SKILL.md",
+      "license": "BSD-3-Clause"
+    },
+    "flutter-add-widget-test": {
+      "commit": "9b8106dbf082e0cfa0b2b8c54ff9ca688b56f2e8",
+      "sha256": "6c449ebd844e331e661b12630b6ad2a218e84d1bd8ea8377ba9dbd62ffe2798a",
+      "pinned": true,
+      "source_repository": "https://github.com/flutter/agent-plugins",
+      "source_path": "skills/flutter-add-widget-test/SKILL.md",
+      "license": "BSD-3-Clause"
     },
     "flutter-agent-plugins": {
-      "version": "3.24.0",
-      "commit": "9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a",
+      "commit": "9b8106dbf082e0cfa0b2b8c54ff9ca688b56f2e8",
       "sha256": "6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/flutter/agent-plugins",
+      "source_path": "skills/flutter-core/SKILL.md",
+      "license": "BSD-3-Clause"
     },
-    "flutter-expert": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "57730216ee889a2e2c3d0d90962c8de395c286b03a9dcf2ff0b8cd0bc8bf13dd",
-      "pinned": true
-    },
-    "form-cro": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "24bcdc304a9359f68be8af27bf83067cdf7a220205033cd548fa970a458dd21b",
-      "pinned": true
+    "fp-check": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "129223b79b8cb1e7c289c90cbe4ba288d9b210e318a0d1464f319e30329481b3",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/fp-check/skills/fp-check/SKILL.md",
+      "license": "Apache-2.0"
     },
     "frontend-design": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "e8a22fcaccd285f8563a4728cb4320c5eb295297a2d3c526cbdff3ab54fe2f21",
-      "pinned": true
+      "commit": "41bbe19d1a3c774f35e982ae3ca3a628864757c3",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "pinned": true,
+      "source_repository": "https://github.com/anthropics/skills",
+      "source_path": "skills/frontend-design/SKILL.md",
+      "license": "MIT"
     },
-    "frontend-developer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "934eb48b61a50e23afc937b39a2abd4f4bdec915da936182477d73a6007d0b1c",
-      "pinned": true
+    "frontend-ui-engineering": {
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "2b74ac4862be3902ec918dceac9366a6fe83b9e003601c0deaf6be09c1766aca",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/frontend-ui-engineering/SKILL.md",
+      "license": "MIT"
     },
-    "frontend-security-coder": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c3a71d6af80bdeda15a1627dd171baf04f411108009fb2e11b3052840d7dee4f",
-      "pinned": true
+    "github-deep-research": {
+      "commit": "cbd6621d5203cba53d4c3298cb3d79bc75836c97",
+      "sha256": "7add6956b424fbe5d4fcf85ea977b7b663ad2d810b3157a69953401db9c7acdb",
+      "pinned": true,
+      "source_repository": "https://github.com/bytedance/deer-flow",
+      "source_path": "skills/public/github-deep-research/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "fsi-compliance-checker": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "b8b66e5c1a508f7521e4283e4b4cdd6739726b807126c81f07e6537a26d68c26",
-      "pinned": true
+    "iac-security-review": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "996dbcba7ec3612445b11499a5a092a1770afd028feb931541ad3b9db6b7abd7",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/iac-security-review/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "gdpr-data-handling": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "4ef837ae102f1385e0110f217385c1b35a84e0a41fa8c4dcbc215db29db2eb5d",
-      "pinned": true
+    "impeccable": {
+      "commit": "8b39f41949544ae5d06bbfeea0a6931548e6fb12",
+      "sha256": "80b1298ec7c89df3c61844314b63dbd65fcb88713e48e7a5d154f93ac5f2fdb2",
+      "pinned": true,
+      "source_repository": "https://github.com/pbakaus/impeccable",
+      "source_path": ".vibe/skills/impeccable/SKILL.md",
+      "license": "MIT"
     },
-    "github-actions-templates": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "cecfec28b9170bddfa59ea30a9d1130d583b7112fdfc5e3d028f26ac6c5e8b66",
-      "pinned": true
+    "improve-animations": {
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+      "sha256": "68f17bbc4671593d2f43dba26a679243e2153ba5f26965fb7d59df52842534ff",
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/improve-animations/SKILL.md",
+      "license": "MIT"
     },
-    "github-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "ba7008b2893b67e7280eb62683e090f4ff965c95cb2269cde3c5a75ec87d6266",
-      "pinned": true
+    "insecure-defaults": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "ce476ebb47cbbd21456aca7c8303d9135e1daf3680ef6c09c06393aa3ab747e5",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/insecure-defaults/README.md",
+      "license": "Apache-2.0"
     },
-    "google-docs-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "72a8884f5d321cf04592728fa42cad5642d12741052fefa3939d6d2a7719e5a4",
-      "pinned": true
+    "ios-app-intents": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "ecfa87ec1070bccfdfa0d21ee997bbfbfd78edfb1f22da5da9c05ff006e9fa52",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/ios-app-intents/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "google-sheets-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "60a32c91ad44c292e03fc672948cb076dcef2a8c02e49a744911ee6c656e57fd",
-      "pinned": true
+    "ios-debugger-agent": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "bb8ad932ec473cee097c9c8d106051134e9ab6cf9dc85d6a8e62ce80ad24c385",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/ios-debugger-agent/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "google-slides-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "0e4e83ec4f856ca2041b2c804f46955a0a37a615aacaf417fe882479a402d717",
-      "pinned": true
+    "ios-ettrace-performance": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "1888c0b2fc6b7d9f3d54d06333e9628a2c4660b9d9b5ddf3edc37f126c773935",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/ios-ettrace-performance/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "googlesheets-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "cae48a4a0caa928655ff6de38f7de59c88f73145f8fb8e4c31a1344991ea07a3",
-      "pinned": true
+    "ios-memgraph-leaks": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "f09a1e78c00b342196035f6570723f16e40e34a800d353c7c885d1dab4dc8781",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/ios-memgraph-leaks/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "grafana-dashboards": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "0a0eea6fbf85e393d071c1c5e83564cef2a979e032ec45e52ed6341ac5f3ce75",
-      "pinned": true
-    },
-    "high-end-visual-design": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "bfd0d754d69c5e8883b13175405fe48c14e7c9653304677e4d55c75978ff6b80",
-      "pinned": true
-    },
-    "hugging-face-evaluation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "3f03599cccfff63e0395ed6b498b08a770a6c3c2c67e0f0f40656e25a7b3996d",
-      "pinned": true
-    },
-    "i18n-localization": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "2d60973202c2932ad49c08ae15ffd20f7eddadad85f2d3d760ee483185014ae2",
-      "pinned": true
-    },
-    "incident-responder": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "d6be4fa395e4a2e3e9a9dd5c04943a87b39a41eec59ad871608c76cdfab46e6a",
-      "pinned": true
-    },
-    "interactive-portfolio": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "ede2ea03ee40d9dd24da00ecaa2c6af709ec07a058e67655e3ec2b32be374266",
-      "pinned": true
-    },
-    "ios-developer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "3919d56b06e74e20618e6f801a0b0a65beef3a7ead5225e45fb67297ba92a828",
-      "pinned": true
-    },
-    "k6-load-testing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "835e5ceea8fffafca6f3be2ce5e647fe70173e4bd6bcbfbe128b61ff8f0995b1",
-      "pinned": true
-    },
-    "kpi-dashboard-design": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "b9429ee5bd2b6ae808e0953345bfc4845d3b18ce13b208b6b990dc16f470b4a7",
-      "pinned": true
-    },
-    "kubernetes-architect": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "3b7cd6869798de58b440599e1db4dfbd005cf6629874121e4fac8595490c6aa4",
-      "pinned": true
-    },
-    "langfuse": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "641a0d2111f947c38d37ec909c7340770420ca85bd2447d7e0935babb7b85bc7",
-      "pinned": true
-    },
-    "langgraph": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "722e1a142a868486b5ef893d0215e580d183c1d7e3f52708eaaa067f0077de0d",
-      "pinned": true
+    "ios-simulator-browser": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "f3f0216323cd7713a73f1bc4beee1b740a7867f20affef331760dd1932a1ec4b",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/ios-simulator-browser/SKILL.md",
+      "license": "Apache-2.0"
     },
     "laravel-agent-skills": {
-      "version": "1.0.0",
       "commit": "6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d",
       "sha256": "3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/laravel/agent-skills",
+      "source_path": "skills/laravel-framework/SKILL.md",
+      "license": "MIT"
+    },
+    "last30days": {
+      "commit": "56ba5ace27d0441db1eec70d37e4063bb7901594",
+      "sha256": "8720df178dd2290775c20d1913a9e3ce4bcc3b6004ce2897bf08f6f3465d218b",
+      "pinned": true,
+      "source_repository": "https://github.com/mvanhorn/last30days-skill",
+      "source_path": "skills/last30days/SKILL.md",
+      "license": "MIT"
     },
     "last30days-skill": {
-      "version": "1.0.0",
-      "commit": "6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f",
+      "commit": "56ba5ace27d0441db1eec70d37e4063bb7901594",
       "sha256": "2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/mvanhorn/last30days-skill",
+      "source_path": "skills/last30days/SKILL.md",
+      "license": "MIT"
     },
-    "launch-strategy": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "026d826aa82881e65f705bde10422d3dde67546885f0912ed493aba1ff65bf88",
-      "pinned": true
-    },
-    "linux-privilege-escalation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "a7baad8fa71c61ec3332b26aae78dc11a749692f990cd1fafc0bdcaed860ef00",
-      "pinned": true
-    },
-    "llm-app-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "919fe2c2afc6316f4d97b988e6413764a201eb854d32a9635126b8dacd96e1ab",
-      "pinned": true
-    },
-    "make-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "eafefe33bf40c745342497d2b052cb25c3c2a3a4d1eb85dce164264184130dba",
-      "pinned": true
+    "llm-risk-assess": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "7f9678c22fe8a1e490bf606c8fe3c7de46a18258cf727c55f4e792f69af2b0e1",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/ai-security-skills/skills/llm-risk-assess/SKILL.md",
+      "license": "Apache-2.0"
     },
     "marketingskills-seo-audit": {
-      "version": "1.0.0",
-      "commit": "0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
+      "commit": "5b2c000776b25ea7a4087e0b57e4e1a1796be4b0",
       "sha256": "7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/coreyhaines31/marketingskills",
+      "source_path": "skills/seo-audit/SKILL.md",
+      "license": "MIT"
     },
-    "mcp-builder": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "7fb7e820f5843bc0ac3b9ac4326c7752961b8acf190df30e8fb28b4280930df3",
-      "pinned": true
-    },
-    "mcp-tool-developer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "10d1a7a0c478ee792dc62d17e86715a5e38fe7d69241bc83ce29537c99680ed0",
-      "pinned": true
-    },
-    "micro-saas-launcher": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "57f24a11662c312943d6e1f7bcd467935cca479e00ebe095f8269703bf51e81c",
-      "pinned": true
+    "mcp-server-review": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "3aff9b4b2bf1005bbfcaa834345650a3b6e84fec5b7ffa219e0e8767b4e8d704",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/ai-security-skills/skills/mcp-server-review/SKILL.md",
+      "license": "Apache-2.0"
     },
     "microsoft-winui": {
-      "version": "1.0.0",
-      "commit": "7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e",
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
       "sha256": "4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "skills/winui-dev-workflow/SKILL.md",
+      "license": "MIT"
     },
-    "mobile-design": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "8a5c7defd2319fb4bed89e2f30f7b2ffa78fdbc6cbef69b4f8bac08ba099e57b",
-      "pinned": true
+    "mobile-code-review": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "dd58464283be64ec094b6394e8c98c6b2e4d47d83e951559bc0fc953f44695ba",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/mobile-code-review/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "mobile-developer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "cb58234882c50431937f6300e56ea5b8cb4acfee657a28e8eadcaad351b14afc",
-      "pinned": true
-    },
-    "monetization": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "da284569c2e67889c82963d96187e5c8b63f4a4d390bf95d18a29ae62dc90cff",
-      "pinned": true
-    },
-    "multi-platform-apps-multi-platform": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "1e2c5f4add1f5c39411734c04b9e0913d7541a0ecb0337436c9c2cf3206bb212",
-      "pinned": true
-    },
-    "n8n-workflow-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "9b61839065e82e83a8146d895984199a82070cd30a0942c91cf03aaa051d25b3",
-      "pinned": true
+    "multi-agentic-threat-model": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "97704a49ff5b73260a64c7b1556ef204d674c4c1071eb2879c5036e4cf0b397b",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/ai-security-skills/skills/multi-agentic-threat-model/SKILL.md",
+      "license": "Apache-2.0"
     },
     "neon-agent-skills": {
-      "version": "1.0.0",
       "commit": "5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c",
       "sha256": "2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
-      "pinned": true
-    },
-    "nextjs-app-router-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "d55fec69735d9f57d61a94c90ed4938666f2cdaac4e59cb4a9e1072b0a7c59a5",
-      "pinned": true
-    },
-    "notion-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "6a7b193d93d5bbdfae88e43f013a7bdc6423812d06a0e65e235655152046e35f",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/neondatabase/agent-skills",
+      "source_path": "skills/neon-postgres/SKILL.md",
+      "license": "Apache-2.0"
     },
     "observability-and-instrumentation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "99a76f243eae599524ae8236dbc3df9894c5235d3fc057d34e5fbd76aa603ba7",
-      "pinned": true
-    },
-    "observability-engineer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "5c319db39f6e672362dcd3b97491d0ffb7da9a0c6ed1e37237808d37631b364d",
-      "pinned": true
-    },
-    "office-productivity": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "e7824be4893a2890264522928639972b77dc82a7141d165c5be721986ee9f050",
-      "pinned": true
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "3170fdbfe029173bf0a2b6969afd6b926c6b5fecaa74d2a5cfee570915f68043",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/observability-and-instrumentation/SKILL.md",
+      "license": "MIT"
     },
     "olzn-ui-craft": {
-      "version": "1.0.1",
-      "commit": "2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
       "sha256": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "skills/ui-craft/SKILL.md",
+      "license": "MIT"
     },
     "openai-build-ios-apps": {
-      "version": "1.0.0",
-      "commit": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
       "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "skills/build-ios-apps/SKILL.md",
+      "license": "Apache-2.0"
     },
     "openai-build-macos-apps": {
-      "version": "1.0.0",
-      "commit": "8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f",
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
       "sha256": "5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
-      "pinned": true
-    },
-    "openapi-spec-generation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c703eec6b2dd7691d2656d782650254c3b53b4260a44bc849d52b9c4b2dda63a",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "skills/build-macos-apps/SKILL.md",
+      "license": "Apache-2.0"
     },
     "owasp-secure-agent-playbook": {
-      "version": "1.0.0",
-      "commit": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
       "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "skills/security-guidance/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "packaging-notarization": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "adc0d5e0c48e74ac6c5078b5846d00cbb798a8fd08bd775590f23793c8e69b2b",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/packaging-notarization/SKILL.md",
+      "license": "Apache-2.0"
     },
     "pbakaus-impeccable": {
-      "version": "1.3.0",
-      "commit": "1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a",
+      "commit": "8b39f41949544ae5d06bbfeea0a6931548e6fb12",
       "sha256": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/pbakaus/impeccable",
+      "source_path": "skills/impeccable/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "pci-compliance": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "11eb11834945dacc0908a5e937b545e17f4cc7fa9b4421eea331bc1c15d98ec0",
-      "pinned": true
+    "performance": {
+      "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
+      "sha256": "b0c220185d88c61f7770eb127d8facf86c86d2dd1fd82b86e15a4965a0137265",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/performance/SKILL.md",
+      "license": "MIT"
     },
-    "pdf-conversion-router": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "cfbcdd8d64ed035bc169376f7066335d6c18d03ebf9070b84a58b7c5f311ea6d",
-      "pinned": true
+    "performance-optimization": {
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "00694d0c69bbde674d0e39de24052d90afea32d9fef9553eaee21a50a7e9b8cf",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/performance-optimization/SKILL.md",
+      "license": "MIT"
     },
-    "pdf-official": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "a009b58f5207742a3ea438d1b06b0a9ef808b0f9f2e42a6ec9e2afeeb91d6769",
-      "pinned": true
-    },
-    "performance-engineer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "8c84837385b436d9ce504eb1b21e4061d110990e192090bbc4dbabf0efa9c187",
-      "pinned": true
-    },
-    "playwright-skill": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "114760ebca9ef6c35a2f0c539ec5b1b48e16827be77eec7abc33e99e4f6e87a7",
-      "pinned": true
-    },
-    "postgres-best-practices": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "79a200f276beb35404afcf8c2f27760115b46f423e0e1dba59a17128f1cac0d8",
-      "pinned": true
-    },
-    "postmortem-writing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "706e2096e761e0cd47fda881d1c986ec279a7ca99f66d1a94f26c94b79bff3ff",
-      "pinned": true
-    },
-    "pptx-official": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "bb574557fc4b8cbfc765024c5d04a97a2aaee206459011287aa4c34ff8a61c56",
-      "pinned": true
-    },
-    "pricing-strategy": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "8a4504b3d8da79d131280ef3c6f80175a685d3c7be15d86d072937e3f0a64015",
-      "pinned": true
+    "play-policy-insights": {
+      "commit": "bac232fd02e2c0eec821217e4db0a55dcab764f6",
+      "sha256": "cc7b9074b746a07b14ba998d5620df0a57f7923545cb078fb47fd2e2c388d467",
+      "pinned": true,
+      "source_repository": "https://github.com/android/skills",
+      "source_path": "play/play-policy-insights/SKILL.md",
+      "license": "Apache-2.0"
     },
     "prisma-skills": {
-      "version": "1.0.0",
       "commit": "4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b",
       "sha256": "1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
-      "pinned": true
-    },
-    "privacy-by-design": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "160da1b30bbdc21850f88ed8be4dd4e5efd90a18a947c72ca11361c3468e5997",
-      "pinned": true
-    },
-    "product-manager": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "61f2b142ffd278349db21489bfb5277c5230fcba71f7cbd265d896c646dda4de",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/prisma/skills",
+      "source_path": "skills/prisma-best-practices/SKILL.md",
+      "license": "Apache-2.0"
     },
     "programmatic-seo": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "fc5a6e9c07e0375ebc167f4e75ce4bf6eeedd69fbfe161cf09f5c89438c822b6",
-      "pinned": true
+      "commit": "5b2c000776b25ea7a4087e0b57e4e1a1796be4b0",
+      "sha256": "15cb5979cab5263ede902a830e03342869256ece17905bff240eef498e27cde1",
+      "pinned": true,
+      "source_repository": "https://github.com/coreyhaines31/marketingskills",
+      "source_path": "skills/programmatic-seo/SKILL.md",
+      "license": "MIT"
     },
-    "prompt-engineering": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "d3b6e6e99ad6b72d782f678fbe4703c8ae1e85a4017981dd44a7b62600579941",
-      "pinned": true
+    "prompt-injection-test": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "80b3930abe4d9940127299b4fe6beceaae137023ffbdd123b96a8d6641c82495",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/ai-security-skills/skills/prompt-injection-test/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "pydantic-models-py": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "a6dbf0a7f42d77f4fbcaf45ed65a9980876087467eeacb1049b302a530d24c85",
-      "pinned": true
+    "property-based-testing": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "9448cacb65c6237a7c22dc59602667177ecae405524079ae9ff92240590b995a",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/property-based-testing/skills/property-based-testing/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "python-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "cd0df4da24a574221c57e621d80c3c36d0aaa0f62db14418ca4a80c2a8f79f57",
-      "pinned": true
-    },
-    "python-pro": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "22c09fe50319ec0a9a32debdc97f7c245824c691c8258f0c7caff850393633bc",
-      "pinned": true
-    },
-    "python-testing-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "cd8b13fbcb0ea0bf3c04e12fc457ef944e8fd8005327189e104e35b1e4761757",
-      "pinned": true
-    },
-    "rag-engineer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "bf6f1e1bb48238d027f1169763e0050e4314ecd8d443622e2de7f8c7063fe24b",
-      "pinned": true
+    "qa": {
+      "commit": "8a9b5f86184517336ea8804b404d49a374971c26",
+      "sha256": "52469b750db93763a0ab59b872eeb05af679af6213e89c02e19d558e1c236238",
+      "pinned": true,
+      "source_repository": "https://github.com/browser-use/browser-use",
+      "source_path": "skills/qa/SKILL.md",
+      "license": "MIT"
     },
     "react-best-practices": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "b6c87721c4dca39bfe83ddec24e6836ebbad9d2064aa166da583ae9e614ffafb",
-      "pinned": true
+      "commit": "063bee94c34a2ec9eb7a3d3c734020a6723ba868",
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "pinned": true,
+      "source_repository": "https://github.com/vercel-labs/agent-skills",
+      "source_path": "skills/react-best-practices/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "react-native-architecture": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "1ed290e098d6984e739bd31c2294291562a9e7d0541bd33ef8492b142eb97b84",
-      "pinned": true
+    "requesting-code-review": {
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "d71cc01ba56d2325cf8af5f7c11837819b63ecd57de0bfdb812f7f3ff7751df8",
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/requesting-code-review/SKILL.md",
+      "license": "MIT"
     },
-    "referral-program": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "15ff48e86b7be7225c69d2d7e4a170478ec9db3d779d99eeaefb41ef1a5673e3",
-      "pinned": true
+    "review-animations": {
+      "commit": "d23d7f88a2bcad0a4bb6d0c75ff386df2bc8bb50",
+      "sha256": "61cf8ac0c4c8e1f63385298c546b16c65ca9aec34abddcd04e821c16712d671d",
+      "pinned": true,
+      "source_repository": "https://github.com/emilkowalski/skills",
+      "source_path": "skills/review-animations/SKILL.md",
+      "license": "MIT"
     },
-    "saas-mvp-launcher": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c05d026c1937acc9d856067d8b6fb9ba20874d6e7f01f3aae0c9b375168353ce",
-      "pinned": true
+    "sca-audit": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "afb2e55b0e9810aa4e5dbf89fcb71e2db36e830d5dc1c46627e8e32e64e7b7ff",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/sca-audit/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "sast-configuration": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "7e480483eb779fcd2f5142f435bab223e3b703e9bce8969e4dbe5516c557b003",
-      "pinned": true
+    "schema": {
+      "commit": "5b2c000776b25ea7a4087e0b57e4e1a1796be4b0",
+      "sha256": "d8b7aa7bcd9727a87fb5470a6c9ee252b99a7ccb84f637d7c67c5d155b507e0b",
+      "pinned": true,
+      "source_repository": "https://github.com/coreyhaines31/marketingskills",
+      "source_path": "skills/schema/SKILL.md",
+      "license": "MIT"
     },
-    "schema-markup": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "514e7abd45fc838bc1d7d741df9e7c7285a60ade9c9d8478b2efd9ac5eae4cdf",
-      "pinned": true
+    "secrets-scan": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "dcb0c8236017a2f6530dcf310a02d5a1e49025623c800cf7fc2bd07100fa707d",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/secrets-scan/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "screen-reader-testing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "c1ef36cc924c953e8e617da4bb97a79295dd27a3381fcd023d5655ff7cc8e09d",
-      "pinned": true
+    "securability-engineering": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "594edad2abcc0d418b0b2e1a9b8fb5eec91d6332ea0c39afc3bafddc812cc2e9",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/securability-engineering/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "scroll-experience": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "f44db2a6a42c12e30701837d3fdc9dba0792941e14ee981e1093e8bade950d52",
-      "pinned": true
+    "security-guidance": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "d19a7bd9e37a890eb166d48af73563bacdd97db28a31f919deb15a492dc1c78e",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/security-guidance/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "secrets-management": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "42dcb1f6feea071cd0e896387809ff7392d21f09cd002d16b1a9bbb0b2f38da4",
-      "pinned": true
-    },
-    "security-auditor": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "312a4ea1acf16869a9c492a2b05285cdf5db52a6c856c73575bd9b3e4ba78a14",
-      "pinned": true
+    "seo": {
+      "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
+      "sha256": "57cd16566c2c706186b643644dec2884da89c42f296843364c65a40a4d566ae6",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/seo/SKILL.md",
+      "license": "MIT"
     },
     "seo-audit": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "5b97fc7f1692581469fd959d749301731ea43ed32f99d334ff774a96fe0069be",
-      "pinned": true
+      "commit": "5b2c000776b25ea7a4087e0b57e4e1a1796be4b0",
+      "sha256": "9420a6c1ffcf7212766bcb618c28766ecb084631bed8045f3115d42b1230d368",
+      "pinned": true,
+      "source_repository": "https://github.com/coreyhaines31/marketingskills",
+      "source_path": "skills/seo-audit/SKILL.md",
+      "license": "MIT"
     },
-    "seo-content-planner": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "611af8c810ffd8209fe54c822dfe820f0be732010497f57249f4efbfdbe7735f",
-      "pinned": true
+    "sharp-edges": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "3b69a709c2f8f0cfcf57d40a3186e166f307865cc8ed924be4098e549a121e9c",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "seo-content-writer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "6a159742e022837fc3dc29ae3448b9b313a13869a35ca1d40f8e12c0b1d6cef9",
-      "pinned": true
+    "shipping-and-launch": {
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "273a88481191b98f1cb2e15cb7e038d304670a7bfe9c3bdb45517151a64bab5e",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/shipping-and-launch/SKILL.md",
+      "license": "MIT"
     },
-    "seo-fundamentals": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "f1257f55d48428e2569e2b570de8d207867e4929e4ab865ad29ed1a92ae13456",
-      "pinned": true
+    "signing-entitlements": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "79326e5096325b53c4350db9e1586c9a2ef56976705f01c24d3643a592dc3030",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/signing-entitlements/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "seo-hreflang": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "e6758daf5f7453c21cba7633ece8e3f412c0a47c6550c033dddcf07208f43a73",
-      "pinned": true
-    },
-    "shadcn": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "2390fd0b0b9413644423a450b13e8cbb9cf4ac9a25569894db15af299bd49e51",
-      "pinned": true
-    },
-    "slack-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "33640ffb9690a3e291f771411a39b21aea0dbe3a1163ed2ddfbf5ec4957bb7fb",
-      "pinned": true
-    },
-    "slo-implementation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "d83ac53b27200b7bbd84c13ca836433d5d01830b2200e8989393bc8489918ac2",
-      "pinned": true
+    "site-architecture": {
+      "commit": "5b2c000776b25ea7a4087e0b57e4e1a1796be4b0",
+      "sha256": "a47f693c6a4f45db89276d8c341b3aa3054090cc8002dd4a2635448d7d152492",
+      "pinned": true,
+      "source_repository": "https://github.com/coreyhaines31/marketingskills",
+      "source_path": "skills/site-architecture/SKILL.md",
+      "license": "MIT"
     },
     "snyk-agent-scan": {
-      "version": "1.0.0",
       "commit": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
       "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/snyk/agent-scan",
+      "source_path": "skills/agent-scan/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "sql-pro": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "90eeb456cd55222e022134cd6c0da2d4fcaad07f57223afeb3fdb82581bdde10",
-      "pinned": true
+    "source-driven-development": {
+      "commit": "48cb1168ae599ef87b05ca3d4b6ca5608dfda49f",
+      "sha256": "719d4e54083c90ded62112fb41df3dbc4619309118ee0e6aa4d846f92d8204af",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/agent-skills",
+      "source_path": "skills/source-driven-development/SKILL.md",
+      "license": "MIT"
     },
-    "stripe-integration": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "3726910b91acf3ee3353760af391d77651f5134ca27f07df352f0492e396073d",
-      "pinned": true
+    "static-analysis": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "04df36a7685632ee39271aa432a4d32e1203b326e4a8091e6f5c0eb191ef90f1",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/static-analysis/skills/semgrep/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "subagent-driven-development": {
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "8dd1b8e698edec3700c6d89517dbe96febd3bacd3f6ea21c1a3569c62ea104b5",
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/subagent-driven-development/SKILL.md",
+      "license": "MIT"
+    },
+    "supabase": {
+      "commit": "8331f91084b12269a8e9e4f509e8b78f44ff5213",
+      "sha256": "16817870f69bb9db58343cfa41c6fb864713c01f3680a64e0fb869605a5d81c3",
+      "pinned": true,
+      "source_repository": "https://github.com/supabase/agent-skills",
+      "source_path": "skills/supabase/SKILL.md",
+      "license": "Apache-2.0"
     },
     "supabase-postgres-best-practices": {
-      "version": "1.2.0",
-      "commit": "2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f",
-      "sha256": "9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
-      "pinned": true
+      "commit": "8331f91084b12269a8e9e4f509e8b78f44ff5213",
+      "sha256": "ad65e776f45e761bafc609d3f506c77c1032225aa65e0c4c02f241b8071e5855",
+      "pinned": true,
+      "source_repository": "https://github.com/supabase/agent-skills",
+      "source_path": "skills/supabase-postgres-best-practices/SKILL.md",
+      "license": "Apache-2.0"
     },
     "superpowers-brainstorming": {
-      "version": "1.0.0",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "sha256": "9b1d8f7e6a5c4b3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/brainstorming/SKILL.md",
+      "license": "MIT"
     },
     "superpowers-requesting-code-review": {
-      "version": "1.0.0",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "sha256": "4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/requesting-code-review/SKILL.md",
+      "license": "MIT"
     },
     "superpowers-subagent-driven-development": {
-      "version": "1.0.0",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "sha256": "5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/subagent-driven-development/SKILL.md",
+      "license": "MIT"
     },
     "superpowers-systematic-debugging": {
-      "version": "1.0.0",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "sha256": "6b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/systematic-debugging/SKILL.md",
+      "license": "MIT"
     },
     "superpowers-test-driven-development": {
-      "version": "1.0.0",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "sha256": "7c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/test-driven-development/SKILL.md",
+      "license": "MIT"
     },
     "superpowers-verification-before-completion": {
-      "version": "1.0.0",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "sha256": "3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/verification-before-completion/SKILL.md",
+      "license": "MIT"
     },
     "superpowers-writing-plans": {
-      "version": "1.0.0",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
       "sha256": "8a2c1b0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/writing-plans/SKILL.md",
+      "license": "MIT"
+    },
+    "supply-chain-risk-auditor": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "a1254b7f8d3a1731a9a7e1f9cd6c67b59cf84ed6ef7c7fb455db9a14c528ceb4",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "surface-interaction": {
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+      "sha256": "25b04b482ae41af48f4b65500b15e5c9feb3d131e31d802c36574ffd333576ee",
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "surface/surface-interaction/SKILL.md",
+      "license": "MIT"
+    },
+    "surface-motion": {
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+      "sha256": "dd21a6a888dcd22b8b9f3959ff28a40a15f3e6e49c50d44ac5878223170a6fde",
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "surface/surface-motion/SKILL.md",
+      "license": "MIT"
+    },
+    "surface-typography": {
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+      "sha256": "3ea2eb11287abb4939b1b72602cd26c79947aae10cad58f9279d6a231aebb2d0",
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "surface/surface-typography/SKILL.md",
+      "license": "MIT"
+    },
+    "swiftui-liquid-glass": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "8e9ec37d9b6ed146672faf12c88be61d367c280ab6159bfbc7726a122030b78b",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/swiftui-liquid-glass/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "swiftui-patterns": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "ebfc06b1c1e11cadec83e5c204b20f33f01db1c36cb5796639567bd8eac0fe07",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/swiftui-patterns/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "swiftui-performance-audit": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "6fc6bd4d49b49ccb2089be706c449f195daa7db2c36d8097d883426488eb4b1a",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/swiftui-performance-audit/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "swiftui-ui-patterns": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "a96f078512c6c679a3504ec20e0eedff4a9be3a06eb9a95107f3556c081bb708",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/swiftui-ui-patterns/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "swiftui-view-refactor": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "129cbb511987985ed7bf9e3f20443632a7becdf0c2824ded6b52241cc339243a",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-ios-apps/skills/swiftui-view-refactor/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "system-components": {
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+      "sha256": "d87099e07b8e5389d50d7aed4d7cdc56cfabecdf02121fcbc368603b5f26b038",
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "system/system-components/SKILL.md",
+      "license": "MIT"
+    },
+    "system-patterns": {
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+      "sha256": "ab55149c72c81c2d024b9937e97334bc0da6120066ceb44a60030c3ef04a8d5a",
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "system/system-patterns/SKILL.md",
+      "license": "MIT"
+    },
+    "system-tokens": {
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+      "sha256": "adddd0e99997f93c91f46e281a2e4423d107a01b958e0d0a8a0b9e184f9524b1",
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "system/system-tokens/SKILL.md",
+      "license": "MIT"
     },
     "systematic-debugging": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "97d5a20c9ad836d966db1744c5b53275ab538c18fe425d2ae99f5b9cb8b569d6",
-      "pinned": true
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787",
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/systematic-debugging/SKILL.md",
+      "license": "MIT"
     },
-    "tailwind-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "1181d76781df9d6a1bdfc13c3efc50fd27cc20b634e4890b7a79c68f4a2377c6",
-      "pinned": true
+    "systematic-literature-review": {
+      "commit": "cbd6621d5203cba53d4c3298cb3d79bc75836c97",
+      "sha256": "9fe4891e86b29d0f0f192bddab4ff913b123ffd764a2af737a4d6bb334209b6a",
+      "pinned": true,
+      "source_repository": "https://github.com/bytedance/deer-flow",
+      "source_path": "skills/public/systematic-literature-review/SKILL.md",
+      "license": "Apache-2.0"
     },
     "taste-skill-frontend": {
-      "version": "1.2.0",
-      "commit": "7b8a9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "commit": "ccbc15639c0d381ae77c25143a502f6ae45ea9be",
       "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/Leonxlnx/taste-skill",
+      "source_path": "skills/design-taste-frontend/SKILL.md",
+      "license": "MIT"
     },
     "tauri-official-guidance": {
-      "version": "2.0.0",
       "commit": "1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c",
       "sha256": "8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/tauri-apps/tauri",
+      "source_path": "skills/tauri-architecture/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "terraform-specialist": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "2c578c6fe952606d769874a61506bb0b9a9690f03e64d853ab13f6698e21066d",
-      "pinned": true
+    "telemetry": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "64fae6fd88c411d108b321462f90b74deb42fb043b815baae04b199a07dfbd25",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/telemetry/SKILL.md",
+      "license": "Apache-2.0"
     },
     "test-driven-development": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "92360fb29eb29c787e2a3ac9cf86272dd3b88bc74f1e9d8dd95dd7f05c6ade56",
-      "pinned": true
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "bf1b8216e523851a411e91d429a7c1c2a173e79d88957bc78e348218d50edd54",
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/test-driven-development/SKILL.md",
+      "license": "MIT"
     },
-    "test-fixing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "29c4cb43789d1c2b40cdef08a3b99eafaec8a80b6a147e6c26e8a673fb5dfa58",
-      "pinned": true
-    },
-    "top-web-vulnerabilities": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "a102fa30e2d9665f08fd174629c6e089fc46fd09ecdbb45d4f53c3d03606a67c",
-      "pinned": true
+    "test-triage": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "e6ed34d34d2b4f62a262f3ab9076ab02bfb75d7661491383493bee78545b7851",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/test-triage/SKILL.md",
+      "license": "Apache-2.0"
     },
     "trailofbits-skills": {
-      "version": "1.0.0",
-      "commit": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
       "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "skills/audit-context-building/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "ui-a11y": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "50956b059b03085ebddb39b717f562149a525f2cc2a85b4eaa7f8a618da8947c",
-      "pinned": true
-    },
-    "ui-review": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "aaf3f7214e3375a96f58e54457239225770a197557d0f58913f245238cc5d362",
-      "pinned": true
+    "ui-craft": {
+      "commit": "e42434b0f344d567c9c0f997cbdd9db41d8e6fa3",
+      "sha256": "a9c284ff22b4a90d2380a8259e6c96452615c46e2b8b0660d77bb856a4d9dcfd",
+      "pinned": true,
+      "source_repository": "https://github.com/olzn/ui-craft",
+      "source_path": "ui-craft/SKILL.md",
+      "license": "MIT"
     },
     "ui-ux-pro-max": {
-      "version": "1.5.0",
-      "commit": "0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f",
-      "sha256": "3c038410bd81e1e8106e98283c8cf6620a1bf43ea69d1802884502b3dc1f911f",
-      "pinned": true
+      "commit": "4aad0584d9426f30a2a4b3605e7e0e84ec16b5a3",
+      "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9",
+      "pinned": true,
+      "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "source_path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "license": "MIT"
     },
-    "vector-database-engineer": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "58377730e72c52c14397f3d569eb65a09145e27ac2fcef3ed026efba4f379d08",
-      "pinned": true
+    "variant-analysis": {
+      "commit": "d3323cefbc5cc1ae6aeb9d39e23c7224213d2f95",
+      "sha256": "7b6b78e499bcb88d05c68254ffc91ebc28edabf4e9808adcc40e2628ebb9407e",
+      "pinned": true,
+      "source_repository": "https://github.com/trailofbits/skills",
+      "source_path": "plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+      "license": "Apache-2.0"
     },
     "vercel-composition-patterns": {
-      "version": "1.0.0",
-      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
-      "sha256": "4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c",
-      "pinned": true
+      "commit": "063bee94c34a2ec9eb7a3d3c734020a6723ba868",
+      "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "pinned": true,
+      "source_repository": "https://github.com/vercel-labs/agent-skills",
+      "source_path": "skills/composition-patterns/SKILL.md",
+      "license": "Apache-2.0"
     },
     "vercel-react-best-practices": {
-      "version": "1.0.0",
-      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
+      "commit": "063bee94c34a2ec9eb7a3d3c734020a6723ba868",
       "sha256": "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b",
-      "pinned": true
+      "pinned": true,
+      "source_repository": "https://github.com/vercel-labs/agent-skills",
+      "source_path": "skills/react-best-practices/SKILL.md",
+      "license": "MIT"
     },
-    "vulnerability-scanner": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "882ce12c7006a05e79b80e3ee5063ec92683d0858b0f65b8416f52cf36419124",
-      "pinned": true
+    "verification-before-completion": {
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/verification-before-completion/SKILL.md",
+      "license": "MIT"
     },
-    "web-security-testing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "51d988a79f461dcbdf7f356f2add80e8e33a7797af476022248df8cce67ce609",
-      "pinned": true
+    "view-refactor": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "924b1a3a6f894443d26987346bc21fa8bf0815d463d2f741cb58a3e4321dc854",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/view-refactor/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "webapp-testing": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "fdec3bb35d5071fae5698cf2a08cd1fbb8917740a33d4c19433f257c737aa3ba",
-      "pinned": true
+    "web-design-guidelines": {
+      "commit": "063bee94c34a2ec9eb7a3d3c734020a6723ba868",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "pinned": true,
+      "source_repository": "https://github.com/vercel-labs/agent-skills",
+      "source_path": "skills/web-design-guidelines/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "workflow-automation": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "29cb9f4e95c3dd7b0eb1d628b199fbd112dcf782af4a45cf00f2999b5778a4e4",
-      "pinned": true
+    "web-quality-audit": {
+      "commit": "afa8da94211ae1071190bc282513f17d3b0dfb2f",
+      "sha256": "1903cfb4dcba987d50dc7a51f6c19ec43830ff924c2c8f78979d8775fbe20f91",
+      "pinned": true,
+      "source_repository": "https://github.com/addyosmani/web-quality-skills",
+      "source_path": "skills/web-quality-audit/SKILL.md",
+      "license": "MIT"
     },
-    "xlsx-official": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "a23404b0083102ccffea95d7162b541347f24b30c2492341b13a97404a8e8791",
-      "pinned": true
+    "web-security-review": {
+      "commit": "79fea6b9116e026600c3b0eb4f686c12ba3cfa88",
+      "sha256": "8c89babe48a6bd63e77af164d60507de4497e6c1febd08100e627aa7e0f79536",
+      "pinned": true,
+      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
+      "source_path": "plugins/code-security-skills/skills/web-security-review/SKILL.md",
+      "license": "Apache-2.0"
     },
-    "zapier-make-patterns": {
-      "version": "1.0.0",
-      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
-      "sha256": "67a76ca4816d49f016fb19159711dc1c6d750fc9492143261df7c0671e2db48a",
-      "pinned": true
+    "window-management": {
+      "commit": "1e285826e6d1e3ee2ae93ff7ce459aa8b55694c9",
+      "sha256": "9fea3f84f6cd96c629bbb45cfe2715e9669a737f088a3453a20bd6083067e64d",
+      "pinned": true,
+      "source_repository": "https://github.com/openai/plugins",
+      "source_path": "plugins/build-macos-apps/skills/window-management/SKILL.md",
+      "license": "Apache-2.0"
+    },
+    "winui-code-review": {
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+      "sha256": "9fba900155a3485db335de20ba4d136d62829f81a8aef35ffcff31b9082ab6a6",
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "plugins/winui/agent-plugin/skills/winui-code-review/SKILL.md",
+      "license": "MIT"
+    },
+    "winui-design": {
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+      "sha256": "dea0912e3e58bc88f31322b68a14c51e7a43985d26f5ece18844fa5edde9c948",
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "plugins/winui/agent-plugin/skills/winui-design/SKILL.md",
+      "license": "MIT"
+    },
+    "winui-dev-workflow": {
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+      "sha256": "1539fce9d371427024fe2600d4fb61b7d079d28ff868cf9158288da23fee65cf",
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "plugins/winui/agent-plugin/skills/winui-dev-workflow/SKILL.md",
+      "license": "MIT"
+    },
+    "winui-packaging": {
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+      "sha256": "b0651e31f098fc8b77793841fcbce3b7ab71967e1009218bec2b5fd31ef8ba5a",
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "plugins/winui/agent-plugin/skills/winui-packaging/SKILL.md",
+      "license": "MIT"
+    },
+    "winui-setup": {
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+      "sha256": "061f5209c7277cc404fe2849d4716474b280d6da828393892c3f648ae1f33cda",
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "plugins/winui/agent-plugin/skills/winui-setup/SKILL.md",
+      "license": "MIT"
+    },
+    "winui-ui-testing": {
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+      "sha256": "1b6164a6b6cd26dbc4d154530030ce05e17f1c421e5389872efb0cf5b91afb42",
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "plugins/winui/agent-plugin/skills/winui-ui-testing/SKILL.md",
+      "license": "MIT"
+    },
+    "winui-wpf-migration": {
+      "commit": "68ae65d5c64c8cbefab0966a40c6b12a868a2bf6",
+      "sha256": "bc7b3bdd2408f6559d887b9be826872db7654501459ab4ed9e63caeb83ae0ed0",
+      "pinned": true,
+      "source_repository": "https://github.com/microsoft/win-dev-skills",
+      "source_path": "plugins/winui/agent-plugin/skills/winui-wpf-migration/SKILL.md",
+      "license": "MIT"
+    },
+    "writing-plans": {
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+      "pinned": true,
+      "source_repository": "https://github.com/obra/superpowers",
+      "source_path": "skills/writing-plans/SKILL.md",
+      "license": "MIT"
     }
   }
 }

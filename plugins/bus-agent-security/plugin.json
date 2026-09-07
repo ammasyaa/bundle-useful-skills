@@ -1,0 +1,20 @@
+{
+  "name": "bus-agent-security",
+  "version": "1.0.0",
+  "description": "AI agent systems security, LLM threat modeling, MCP server reviews, and injection defense",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "agent-security"
+  ],
+  "skills": [
+    "agent-security-audit",
+    "llm-risk-assess",
+    "agentic-ai-risk-assess",
+    "mcp-server-review",
+    "prompt-injection-test",
+    "multi-agentic-threat-model"
+  ]
+}

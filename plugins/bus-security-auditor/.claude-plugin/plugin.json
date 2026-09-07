@@ -1,0 +1,16 @@
+{
+  "name": "bus-security-auditor",
+  "description": "Deep security auditing, static analysis, variant analysis, and supply chain verification",
+  "version": "1.0.0",
+  "skills": [
+    "skills/audit-context-building",
+    "skills/static-analysis",
+    "skills/differential-review",
+    "skills/variant-analysis",
+    "skills/fp-check",
+    "skills/insecure-defaults",
+    "skills/sharp-edges",
+    "skills/supply-chain-risk-auditor",
+    "skills/property-based-testing"
+  ]
+}

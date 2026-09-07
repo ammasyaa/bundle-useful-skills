@@ -1,0 +1,25 @@
+{
+  "name": "bus-seo-geo-web-quality",
+  "version": "1.0.0",
+  "description": "Evidence-backed web quality, Core Web Vitals, accessibility, and GEO/AEO search optimization",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "seo-geo-web-quality"
+  ],
+  "skills": [
+    "web-quality-audit",
+    "performance",
+    "core-web-vitals",
+    "accessibility",
+    "seo",
+    "best-practices",
+    "seo-audit",
+    "ai-seo",
+    "schema",
+    "site-architecture",
+    "programmatic-seo"
+  ]
+}

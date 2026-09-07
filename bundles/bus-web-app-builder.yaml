@@ -1,0 +1,58 @@
+id: bus-web-app-builder
+job: Modern full-stack web application engineering, performance, and Next.js/React development
+skills:
+  - id: source-driven-development
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/source-driven-development/SKILL.md
+    mode: CORE
+    use: "Verify framework/library decisions against current sources"
+  - id: frontend-ui-engineering
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md
+    mode: CORE
+    use: "Production UI implementation"
+  - id: browser-testing-with-devtools
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/browser-testing-with-devtools/SKILL.md
+    mode: CORE
+    use: "Runtime browser verification"
+  - id: code-review-and-quality
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md
+    mode: CORE
+    use: "General engineering review"
+  - id: api-and-interface-design
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md
+    mode: COND
+    use: "Public/module/API interfaces"
+  - id: performance-optimization
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/performance-optimization/SKILL.md
+    mode: COND
+    use: "Performance-sensitive code"
+  - id: observability-and-instrumentation
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/observability-and-instrumentation/SKILL.md
+    mode: COND
+    use: "Logs/metrics/tracing"
+  - id: shipping-and-launch
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/shipping-and-launch/SKILL.md
+    mode: COND
+    use: "Release"
+  - id: react-best-practices
+    url: https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md
+    mode: CORE
+    when: react
+    use: "React/Next implementation"
+  - id: vercel-composition-patterns
+    url: https://github.com/vercel-labs/agent-skills/blob/main/skills/composition-patterns/SKILL.md
+    mode: COND
+    when: react
+    use: "Component/API architecture"
+  - id: web-design-guidelines
+    url: https://github.com/vercel-labs/agent-skills/blob/main/skills/web-design-guidelines/SKILL.md
+    mode: COND
+    use: "Web-interface review"
+recommended_with:
+  - bus-product-ui-taste
+  - bus-seo-geo-web-quality
+  - bus-secure-app-builder
+runtime_rules:
+  - "frontend-ui-engineering + framework authority + emil-design-eng + impeccable"
+  - "Add design-taste-frontend or frontend-design only for new visual direction"
+  - "SEO/GEO skills only for public/indexable content"
+  - "OWASP skills only when relevant security surface exists"

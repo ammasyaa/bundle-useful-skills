@@ -1,9 +1,0 @@
-{
-  "name": "agentic-bundle-aas-api-platform-builder",
-  "version": "1.0.0",
-  "description": "Portable skills bundle for \"AAS API Platform Builder\".",
-  "author": {
-    "name": "bundle-useful-skills",
-    "url": "https://github.com/sickn33/agentic-awesome-skills"
-  }
-}

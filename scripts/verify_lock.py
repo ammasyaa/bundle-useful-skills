@@ -38,7 +38,7 @@ def verify_lockfile() -> int:
     commit_re = re.compile(r"^[0-9a-f]{7,40}$")
 
     errors = []
-    print(f"Lockfile Version: {lock_data.get('lockfile_version', lock_data.get('version', 1))}")
+    print(f"Lockfile Version: {lock_data.get('version')}")
     print(f"Generated At:     {lock_data.get('generated_at')}")
     print(f"Locked Entries:   {len(locked_skills)}\n")
 

@@ -1,0 +1,25 @@
+{
+  "name": "bus-web-app-builder",
+  "version": "1.0.0",
+  "description": "Modern full-stack web application engineering, performance, and Next.js/React development",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "web-app-builder"
+  ],
+  "skills": [
+    "source-driven-development",
+    "frontend-ui-engineering",
+    "browser-testing-with-devtools",
+    "code-review-and-quality",
+    "api-and-interface-design",
+    "performance-optimization",
+    "observability-and-instrumentation",
+    "shipping-and-launch",
+    "react-best-practices",
+    "vercel-composition-patterns",
+    "web-design-guidelines"
+  ]
+}

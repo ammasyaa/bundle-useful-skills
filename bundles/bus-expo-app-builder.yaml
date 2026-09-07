@@ -1,0 +1,54 @@
+id: bus-expo-app-builder
+job: Universal React Native / Expo mobile development, native UI, router, and fluid motion
+skills:
+  - id: expo-project-structure
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-project-structure/SKILL.md
+    mode: CORE
+    when: expo
+    use: "Project organization"
+  - id: expo-router
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-router/SKILL.md
+    mode: CORE
+    when: expo
+    use: "Navigation/routing"
+  - id: expo-native-ui
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-native-ui/SKILL.md
+    mode: CORE
+    when: expo
+    use: "Native-feeling platform UI"
+  - id: expo-ui
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-ui/SKILL.md
+    mode: COND
+    when: expo
+    use: "Native UI components"
+  - id: expo-data-fetching
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-data-fetching/SKILL.md
+    mode: CORE
+    when: expo
+    use: "Networking/cache/offline"
+  - id: expo-design-system
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-design-system/SKILL.md
+    mode: CORE
+    when: expo
+    use: "Tokens/components/system consistency"
+  - id: expo-dev-client
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-dev-client/SKILL.md
+    mode: COND
+    when: expo
+    use: "Dev-client workflow"
+  - id: expo-module
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-module/SKILL.md
+    mode: COND
+    when: expo
+    use: "Native module development"
+  - id: expo-upgrade
+    url: https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-upgrade/SKILL.md
+    mode: COND
+    when: expo
+    use: "SDK upgrade"
+recommended_with:
+  - bus-product-ui-taste
+  - bus-secure-app-builder
+runtime_rules:
+  - "expo-project-structure + expo-native-ui + expo-design-system + relevant router/data skill"
+  - "Companion: animate-expo"

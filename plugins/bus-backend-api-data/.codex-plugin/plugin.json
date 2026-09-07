@@ -1,0 +1,12 @@
+{
+  "name": "bus-backend-api-data",
+  "version": "1.0.0",
+  "skills": [
+    "skills/source-driven-development",
+    "skills/api-and-interface-design",
+    "skills/code-review-and-quality",
+    "skills/observability-and-instrumentation",
+    "skills/supabase-postgres-best-practices",
+    "skills/supabase"
+  ]
+}

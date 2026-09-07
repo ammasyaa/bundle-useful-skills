@@ -1,0 +1,23 @@
+{
+  "name": "bus-security-auditor",
+  "version": "1.0.0",
+  "description": "Deep security auditing, static analysis, variant analysis, and supply chain verification",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "security-auditor"
+  ],
+  "skills": [
+    "audit-context-building",
+    "static-analysis",
+    "differential-review",
+    "variant-analysis",
+    "fp-check",
+    "insecure-defaults",
+    "sharp-edges",
+    "supply-chain-risk-auditor",
+    "property-based-testing"
+  ]
+}

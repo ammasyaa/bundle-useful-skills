@@ -1,0 +1,13 @@
+{
+  "name": "bus-windows-app-builder",
+  "version": "1.0.0",
+  "skills": [
+    "skills/winui-dev-workflow",
+    "skills/winui-design",
+    "skills/winui-code-review",
+    "skills/winui-ui-testing",
+    "skills/winui-packaging",
+    "skills/winui-setup",
+    "skills/winui-wpf-migration"
+  ]
+}

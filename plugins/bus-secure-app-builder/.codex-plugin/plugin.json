@@ -1,0 +1,15 @@
+{
+  "name": "bus-secure-app-builder",
+  "version": "1.0.0",
+  "skills": [
+    "skills/security-guidance",
+    "skills/code-review-security",
+    "skills/web-security-review",
+    "skills/api-security-review",
+    "skills/mobile-code-review",
+    "skills/sca-audit",
+    "skills/secrets-scan",
+    "skills/iac-security-review",
+    "skills/securability-engineering"
+  ]
+}

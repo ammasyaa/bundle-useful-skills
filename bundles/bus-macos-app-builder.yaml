@@ -1,0 +1,45 @@
+id: bus-macos-app-builder
+job: Native macOS desktop development with SwiftUI, AppKit, window management, and notarization
+skills:
+  - id: build-run-debug
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/build-run-debug/SKILL.md
+    mode: CORE
+    use: "Native build/run/debug"
+  - id: swiftui-patterns
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/swiftui-patterns/SKILL.md
+    mode: CORE
+    use: "SwiftUI implementation"
+  - id: window-management
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/window-management/SKILL.md
+    mode: CORE
+    use: "macOS windows/scenes"
+  - id: appkit-interop
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/appkit-interop/SKILL.md
+    mode: COND
+    use: "SwiftUI/AppKit boundary"
+  - id: view-refactor
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/view-refactor/SKILL.md
+    mode: COND
+    use: "View structure/refactor"
+  - id: test-triage
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/test-triage/SKILL.md
+    mode: CORE
+    use: "Test/debug triage"
+  - id: signing-entitlements
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/signing-entitlements/SKILL.md
+    mode: COND
+    use: "Signing/entitlements"
+  - id: packaging-notarization
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/packaging-notarization/SKILL.md
+    mode: COND
+    use: "Distribution/notarization"
+  - id: telemetry
+    url: https://github.com/openai/plugins/blob/main/plugins/build-macos-apps/skills/telemetry/SKILL.md
+    mode: COND
+    use: "Native runtime telemetry"
+recommended_with:
+  - bus-product-ui-taste
+  - bus-audit-release
+runtime_rules:
+  - "build-run-debug + swiftui-patterns + test-triage + verification-before-completion"
+  - "Apple HIG remains platform authority"

@@ -1,0 +1,15 @@
+{
+  "name": "bus-macos-app-builder",
+  "version": "1.0.0",
+  "skills": [
+    "skills/build-run-debug",
+    "skills/swiftui-patterns",
+    "skills/window-management",
+    "skills/appkit-interop",
+    "skills/view-refactor",
+    "skills/test-triage",
+    "skills/signing-entitlements",
+    "skills/packaging-notarization",
+    "skills/telemetry"
+  ]
+}

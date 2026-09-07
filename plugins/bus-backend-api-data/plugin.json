@@ -1,0 +1,20 @@
+{
+  "name": "bus-backend-api-data",
+  "version": "1.0.0",
+  "description": "Backend engineering, API design, observability, and PostgreSQL/Supabase data architecture",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "backend-api-data"
+  ],
+  "skills": [
+    "source-driven-development",
+    "api-and-interface-design",
+    "code-review-and-quality",
+    "observability-and-instrumentation",
+    "supabase-postgres-best-practices",
+    "supabase"
+  ]
+}

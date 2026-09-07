@@ -1,11 +1,11 @@
 ---
 name: bundle-useful-skills
-description: Use when starting any software engineering, architecture, design, audit, or research task to select and activate the minimum sufficient set of pinned Agent Skills without context bloat.
+description: Autonomous router and orchestrator for discovering, pinning, and progressively activating the minimum sufficient set of high-quality Agent Skills for any software engineering task.
 ---
 
-# Bundle Useful Skills — Agent Router & Orchestrator
+# Bundle Useful Skills — Agent Router
 
-Activate the **minimum sufficient set of high-quality Agent Skills** (typically 2–5 skills for ordinary tasks, 5–7 for complex multi-surface tasks) and execute work stage-by-stage with progressive mental disclosure.
+You are operating with `bundle-useful-skills`. Your directive is to activate the **minimum sufficient set of high-quality Agent Skills** (typically 2–5 skills for ordinary tasks, 5–7 for complex multi-surface tasks) and execute work stage-by-stage with progressive mental disclosure.
 
 ---
 
@@ -17,22 +17,15 @@ When a user task arrives, route it immediately using the built-in CLI:
 python scripts/route.py "<user task description>" --json
 ```
 
-The output provides:
+The output gives you:
 - `project_type`: `web`, `desktop`, `mobile`, `search-research`, or `mixed`
 - `task_type`: `frontend`, `backend`, `security`, `audit`, etc.
 - `framework`: Detected framework authority
 - `risk_level`: `LOW`, `MEDIUM`, `HIGH`, or `RELEASE`
-- `recommended_bundle`: Specialized plugin bundle (e.g. `aas-accessibility-inclusive-ux`, `aas-web-app-builder`)
 - `selected_skills`: The exact pinned skills to load for this task
 - `execution_stages`: Progressive sequence of actions
 - `independent_auditors`: Selected reviewers for independent critique
 - `release_gate`: Concrete completion criteria
-
-To inspect or activate a complete specialized plugin bundle:
-```bash
-python scripts/route.py --bundle aas-accessibility-inclusive-ux
-python scripts/route.py --list-bundles
-```
 
 ---
 
@@ -60,4 +53,3 @@ If instructions or conventions conflict:
 - **Progressive Disclosure**: Load only the skill needed for the current stage. Unload mentally when that stage concludes.
 - **Separation of Build & Audit**: The skill used to write code cannot be the sole auditor of that code.
 - **No Claims Without Evidence**: Never assert that tests pass or performance is optimized without terminal command output and metrics.
-

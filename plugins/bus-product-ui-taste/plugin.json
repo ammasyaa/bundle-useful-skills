@@ -1,0 +1,31 @@
+{
+  "name": "bus-product-ui-taste",
+  "version": "1.0.0",
+  "description": "Product design, craft, motion, UI/UX intelligence, and anti-slop visual critique",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "product-ui-taste"
+  ],
+  "skills": [
+    "design-taste-frontend",
+    "frontend-design",
+    "emil-design-eng",
+    "apple-design",
+    "animate",
+    "animate-expo",
+    "review-animations",
+    "improve-animations",
+    "ui-ux-pro-max",
+    "impeccable",
+    "ui-craft",
+    "surface-motion",
+    "surface-interaction",
+    "surface-typography",
+    "system-tokens",
+    "system-components",
+    "system-patterns"
+  ]
+}

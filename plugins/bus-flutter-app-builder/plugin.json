@@ -1,0 +1,23 @@
+{
+  "name": "bus-flutter-app-builder",
+  "version": "1.0.0",
+  "description": "Cross-platform mobile application development with Flutter, Dart unit tests, and widget tests",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "flutter-app-builder"
+  ],
+  "skills": [
+    "flutter-add-widget-preview",
+    "flutter-add-widget-test",
+    "flutter-add-integration-test",
+    "dart-run-static-analysis",
+    "dart-add-unit-test",
+    "dart-collect-coverage",
+    "dart-fix-runtime-errors",
+    "dart-generate-test-mocks",
+    "dart-resolve-package-conflicts"
+  ]
+}

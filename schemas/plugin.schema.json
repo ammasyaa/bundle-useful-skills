@@ -1,17 +1,16 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "SpecializedPlugin",
-  "description": "Schema for specialized plugin bundles in bundle-useful-skills",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BundlePluginMetadata",
+  "description": "Schema for focused bundle plugins within bundle-useful-skills",
   "type": "object",
   "required": [
     "id",
     "name",
     "plugin_name",
-    "priority",
-    "audience",
-    "why",
-    "skill_count",
-    "skills"
+    "description",
+    "job",
+    "skills",
+    "skill_count"
   ],
   "properties": {
     "id": {
@@ -24,17 +23,13 @@
     },
     "plugin_name": {
       "type": "string",
-      "pattern": "^agentic-bundle-[a-z0-9-]+$"
+      "pattern": "^[a-z0-9-]+$"
     },
-    "priority": {
-      "type": "string",
-      "enum": ["tier-1", "tier-2", "tier-3"]
-    },
-    "audience": {
+    "description": {
       "type": "string",
       "minLength": 5
     },
-    "why": {
+    "job": {
       "type": "string",
       "minLength": 5
     },
@@ -48,6 +43,18 @@
         "type": "string"
       },
       "minItems": 1
+    },
+    "recommended_with": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "runtime_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "additionalProperties": false

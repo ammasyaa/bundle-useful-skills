@@ -1,0 +1,32 @@
+id: bus-backend-api-data
+job: Backend engineering, API design, observability, and PostgreSQL/Supabase data architecture
+skills:
+  - id: source-driven-development
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/source-driven-development/SKILL.md
+    mode: CORE
+    use: "Addy Osmani"
+  - id: api-and-interface-design
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md
+    mode: CORE
+    use: "Addy Osmani"
+  - id: code-review-and-quality
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md
+    mode: CORE
+    use: "Addy Osmani"
+  - id: observability-and-instrumentation
+    url: https://github.com/addyosmani/agent-skills/blob/main/skills/observability-and-instrumentation/SKILL.md
+    mode: COND
+    use: "Addy Osmani"
+  - id: supabase-postgres-best-practices
+    url: https://github.com/supabase/agent-skills#supabase-postgres-best-practices
+    mode: CORE
+    when: supabase
+    use: "PostgreSQL schema/query/index/RLS work"
+  - id: supabase
+    url: https://github.com/supabase/agent-skills/blob/main/skills/supabase/SKILL.md
+    mode: COND
+    when: supabase
+    use: "Actual Supabase projects"
+recommended_with:
+  - bus-engineering-core
+  - bus-secure-app-builder

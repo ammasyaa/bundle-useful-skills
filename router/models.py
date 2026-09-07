@@ -54,6 +54,24 @@ class Skill:
 
 
 @dataclass
+class BundleSkillRef:
+    id: str
+    url: str
+    mode: str
+    use: str
+    when: Optional[str] = None
+
+
+@dataclass
+class BundleManifest:
+    id: str
+    job: str
+    skills: List[BundleSkillRef]
+    recommended_with: List[str] = field(default_factory=list)
+    runtime_rules: List[str] = field(default_factory=list)
+
+
+@dataclass
 class HardConflict:
     id: str
     description: str
@@ -89,31 +107,6 @@ class ExecutionStage:
 
 
 @dataclass
-class SpecializedPlugin:
-    id: str
-    name: str
-    plugin_name: str
-    priority: str
-    audience: str
-    why: str
-    skill_count: int
-    skills: List[str]
-
-    @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "SpecializedPlugin":
-        return cls(
-            id=data["id"],
-            name=data["name"],
-            plugin_name=data["plugin_name"],
-            priority=data.get("priority", "tier-1"),
-            audience=data.get("audience", ""),
-            why=data.get("why", ""),
-            skill_count=data.get("skill_count", len(data.get("skills", []))),
-            skills=data.get("skills", []),
-        )
-
-
-@dataclass
 class RouteResult:
     request: TaskRequest
     project_type: str
@@ -128,7 +121,6 @@ class RouteResult:
     conflicts_detected: List[str]
     warnings: List[str]
     release_gate: List[str]
-    recommended_bundle: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -140,7 +132,6 @@ class RouteResult:
                 "platform": self.platform,
                 "risk_level": self.risk_level,
                 "primary_authority": self.primary_authority,
-                "recommended_bundle": self.recommended_bundle,
             },
             "selected_skills": [
                 {
@@ -166,7 +157,6 @@ class RouteResult:
             "conflicts_detected": self.conflicts_detected,
             "warnings": self.warnings,
             "release_gate": self.release_gate,
-            "recommended_bundle": self.recommended_bundle,
             "skill_count": len(self.selected_skills),
         }
 
@@ -180,7 +170,6 @@ class RouteResult:
             f"- **Platform / Framework**: `{self.platform}` / `{self.framework}`",
             f"- **Primary Authority**: `{self.primary_authority or 'N/A'}`",
             f"- **Risk Level**: `{self.risk_level}`",
-            f"- **Recommended Bundle**: `{self.recommended_bundle or 'None'}`",
             f"- **Activated Skills Count**: **{len(self.selected_skills)}** (Target: 2-5 normal, 5-7 complex)",
             "",
             "## 2. Minimum Sufficient Skill Stack",

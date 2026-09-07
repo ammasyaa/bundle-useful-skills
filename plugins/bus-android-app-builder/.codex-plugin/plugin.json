@@ -1,0 +1,12 @@
+{
+  "name": "bus-android-app-builder",
+  "version": "1.0.0",
+  "skills": [
+    "skills/android-cli",
+    "skills/edge-to-edge",
+    "skills/play-policy-insights",
+    "skills/android-intent-security",
+    "skills/camerax",
+    "skills/agp-9-upgrade"
+  ]
+}

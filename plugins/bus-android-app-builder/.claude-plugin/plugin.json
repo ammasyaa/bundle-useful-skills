@@ -1,0 +1,13 @@
+{
+  "name": "bus-android-app-builder",
+  "description": "Native Android app engineering with Jetpack Compose, edge-to-edge, and Play policy compliance",
+  "version": "1.0.0",
+  "skills": [
+    "skills/android-cli",
+    "skills/edge-to-edge",
+    "skills/play-policy-insights",
+    "skills/android-intent-security",
+    "skills/camerax",
+    "skills/agp-9-upgrade"
+  ]
+}

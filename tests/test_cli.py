@@ -49,15 +49,21 @@ class TestCLICommands(unittest.TestCase):
     def test_list_bundles_cli(self):
         proc = self.run_cmd(["scripts/route.py", "--list-bundles"])
         self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
-        self.assertIn("AAS Accessibility & Inclusive UX", proc.stdout)
-        self.assertIn("AAS Web App Builder", proc.stdout)
+        self.assertIn("bus-web-app-builder", proc.stdout)
+        self.assertIn("bus-engineering-core", proc.stdout)
+        self.assertIn("bus-secure-app-builder", proc.stdout)
 
     def test_bundle_detail_cli(self):
-        proc = self.run_cmd(["scripts/route.py", "--bundle", "aas-accessibility-inclusive-ux"])
+        proc = self.run_cmd(["scripts/route.py", "--bundle", "bus-web-app-builder"])
         self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
-        self.assertIn("accesslint-audit", proc.stdout)
-        self.assertIn("ui-a11y", proc.stdout)
-        self.assertIn("screen-reader-testing", proc.stdout)
+        self.assertIn("react-best-practices", proc.stdout)
+        self.assertIn("frontend-ui-engineering", proc.stdout)
+        self.assertIn("Runtime Rules:", proc.stdout)
+
+    def test_supply_chain_scanner_cli(self):
+        proc = self.run_cmd(["scripts/scan_supply_chain.py", "--check-all"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        self.assertIn("successfully passed supply-chain admission", proc.stdout)
 
     def test_audit_everything_cli(self):
         proc = self.run_cmd(["scripts/audit_everything.py"])

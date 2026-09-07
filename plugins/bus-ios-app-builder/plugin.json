@@ -1,0 +1,23 @@
+{
+  "name": "bus-ios-app-builder",
+  "version": "1.0.0",
+  "description": "Native iOS development with SwiftUI, simulator inspection, debugger workflows, and Liquid Glass",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "ios-app-builder"
+  ],
+  "skills": [
+    "swiftui-ui-patterns",
+    "swiftui-view-refactor",
+    "ios-debugger-agent",
+    "ios-simulator-browser",
+    "swiftui-performance-audit",
+    "ios-ettrace-performance",
+    "ios-memgraph-leaks",
+    "swiftui-liquid-glass",
+    "ios-app-intents"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "bus-product-ui-taste",
+  "description": "Product design, craft, motion, UI/UX intelligence, and anti-slop visual critique",
+  "version": "1.0.0",
+  "skills": [
+    "skills/design-taste-frontend",
+    "skills/frontend-design",
+    "skills/emil-design-eng",
+    "skills/apple-design",
+    "skills/animate",
+    "skills/animate-expo",
+    "skills/review-animations",
+    "skills/improve-animations",
+    "skills/ui-ux-pro-max",
+    "skills/impeccable",
+    "skills/ui-craft",
+    "skills/surface-motion",
+    "skills/surface-interaction",
+    "skills/surface-typography",
+    "skills/system-tokens",
+    "skills/system-components",
+    "skills/system-patterns"
+  ]
+}

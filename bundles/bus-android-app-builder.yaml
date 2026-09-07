@@ -1,0 +1,30 @@
+id: bus-android-app-builder
+job: Native Android app engineering with Jetpack Compose, edge-to-edge, and Play policy compliance
+skills:
+  - id: android-cli
+    url: https://github.com/android/skills/blob/main/devtools/android-cli/SKILL.md
+    mode: CORE
+    use: "Official docs, SDK/device/project/skill discovery"
+  - id: edge-to-edge
+    url: https://github.com/android/skills/blob/main/system/edge-to-edge/SKILL.md
+    mode: COND
+    use: "Compose insets/system bars/IME"
+  - id: play-policy-insights
+    url: https://github.com/android/skills/blob/main/play/play-policy-insights/SKILL.md
+    mode: COND
+    use: "Play policy/data safety/release compliance"
+  - id: android-intent-security
+    url: https://github.com/android/skills/tree/main/security/android-intent-security
+    mode: COND
+    use: "Intent/component security"
+  - id: camerax
+    url: https://github.com/android/skills/tree/main/media/camerax
+    mode: COND
+    use: "CameraX work"
+  - id: agp-9-upgrade
+    url: https://github.com/android/skills/tree/main/build/agp-9-upgrade
+    mode: COND
+    use: "AGP upgrade"
+recommended_with:
+  - bus-engineering-core
+  - bus-secure-app-builder

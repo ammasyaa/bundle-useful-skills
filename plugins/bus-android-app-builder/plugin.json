@@ -1,0 +1,20 @@
+{
+  "name": "bus-android-app-builder",
+  "version": "1.0.0",
+  "description": "Native Android app engineering with Jetpack Compose, edge-to-edge, and Play policy compliance",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "android-app-builder"
+  ],
+  "skills": [
+    "android-cli",
+    "edge-to-edge",
+    "play-policy-insights",
+    "android-intent-security",
+    "camerax",
+    "agp-9-upgrade"
+  ]
+}

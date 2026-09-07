@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BundleManifest",
+  "description": "Schema for focused bundle manifests (Section 19)",
+  "type": "object",
+  "required": ["id", "job", "skills"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bus-[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "job": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url"],
+        "properties": {
+          "id": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "mode": { "type": "string", "enum": ["CORE", "COND", "ALT"] },
+          "when": { "type": ["string", "null"] },
+          "use": { "type": "string" }
+        }
+      }
+    },
+    "recommended_with": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "runtime_rules": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

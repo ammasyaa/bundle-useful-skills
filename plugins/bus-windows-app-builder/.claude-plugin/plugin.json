@@ -1,0 +1,14 @@
+{
+  "name": "bus-windows-app-builder",
+  "description": "Native Windows desktop application engineering using WinUI 3, XAML, and Fluent Design",
+  "version": "1.0.0",
+  "skills": [
+    "skills/winui-dev-workflow",
+    "skills/winui-design",
+    "skills/winui-code-review",
+    "skills/winui-ui-testing",
+    "skills/winui-packaging",
+    "skills/winui-setup",
+    "skills/winui-wpf-migration"
+  ]
+}

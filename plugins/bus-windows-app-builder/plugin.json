@@ -1,0 +1,21 @@
+{
+  "name": "bus-windows-app-builder",
+  "version": "1.0.0",
+  "description": "Native Windows desktop application engineering using WinUI 3, XAML, and Fluent Design",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "windows-app-builder"
+  ],
+  "skills": [
+    "winui-dev-workflow",
+    "winui-design",
+    "winui-code-review",
+    "winui-ui-testing",
+    "winui-packaging",
+    "winui-setup",
+    "winui-wpf-migration"
+  ]
+}

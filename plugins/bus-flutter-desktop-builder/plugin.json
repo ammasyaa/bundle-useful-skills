@@ -1,0 +1,23 @@
+{
+  "name": "bus-flutter-desktop-builder",
+  "version": "1.0.0",
+  "description": "Cross-platform desktop application development with Flutter and Dart analysis",
+  "author": "Bundle Useful Skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "bundle-useful-skills",
+    "flutter-desktop-builder"
+  ],
+  "skills": [
+    "flutter-add-widget-preview",
+    "flutter-add-widget-test",
+    "flutter-add-integration-test",
+    "dart-run-static-analysis",
+    "dart-add-unit-test",
+    "dart-collect-coverage",
+    "dart-fix-runtime-errors",
+    "dart-generate-test-mocks",
+    "dart-resolve-package-conflicts"
+  ]
+}

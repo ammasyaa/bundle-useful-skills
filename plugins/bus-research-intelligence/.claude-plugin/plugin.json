@@ -1,0 +1,15 @@
+{
+  "name": "bus-research-intelligence",
+  "description": "Comprehensive search, deep literature research, and interactive web synthesis",
+  "version": "1.0.0",
+  "skills": [
+    "skills/firecrawl-search",
+    "skills/deep-research",
+    "skills/github-deep-research",
+    "skills/academic-paper-review",
+    "skills/systematic-literature-review",
+    "skills/browser-use",
+    "skills/qa",
+    "skills/last30days"
+  ]
+}

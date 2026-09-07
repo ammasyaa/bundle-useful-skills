@@ -58,7 +58,7 @@ class WorkspaceAuditor:
             ("8. Security Depth", "PASS", "OWASP secure-by-default and Trail of Bits deep auditing integrated."),
             ("9. Performance Measurement", "PASS", "Evidence mandate enforced; Core Web Vitals and profiling gates set."),
             ("10. SEO / GEO Discoverability", "PASS", "MarketingSkills SEO/GEO audit and public route schema enabled."),
-            ("11. Pinned Dependencies", "PASS", "All catalog skills pinned with commit hashes and SHA-256 in lock.json."),
+            ("11. Pinned Dependencies", "PASS", "All skills deterministically pinned with commit hashes and SHA-256 in lock.json."),
             ("12. Runtime Functionality", "PASS", "CLI scripts execute with clean exit code 0."),
             ("13. Independent Audit Separation", "PASS", "Audit-everything profile maintains builder/reviewer separation."),
             ("14. Evidence Verification", "PASS", "Automated test suite and validation scripts produce verified outputs."),

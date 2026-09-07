@@ -1,0 +1,42 @@
+id: bus-secure-app-builder
+job: Secure-by-default software engineering, secrets scanning, and OWASP code reviews
+skills:
+  - id: security-guidance
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/security-guidance/SKILL.md
+    mode: CORE
+    use: "Secure-by-default implementation"
+  - id: code-review-security
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/code-review-security/SKILL.md
+    mode: CORE
+    use: "General secure code review"
+  - id: web-security-review
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/web-security-review/SKILL.md
+    mode: COND
+    use: "Web app"
+  - id: api-security-review
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/api-security-review/SKILL.md
+    mode: COND
+    use: "REST/GraphQL/gRPC/API"
+  - id: mobile-code-review
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/mobile-code-review/SKILL.md
+    mode: COND
+    use: "Android/iOS"
+  - id: sca-audit
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/sca-audit/SKILL.md
+    mode: COND
+    use: "Dependency CVEs/reachability"
+  - id: secrets-scan
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/secrets-scan/SKILL.md
+    mode: CORE
+    use: "Hard-coded secrets"
+  - id: iac-security-review
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/iac-security-review/SKILL.md
+    mode: COND
+    use: "Terraform/K8s/CloudFormation"
+  - id: securability-engineering
+    url: https://github.com/OWASP/secure-agent-playbook/blob/main/plugins/code-security-skills/skills/securability-engineering/SKILL.md
+    mode: COND
+    use: "Security-focused architecture/code generation"
+recommended_with:
+  - bus-security-auditor
+  - bus-audit-release

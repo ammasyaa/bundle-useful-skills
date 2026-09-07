@@ -1,0 +1,18 @@
+{
+  "name": "bus-seo-geo-web-quality",
+  "description": "Evidence-backed web quality, Core Web Vitals, accessibility, and GEO/AEO search optimization",
+  "version": "1.0.0",
+  "skills": [
+    "skills/web-quality-audit",
+    "skills/performance",
+    "skills/core-web-vitals",
+    "skills/accessibility",
+    "skills/seo",
+    "skills/best-practices",
+    "skills/seo-audit",
+    "skills/ai-seo",
+    "skills/schema",
+    "skills/site-architecture",
+    "skills/programmatic-seo"
+  ]
+}

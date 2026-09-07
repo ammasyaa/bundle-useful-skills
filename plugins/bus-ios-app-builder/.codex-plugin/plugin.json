@@ -1,0 +1,15 @@
+{
+  "name": "bus-ios-app-builder",
+  "version": "1.0.0",
+  "skills": [
+    "skills/swiftui-ui-patterns",
+    "skills/swiftui-view-refactor",
+    "skills/ios-debugger-agent",
+    "skills/ios-simulator-browser",
+    "skills/swiftui-performance-audit",
+    "skills/ios-ettrace-performance",
+    "skills/ios-memgraph-leaks",
+    "skills/swiftui-liquid-glass",
+    "skills/ios-app-intents"
+  ]
+}

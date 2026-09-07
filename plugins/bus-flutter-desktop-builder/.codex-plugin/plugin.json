@@ -1,0 +1,15 @@
+{
+  "name": "bus-flutter-desktop-builder",
+  "version": "1.0.0",
+  "skills": [
+    "skills/flutter-add-widget-preview",
+    "skills/flutter-add-widget-test",
+    "skills/flutter-add-integration-test",
+    "skills/dart-run-static-analysis",
+    "skills/dart-add-unit-test",
+    "skills/dart-collect-coverage",
+    "skills/dart-fix-runtime-errors",
+    "skills/dart-generate-test-mocks",
+    "skills/dart-resolve-package-conflicts"
+  ]
+}

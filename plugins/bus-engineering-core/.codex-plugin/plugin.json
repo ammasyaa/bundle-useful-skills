@@ -1,0 +1,13 @@
+{
+  "name": "bus-engineering-core",
+  "version": "1.0.0",
+  "skills": [
+    "skills/brainstorming",
+    "skills/writing-plans",
+    "skills/test-driven-development",
+    "skills/systematic-debugging",
+    "skills/requesting-code-review",
+    "skills/verification-before-completion",
+    "skills/subagent-driven-development"
+  ]
+}

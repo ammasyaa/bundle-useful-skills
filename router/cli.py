@@ -62,12 +62,12 @@ def main() -> int:
     parser.add_argument(
         "--list-bundles",
         action="store_true",
-        help="List all 21 specialized plugin bundles from the roadmap",
+        help="List all 17 focused bundle manifests",
     )
     parser.add_argument(
         "--bundle",
         type=str,
-        help="Inspect a specific specialized plugin bundle (e.g. aas-accessibility-inclusive-ux)",
+        help="Inspect a specific focused bundle manifest by ID (e.g. bus-web-app-builder)",
     )
 
     args = parser.parse_args()
@@ -87,57 +87,69 @@ def main() -> int:
                 for w in warnings:
                     print(f"[WARNING] {w}")
         return 1 if conflicts else 0
- 
+
     if args.list_bundles:
+        bundles = router.list_bundles()
         if args.json:
             out = [
                 {
-                    "id": p.id,
-                    "name": p.name,
-                    "plugin_name": p.plugin_name,
-                    "why": p.why,
-                    "skill_count": p.skill_count,
-                    "skills": p.skills,
+                    "id": b.id,
+                    "job": b.job,
+                    "skill_count": len(b.skills),
+                    "recommended_with": b.recommended_with,
                 }
-                for p in router.plugins.values()
+                for b in bundles
             ]
             print(json.dumps(out, indent=2))
         else:
             print("==================================================")
-            print("  Specialized Plugin Bundles (Roadmap 2026)")
+            print("  Bundle Useful Skills: Focused Bundles (bus-*)")
             print("==================================================")
-            for p in router.plugins.values():
-                print(f"- {p.name} (`{p.id}` / `{p.plugin_name}`): {p.skill_count} skills")
-                print(f"  Why: {p.why}")
-                print(f"  Skills: {', '.join(p.skills)}\n")
+            for b in bundles:
+                print(f"- {b.id}: {b.job} ({len(b.skills)} skills)")
+                if b.recommended_with:
+                    print(f"    Recommended with: {', '.join(b.recommended_with)}")
         return 0
 
     if args.bundle:
-        b_id = args.bundle.replace("agentic-bundle-", "")
-        if b_id not in router.plugins:
-            print(f"[ERROR] Specialized bundle '{args.bundle}' not found. Use --list-bundles to see available bundles.")
+        b = router.get_bundle(args.bundle)
+        if not b:
+            print(f"Error: Bundle '{args.bundle}' not found.", file=sys.stderr)
             return 1
-        bundle = router.plugins[b_id]
         if args.json:
-            print(json.dumps({
-                "id": bundle.id,
-                "name": bundle.name,
-                "plugin_name": bundle.plugin_name,
-                "priority": bundle.priority,
-                "audience": bundle.audience,
-                "why": bundle.why,
-                "skills": bundle.skills,
-            }, indent=2))
+            out = {
+                "id": b.id,
+                "job": b.job,
+                "skills": [
+                    {
+                        "id": s.id,
+                        "url": s.url,
+                        "mode": s.mode,
+                        "when": s.when,
+                        "use": s.use,
+                    }
+                    for s in b.skills
+                ],
+                "recommended_with": b.recommended_with,
+                "runtime_rules": b.runtime_rules,
+            }
+            print(json.dumps(out, indent=2))
         else:
-            print(f"# Bundle: {bundle.name} ({bundle.plugin_name})")
-            print(f"**Audience**: {bundle.audience}")
-            print(f"**Objective**: {bundle.why}")
-            print(f"**Skill Count**: {bundle.skill_count}")
-            print("\n## Included Skills:")
-            for s in bundle.skills:
-                skill_obj = router.skills.get(s)
-                authority = skill_obj.authority_level if skill_obj else "unknown"
-                print(f"- `{s}` ({authority})")
+            print(f"# Bundle: {b.id}")
+            print(f"**Job:** {b.job}\n")
+            print("## Constituent Skills:")
+            for s in b.skills:
+                cond = f" (when: {s.when})" if s.when else ""
+                print(f"- `{s.id}` [{s.mode}]{cond}: {s.use}")
+                print(f"  Source: {s.url}")
+            if b.recommended_with:
+                print("\n## Recommended With:")
+                for r in b.recommended_with:
+                    print(f"- {r}")
+            if b.runtime_rules:
+                print("\n## Runtime Rules:")
+                for rule in b.runtime_rules:
+                    print(f"- {rule}")
         return 0
 
     if not args.query:

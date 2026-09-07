@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-Deep verification script checking 100% parity between:
-C:/Users/Amma/Downloads/bundle-useful-skills-linked-manifest-prompt.md
+Deep verification script checking 100% parity between the linked manifest prompt
 and the repository implementation (bundles, registry, lockfile, plugins).
 """
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROMPT_PATH = Path(r"C:\Users\Amma\Downloads\bundle-useful-skills-linked-manifest-prompt.md")
+PROMPT_PATH = Path(os.environ.get("BUNDLE_MANIFEST_PROMPT", Path.home() / "Downloads" / "bundle-useful-skills-linked-manifest-prompt.md"))
 
 def main():
     if not PROMPT_PATH.exists():

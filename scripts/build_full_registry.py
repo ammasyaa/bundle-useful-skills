@@ -13,7 +13,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
-PROMPT_FILE = Path(r"C:\Users\Amma\Downloads\bundle-useful-skills-linked-manifest-prompt.md")
+PROMPT_FILE = Path(os.environ.get("BUNDLE_MANIFEST_PROMPT", Path.home() / "Downloads" / "bundle-useful-skills-linked-manifest-prompt.md"))
 
 COMMITS = {
     "EveryInc/compound-engineering-plugin": "caa3b23145dae6ec8773e734c2642bf1bc64161b",

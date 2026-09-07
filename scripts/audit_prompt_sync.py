@@ -4,12 +4,13 @@ Deep comparison between bundle-useful-skills-linked-manifest-prompt.md
 and the implementation files (bundles/*.yaml, registry/skills.json, registry/sources.json).
 """
 
+import os
 import re
 import yaml
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROMPT_FILE = Path(r"C:\Users\Amma\Downloads\bundle-useful-skills-linked-manifest-prompt.md")
+PROMPT_FILE = Path(os.environ.get("BUNDLE_MANIFEST_PROMPT", Path.home() / "Downloads" / "bundle-useful-skills-linked-manifest-prompt.md"))
 
 
 def audit():

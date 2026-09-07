@@ -70,6 +70,11 @@ class TestCLICommands(unittest.TestCase):
         self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
         self.assertIn("Audit Summary: ALL 14 CRITERIA VERIFIED", proc.stdout)
 
+    def test_verify_against_prompt_cli(self):
+        proc = self.run_cmd(["scripts/verify_against_prompt.py"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        self.assertIn("PERFECT: 100% parity verified with prompt specifications!", proc.stdout)
+
     def test_check_conflicts_cli_pass(self):
         proc = self.run_cmd(["scripts/route.py", "--check-conflicts", "vercel-react-best-practices", "emil-design-eng"])
         self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")

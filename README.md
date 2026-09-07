@@ -185,7 +185,10 @@ python scripts/verify_lock.py
 # Run Snyk Supply-Chain Scanner across all registered skills (Section 17)
 python scripts/scan_supply_chain.py --check-all
 
-# Run full automated test suite (34 tests)
+# Run deep prompt verification for 100% manifest and plugin parity
+python scripts/verify_against_prompt.py
+
+# Run full automated test suite (38 tests)
 python -m unittest discover tests -v
 ```
 
@@ -248,7 +251,7 @@ bundle-useful-skills/
 │
 ├── registry/
 │   ├── skills.json                         # Pinned skill catalog with rich metadata (175 skills)
-│   ├── sources.json                        # 25 trusted source repositories
+│   ├── sources.json                        # 31 upstream sources & conditional providers
 │   ├── compatibility.json                  # Platform & framework matrix
 │   ├── conflicts.json                      # Machine-readable exclusions
 │   ├── lock.json                           # Cryptographic deterministic lockfile
@@ -262,9 +265,10 @@ bundle-useful-skills/
 │   ├── scan_supply_chain.py                # Snyk Agent Scan admission pipeline (Section 17)
 │   ├── validate_registry.py                # Comprehensive registry and bundle validator
 │   ├── verify_lock.py                      # Cryptographic lockfile verifier
+│   ├── verify_against_prompt.py            # Deep prompt specification parity verifier
 │   ├── audit_everything.py                 # Multi-perspective workspace auditor
 │   └── route.py                            # CLI entrypoint
-└── tests/                                  # Comprehensive automated test suite (34 tests)
+└── tests/                                  # Comprehensive automated test suite (38 tests)
     ├── test_bundles.py                     # Bundle manifest & plugin parity tests
     ├── test_cli.py                         # CLI end-to-end tests
     ├── test_conflicts.py                   # Hard conflict & warning tests

@@ -152,24 +152,24 @@
       "type": "string",
       "description": "Operational instructions, boundaries, and activation triggers"
     },
-    "url": {
-      "type": "string",
-      "format": "uri",
-      "description": "Canonical upstream URL to the SKILL.md file"
-    },
     "repo": {
       "type": "string",
       "format": "uri",
-      "description": "Canonical upstream git repository URL"
+      "description": "Upstream source repository URL"
     },
     "path": {
       "type": "string",
-      "description": "Relative path to the SKILL.md within the repository"
+      "description": "Upstream file path to SKILL.md"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Direct URL to upstream SKILL.md"
     },
     "status": {
       "type": "string",
       "enum": ["trusted", "conditional", "pending-review", "rejected"],
-      "description": "Operational trust and admission status"
+      "description": "Trust and admission status of the skill (Section 19)"
     }
   },
   "additionalProperties": false

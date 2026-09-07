@@ -86,34 +86,38 @@ class SkillsRouter:
     def _load_bundle(self, bfile: Path) -> None:
         try:
             import yaml
-            with open(bfile, "r", encoding="utf-8") as f:
-                data = yaml.safe_load(f)
-            if isinstance(data, dict):
-                b_id = data.get("id", "")
-                job = data.get("job", "")
-                skills = [
-                    BundleSkillRef(
-                        id=s.get("id", ""),
-                        url=s.get("url", ""),
-                        mode=s.get("mode", "CORE"),
-                        use=s.get("use", ""),
-                        when=s.get("when"),
+            has_yaml = True
+        except ImportError:
+            has_yaml = False
+
+        if has_yaml:
+            try:
+                with open(bfile, "r", encoding="utf-8") as yf:
+                    bdata = yaml.safe_load(yf)
+                b_id = bdata.get("id", "")
+                job = bdata.get("job", "")
+                skills_list = []
+                for s in bdata.get("skills", []):
+                    skills_list.append(
+                        BundleSkillRef(
+                            id=s.get("id", ""),
+                            url=s.get("url", ""),
+                            mode=s.get("mode", "CORE"),
+                            when=s.get("when"),
+                            use=s.get("use", ""),
+                        )
                     )
-                    for s in data.get("skills", [])
-                ]
-                recommended = data.get("recommended_with", [])
-                runtime_rules = data.get("runtime_rules", [])
                 if b_id:
                     self.bundles[b_id] = BundleManifest(
                         id=b_id,
                         job=job,
-                        skills=skills,
-                        recommended_with=recommended,
-                        runtime_rules=runtime_rules,
+                        skills=skills_list,
+                        recommended_with=bdata.get("recommended_with", []),
+                        runtime_rules=bdata.get("runtime_rules", []),
                     )
                 return
-        except ImportError:
-            pass
+            except Exception:
+                pass
 
         lines = bfile.read_text(encoding="utf-8").splitlines()
         b_id = ""
@@ -159,10 +163,10 @@ class SkillsRouter:
                     current_skill.use = stripped.split(":", 1)[1].strip().strip('"')
             elif current_section == "recommended_with":
                 if stripped.startswith("- "):
-                    recommended.append(stripped[2:].strip().strip('"'))
+                    recommended.append(stripped.replace("- ", "").strip())
             elif current_section == "runtime_rules":
                 if stripped.startswith("- "):
-                    runtime_rules.append(stripped[2:].strip().strip('"'))
+                    runtime_rules.append(stripped.replace("- ", "").strip().strip('"'))
 
         if current_skill:
             skills.append(current_skill)
@@ -488,49 +492,48 @@ class SkillsRouter:
         # Step 10: Release Gate
         release_gate = self._build_release_gate(project_type, risk_level)
 
-        # Step 11: Recommended Focused Bundles
+        # Step 11: Focused Bundle Recommendations
         recommended_bundles: List[str] = []
         if project_type == "web":
             recommended_bundles.append("bus-web-app-builder")
             if any(s.domain == "design-taste" for s in deduped):
                 recommended_bundles.append("bus-product-ui-taste")
-            if any("seo" in s.id or "marketingskills" in s.id for s in deduped):
+            if any("seo" in s.id or "marketingskills" in s.id for s in deduped) or any(w in q for w in ["seo", "geo", "aeo"]):
                 recommended_bundles.append("bus-seo-geo-web-quality")
             if any(s.domain in ["backend", "database"] for s in deduped):
                 recommended_bundles.append("bus-backend-api-data")
         elif project_type == "desktop":
-            if platform == "windows":
+            if "winui" in framework or platform == "windows":
                 recommended_bundles.append("bus-windows-app-builder")
-            elif platform == "macos":
+            elif "macos" in platform or "swiftui" in framework:
                 recommended_bundles.append("bus-macos-app-builder")
-            elif framework == "flutter":
+            elif "flutter" in framework:
                 recommended_bundles.append("bus-flutter-desktop-builder")
         elif project_type == "mobile":
-            if framework in ["react-native", "expo"]:
-                recommended_bundles.append("bus-expo-app-builder")
-            elif framework == "flutter":
+            if "flutter" in framework:
                 recommended_bundles.append("bus-flutter-app-builder")
+            elif "expo" in framework or "react native" in q:
+                recommended_bundles.append("bus-expo-app-builder")
             elif platform == "ios":
                 recommended_bundles.append("bus-ios-app-builder")
             elif platform == "android":
                 recommended_bundles.append("bus-android-app-builder")
-        elif task_type in ["research", "search"]:
+        elif project_type == "research":
             recommended_bundles.append("bus-research-intelligence")
 
         if risk_level in ["HIGH", "RELEASE"] or task_type == "security":
             recommended_bundles.append("bus-secure-app-builder")
             recommended_bundles.append("bus-security-auditor")
-
-        if task_type in ["release", "audit"]:
+        if task_type in ["audit", "release"]:
             recommended_bundles.append("bus-audit-release")
 
         if not recommended_bundles:
             recommended_bundles.append("bus-engineering-core")
 
-        # Deduplicate recommended bundles preserving order
+        # Deduplicate while preserving order
         deduped_bundles: List[str] = []
         for b in recommended_bundles:
-            if b not in deduped_bundles and b in self.bundles:
+            if b not in deduped_bundles and (b in self.bundles or not self.bundles):
                 deduped_bundles.append(b)
 
         return RouteResult(

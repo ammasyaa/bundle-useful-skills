@@ -10,7 +10,19 @@ import yaml
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROMPT_FILE = Path(os.environ.get("BUNDLE_MANIFEST_PROMPT", Path.home() / "Downloads" / "bundle-useful-skills-linked-manifest-prompt.md"))
+
+def get_prompt_file() -> Path:
+    if "BUNDLE_MANIFEST_PROMPT" in os.environ:
+        return Path(os.environ["BUNDLE_MANIFEST_PROMPT"])
+    repo_spec = ROOT / "specs" / "bundle-useful-skills-linked-manifest-prompt.md"
+    if repo_spec.exists():
+        return repo_spec
+    downloads_spec = Path.home() / "Downloads" / "bundle-useful-skills-linked-manifest-prompt.md"
+    if downloads_spec.exists():
+        return downloads_spec
+    return repo_spec
+
+PROMPT_FILE = get_prompt_file()
 
 
 def audit():

@@ -11,15 +11,33 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROMPT_PATH = Path(os.environ.get("BUNDLE_MANIFEST_PROMPT", Path.home() / "Downloads" / "bundle-useful-skills-linked-manifest-prompt.md"))
 
-def main():
-    if not PROMPT_PATH.exists():
-        print(f"Error: Prompt file not found at {PROMPT_PATH}")
-        sys.exit(1)
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-    prompt_text = PROMPT_PATH.read_text(encoding="utf-8")
-    
+from router.engine import SkillsRouter
+
+
+def get_prompt_path() -> Path:
+    if "BUNDLE_MANIFEST_PROMPT" in os.environ:
+        return Path(os.environ["BUNDLE_MANIFEST_PROMPT"])
+    repo_spec = ROOT / "specs" / "bundle-useful-skills-linked-manifest-prompt.md"
+    if repo_spec.exists():
+        return repo_spec
+    downloads_spec = Path.home() / "Downloads" / "bundle-useful-skills-linked-manifest-prompt.md"
+    if downloads_spec.exists():
+        return downloads_spec
+    return repo_spec
+
+
+def main() -> int:
+    prompt_path = get_prompt_path()
+    if not prompt_path.exists():
+        print(f"Error: Prompt file not found at {prompt_path}", file=sys.stderr)
+        return 1
+
+    prompt_text = prompt_path.read_text(encoding="utf-8")
+
     section_headers = [
         ("bus-engineering-core", "# 1. Engineering Core"),
         ("bus-research-intelligence", "# 2. Search & Research"),
@@ -45,14 +63,9 @@ def main():
     lock_json = json.load(open(ROOT / "registry/lock.json", encoding="utf-8"))["skills"]
 
     errors = []
-
     table_re = re.compile(r"\|\s*\[([a-zA-Z0-9-_]+)\]\(([^)]+)\)\s*\|\s*([A-Z*]+)\s*\|\s*([^|\n\r]+)\|")
 
-    try:
-        import yaml
-    except ImportError:
-        print("Error: pyyaml is required")
-        sys.exit(1)
+    router = SkillsRouter()
 
     print("==================================================")
     print("  Verifying Parity with Linked Bundle Manifest Prompt")
@@ -64,10 +77,12 @@ def main():
             errors.append(f"Missing bundle manifest: {b_file.name}")
             continue
 
-        with open(b_file, "r", encoding="utf-8") as yf:
-            b_data = yaml.safe_load(yf)
+        b_obj = router.get_bundle(b_id)
+        if not b_obj:
+            errors.append(f"Failed to parse bundle manifest for '{b_id}'")
+            continue
 
-        b_skills = {s["id"]: s for s in b_data.get("skills", [])}
+        b_skills = {s.id: s for s in b_obj.skills}
 
         p_dir = ROOT / f"plugins/{b_id}"
         if not p_dir.exists():
@@ -119,6 +134,7 @@ def main():
         print(f"  - All 17 plugin packages verified (.claude-plugin, .codex-plugin, plugin.json)")
         print(f"  - All {len(prompt_matches)} prompt table skills mapped, committed, locked, and packaged")
         return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

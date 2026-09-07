@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agentic-bundle-aas-agent-mcp-builder",
+  "version": "1.0.0",
+  "description": "Portable skills bundle for \"AAS Agent & MCP Builder\" (Build a bounded agent or MCP tool with explicit interfaces, failure handling and behavioral evaluation.)",
+  "author": {
+    "name": "bundle-useful-skills and contributors",
+    "url": "https://github.com/sickn33/agentic-awesome-skills"
+  },
+  "homepage": "https://github.com/sickn33/agentic-awesome-skills",
+  "repository": "https://github.com/sickn33/agentic-awesome-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-plugins",
+    "agent-skills",
+    "bundle",
+    "aas-agent-mcp-builder",
+    "bundle-useful-skills"
+  ]
+}

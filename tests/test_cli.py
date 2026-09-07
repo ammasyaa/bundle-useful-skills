@@ -44,7 +44,20 @@ class TestCLICommands(unittest.TestCase):
     def test_verify_lock_cli(self):
         proc = self.run_cmd(["scripts/verify_lock.py"])
         self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
-        self.assertIn("[PASS] All 44 skills deterministically pinned", proc.stdout)
+        self.assertIn("deterministically pinned with valid SHA-256 hashes", proc.stdout)
+
+    def test_list_bundles_cli(self):
+        proc = self.run_cmd(["scripts/route.py", "--list-bundles"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        self.assertIn("AAS Accessibility & Inclusive UX", proc.stdout)
+        self.assertIn("AAS Web App Builder", proc.stdout)
+
+    def test_bundle_detail_cli(self):
+        proc = self.run_cmd(["scripts/route.py", "--bundle", "aas-accessibility-inclusive-ux"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        self.assertIn("accesslint-audit", proc.stdout)
+        self.assertIn("ui-a11y", proc.stdout)
+        self.assertIn("screen-reader-testing", proc.stdout)
 
     def test_audit_everything_cli(self):
         proc = self.run_cmd(["scripts/audit_everything.py"])

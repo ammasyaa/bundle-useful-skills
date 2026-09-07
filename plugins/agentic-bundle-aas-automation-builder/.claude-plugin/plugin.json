@@ -1,0 +1,9 @@
+{
+  "name": "agentic-bundle-aas-automation-builder",
+  "version": "1.0.0",
+  "description": "Portable skills bundle for \"AAS Automation Builder\".",
+  "author": {
+    "name": "bundle-useful-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills"
+  }
+}

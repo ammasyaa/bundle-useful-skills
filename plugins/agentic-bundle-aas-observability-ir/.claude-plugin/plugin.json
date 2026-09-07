@@ -1,0 +1,9 @@
+{
+  "name": "agentic-bundle-aas-observability-ir",
+  "version": "1.0.0",
+  "description": "Portable skills bundle for \"AAS Observability IR\".",
+  "author": {
+    "name": "bundle-useful-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills"
+  }
+}

@@ -59,6 +59,16 @@ def main() -> int:
         metavar="SKILL_ID",
         help="Check whether a specific list of skill IDs contains mutual exclusions",
     )
+    parser.add_argument(
+        "--list-bundles",
+        action="store_true",
+        help="List all 21 specialized plugin bundles from the roadmap",
+    )
+    parser.add_argument(
+        "--bundle",
+        type=str,
+        help="Inspect a specific specialized plugin bundle (e.g. aas-accessibility-inclusive-ux)",
+    )
 
     args = parser.parse_args()
 
@@ -77,6 +87,58 @@ def main() -> int:
                 for w in warnings:
                     print(f"[WARNING] {w}")
         return 1 if conflicts else 0
+ 
+    if args.list_bundles:
+        if args.json:
+            out = [
+                {
+                    "id": p.id,
+                    "name": p.name,
+                    "plugin_name": p.plugin_name,
+                    "why": p.why,
+                    "skill_count": p.skill_count,
+                    "skills": p.skills,
+                }
+                for p in router.plugins.values()
+            ]
+            print(json.dumps(out, indent=2))
+        else:
+            print("==================================================")
+            print("  Specialized Plugin Bundles (Roadmap 2026)")
+            print("==================================================")
+            for p in router.plugins.values():
+                print(f"- {p.name} (`{p.id}` / `{p.plugin_name}`): {p.skill_count} skills")
+                print(f"  Why: {p.why}")
+                print(f"  Skills: {', '.join(p.skills)}\n")
+        return 0
+
+    if args.bundle:
+        b_id = args.bundle.replace("agentic-bundle-", "")
+        if b_id not in router.plugins:
+            print(f"[ERROR] Specialized bundle '{args.bundle}' not found. Use --list-bundles to see available bundles.")
+            return 1
+        bundle = router.plugins[b_id]
+        if args.json:
+            print(json.dumps({
+                "id": bundle.id,
+                "name": bundle.name,
+                "plugin_name": bundle.plugin_name,
+                "priority": bundle.priority,
+                "audience": bundle.audience,
+                "why": bundle.why,
+                "skills": bundle.skills,
+            }, indent=2))
+        else:
+            print(f"# Bundle: {bundle.name} ({bundle.plugin_name})")
+            print(f"**Audience**: {bundle.audience}")
+            print(f"**Objective**: {bundle.why}")
+            print(f"**Skill Count**: {bundle.skill_count}")
+            print("\n## Included Skills:")
+            for s in bundle.skills:
+                skill_obj = router.skills.get(s)
+                authority = skill_obj.authority_level if skill_obj else "unknown"
+                print(f"- `{s}` ({authority})")
+        return 0
 
     if not args.query:
         if not sys.stdin.isatty():

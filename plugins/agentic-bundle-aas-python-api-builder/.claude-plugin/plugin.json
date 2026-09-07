@@ -1,0 +1,9 @@
+{
+  "name": "agentic-bundle-aas-python-api-builder",
+  "version": "1.0.0",
+  "description": "Portable skills bundle for \"AAS Python API Builder\".",
+  "author": {
+    "name": "bundle-useful-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills"
+  }
+}

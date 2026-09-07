@@ -13,6 +13,7 @@ from .models import (
     TaskRequest,
     RouteResult,
     ExecutionStage,
+    SpecializedPlugin,
 )
 
 
@@ -28,6 +29,7 @@ class SkillsRouter:
         self.profiles_dir = self.base_dir / "profiles"
 
         self.skills: Dict[str, Skill] = {}
+        self.plugins: Dict[str, SpecializedPlugin] = {}
         self.hard_conflicts: List[HardConflict] = []
         self.conditional_warnings: List[ConditionalWarning] = []
         self.compatibility: Dict[str, Any] = {}
@@ -38,6 +40,20 @@ class SkillsRouter:
         # Load skills
         skills_file = self.registry_dir / "skills.json"
         if skills_file.exists():
+            with open(skills_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                for item in data:
+                    skill = Skill.from_dict(item)
+                    self.skills[skill.id] = skill
+
+        # Load specialized plugins
+        plugins_file = self.registry_dir / "plugins.json"
+        if plugins_file.exists():
+            with open(plugins_file, "r", encoding="utf-8") as f:
+                p_data = json.load(f)
+                for item in p_data:
+                    plugin = SpecializedPlugin.from_dict(item)
+                    self.plugins[plugin.id] = plugin
             with open(skills_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 for item in data:
@@ -198,6 +214,51 @@ class SkillsRouter:
 
         return conflicts, warnings
 
+    def match_specialized_bundle(self, query: str, project_type: str, task_type: str) -> Optional[str]:
+        """
+        Maps a task query to the most relevant specialized plugin bundle from the 21 roadmap bundles.
+        """
+        q = query.lower()
+        if any(w in q for w in ["a11y", "accessibility", "wcag", "screen reader", "talkback", "voiceover", "accesslint"]):
+            return "aas-accessibility-inclusive-ux"
+        if any(w in q for w in ["office", "docx", "xlsx", "pptx", "pdf", "presentation", "slides", "spreadsheets"]):
+            return "aas-documents-presentations"
+        if any(w in q for w in ["burp", "pentest", "penetration", "vulnerability", "ethical hacking", "exploit"]):
+            return "aas-security-engineer"
+        if any(w in q for w in ["mcp", "agent architect", "langgraph", "langfuse", "tool developer"]):
+            return "aas-agent-mcp-builder"
+        if any(w in q for w in ["fastapi", "django", "pydantic", "python api"]):
+            return "aas-python-api-builder"
+        if any(w in q for w in ["observability", "grafana", "tracing", "sre", "incident response", "postmortem"]):
+            return "aas-observability-ir"
+        if any(w in q for w in ["airflow", "dbt", "data engineering", "pipeline", "etl"]):
+            return "aas-data-engineering-platform"
+        if any(w in q for w in ["analytics", "sql", "kpi dashboard", "experiment readout"]):
+            return "aas-data-analytics"
+        if any(w in q for w in ["gdpr", "hipaa", "privacy", "compliance"]):
+            return "aas-privacy-compliance-engineering"
+        if any(w in q for w in ["i18n", "localization", "hreflang", "international"]):
+            return "aas-localization-international-growth"
+        if any(w in q for w in ["saas", "stripe", "monetization", "pricing strategy", "launch"]):
+            return "aas-saas-launch-revenue"
+        if any(w in q for w in ["e2e", "playwright", "test automation", "load testing"]):
+            return "aas-qa-test-automation"
+        if any(w in q for w in ["portfolio", "3d", "scroll experience", "visual design", "canvas"]):
+            return "aas-product-design-studio"
+        if any(w in q for w in ["marketing", "growth", "seo audit", "copywriting"]):
+            return "aas-marketing-seo-growth"
+        if any(w in q for w in ["auth", "jwt", "oauth", "access control", "pci", "secrets management"]):
+            return "aas-secure-app-builder"
+        if any(w in q for w in ["docker", "kubernetes", "terraform", "github actions", "devops"]):
+            return "aas-devops-cloud"
+        if any(w in q for w in ["automation", "make", "zapier", "airtable", "notion", "n8n"]):
+            return "aas-automation-builder"
+        if project_type == "web" and ("react" in q or "next" in q or "frontend" in q):
+            return "aas-web-app-builder"
+        if project_type == "mobile":
+            return "aas-mobile-app-builder"
+        return None
+
     def route(self, request: TaskRequest) -> RouteResult:
         """
         Executes the 11-step routing algorithm on the incoming task request.
@@ -218,6 +279,7 @@ class SkillsRouter:
         primary_authority_id: Optional[str] = None
 
         q = request.query.lower()
+        recommended_bundle = self.match_specialized_bundle(request.query, project_type, task_type)
 
         # Step 5: Resolve Process Layer (Superpowers)
         if task_type == "debugging":
@@ -229,6 +291,12 @@ class SkillsRouter:
 
         if process_skill and project_type != "search-research":
             selected_skills.append(process_skill)
+
+        # Specialized bundle enhancement: Accessibility
+        if recommended_bundle == "aas-accessibility-inclusive-ux" or any(w in q for w in ["a11y", "accessibility", "wcag", "accesslint"]):
+            for s_cand in ["accesslint-audit", "ui-a11y", "fixing-accessibility"]:
+                if s_cand in self.skills and self.skills[s_cand] not in selected_skills:
+                    selected_skills.append(self.skills[s_cand])
 
         # Step 6: Route Domain & Platform Authorities
         if project_type == "search-research":
@@ -391,6 +459,7 @@ class SkillsRouter:
             conflicts_detected=conflicts_detected,
             warnings=warnings,
             release_gate=release_gate,
+            recommended_bundle=recommended_bundle,
         )
 
     def _build_execution_stages(

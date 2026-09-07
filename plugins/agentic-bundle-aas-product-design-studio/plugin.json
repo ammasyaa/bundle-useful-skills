@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agentic-bundle-aas-product-design-studio",
+  "version": "1.0.0",
+  "description": "Portable skills bundle for \"AAS Product Design Studio\" (Turn a product brief into a coherent visual direction, responsive interface and actionable design review.)",
+  "author": {
+    "name": "bundle-useful-skills and contributors",
+    "url": "https://github.com/sickn33/agentic-awesome-skills"
+  },
+  "homepage": "https://github.com/sickn33/agentic-awesome-skills",
+  "repository": "https://github.com/sickn33/agentic-awesome-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-plugins",
+    "agent-skills",
+    "bundle",
+    "aas-product-design-studio",
+    "bundle-useful-skills"
+  ]
+}

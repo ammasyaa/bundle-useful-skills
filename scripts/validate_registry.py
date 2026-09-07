@@ -186,7 +186,7 @@ class RegistryValidator:
         print("      Compatibility matrix verified.")
 
     def validate_profiles(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
-        print("[5/5] Validating domain profiles in profiles/*...")
+        print("[5/6] Validating domain profiles in profiles/*...")
         profile_dirs = [p for p in self.profiles_dir.iterdir() if p.is_dir()]
         for pdir in profile_dirs:
             pjson = pdir / "profile.json"
@@ -209,6 +209,45 @@ class RegistryValidator:
 
         print(f"      Verified {len(profile_dirs)} domain profiles.")
 
+    def validate_specialized_plugins(self, known_skills: Dict[str, Dict[str, Any]]) -> None:
+        print("[6/6] Validating specialized plugin bundles in registry/plugins.json & plugins/*...")
+        plugins_file = self.registry_dir / "plugins.json"
+        if not plugins_file.exists():
+            self.log_error("registry/plugins.json missing!")
+            return
+
+        plugins_data = self.load_json(plugins_file)
+        if not isinstance(plugins_data, list):
+            self.log_error("plugins.json must contain a list of plugin objects.")
+            return
+
+        plugins_dir = self.root / "plugins"
+        for p in plugins_data:
+            pid = p.get("id")
+            pname = p.get("plugin_name")
+            if not pid or not pname:
+                self.log_error(f"Plugin entry missing id or plugin_name: {p}")
+                continue
+
+            p_path = plugins_dir / pname
+            if not p_path.exists():
+                self.log_error(f"Plugin directory missing for '{pname}' at {p_path}")
+                continue
+
+            if not (p_path / "plugin.json").exists():
+                self.log_error(f"plugin.json missing in '{pname}'")
+
+            skills = p.get("skills", [])
+            for sid in skills:
+                if sid not in known_skills:
+                    self.log_error(f"Plugin '{pid}' references unknown skill '{sid}' not in skills.json!")
+
+                skill_file = p_path / "skills" / sid / "SKILL.md"
+                if not skill_file.exists():
+                    self.log_error(f"Skill file missing: {skill_file}")
+
+        print(f"      Verified {len(plugins_data)} specialized plugin bundles.")
+
     def run(self) -> int:
         print("==================================================")
         print("  Bundle Useful Skills: Registry Validator")
@@ -219,6 +258,7 @@ class RegistryValidator:
             self.validate_conflicts(skills)
             self.validate_compatibility()
             self.validate_profiles(skills)
+            self.validate_specialized_plugins(skills)
 
         print("--------------------------------------------------")
         if self.errors:

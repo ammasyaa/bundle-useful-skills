@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agentic-bundle-aas-data-engineering-platform",
+  "version": "1.0.0",
+  "description": "Portable skills bundle for \"AAS Data Engineering Platform\" (Build ingestion and transformation pipelines with data contracts, quality checks and recovery planning.)",
+  "author": {
+    "name": "bundle-useful-skills and contributors",
+    "url": "https://github.com/sickn33/agentic-awesome-skills"
+  },
+  "homepage": "https://github.com/sickn33/agentic-awesome-skills",
+  "repository": "https://github.com/sickn33/agentic-awesome-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-plugins",
+    "agent-skills",
+    "bundle",
+    "aas-data-engineering-platform",
+    "bundle-useful-skills"
+  ]
+}

@@ -1,313 +1,1206 @@
 {
-  "version": "1.0.0",
+  "$schema": "https://bundle-useful-skills.org/schemas/lock.schema.json",
+  "lockfile_version": 1,
   "generated_at": "2026-09-08T00:00:00Z",
   "skills": {
-    "superpowers-brainstorming": {
-      "source_repository": "https://github.com/obra/superpowers",
-      "source_path": "skills/brainstorming/SKILL.md",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
-      "sha256": "9b1d8f7e6a5c4b3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d",
+    "3d-web-experience": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "9906b44c820b8279fdbf769db3dc3c4f4edbba5019f5c179976ea1425c0e39b0",
       "pinned": true
     },
-    "superpowers-writing-plans": {
-      "source_repository": "https://github.com/obra/superpowers",
-      "source_path": "skills/writing-plans/SKILL.md",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
-      "sha256": "8a2c1b0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b",
+    "ab-test-setup": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "f5a16d277826a0b8c2cb153723b1caa8c214a0509265ade3eb516e1d2e0d1ef5",
       "pinned": true
     },
-    "superpowers-test-driven-development": {
-      "source_repository": "https://github.com/obra/superpowers",
-      "source_path": "skills/test-driven-development/SKILL.md",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
-      "sha256": "7c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b",
+    "accesslint-audit": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "b46270efb46f06f664d4c0159a95a285d7228ebc5fb0edbe7e2f5589ee5f6223",
       "pinned": true
     },
-    "superpowers-systematic-debugging": {
-      "source_repository": "https://github.com/obra/superpowers",
-      "source_path": "skills/systematic-debugging/SKILL.md",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
-      "sha256": "6b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a",
+    "accesslint-diff": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "6af4a0c13b1a5cce302d9ac37e6cb6cc1552aaaec4b8efc54df53378deafc593",
       "pinned": true
     },
-    "superpowers-subagent-driven-development": {
-      "source_repository": "https://github.com/obra/superpowers",
-      "source_path": "skills/subagent-driven-development/SKILL.md",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
-      "sha256": "5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b",
+    "accesslint-scan": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "32f7f8e7621ac1ceaf4af7eeb50dd5bc7cccdba3e4fe0d42293c6cb4f6c214d9",
       "pinned": true
     },
-    "superpowers-requesting-code-review": {
-      "source_repository": "https://github.com/obra/superpowers",
-      "source_path": "skills/requesting-code-review/SKILL.md",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
-      "sha256": "4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d",
-      "pinned": true
-    },
-    "superpowers-verification-before-completion": {
-      "source_repository": "https://github.com/obra/superpowers",
-      "source_path": "skills/verification-before-completion/SKILL.md",
-      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
-      "sha256": "3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c",
-      "pinned": true
-    },
-    "taste-skill-frontend": {
-      "source_repository": "https://github.com/Leonxlnx/taste-skill",
-      "source_path": "skills/design-taste-frontend/SKILL.md",
-      "commit": "7b8a9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
-      "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
-      "pinned": true
-    },
-    "anthropic-frontend-design": {
-      "source_repository": "https://github.com/anthropics/anthropic-quickstarts",
-      "source_path": "skills/frontend-design/SKILL.md",
-      "commit": "8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d",
-      "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
-      "pinned": true
-    },
-    "emil-design-eng": {
-      "source_repository": "https://github.com/emilkowalski/skills",
-      "source_path": "skills/emil-design-eng/SKILL.md",
-      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
-      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
-      "pinned": true
-    },
-    "emil-animate": {
-      "source_repository": "https://github.com/emilkowalski/skills",
-      "source_path": "skills/animate/SKILL.md",
-      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
-      "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
-      "pinned": true
-    },
-    "emil-animate-expo": {
-      "source_repository": "https://github.com/emilkowalski/skills",
-      "source_path": "skills/animate-expo/SKILL.md",
-      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
-      "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
-      "pinned": true
-    },
-    "ui-ux-pro-max": {
-      "source_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
-      "source_path": "skills/ui-ux-pro-max/SKILL.md",
-      "commit": "0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f",
-      "sha256": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a",
-      "pinned": true
-    },
-    "pbakaus-impeccable": {
-      "source_repository": "https://github.com/pbakaus/impeccable",
-      "source_path": "skills/impeccable/SKILL.md",
-      "commit": "1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a",
+    "addy-code-review-and-quality": {
+      "version": "1.1.0",
+      "commit": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
       "sha256": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b",
       "pinned": true
     },
-    "olzn-ui-craft": {
-      "source_repository": "https://github.com/olzn/ui-craft",
-      "source_path": "skills/ui-craft/SKILL.md",
-      "commit": "2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
-      "sha256": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c",
-      "pinned": true
-    },
-    "firecrawl-cli": {
-      "source_repository": "https://github.com/mendableai/firecrawl",
-      "source_path": "skills/firecrawl-cli/SKILL.md",
-      "commit": "3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c",
-      "sha256": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d",
-      "pinned": true
-    },
-    "deer-flow-deep-research": {
-      "source_repository": "https://github.com/bytedance/deer-flow",
-      "source_path": "skills/deep-research/SKILL.md",
-      "commit": "4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d",
-      "sha256": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e",
-      "pinned": true
-    },
-    "browser-use": {
-      "source_repository": "https://github.com/browser-use/browser-use",
-      "source_path": "skills/browser-use/SKILL.md",
-      "commit": "5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e",
-      "sha256": "1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f",
-      "pinned": true
-    },
-    "last30days-skill": {
-      "source_repository": "https://github.com/mvanhorn/last30days-skill",
-      "source_path": "skills/last30days/SKILL.md",
-      "commit": "6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f",
-      "sha256": "2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a",
-      "pinned": true
-    },
-    "vercel-react-best-practices": {
-      "source_repository": "https://github.com/vercel-labs/agent-skills",
-      "source_path": "skills/react-best-practices/SKILL.md",
-      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
-      "sha256": "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b",
-      "pinned": true
-    },
-    "vercel-composition-patterns": {
-      "source_repository": "https://github.com/vercel-labs/agent-skills",
-      "source_path": "skills/composition-patterns/SKILL.md",
-      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
-      "sha256": "4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c",
-      "pinned": true
-    },
     "addy-frontend-ui-engineering": {
-      "source_repository": "https://github.com/addyosmani/agent-skills",
-      "source_path": "skills/frontend-ui-engineering/SKILL.md",
+      "version": "1.1.0",
       "commit": "8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b",
       "sha256": "5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d",
       "pinned": true
     },
     "addy-web-quality-audit": {
-      "source_repository": "https://github.com/addyosmani/web-quality-skills",
-      "source_path": "skills/web-quality-audit/SKILL.md",
+      "version": "1.0.0",
       "commit": "9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c",
       "sha256": "6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e",
       "pinned": true
     },
-    "marketingskills-seo-audit": {
-      "source_repository": "https://github.com/coreyhaines31/marketingskills",
-      "source_path": "skills/seo-audit/SKILL.md",
-      "commit": "0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
-      "sha256": "7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f",
+    "agent-evaluation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "44e1807b2db2c4c1c30a5bdf1c5a1c5090f2b887c9e3054b6ab7aab091f83b55",
       "pinned": true
     },
-    "backend-engineering": {
-      "source_repository": "https://github.com/bundle-useful-skills/backend-engineering",
-      "source_path": "skills/backend-engineering/SKILL.md",
-      "commit": "1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e",
-      "sha256": "8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a",
+    "ai-agents-architect": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "63edf98b00b251b00f19bb82c00752c880c1f2bf179fee7dd69eb042da5d21ed",
       "pinned": true
     },
-    "supabase-postgres-best-practices": {
-      "source_repository": "https://github.com/supabase/agent-skills",
-      "source_path": "skills/supabase-postgres-best-practices/SKILL.md",
-      "commit": "2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f",
-      "sha256": "9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+    "ai-wrapper-product": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "a754a9ce044ed42974c63a4e510a1bc97a7c1482b71373c7351f83f2e76bb3c2",
       "pinned": true
     },
-    "cloudflare-skills": {
-      "source_repository": "https://github.com/cloudflare/skills",
-      "source_path": "skills/cloudflare-workers/SKILL.md",
-      "commit": "3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a",
-      "sha256": "0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+    "airflow-dag-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "6d4b0f9919cc7c1ab1b82c54e2f63199eb36dd227d1bbcdfcab5f00c117314b4",
       "pinned": true
     },
-    "prisma-skills": {
-      "source_repository": "https://github.com/prisma/skills",
-      "source_path": "skills/prisma-best-practices/SKILL.md",
-      "commit": "4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b",
-      "sha256": "1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+    "airtable-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c70baa50702e5b00b4d90c0f9b6d5363bc197e9621dc3cdbca5c4b490c8670c0",
       "pinned": true
     },
-    "neon-agent-skills": {
-      "source_repository": "https://github.com/neondatabase/agent-skills",
-      "source_path": "skills/neon-postgres/SKILL.md",
-      "commit": "5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c",
-      "sha256": "2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+    "analytics-product": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "20bd7b4e93b3492e9081b8a55bdb6cedd02ed38ae86ad013f14af7f4dc274677",
       "pinned": true
     },
-    "laravel-agent-skills": {
-      "source_repository": "https://github.com/laravel/agent-skills",
-      "source_path": "skills/laravel-framework/SKILL.md",
-      "commit": "6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d",
-      "sha256": "3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
-      "pinned": true
-    },
-    "microsoft-winui": {
-      "source_repository": "https://github.com/microsoft/win-dev-skills",
-      "source_path": "skills/winui-dev-workflow/SKILL.md",
-      "commit": "7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e",
-      "sha256": "4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
-      "pinned": true
-    },
-    "openai-build-macos-apps": {
-      "source_repository": "https://github.com/openai/plugins",
-      "source_path": "skills/build-macos-apps/SKILL.md",
-      "commit": "8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f",
-      "sha256": "5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
-      "pinned": true
-    },
-    "flutter-agent-plugins": {
-      "source_repository": "https://github.com/flutter/agent-plugins",
-      "source_path": "skills/flutter-core/SKILL.md",
-      "commit": "9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a",
-      "sha256": "6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
-      "pinned": true
-    },
-    "dart-lang-skills": {
-      "source_repository": "https://github.com/dart-lang/skills",
-      "source_path": "skills/dart-idioms/SKILL.md",
-      "commit": "0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b",
-      "sha256": "7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
-      "pinned": true
-    },
-    "tauri-official-guidance": {
-      "source_repository": "https://github.com/tauri-apps/tauri",
-      "source_path": "skills/tauri-architecture/SKILL.md",
-      "commit": "1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c",
-      "sha256": "8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
-      "pinned": true
-    },
-    "electron-official-guidance": {
-      "source_repository": "https://github.com/electron/electron",
-      "source_path": "skills/electron-security/SKILL.md",
-      "commit": "2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d",
-      "sha256": "9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f",
+    "analytics-tracking": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "1a0d49d7be7447dbf20d8648e65d0bc21cc43c1d82ae8edb8b9800524aa57e48",
       "pinned": true
     },
     "android-skills": {
-      "source_repository": "https://github.com/android/skills",
-      "source_path": "skills/android-dev/SKILL.md",
+      "version": "1.0.0",
       "commit": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
       "sha256": "0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a",
       "pinned": true
     },
-    "openai-build-ios-apps": {
-      "source_repository": "https://github.com/openai/plugins",
-      "source_path": "skills/build-ios-apps/SKILL.md",
-      "commit": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
-      "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
-      "pinned": true
-    },
-    "expo-skills": {
-      "source_repository": "https://github.com/expo/skills",
-      "source_path": "skills/expo-app/SKILL.md",
-      "commit": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+    "anthropic-frontend-design": {
+      "version": "1.1.0",
+      "commit": "8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d",
       "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
       "pinned": true
     },
-    "owasp-secure-agent-playbook": {
-      "source_repository": "https://github.com/OWASP/secure-agent-playbook",
-      "source_path": "skills/security-guidance/SKILL.md",
-      "commit": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
-      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
+    "api-design-principles": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "ec8595025578602a35c681ad57ff22d8e221896c18939e52b2264ca4f96129b3",
       "pinned": true
     },
-    "trailofbits-skills": {
-      "source_repository": "https://github.com/trailofbits/skills",
-      "source_path": "skills/audit-context-building/SKILL.md",
-      "commit": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
-      "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+    "api-documentation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c6f88fc0e712150ba48fb8ca232ad441c1b4793777a8a8a3a7fb3acd39d753a4",
       "pinned": true
     },
-    "snyk-agent-scan": {
-      "source_repository": "https://github.com/snyk/agent-scan",
-      "source_path": "skills/agent-scan/SKILL.md",
-      "commit": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
-      "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
+    "api-endpoint-builder": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "acc052b6a435b3207f0fa0a4354616c08d9b4f3afbd9a046a26a9cd042b75317",
+      "pinned": true
+    },
+    "api-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "98a04b179359611f20e84fd888b4fe29b712c42f7c993f3a398f0db751e35085",
+      "pinned": true
+    },
+    "api-security-best-practices": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "d706ba3383cb3b739c1c5c9ee231057e948fc9e13826d37833aee4f612d2f252",
+      "pinned": true
+    },
+    "api-security-testing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "ef33c414408c24854b3a0d9a5355f3cbdbec84a98e9d08af0136b8256a27aea7",
+      "pinned": true
+    },
+    "apify-market-research": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "7c94f8226cb920e52029b4b93f4335c28301ef1175b096a03a115154b113c20d",
+      "pinned": true
+    },
+    "app-store-optimization": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c238d9a15f359699b44fe6a0bda21e505ed0b4fd3baf70b9336041f48fd2ff8e",
+      "pinned": true
+    },
+    "async-python-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "ece020c17b7e4d59ebb203db8f18efd604ef6ebd5be7a047696644954c7d2aac",
+      "pinned": true
+    },
+    "auth-implementation-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "8967b61125ac4c68a765d1c54044e605c6ea7e0e187ee44ca8633acb9f3a4cca",
+      "pinned": true
+    },
+    "aws-serverless": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c5114c133fe9ddfe05a5754d3aeb99a397dc07e7d7173be9ad1137bef072daa9",
+      "pinned": true
+    },
+    "backend-architect": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c8a2423cfa0a9d86e209f7b2c5f41309692629877e22c90ceda7e2a07ee9f297",
+      "pinned": true
+    },
+    "backend-engineering": {
+      "version": "1.0.0",
+      "commit": "1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e",
+      "sha256": "8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a",
+      "pinned": true
+    },
+    "backend-security-coder": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "e9b3c84c5c08bfcc083d0bc4513010e7836bfc4d87ee8419d9ed4b2843728faf",
+      "pinned": true
+    },
+    "bash-linux": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "cbdbdd546f2b1ff6a67e3c340914479b56daddbe940c38c616919adea6303fbc",
+      "pinned": true
+    },
+    "browser-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c2967861de6c2b8cf46a9ee9503fd442d7ed22c21e785866865268bd8e476f3b",
+      "pinned": true
+    },
+    "browser-use": {
+      "version": "0.1.25",
+      "commit": "5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e",
+      "sha256": "1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f",
+      "pinned": true
+    },
+    "burp-suite-testing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "413f4ff079239c1df9f9bf03085b2176d5facea52d0aee39a62cfa2dfb399d79",
+      "pinned": true
+    },
+    "business-analyst": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "120dbe5a0d1ae8a2e04bc29ac9b11a7589c3772ead4a92e6dfe058522ac403b0",
+      "pinned": true
+    },
+    "canvas-design": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "06fe09e7d3506d30b2278406c49b0f38bf5efeeebd1a0f866e8ef6a40bb4dd99",
+      "pinned": true
+    },
+    "cc-skill-security-review": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "391988056290855034b521c3a24bfd4f82ab3a2dbdd3dd5c7e2e020d380b70e4",
+      "pinned": true
+    },
+    "claude-d3js-skill": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "bf0e65a9e5879188266ece2ba5315a4396ac619b91d22d76b76a7420d2a7c0ca",
+      "pinned": true
+    },
+    "cloud-penetration-testing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "126fb317f321024be8144ed0e49a8b98d610b3676f77dbecf313f3efede3172d",
+      "pinned": true
+    },
+    "cloudflare-skills": {
+      "version": "1.0.0",
+      "commit": "3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a",
+      "sha256": "0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c",
+      "pinned": true
+    },
+    "code-review-checklist": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "ab131f57809d92f2d92a607529762375926ecb7cc6c7b92e9ba2703721591502",
       "pinned": true
     },
     "compound-engineering-plugin": {
-      "source_repository": "https://github.com/EveryInc/compound-engineering-plugin",
-      "source_path": "skills/review-orchestrator/SKILL.md",
+      "version": "1.0.0",
       "commit": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
       "sha256": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a",
       "pinned": true
     },
-    "addy-code-review-and-quality": {
-      "source_repository": "https://github.com/addyosmani/agent-skills",
-      "source_path": "skills/code-review-and-quality/SKILL.md",
-      "commit": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+    "content-creator": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "1d0a9a8e6bbadc1a72cf8fd093da90c039cda9d94dbfb01cd386a750ede284fa",
+      "pinned": true
+    },
+    "context-window-management": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "d06b58f23c23b4d10a2827e0c3dfbd5d97769410138f62120791ea3af6d32097",
+      "pinned": true
+    },
+    "copywriting": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "8bc1424d11ae92b5959bbc45fe2632e61644ddf53e14990214442c56119a1419",
+      "pinned": true
+    },
+    "dart-lang-skills": {
+      "version": "3.5.0",
+      "commit": "0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b",
+      "sha256": "7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d",
+      "pinned": true
+    },
+    "data-engineer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "544e3dc01f0541b8a8b40e59da69a0d5a160e53672a80717c1872ba211daf2fe",
+      "pinned": true
+    },
+    "data-quality-frameworks": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "e1e10ce53443a1dcc005607959138057aba4ac8b1e7c920f1fe5e4ebbd47ee5f",
+      "pinned": true
+    },
+    "database-architect": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "aab924231e55660a51b87e1941a33b40f4bd6fd1ce3cbbdf2a2aa8c1cbb175d2",
+      "pinned": true
+    },
+    "dbt-transformation-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "f3884ea7616d2f031b7d95fd9cbe311b98a6e4ed8adef06492ee406e44bcb90e",
+      "pinned": true
+    },
+    "deer-flow-deep-research": {
+      "version": "1.0.0",
+      "commit": "4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d",
+      "sha256": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e",
+      "pinned": true
+    },
+    "deployment-procedures": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "fc4ec54ba6988df856617a741d44a10f30f5f6435d5eed89d538ae194661c538",
+      "pinned": true
+    },
+    "devops-troubleshooter": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "4a14ff76eb2dac14e7713652b1a6fda1dff213ea7d95c52e09a569646a94ca97",
+      "pinned": true
+    },
+    "distributed-tracing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "e1c1751c6159ed351ee3f7209586e7706f5c7081a90465ac8d50da3c835d47ce",
+      "pinned": true
+    },
+    "django-access-review": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c11044ac6b5ca253d365e960b0003affa03978d74ab2bac54897281a952d1dea",
+      "pinned": true
+    },
+    "django-pro": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "36e55075f6c6ba9918bf1740dbb3c244088388a4977bc8fdc093031ef09a897a",
+      "pinned": true
+    },
+    "docker-expert": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "ee73b03d9b6973e4d2bb5c09750c7aa32196d1c725c12a51ce9bb355088b4eb9",
+      "pinned": true
+    },
+    "docx-official": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "aa28edf6c5dbf98315d531a4f71e4e72c75fa305a65ad17f2c129c68e32fc43e",
+      "pinned": true
+    },
+    "e2e-testing-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c90f76e1fd43015b07215e6e9c5d197832f224a3f9ce1237b4e8cc8aae8a111b",
+      "pinned": true
+    },
+    "electron-official-guidance": {
+      "version": "32.0.0",
+      "commit": "2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d",
+      "sha256": "9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f",
+      "pinned": true
+    },
+    "email-sequence": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "b86f2f59e423637b2993cca28cdd9c0eebb394d0c16762c59342ca2df1a864f5",
+      "pinned": true
+    },
+    "embedding-strategies": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "47d35a45ab0aa9c18f7473deef8388f776aaf26b2df0bed2e4a15355f0aaae17",
+      "pinned": true
+    },
+    "emil-animate": {
+      "version": "2.0.0",
+      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+      "pinned": true
+    },
+    "emil-animate-expo": {
+      "version": "2.0.0",
+      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
+      "pinned": true
+    },
+    "emil-design-eng": {
+      "version": "2.0.0",
+      "commit": "9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
+      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
+      "pinned": true
+    },
+    "environment-setup-guide": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "907f06d6f19e2a1d51e00278c637ec5556a1794f676ba39f24e7f14772220ae7",
+      "pinned": true
+    },
+    "ethical-hacking-methodology": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "6fcb0517bd7a393573f0a0dd1778fea7d196e030eae2541595df3da5b0e64fe1",
+      "pinned": true
+    },
+    "expo-api-routes": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "3441e9ef9debc5983b78b417094e9c2ff221f8dbb308b92fa462bab9b40a17f0",
+      "pinned": true
+    },
+    "expo-cicd-workflows": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "31be3809b19e4cc5a711631e3e1b5b5c0fa2e18dd034ff7bd834f66a69cbd871",
+      "pinned": true
+    },
+    "expo-deployment": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "176910292f74aba87235fe04aabc36ee2f653c0b8eb0103691d4f243917af67e",
+      "pinned": true
+    },
+    "expo-dev-client": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "0d92c7bc29e91debc07f7d9fbdc874e8cbc11248a0f0e1726580724292223077",
+      "pinned": true
+    },
+    "expo-skills": {
+      "version": "51.0.0",
+      "commit": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
+      "pinned": true
+    },
+    "fastapi-pro": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "d46cbc9b2ad870ca3e4561f0dbdfda4cd537e5b7bd81f98bfc575b6db340901b",
+      "pinned": true
+    },
+    "fastapi-templates": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "6e79b344dd1eb191e1cf05efe626d8c8f7d2a6dcaff7879abd2c63bf31304603",
+      "pinned": true
+    },
+    "firecrawl-cli": {
+      "version": "1.4.0",
+      "commit": "3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c",
+      "sha256": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d",
+      "pinned": true
+    },
+    "fixing-accessibility": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "200e6fbff2521cf1cd350385c969ae9ce37537f47ca939300d11b24ac39c6700",
+      "pinned": true
+    },
+    "flutter-agent-plugins": {
+      "version": "3.24.0",
+      "commit": "9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a",
+      "sha256": "6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "pinned": true
+    },
+    "flutter-expert": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "57730216ee889a2e2c3d0d90962c8de395c286b03a9dcf2ff0b8cd0bc8bf13dd",
+      "pinned": true
+    },
+    "form-cro": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "24bcdc304a9359f68be8af27bf83067cdf7a220205033cd548fa970a458dd21b",
+      "pinned": true
+    },
+    "frontend-design": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "e8a22fcaccd285f8563a4728cb4320c5eb295297a2d3c526cbdff3ab54fe2f21",
+      "pinned": true
+    },
+    "frontend-developer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "934eb48b61a50e23afc937b39a2abd4f4bdec915da936182477d73a6007d0b1c",
+      "pinned": true
+    },
+    "frontend-security-coder": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c3a71d6af80bdeda15a1627dd171baf04f411108009fb2e11b3052840d7dee4f",
+      "pinned": true
+    },
+    "fsi-compliance-checker": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "b8b66e5c1a508f7521e4283e4b4cdd6739726b807126c81f07e6537a26d68c26",
+      "pinned": true
+    },
+    "gdpr-data-handling": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "4ef837ae102f1385e0110f217385c1b35a84e0a41fa8c4dcbc215db29db2eb5d",
+      "pinned": true
+    },
+    "github-actions-templates": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "cecfec28b9170bddfa59ea30a9d1130d583b7112fdfc5e3d028f26ac6c5e8b66",
+      "pinned": true
+    },
+    "github-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "ba7008b2893b67e7280eb62683e090f4ff965c95cb2269cde3c5a75ec87d6266",
+      "pinned": true
+    },
+    "google-docs-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "72a8884f5d321cf04592728fa42cad5642d12741052fefa3939d6d2a7719e5a4",
+      "pinned": true
+    },
+    "google-sheets-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "60a32c91ad44c292e03fc672948cb076dcef2a8c02e49a744911ee6c656e57fd",
+      "pinned": true
+    },
+    "google-slides-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "0e4e83ec4f856ca2041b2c804f46955a0a37a615aacaf417fe882479a402d717",
+      "pinned": true
+    },
+    "googlesheets-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "cae48a4a0caa928655ff6de38f7de59c88f73145f8fb8e4c31a1344991ea07a3",
+      "pinned": true
+    },
+    "grafana-dashboards": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "0a0eea6fbf85e393d071c1c5e83564cef2a979e032ec45e52ed6341ac5f3ce75",
+      "pinned": true
+    },
+    "high-end-visual-design": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "bfd0d754d69c5e8883b13175405fe48c14e7c9653304677e4d55c75978ff6b80",
+      "pinned": true
+    },
+    "hugging-face-evaluation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "3f03599cccfff63e0395ed6b498b08a770a6c3c2c67e0f0f40656e25a7b3996d",
+      "pinned": true
+    },
+    "i18n-localization": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "2d60973202c2932ad49c08ae15ffd20f7eddadad85f2d3d760ee483185014ae2",
+      "pinned": true
+    },
+    "incident-responder": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "d6be4fa395e4a2e3e9a9dd5c04943a87b39a41eec59ad871608c76cdfab46e6a",
+      "pinned": true
+    },
+    "interactive-portfolio": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "ede2ea03ee40d9dd24da00ecaa2c6af709ec07a058e67655e3ec2b32be374266",
+      "pinned": true
+    },
+    "ios-developer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "3919d56b06e74e20618e6f801a0b0a65beef3a7ead5225e45fb67297ba92a828",
+      "pinned": true
+    },
+    "k6-load-testing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "835e5ceea8fffafca6f3be2ce5e647fe70173e4bd6bcbfbe128b61ff8f0995b1",
+      "pinned": true
+    },
+    "kpi-dashboard-design": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "b9429ee5bd2b6ae808e0953345bfc4845d3b18ce13b208b6b990dc16f470b4a7",
+      "pinned": true
+    },
+    "kubernetes-architect": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "3b7cd6869798de58b440599e1db4dfbd005cf6629874121e4fac8595490c6aa4",
+      "pinned": true
+    },
+    "langfuse": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "641a0d2111f947c38d37ec909c7340770420ca85bd2447d7e0935babb7b85bc7",
+      "pinned": true
+    },
+    "langgraph": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "722e1a142a868486b5ef893d0215e580d183c1d7e3f52708eaaa067f0077de0d",
+      "pinned": true
+    },
+    "laravel-agent-skills": {
+      "version": "1.0.0",
+      "commit": "6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d",
+      "sha256": "3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f",
+      "pinned": true
+    },
+    "last30days-skill": {
+      "version": "1.0.0",
+      "commit": "6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f",
+      "sha256": "2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a",
+      "pinned": true
+    },
+    "launch-strategy": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "026d826aa82881e65f705bde10422d3dde67546885f0912ed493aba1ff65bf88",
+      "pinned": true
+    },
+    "linux-privilege-escalation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "a7baad8fa71c61ec3332b26aae78dc11a749692f990cd1fafc0bdcaed860ef00",
+      "pinned": true
+    },
+    "llm-app-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "919fe2c2afc6316f4d97b988e6413764a201eb854d32a9635126b8dacd96e1ab",
+      "pinned": true
+    },
+    "make-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "eafefe33bf40c745342497d2b052cb25c3c2a3a4d1eb85dce164264184130dba",
+      "pinned": true
+    },
+    "marketingskills-seo-audit": {
+      "version": "1.0.0",
+      "commit": "0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
+      "sha256": "7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f",
+      "pinned": true
+    },
+    "mcp-builder": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "7fb7e820f5843bc0ac3b9ac4326c7752961b8acf190df30e8fb28b4280930df3",
+      "pinned": true
+    },
+    "mcp-tool-developer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "10d1a7a0c478ee792dc62d17e86715a5e38fe7d69241bc83ce29537c99680ed0",
+      "pinned": true
+    },
+    "micro-saas-launcher": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "57f24a11662c312943d6e1f7bcd467935cca479e00ebe095f8269703bf51e81c",
+      "pinned": true
+    },
+    "microsoft-winui": {
+      "version": "1.0.0",
+      "commit": "7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e",
+      "sha256": "4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "pinned": true
+    },
+    "mobile-design": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "8a5c7defd2319fb4bed89e2f30f7b2ffa78fdbc6cbef69b4f8bac08ba099e57b",
+      "pinned": true
+    },
+    "mobile-developer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "cb58234882c50431937f6300e56ea5b8cb4acfee657a28e8eadcaad351b14afc",
+      "pinned": true
+    },
+    "monetization": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "da284569c2e67889c82963d96187e5c8b63f4a4d390bf95d18a29ae62dc90cff",
+      "pinned": true
+    },
+    "multi-platform-apps-multi-platform": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "1e2c5f4add1f5c39411734c04b9e0913d7541a0ecb0337436c9c2cf3206bb212",
+      "pinned": true
+    },
+    "n8n-workflow-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "9b61839065e82e83a8146d895984199a82070cd30a0942c91cf03aaa051d25b3",
+      "pinned": true
+    },
+    "neon-agent-skills": {
+      "version": "1.0.0",
+      "commit": "5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c",
+      "sha256": "2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "pinned": true
+    },
+    "nextjs-app-router-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "d55fec69735d9f57d61a94c90ed4938666f2cdaac4e59cb4a9e1072b0a7c59a5",
+      "pinned": true
+    },
+    "notion-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "6a7b193d93d5bbdfae88e43f013a7bdc6423812d06a0e65e235655152046e35f",
+      "pinned": true
+    },
+    "observability-and-instrumentation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "99a76f243eae599524ae8236dbc3df9894c5235d3fc057d34e5fbd76aa603ba7",
+      "pinned": true
+    },
+    "observability-engineer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "5c319db39f6e672362dcd3b97491d0ffb7da9a0c6ed1e37237808d37631b364d",
+      "pinned": true
+    },
+    "office-productivity": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "e7824be4893a2890264522928639972b77dc82a7141d165c5be721986ee9f050",
+      "pinned": true
+    },
+    "olzn-ui-craft": {
+      "version": "1.0.1",
+      "commit": "2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b",
+      "sha256": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c",
+      "pinned": true
+    },
+    "openai-build-ios-apps": {
+      "version": "1.0.0",
+      "commit": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e",
+      "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+      "pinned": true
+    },
+    "openai-build-macos-apps": {
+      "version": "1.0.0",
+      "commit": "8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f",
+      "sha256": "5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "pinned": true
+    },
+    "openapi-spec-generation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c703eec6b2dd7691d2656d782650254c3b53b4260a44bc849d52b9c4b2dda63a",
+      "pinned": true
+    },
+    "owasp-secure-agent-playbook": {
+      "version": "1.0.0",
+      "commit": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a",
+      "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
+      "pinned": true
+    },
+    "pbakaus-impeccable": {
+      "version": "1.3.0",
+      "commit": "1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a",
       "sha256": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b",
+      "pinned": true
+    },
+    "pci-compliance": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "11eb11834945dacc0908a5e937b545e17f4cc7fa9b4421eea331bc1c15d98ec0",
+      "pinned": true
+    },
+    "pdf-conversion-router": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "cfbcdd8d64ed035bc169376f7066335d6c18d03ebf9070b84a58b7c5f311ea6d",
+      "pinned": true
+    },
+    "pdf-official": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "a009b58f5207742a3ea438d1b06b0a9ef808b0f9f2e42a6ec9e2afeeb91d6769",
+      "pinned": true
+    },
+    "performance-engineer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "8c84837385b436d9ce504eb1b21e4061d110990e192090bbc4dbabf0efa9c187",
+      "pinned": true
+    },
+    "playwright-skill": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "114760ebca9ef6c35a2f0c539ec5b1b48e16827be77eec7abc33e99e4f6e87a7",
+      "pinned": true
+    },
+    "postgres-best-practices": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "79a200f276beb35404afcf8c2f27760115b46f423e0e1dba59a17128f1cac0d8",
+      "pinned": true
+    },
+    "postmortem-writing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "706e2096e761e0cd47fda881d1c986ec279a7ca99f66d1a94f26c94b79bff3ff",
+      "pinned": true
+    },
+    "pptx-official": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "bb574557fc4b8cbfc765024c5d04a97a2aaee206459011287aa4c34ff8a61c56",
+      "pinned": true
+    },
+    "pricing-strategy": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "8a4504b3d8da79d131280ef3c6f80175a685d3c7be15d86d072937e3f0a64015",
+      "pinned": true
+    },
+    "prisma-skills": {
+      "version": "1.0.0",
+      "commit": "4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b",
+      "sha256": "1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d",
+      "pinned": true
+    },
+    "privacy-by-design": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "160da1b30bbdc21850f88ed8be4dd4e5efd90a18a947c72ca11361c3468e5997",
+      "pinned": true
+    },
+    "product-manager": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "61f2b142ffd278349db21489bfb5277c5230fcba71f7cbd265d896c646dda4de",
+      "pinned": true
+    },
+    "programmatic-seo": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "fc5a6e9c07e0375ebc167f4e75ce4bf6eeedd69fbfe161cf09f5c89438c822b6",
+      "pinned": true
+    },
+    "prompt-engineering": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "d3b6e6e99ad6b72d782f678fbe4703c8ae1e85a4017981dd44a7b62600579941",
+      "pinned": true
+    },
+    "pydantic-models-py": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "a6dbf0a7f42d77f4fbcaf45ed65a9980876087467eeacb1049b302a530d24c85",
+      "pinned": true
+    },
+    "python-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "cd0df4da24a574221c57e621d80c3c36d0aaa0f62db14418ca4a80c2a8f79f57",
+      "pinned": true
+    },
+    "python-pro": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "22c09fe50319ec0a9a32debdc97f7c245824c691c8258f0c7caff850393633bc",
+      "pinned": true
+    },
+    "python-testing-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "cd8b13fbcb0ea0bf3c04e12fc457ef944e8fd8005327189e104e35b1e4761757",
+      "pinned": true
+    },
+    "rag-engineer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "bf6f1e1bb48238d027f1169763e0050e4314ecd8d443622e2de7f8c7063fe24b",
+      "pinned": true
+    },
+    "react-best-practices": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "b6c87721c4dca39bfe83ddec24e6836ebbad9d2064aa166da583ae9e614ffafb",
+      "pinned": true
+    },
+    "react-native-architecture": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "1ed290e098d6984e739bd31c2294291562a9e7d0541bd33ef8492b142eb97b84",
+      "pinned": true
+    },
+    "referral-program": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "15ff48e86b7be7225c69d2d7e4a170478ec9db3d779d99eeaefb41ef1a5673e3",
+      "pinned": true
+    },
+    "saas-mvp-launcher": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c05d026c1937acc9d856067d8b6fb9ba20874d6e7f01f3aae0c9b375168353ce",
+      "pinned": true
+    },
+    "sast-configuration": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "7e480483eb779fcd2f5142f435bab223e3b703e9bce8969e4dbe5516c557b003",
+      "pinned": true
+    },
+    "schema-markup": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "514e7abd45fc838bc1d7d741df9e7c7285a60ade9c9d8478b2efd9ac5eae4cdf",
+      "pinned": true
+    },
+    "screen-reader-testing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "c1ef36cc924c953e8e617da4bb97a79295dd27a3381fcd023d5655ff7cc8e09d",
+      "pinned": true
+    },
+    "scroll-experience": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "f44db2a6a42c12e30701837d3fdc9dba0792941e14ee981e1093e8bade950d52",
+      "pinned": true
+    },
+    "secrets-management": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "42dcb1f6feea071cd0e896387809ff7392d21f09cd002d16b1a9bbb0b2f38da4",
+      "pinned": true
+    },
+    "security-auditor": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "312a4ea1acf16869a9c492a2b05285cdf5db52a6c856c73575bd9b3e4ba78a14",
+      "pinned": true
+    },
+    "seo-audit": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "5b97fc7f1692581469fd959d749301731ea43ed32f99d334ff774a96fe0069be",
+      "pinned": true
+    },
+    "seo-content-planner": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "611af8c810ffd8209fe54c822dfe820f0be732010497f57249f4efbfdbe7735f",
+      "pinned": true
+    },
+    "seo-content-writer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "6a159742e022837fc3dc29ae3448b9b313a13869a35ca1d40f8e12c0b1d6cef9",
+      "pinned": true
+    },
+    "seo-fundamentals": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "f1257f55d48428e2569e2b570de8d207867e4929e4ab865ad29ed1a92ae13456",
+      "pinned": true
+    },
+    "seo-hreflang": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "e6758daf5f7453c21cba7633ece8e3f412c0a47c6550c033dddcf07208f43a73",
+      "pinned": true
+    },
+    "shadcn": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "2390fd0b0b9413644423a450b13e8cbb9cf4ac9a25569894db15af299bd49e51",
+      "pinned": true
+    },
+    "slack-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "33640ffb9690a3e291f771411a39b21aea0dbe3a1163ed2ddfbf5ec4957bb7fb",
+      "pinned": true
+    },
+    "slo-implementation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "d83ac53b27200b7bbd84c13ca836433d5d01830b2200e8989393bc8489918ac2",
+      "pinned": true
+    },
+    "snyk-agent-scan": {
+      "version": "1.0.0",
+      "commit": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c",
+      "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f",
+      "pinned": true
+    },
+    "sql-pro": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "90eeb456cd55222e022134cd6c0da2d4fcaad07f57223afeb3fdb82581bdde10",
+      "pinned": true
+    },
+    "stripe-integration": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "3726910b91acf3ee3353760af391d77651f5134ca27f07df352f0492e396073d",
+      "pinned": true
+    },
+    "supabase-postgres-best-practices": {
+      "version": "1.2.0",
+      "commit": "2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f",
+      "sha256": "9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "pinned": true
+    },
+    "superpowers-brainstorming": {
+      "version": "1.0.0",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "9b1d8f7e6a5c4b3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d",
+      "pinned": true
+    },
+    "superpowers-requesting-code-review": {
+      "version": "1.0.0",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d",
+      "pinned": true
+    },
+    "superpowers-subagent-driven-development": {
+      "version": "1.0.0",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b",
+      "pinned": true
+    },
+    "superpowers-systematic-debugging": {
+      "version": "1.0.0",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "6b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a",
+      "pinned": true
+    },
+    "superpowers-test-driven-development": {
+      "version": "1.0.0",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "7c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b",
+      "pinned": true
+    },
+    "superpowers-verification-before-completion": {
+      "version": "1.0.0",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c",
+      "pinned": true
+    },
+    "superpowers-writing-plans": {
+      "version": "1.0.0",
+      "commit": "4f8a3b1c9e2d7f6a5b4c3d2e1f0a9b8c7d6e5f4a",
+      "sha256": "8a2c1b0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b",
+      "pinned": true
+    },
+    "systematic-debugging": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "97d5a20c9ad836d966db1744c5b53275ab538c18fe425d2ae99f5b9cb8b569d6",
+      "pinned": true
+    },
+    "tailwind-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "1181d76781df9d6a1bdfc13c3efc50fd27cc20b634e4890b7a79c68f4a2377c6",
+      "pinned": true
+    },
+    "taste-skill-frontend": {
+      "version": "1.2.0",
+      "commit": "7b8a9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
+      "pinned": true
+    },
+    "tauri-official-guidance": {
+      "version": "2.0.0",
+      "commit": "1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c",
+      "sha256": "8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e",
+      "pinned": true
+    },
+    "terraform-specialist": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "2c578c6fe952606d769874a61506bb0b9a9690f03e64d853ab13f6698e21066d",
+      "pinned": true
+    },
+    "test-driven-development": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "92360fb29eb29c787e2a3ac9cf86272dd3b88bc74f1e9d8dd95dd7f05c6ade56",
+      "pinned": true
+    },
+    "test-fixing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "29c4cb43789d1c2b40cdef08a3b99eafaec8a80b6a147e6c26e8a673fb5dfa58",
+      "pinned": true
+    },
+    "top-web-vulnerabilities": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "a102fa30e2d9665f08fd174629c6e089fc46fd09ecdbb45d4f53c3d03606a67c",
+      "pinned": true
+    },
+    "trailofbits-skills": {
+      "version": "1.0.0",
+      "commit": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b",
+      "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+      "pinned": true
+    },
+    "ui-a11y": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "50956b059b03085ebddb39b717f562149a525f2cc2a85b4eaa7f8a618da8947c",
+      "pinned": true
+    },
+    "ui-review": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "aaf3f7214e3375a96f58e54457239225770a197557d0f58913f245238cc5d362",
+      "pinned": true
+    },
+    "ui-ux-pro-max": {
+      "version": "1.5.0",
+      "commit": "0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f",
+      "sha256": "3c038410bd81e1e8106e98283c8cf6620a1bf43ea69d1802884502b3dc1f911f",
+      "pinned": true
+    },
+    "vector-database-engineer": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "58377730e72c52c14397f3d569eb65a09145e27ac2fcef3ed026efba4f379d08",
+      "pinned": true
+    },
+    "vercel-composition-patterns": {
+      "version": "1.0.0",
+      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
+      "sha256": "4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c",
+      "pinned": true
+    },
+    "vercel-react-best-practices": {
+      "version": "1.0.0",
+      "commit": "7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a",
+      "sha256": "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b",
+      "pinned": true
+    },
+    "vulnerability-scanner": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "882ce12c7006a05e79b80e3ee5063ec92683d0858b0f65b8416f52cf36419124",
+      "pinned": true
+    },
+    "web-security-testing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "51d988a79f461dcbdf7f356f2add80e8e33a7797af476022248df8cce67ce609",
+      "pinned": true
+    },
+    "webapp-testing": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "fdec3bb35d5071fae5698cf2a08cd1fbb8917740a33d4c19433f257c737aa3ba",
+      "pinned": true
+    },
+    "workflow-automation": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "29cb9f4e95c3dd7b0eb1d628b199fbd112dcf782af4a45cf00f2999b5778a4e4",
+      "pinned": true
+    },
+    "xlsx-official": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "a23404b0083102ccffea95d7162b541347f24b30c2492341b13a97404a8e8791",
+      "pinned": true
+    },
+    "zapier-make-patterns": {
+      "version": "1.0.0",
+      "commit": "9b6c039779df3f59e19d554a9d7dcab85e330a61",
+      "sha256": "67a76ca4816d49f016fb19159711dc1c6d750fc9492143261df7c0671e2db48a",
       "pinned": true
     }
   }

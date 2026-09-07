@@ -137,6 +137,18 @@ python scripts/route.py "Audit iOS SwiftUI app for memory leaks and accessibilit
 python scripts/route.py "Update user profile page" --framework react --risk low
 ```
 
+### Inspecting Specialized Plugin Bundles
+```bash
+# List all 21 specialized plugin bundles from the roadmap
+python scripts/route.py --list-bundles
+
+# Inspect a specific bundle (e.g. AAS Accessibility & Inclusive UX)
+python scripts/route.py --bundle aas-accessibility-inclusive-ux
+
+# Verify all plugin bundles and skill files on disk
+python scripts/sync_specialized_plugins.py --check
+```
+
 ### Registry Validation & Lock Verification
 ```bash
 # Validate registry JSON files against schemas
@@ -157,7 +169,28 @@ python scripts/audit_everything.py
 
 ---
 
-## 7. Repository Structure
+## 7. Specialized Plugin Bundles (Roadmap Integration)
+
+In alignment with the [Agentic Awesome Skills Specialized Plugin Roadmap](https://github.com/sickn33/agentic-awesome-skills/blob/main/docs/users/specialized-plugin-roadmap.md), `bundle-useful-skills` provides 21 curated, portable plugin bundles. Each bundle contains portable plugin manifests (`plugin.json`, `.claude-plugin/plugin.json`, `.codex-plugin/plugin.json`) and complete skill folders with authentic `SKILL.md` files.
+
+### Reference Bundle: `agentic-bundle-aas-accessibility-inclusive-ux`
+- **Audience**: Designers and engineers building usable interfaces for all audiences.
+- **Objective**: Find and fix accessibility barriers with keyboard, automated, and screen-reader checks appropriate to the interface.
+- **Constituent Skills**:
+  1. `accesslint-audit`: WCAG 2.2 auditing and prioritized reports
+  2. `accesslint-diff`: Focused accessibility diff checks
+  3. `accesslint-scan`: Fast automated scanning
+  4. `fixing-accessibility`: Step-by-step remediation workflows
+  5. `playwright-skill`: Browser end-to-end accessibility testing
+  6. `screen-reader-testing`: VoiceOver, TalkBack, and NVDA procedures
+  7. `ui-a11y`: Interface accessibility guidelines
+  8. `webapp-testing`: Web application verification and assertions
+
+All 21 bundles (including Web App Builder, Product Design Studio, Security Engineer, Secure App Builder, etc.) are available under `plugins/` and indexed in `registry/plugins.json`.
+
+---
+
+## 8. Repository Structure
 
 ```text
 bundle-useful-skills/
@@ -169,7 +202,7 @@ bundle-useful-skills/
 ├── router/
 │   ├── SKILL.md                            # Agent Skill definition for router
 │   ├── __init__.py                         # Python package
-│   ├── engine.py                           # 11-step routing orchestrator
+│   ├── engine.py                           # 11-step routing orchestrator & bundle mapper
 │   ├── cli.py                              # CLI interface
 │   ├── models.py                           # Dataclasses & types
 │   ├── profiles/                           # Profile router documentation
@@ -177,16 +210,33 @@ bundle-useful-skills/
 │   └── verification/                       # Release gates & completion standard
 │
 ├── registry/
-│   ├── skills.json                         # Pinned skill catalog with rich metadata
+│   ├── skills.json                         # Pinned skill catalog (200 skills)
+│   ├── plugins.json                        # 21 specialized plugin bundles
 │   ├── sources.json                        # Trusted source repositories
 │   ├── compatibility.json                  # Platform & framework matrix
 │   ├── conflicts.json                      # Machine-readable exclusions
 │   └── lock.json                           # Cryptographic deterministic lockfile
 │
 ├── profiles/                               # Domain profile definitions & READMEs
-├── schemas/                                # JSON schemas for skills, locks, and conflicts
+├── plugins/                                # Portable specialized plugin bundles
+│   ├── agentic-bundle-aas-accessibility-inclusive-ux/
+│   │   ├── plugin.json
+│   │   ├── .claude-plugin/plugin.json
+│   │   ├── .codex-plugin/plugin.json
+│   │   └── skills/
+│   │       ├── accesslint-audit/SKILL.md
+│   │       ├── accesslint-diff/SKILL.md
+│   │       ├── accesslint-scan/SKILL.md
+│   │       ├── fixing-accessibility/SKILL.md
+│   │       ├── playwright-skill/SKILL.md
+│   │       ├── screen-reader-testing/SKILL.md
+│   │       ├── ui-a11y/SKILL.md
+│   │       └── webapp-testing/SKILL.md
+│   └── ... (21 specialized plugin bundles)
+│
+├── schemas/                                # JSON schemas for skills, plugins, locks, conflicts
 ├── scripts/                                # Standalone CLI tools & validators
-└── tests/                                  # Comprehensive automated test suite
+└── tests/                                  # Comprehensive automated test suite (31 tests)
 ```
 
 ---

@@ -38,7 +38,7 @@ def verify_lockfile() -> int:
     commit_re = re.compile(r"^[0-9a-f]{7,40}$")
 
     errors = []
-    print(f"Lockfile Version: {lock_data.get('version')}")
+    print(f"Lockfile Version: {lock_data.get('lockfile_version', lock_data.get('version', 1))}")
     print(f"Generated At:     {lock_data.get('generated_at')}")
     print(f"Locked Entries:   {len(locked_skills)}\n")
 
@@ -78,7 +78,7 @@ def verify_lockfile() -> int:
             print(f"  - {err}")
         return 1
 
-    print("[PASS] All 44 skills deterministically pinned with valid SHA-256 hashes.")
+    print(f"[PASS] All {len(locked_skills)} skills deterministically pinned with valid SHA-256 hashes.")
     return 0
 
 

@@ -206,5 +206,13 @@
     "trust_status": "trusted",
     "default_license": "MIT",
     "notes": "Independent multi-perspective code review orchestrator."
+  },
+  {
+    "repository": "https://github.com/sickn33/agentic-awesome-skills",
+    "name": "Agentic Awesome Skills",
+    "maintainer": "sickn33 and contributors",
+    "trust_status": "trusted",
+    "default_license": "MIT",
+    "notes": "Curated catalog of specialized Agent Skills and portable plugin bundles."
   }
 ]

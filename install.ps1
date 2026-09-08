@@ -1,10 +1,13 @@
-# ==============================================================================
-# Bundle Useful Skills — Fast Universal Installer (Windows PowerShell)
-# ==============================================================================
+param(
+    [string]$Target = "all",
+    [string]$Bundle = "all",
+    [switch]$RouterOnly,
+    [switch]$Doctor
+)
 
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Bundle Useful Skills: Fast Installer ===" -ForegroundColor Cyan
+Write-Host "=== Bundle Useful Skills: Fast Universal Installer ===" -ForegroundColor Cyan
 Write-Host ""
 
 # 1. Check Python version (>= 3.10)
@@ -51,9 +54,20 @@ if ((Test-Path "router\SKILL.md") -and (Test-Path "scripts\install.py")) {
     $RepoDir = $InstallDir
 }
 
+# If user just requested doctor check
+if ($Doctor) {
+    Write-Host "`n--> Running agent environment diagnostics..." -ForegroundColor Cyan
+    & $PythonCmd (Join-Path $RepoDir "scripts\install.py") --doctor
+    exit 0
+}
+
 # 3. Register with all detected AI agents
-Write-Host "`n--> Registering with detected AI agent platforms..." -ForegroundColor Cyan
-& $PythonCmd (Join-Path $RepoDir "scripts\install.py") --target all
+Write-Host "`n--> Registering router and skills with detected AI agent platforms..." -ForegroundColor Cyan
+if ($RouterOnly) {
+    & $PythonCmd (Join-Path $RepoDir "scripts\install.py") --target $Target --router-only
+} else {
+    & $PythonCmd (Join-Path $RepoDir "scripts\install.py") --target $Target --bundle $Bundle
+}
 
 # 4. Install global CLI command 'bus'
 $BinDir = Join-Path $env:USERPROFILE ".local\bin"
@@ -78,7 +92,27 @@ if ($UserPath -notlike "*$BinDir*") {
     Write-Host "[OK] Added to PATH! (Restart existing terminals if 'bus' is not recognized immediately)" -ForegroundColor Green
 }
 
+# 5. Live Agent Detection & Health Check (Proof of Detection)
+Write-Host "`n--> Verifying agent detection & installed skills..." -ForegroundColor Cyan
+& $PythonCmd (Join-Path $RepoDir "scripts\install.py") --doctor
+
 Write-Host "`n[SUCCESS] Installation Complete!" -ForegroundColor Green
-Write-Host "Try routing a task:"
-Write-Host '  bus "Build a Next.js app with Supabase and Tailwind"' -ForegroundColor Yellow
+Write-Host ""
+Write-Host "=== How to Test & Verify in Your AI Agents ===" -ForegroundColor Cyan
+Write-Host "1. Google Antigravity:" -ForegroundColor Yellow
+Write-Host "   - Open or restart Antigravity."
+Write-Host "   - Check 'Available skills' in the prompt/sidebar (137 skills active)."
+Write-Host "   - Type '@bundle-useful-skills' or mention any skill like '@systematic-debugging'."
+Write-Host "2. Anthropic Claude Code:" -ForegroundColor Yellow
+Write-Host "   - Run 'claude' in terminal."
+Write-Host "   - Ask: 'What skills do you have access to?' or inspect ~/.claude/skills"
+Write-Host "3. OpenAI Codex:" -ForegroundColor Yellow
+Write-Host "   - Skills in ~/.codex/skills are automatically indexed and injected."
+Write-Host "4. Cursor / Windsurf:" -ForegroundColor Yellow
+Write-Host "   - Global skills in ~/.cursor/skills or ~/.codeium/windsurf/skills are active."
+Write-Host ""
+Write-Host "Verify detection anytime with:" -ForegroundColor Cyan
+Write-Host "  bus doctor" -ForegroundColor Green
+Write-Host "Route tasks with:" -ForegroundColor Cyan
+Write-Host '  bus "Build a Next.js app with Supabase and Tailwind"' -ForegroundColor Green
 Write-Host ""

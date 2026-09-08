@@ -15,6 +15,7 @@
 
 <p align="center">
   <a href="#-fast--frictionless-installation">Installation</a> •
+  <a href="#-verifying-skill-detection-in-your-agentic-app">Detection & Doctor</a> •
   <a href="#-why-bundle-useful-skills">Why This Exists</a> •
   <a href="#-the-11-step-routing-pipeline">Routing Architecture</a> •
   <a href="#-the-17-focused-bundles-bus-">The 17 Bundles</a> •
@@ -32,9 +33,9 @@
 
 `bundle-useful-skills` requires **zero third-party dependencies** and runs out of the box with Python 3.10+. Choose your preferred installation method below:
 
-### Option 1: Universal One-Liner (Fastest)
+### Option 1: Universal One-Liner (Fastest & Recommended)
 
-Install the global `bus` CLI and automatically register the router with all detected AI agents on your machine with one command:
+Install the global `bus` CLI and automatically register the router and **all 136 unique skills across all 17 focused bundles** globally into all detected AI agents on your machine with one command:
 
 **macOS & Linux:**
 ```bash
@@ -48,9 +49,10 @@ irm https://raw.githubusercontent.com/ammasyaa/bundle-useful-skills/main/install
 
 *What this does automatically:*
 1. Validates Python 3.10+ availability.
-2. Clones/updates the repository into `~/.bundle-useful-skills`.
-3. Registers the router skill into **Google Antigravity**, **Claude Code**, **Codex**, and **Cursor**.
+2. Clones or updates the repository into `~/.bundle-useful-skills`.
+3. Installs the router and constituent skills (137 total) globally into **Google Antigravity** (`~/.gemini/config/skills`), **Anthropic Claude Code** (`~/.claude/skills`), **OpenAI Codex** (`~/.codex/skills`), **Cursor** (`~/.cursor/skills`), and **Windsurf** (`~/.codeium/windsurf/skills`).
 4. Adds the global `bus` command to your PATH (`~/.local/bin/bus`).
+5. Executes `bus doctor` to output live confirmation and proof of detection.
 
 ---
 
@@ -68,6 +70,10 @@ pipx install git+https://github.com/ammasyaa/bundle-useful-skills.git
 
 Once installed, the `bus` command is immediately available everywhere in your terminal:
 ```bash
+# Verify agent detection
+bus doctor
+
+# Route a prompt to the minimum sufficient skill stack
 bus "Build a real-time Next.js dashboard with Supabase"
 ```
 
@@ -75,46 +81,38 @@ bus "Build a real-time Next.js dashboard with Supabase"
 
 ### Option 3: 1-Click AI Agent Integration
 
-Already cloned the repository or installed via pip? You can register the router directly with your preferred agent environments:
+Already cloned the repository or installed via pip? You can register skills directly with your preferred agent environments:
 
 ```bash
-# Auto-detect all agents and install to all of them
+# Install all 136 skills + router across all detected agents (Default)
+bus --install all --all-skills
+# (or: python scripts/install.py --target all --bundle all)
+
+# Install only the lightweight router skill without bundle skills
 bus --install all
-# (or: python scripts/install.py --target all)
+# (or: python scripts/install.py --target all --router-only)
 
 # Install specifically to Google Antigravity
-bus --install antigravity
+bus --install antigravity --all-skills
 
 # Install specifically to Anthropic Claude Code
-bus --install claude
+bus --install claude --all-skills
 
 # Install specifically to OpenAI Codex
-bus --install codex
+bus --install codex --all-skills
 
-# Install specifically to Cursor / Windsurf workspace
-bus --install cursor
-```
+# Install specifically to Cursor
+bus --install cursor --all-skills
 
-Inspect which AI agent environments are installed on your machine:
-```bash
-bus --list-targets
-```
-*Output:*
-```text
-==================================================
-  Detected AI Agent Environments
-==================================================
-[ACTIVE]     antigravity    -> ~/.gemini/antigravity/skills
-[ACTIVE]     codex          -> ~/.codex/skills
-[ACTIVE]     claude         -> ~/.claude/plugins
-[ACTIVE]     cursor         -> .cursor/skills
+# Install specifically to Windsurf
+bus --install windsurf --all-skills
 ```
 
 ---
 
-### Option 4: Install a Focused Bundle into Your Agent
+### Option 4: Install a Specific Focused Bundle into Your Agent
 
-Want your agent to directly possess all individual skills from a specific domain bundle (e.g. `bus-web-app-builder`, `bus-product-ui-taste`)? Install it with one flag:
+Want your agent to possess individual skills from a specific domain bundle (e.g. `bus-web-app-builder`, `bus-product-ui-taste`)? Install it with one flag:
 
 ```bash
 # Install the Web App Builder bundle into all active agents
@@ -123,7 +121,7 @@ bus --install all --install-bundle bus-web-app-builder
 # Install the Product UI & Taste bundle into Claude Code
 bus --install claude --install-bundle bus-product-ui-taste
 
-# Install all 17 focused bundles (all 175 skills) into Antigravity
+# Install all 17 focused bundles into Antigravity
 bus --install antigravity --install-bundle all
 ```
 
@@ -139,14 +137,76 @@ cd bundle-useful-skills
 # 2. Install editable CLI
 pip install -e .
 
-# 3. Run test suite & validation
+# 3. Verify health across all AI agents
+python scripts/install.py --doctor
+
+# 4. Run test suite & validation
 python -m unittest discover tests -v
 python scripts/validate_registry.py
 ```
 
 ---
 
-## 🎯 Why Bundle Useful Skills?
+## 🩺 Verifying Skill Detection in Your Agentic App
+
+After installation, how do you verify that your AI agents detect and load the skills?
+
+### 1. Instant CLI Health Check (`bus doctor`)
+
+Run the built-in diagnostic doctor command anytime:
+
+```bash
+bus doctor
+# or: python scripts/install.py --doctor
+```
+
+*Sample Output:*
+```text
+======================================================================
+  [DOCTOR] Bundle Useful Skills: Agentic App Detection & Health Check
+======================================================================
+
+[DETECTED]   Google Antigravity
+  Target Path : ~/.gemini/config/skills
+  Status      : 137 skills installed | [ROUTER ACTIVE]
+  Sample      : systematic-debugging, test-driven-development, frontend-design, react-best-practices, supabase
+  Verify In-App: Restart or start a new Antigravity session. In the chat prompt, check 'Available skills' or ask: 'What skills do you have access to?'.
+
+[DETECTED]   Claude Code
+  Target Path : ~/.claude/skills
+  Status      : 137 skills installed | [ROUTER ACTIVE]
+  Sample      : systematic-debugging, test-driven-development, ...
+  Verify In-App: Run `claude` in terminal and ask: 'What skills do you have?' or inspect `ls ~/.claude/skills`.
+
+[DETECTED]   OpenAI Codex
+  Target Path : ~/.codex/skills
+  Status      : 137 skills installed | [ROUTER ACTIVE]
+  Verify In-App: Run `codex`. Skills in ~/.codex/skills are automatically indexed and injected by the runtime.
+
+[DETECTED]   Cursor
+  Target Path : ~/.cursor/skills
+  Status      : 137 skills installed | [ROUTER ACTIVE]
+  Verify In-App: Open Cursor. Skills installed in ~/.cursor/skills are automatically accessible to the agent.
+
+[DETECTED]   Windsurf
+  Target Path : ~/.codeium/windsurf/skills
+  Status      : 137 skills installed | [ROUTER ACTIVE]
+  Verify In-App: Open Windsurf. Global skills in ~/.codeium/windsurf/skills are indexed by Cascade.
+
+----------------------------------------------------------------------
+Summary: 5/5 agent platforms have skills installed. Full catalog has 137 skills.
+======================================================================
+```
+
+### 2. How Each Agent Detects Skills Globally
+
+| Agentic App | Global Skills Path | How It Discovers Skills | How to Confirm in Chat / UI |
+|:---|:---|:---|:---|
+| **Google Antigravity** | `~/.gemini/config/skills/` | Automatically scans `~/.gemini/config/skills/<skill>/SKILL.md` at session start. Uses progressive disclosure. | In chat canvas, check the **Available skills** list, or type `@bundle-useful-skills` or `@systematic-debugging`. Or prompt: *"What skills do you have access to?"* |
+| **Anthropic Claude Code** | `~/.claude/skills/` | Scans `~/.claude/skills/<skill>/SKILL.md`. Automatically indexed as tools/skills. | In your terminal, run `claude` and ask: *"List your active skills"*, or verify via `ls ~/.claude/skills`. |
+| **OpenAI Codex** | `~/.codex/skills/` (or `$CODEX_HOME/skills`) | Indexes all skill definitions in the root skills directory. | Run `codex` and prompt: *"Which engineering skills are installed?"*. |
+| **Cursor** | `~/.cursor/skills/` | Indexes global skill definitions and exposes them to Chat / Composer. | Open Cursor Chat and ask: *"What skills can you use?"*. |
+| **Windsurf** | `~/.codeium/windsurf/skills/` | Cascade indexes global skill instructions and runbooks. | In Cascade chat, ask: *"List all installed skills"*. |
 
 Most AI coding setups suffer from two critical failure modes:
 
@@ -317,12 +377,19 @@ bus --check-conflicts vercel-react-best-practices emil-design-eng
 bus --check-conflicts microsoft-winui flutter-agent-plugins
 ```
 
-### AI Agent Environment Management
+### AI Agent Environment Management & Diagnostics
 ```bash
+# Run comprehensive health check and live skill detection across all agents
+bus doctor
+# (or: python scripts/install.py --doctor)
+
 # Detect installed AI agents on your machine
 bus --list-targets
 
-# Register router with all detected agents
+# Install router + all 136 unique skills across all detected agents
+bus --install all --all-skills
+
+# Install router only into all detected agents
 bus --install all
 
 # Install specific focused bundle into an agent environment

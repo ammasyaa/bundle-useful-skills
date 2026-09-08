@@ -5,14 +5,29 @@ set -e
 # Bundle Useful Skills — Fast Universal Installer (macOS & Linux)
 # ==============================================================================
 
+TARGET="all"
+BUNDLE="all"
+ROUTER_ONLY=false
+DOCTOR=false
+
+for arg in "$@"; do
+  case $arg in
+    --router-only) ROUTER_ONLY=true ;;
+    --doctor) DOCTOR=true ;;
+    --target=*) TARGET="${arg#*=}" ;;
+    --bundle=*) BUNDLE="${arg#*=}" ;;
+  esac
+done
+
 BOLD="\033[1m"
 GREEN="\033[32m"
 BLUE="\033[34m"
 YELLOW="\033[33m"
+CYAN="\033[36m"
 RED="\033[31m"
 RESET="\033[0m"
 
-echo -e "${BOLD}${BLUE}=== Bundle Useful Skills: Fast Installer ===${RESET}\n"
+echo -e "${BOLD}${CYAN}=== Bundle Useful Skills: Fast Universal Installer ===${RESET}\n"
 
 # 1. Check Python version (>= 3.10)
 PYTHON_BIN=""
@@ -54,9 +69,20 @@ else
   REPO_DIR="$INSTALL_DIR"
 fi
 
-# 3. Register with all detected AI agents
-echo -e "\n${BLUE}--> Registering with detected AI agent platforms...${RESET}"
-"$PYTHON_BIN" "$REPO_DIR/scripts/install.py" --target all
+# If user just requested doctor check
+if [ "$DOCTOR" = true ]; then
+  echo -e "\n${CYAN}--> Running agent environment diagnostics...${RESET}"
+  "$PYTHON_BIN" "$REPO_DIR/scripts/install.py" --doctor
+  exit 0
+fi
+
+# 3. Register router and skills with all detected AI agents
+echo -e "\n${BLUE}--> Registering router and skills with detected AI agent platforms...${RESET}"
+if [ "$ROUTER_ONLY" = true ]; then
+  "$PYTHON_BIN" "$REPO_DIR/scripts/install.py" --target "$TARGET" --router-only
+else
+  "$PYTHON_BIN" "$REPO_DIR/scripts/install.py" --target "$TARGET" --bundle "$BUNDLE"
+fi
 
 # 4. Install global CLI command 'bus'
 BIN_DIR="${HOME}/.local/bin"
@@ -76,6 +102,24 @@ if [[ ":$PATH:" != *":$BIN_DIR:"* ]]; then
   echo -e "  export PATH=\"\$HOME/.local/bin:\$PATH\""
 fi
 
+# 5. Live Agent Detection & Health Check (Proof of Detection)
+echo -e "\n${CYAN}--> Verifying agent detection & installed skills...${RESET}"
+"$PYTHON_BIN" "$REPO_DIR/scripts/install.py" --doctor
+
 echo -e "\n${BOLD}${GREEN}✔ Installation Complete!${RESET}"
-echo -e "Try routing a task:"
+echo -e "\n${BOLD}${CYAN}=== How to Test & Verify in Your AI Agents ===${RESET}"
+echo -e "${YELLOW}1. Google Antigravity:${RESET}"
+echo -e "   - Open or restart Antigravity."
+echo -e "   - Check 'Available skills' in the prompt/sidebar (137 skills active)."
+echo -e "   - Type '@bundle-useful-skills' or mention any skill like '@systematic-debugging'."
+echo -e "${YELLOW}2. Anthropic Claude Code:${RESET}"
+echo -e "   - Run 'claude' in terminal."
+echo -e "   - Ask: 'What skills do you have access to?' or inspect ~/.claude/skills"
+echo -e "${YELLOW}3. OpenAI Codex:${RESET}"
+echo -e "   - Skills in ~/.codex/skills are automatically indexed and injected."
+echo -e "${YELLOW}4. Cursor / Windsurf:${RESET}"
+echo -e "   - Global skills in ~/.cursor/skills or ~/.codeium/windsurf/skills are active."
+echo -e "\n${CYAN}Verify detection anytime with:${RESET}"
+echo -e "  ${BOLD}bus doctor${RESET}"
+echo -e "${CYAN}Route tasks with:${RESET}"
 echo -e "  ${BOLD}bus \"Build a Next.js app with Supabase and Tailwind\"${RESET}\n"

@@ -70,18 +70,28 @@ def main() -> int:
         help="Inspect a specific focused bundle manifest by ID (e.g. bus-web-app-builder)",
     )
     parser.add_argument(
+        "--doctor",
+        action="store_true",
+        help="Run health check and diagnostics across all AI agent platforms",
+    )
+    parser.add_argument(
+        "--all-skills",
+        action="store_true",
+        help="Install all 136+ unique skills across all 17 bundles alongside the router",
+    )
+    parser.add_argument(
         "--install",
         nargs="?",
         const="all",
-        choices=["all", "antigravity", "codex", "claude", "cursor"],
+        choices=["all", "antigravity", "codex", "claude", "cursor", "windsurf"],
         metavar="TARGET",
-        help="Install router into AI agent environment (all, antigravity, codex, claude, cursor)",
+        help="Install router into AI agent environment (all, antigravity, codex, claude, cursor, windsurf)",
     )
     parser.add_argument(
         "--install-bundle",
         type=str,
         metavar="BUNDLE_ID",
-        help="Install specific focused bundle into AI agent environment (e.g. bus-web-app-builder)",
+        help="Install specific focused bundle into AI agent environment (or 'all' for all 17 bundles)",
     )
     parser.add_argument(
         "--list-targets",
@@ -90,6 +100,15 @@ def main() -> int:
     )
 
     args = parser.parse_args()
+
+    if args.doctor or (args.query and args.query.lower().strip() == "doctor"):
+        from .installer import get_doctor_report, format_doctor_report
+        report = get_doctor_report()
+        if args.json:
+            print(json.dumps(report, indent=2))
+        else:
+            print(format_doctor_report(report))
+        return 0
 
     if args.list_targets:
         from .installer import detect_installed_agents
@@ -105,10 +124,11 @@ def main() -> int:
                 print(f"{mark:<12} {agent:<14} -> {data['active_path']}")
         return 0
 
-    if args.install or args.install_bundle:
+    if args.install or args.install_bundle or args.all_skills:
         from .installer import run_installation
         target = args.install or "all"
-        res = run_installation(target=target, bundle=args.install_bundle)
+        bundle = "all" if args.all_skills else args.install_bundle
+        res = run_installation(target=target, bundle=bundle)
         if args.json:
             print(json.dumps(res, indent=2))
         else:
@@ -120,6 +140,7 @@ def main() -> int:
             print("--------------------------------------------------")
             if res["success"]:
                 print("[SUCCESS] Installation completed cleanly!")
+                print("\nRun 'bus doctor' to verify live detection across all agent environments.")
             else:
                 print("[FAILED] Installation encountered errors.")
         return 0 if res["success"] else 1

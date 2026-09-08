@@ -77,6 +77,33 @@ class TestInstaller(unittest.TestCase):
         self.assertTrue(res["success"])
         target_path = self.home / ".gemini" / "antigravity" / "skills"
         self.assertTrue((target_path / "systematic-debugging" / "SKILL.md").exists())
+        config_path = self.home / ".gemini" / "config" / "skills"
+        self.assertTrue((config_path / "systematic-debugging" / "SKILL.md").exists())
+
+    def test_install_all_skills_to_dir(self):
+        from router.installer import install_all_skills_to_dir
+        dest = self.home / "all_skills"
+        ok, msg, count = install_all_skills_to_dir(dest, dry_run=False)
+        self.assertTrue(ok)
+        self.assertGreater(count, 100)
+        self.assertTrue((dest / "bundle-useful-skills" / "SKILL.md").exists())
+        self.assertTrue((dest / "systematic-debugging" / "SKILL.md").exists())
+
+    def test_doctor_report_structure(self):
+        from router.installer import get_doctor_report, format_doctor_report
+        report = get_doctor_report(home_dir=self.home)
+        self.assertIn("agents", report)
+        self.assertIn("total_detected_agents", report)
+        self.assertIn("antigravity", report["agents"])
+        self.assertIn("claude", report["agents"])
+        self.assertIn("codex", report["agents"])
+        self.assertIn("cursor", report["agents"])
+        self.assertIn("windsurf", report["agents"])
+
+        formatted = format_doctor_report(report)
+        self.assertIn("[DOCTOR]", formatted)
+        self.assertIn("Google Antigravity", formatted)
+        self.assertIn("Claude Code", formatted)
 
 
 if __name__ == "__main__":

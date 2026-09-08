@@ -20,6 +20,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from router.installer import (
     detect_installed_agents,
+    format_doctor_report,
+    get_doctor_report,
     run_installation,
 )
 
@@ -30,14 +32,25 @@ def main() -> int:
     )
     parser.add_argument(
         "--target",
-        choices=["all", "antigravity", "codex", "claude", "cursor"],
+        choices=["all", "antigravity", "codex", "claude", "cursor", "windsurf"],
         default="all",
         help="Target AI agent environment (default: all detected agents)",
     )
     parser.add_argument(
         "--bundle",
         type=str,
-        help="Install specific focused bundle (e.g. bus-web-app-builder) or 'all'",
+        default="all",
+        help="Install specific focused bundle (e.g. bus-web-app-builder), 'all' (default), or 'none'",
+    )
+    parser.add_argument(
+        "--router-only",
+        action="store_true",
+        help="Install only the router skill without constituent bundle skills",
+    )
+    parser.add_argument(
+        "--doctor",
+        action="store_true",
+        help="Run health check and diagnostics across all AI agent platforms",
     )
     parser.add_argument(
         "--list-targets",
@@ -73,6 +86,14 @@ def main() -> int:
     args = parser.parse_args()
     custom_home = Path(args.home).resolve() if args.home else None
 
+    if args.doctor:
+        report = get_doctor_report(home_dir=custom_home)
+        if args.json:
+            print(json.dumps(report, indent=2))
+        else:
+            print(format_doctor_report(report))
+        return 0
+
     if args.list_targets:
         status = detect_installed_agents(home_dir=custom_home)
         if args.json:
@@ -98,9 +119,12 @@ def main() -> int:
                 print(f"- {b}")
         return 0
 
+    # Determine bundle to install
+    bundle_to_install = None if (args.router_only or args.bundle in ("none", "router")) else args.bundle
+
     res = run_installation(
         target=args.target,
-        bundle=args.bundle,
+        bundle=bundle_to_install,
         home_dir=custom_home,
         dry_run=args.dry_run,
         uninstall=args.uninstall,
@@ -118,6 +142,8 @@ def main() -> int:
         print("--------------------------------------------------")
         if res["success"]:
             print(f"[SUCCESS] {title} completed cleanly!")
+            if not args.uninstall and not args.dry_run:
+                print("\nRun 'bus doctor' (or 'python scripts/install.py --doctor') to verify live agent detection.")
         else:
             print(f"[FAILED] Errors occurred during {title.lower()}.")
             if "error" in res:

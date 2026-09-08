@@ -85,6 +85,26 @@ class TestCLICommands(unittest.TestCase):
         self.assertEqual(proc.returncode, 1, f"Expected conflict error, got exit code 0: {proc.stdout}")
         self.assertIn("[CONFLICT]", proc.stdout)
 
+    def test_doctor_cli(self):
+        proc = self.run_cmd(["scripts/route.py", "doctor"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        self.assertIn("[DOCTOR]", proc.stdout)
+        self.assertIn("Google Antigravity", proc.stdout)
+        self.assertIn("Claude Code", proc.stdout)
+
+    def test_doctor_cli_json(self):
+        proc = self.run_cmd(["scripts/route.py", "doctor", "--json"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        data = json.loads(proc.stdout)
+        self.assertIn("agents", data)
+        self.assertIn("antigravity", data["agents"])
+
+    def test_install_dry_run_cli(self):
+        proc = self.run_cmd(["scripts/install.py", "--dry-run", "--bundle", "all"])
+        self.assertEqual(proc.returncode, 0, f"Error: {proc.stderr}")
+        self.assertIn("[DRY-RUN]", proc.stdout)
+        self.assertIn("[SUCCESS]", proc.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()
